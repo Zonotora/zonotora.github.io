@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getAllPosts } from "../lib/api";
 import PostType from "../interfaces/post";
 import Posts from "../components/posts";
+import Header from "../components/header";
 
 type Props = {
   posts: PostType[];
@@ -13,9 +14,7 @@ type Props = {
 export const Home = ({ posts }: Props) => {
   return (
     <div className="main">
-      <Link href="/posts">Posts</Link>
-      <Link href="/mindpalace">Mindpalace</Link>
-      <Link href="/sketches">Sketches</Link>
+      <Header links={["posts", "mindpalace", "sketches"]} />
 
       <Posts posts={posts} count={3} />
     </div>
