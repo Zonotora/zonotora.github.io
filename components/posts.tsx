@@ -11,6 +11,7 @@ const Posts = ({ posts, count }: Props) => {
     <div className="posts">
       {posts.map((post) => (
         <PostPreview
+          key={post.title}
           title={post.title}
           date={post.date}
           description={post.description}

@@ -30,6 +30,7 @@ a {
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+  gap: 5px;
 }
 
 .post-preview {

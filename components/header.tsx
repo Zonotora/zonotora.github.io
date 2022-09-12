@@ -12,7 +12,9 @@ const Header = ({ links }: Props) => {
   return (
     <header className="header">
       {links.map((link) => (
-        <Link href={`/${link}`}>{capitalize(link)}</Link>
+        <Link key={link} href={`/${link}`}>
+          {capitalize(link)}
+        </Link>
       ))}
     </header>
   );
