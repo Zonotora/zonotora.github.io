@@ -47,11 +47,7 @@ jobs:
           git fetch $REPOSITORY_URL
           git worktree add --checkout temporary origin/gh-pages
           rm -r temporary/*
-          mkdir temporary/_next
-          cp -r build/static temporary/_next/static
-          cd build/server/pages
-          cp $(find -name "*.html") ../../../temporary
-          cd ../../../temporary
+          python3 scripts/build.py
           git checkout -b temporary
           git status --porcelain
           git add --all .
