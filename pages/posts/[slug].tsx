@@ -17,10 +17,10 @@ export default function Post({ post }: Props) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <div>
+    <main>
       {post.title}
       <div dangerouslySetInnerHTML={{ __html: post.content }} />
-    </div>
+    </main>
   );
 }
 
