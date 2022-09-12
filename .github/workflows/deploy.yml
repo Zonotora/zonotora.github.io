@@ -8,7 +8,8 @@ on:
     branches:
       - main
     paths:
-      - "src/**"
+      - "posts/**"
+      - "pages/**"
       - ".github/workflows/**"
 
 jobs:
