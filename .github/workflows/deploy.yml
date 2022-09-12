@@ -47,7 +47,7 @@ jobs:
           git fetch $REPOSITORY_URL
           git worktree add --checkout temporary origin/gh-pages
           rm -r temporary/*
-          rsync -q -av --checksum --progress public/. temporary --exclude .ssh --exclude .git --exclude .github
+          rsync -q -av --checksum --progress out/. temporary --exclude .ssh --exclude .git --exclude .github
           cd temporary
           git checkout -b temporary
           git status --porcelain
