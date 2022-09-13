@@ -12,6 +12,7 @@ body {
   padding: 0px;
   overflow-x: hidden;
   background-color: var(--background-color);
+  color: white;
 }
 
 a {
@@ -24,7 +25,6 @@ a {
 }
 
 .posts {
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
