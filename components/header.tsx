@@ -14,10 +14,8 @@ const Header = ({ active }: Props) => {
       <div className="header">
         {links.map((link) =>
           link === active ? (
-            <span style={{ textDecoration: "underline" }}>
-              <Link key={link} href={`/${link}`}>
-                {capitalize(link)}
-              </Link>
+            <span key={link} style={{ textDecoration: "underline" }}>
+              <Link href={`/${link}`}>{capitalize(link)}</Link>
             </span>
           ) : (
             <Link key={link} href={`/${link}`}>
