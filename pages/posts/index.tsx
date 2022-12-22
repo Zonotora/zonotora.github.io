@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts } from "../../lib/api";
 import PostType from "../../interfaces/post";
-import Posts from "../../components/posts";
+import PostPreview from "../../components/post-preview";
 import Header from "../../components/header";
 
 type Props = {
@@ -16,13 +16,24 @@ export const Home = ({ posts }: Props) => {
     <div className="main">
       <Header active="posts" />
 
-      <Posts posts={posts} count={99} />
+      <div className="posts">
+        {posts.map((post) => (
+          <PostPreview
+            key={post.title}
+            title={post.title}
+            date={post.date}
+            description={post.description}
+            tags={post.tags}
+            slug={post.slug}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
 export const getStaticProps = async () => {
-  const posts = getAllPosts(["title", "date", "description", "slug"]);
+  const posts = getAllPosts(["title", "date", "description", "slug", "tags"]);
 
   return {
     props: { posts },
