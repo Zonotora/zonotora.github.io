@@ -14,7 +14,7 @@ type Props = {
 export const Home = ({ posts }: Props) => {
   return (
     <div className="main">
-      <Header links={["posts", "mindpalace", "sketches"]} />
+      <Header active="posts" />
 
       <Posts posts={posts} count={99} />
     </div>
