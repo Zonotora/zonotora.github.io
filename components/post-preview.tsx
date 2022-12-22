@@ -1,13 +1,15 @@
 import Link from "next/link";
+import Tag from "./tag";
 
 type Props = {
   title: string;
   date: string;
   description: string;
+  tags: string[];
   slug: string;
 };
 
-const PostPreview = ({ title, date, description, slug }: Props) => {
+const PostPreview = ({ title, date, description, tags, slug }: Props) => {
   return (
     <Link href={`/posts/${slug}`}>
       <div className="post-preview">
@@ -16,7 +18,11 @@ const PostPreview = ({ title, date, description, slug }: Props) => {
         </div>
         <div className="post-preview-info">
           {date}
-        {title}
+          <div className="tags">
+            {tags.map((tag) => (
+              <Tag key={tag} name={tag} />
+            ))}
+          </div>
         </div>
         <div className="post-preview-content">{description}</div>
       </div>

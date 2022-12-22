@@ -36,9 +36,22 @@ a {
 .post-preview {
   min-width: 100px;
   height: 100px;
-  width: 40%;
+  width: 50%;
   border: 1px solid var(--border-color);
   border-radius: 5px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.post-preview-title {
+  font-size: 16pt;
+}
+.post-preview-info {
+  color: antiquewhite;
+  font-size: 10pt;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
 }
 
 .post-preview:hover {
@@ -56,4 +69,28 @@ a {
   flex-direction: row;
   justify-content: center;
   gap: 5px;
+  width: 50%;
+  margin: 0 calc(50% / 2 - 10px);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  gap: 50px;
+  margin-top: 10px;
+  padding: 2px 10px;
+}
+
+.tags {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.tag {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
+  min-width: 25px;
+  text-align: center;
 }
