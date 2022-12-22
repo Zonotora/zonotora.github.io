@@ -6,6 +6,15 @@ const nextConfig = {
     loader: "akamai",
     path: "",
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/posts",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
