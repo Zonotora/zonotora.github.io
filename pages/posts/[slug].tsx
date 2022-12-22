@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
-import Head from "next/head";
+import Header from "../../components/header";
 import markdownToHtml from "../../lib/markdown";
 import type PostType from "../../interfaces/post";
 
@@ -18,8 +18,12 @@ export default function Post({ post }: Props) {
   }
   return (
     <main>
-      {post.title}
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      <Header active="posts" />
+
+      <div className="post">
+        <h1>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      </div>
     </main>
   );
 }
