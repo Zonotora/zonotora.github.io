@@ -18,11 +18,13 @@ export default function Post({ post }: Props) {
   }
   return (
     <main>
-      <Header active="posts" />
+      <Header active="" />
 
-      <div className="post">
-        <h1>{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      <div className="posts">
+        <div className="post">
+          <h1>{post.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </div>
       </div>
     </main>
   );
