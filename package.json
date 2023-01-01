@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "gray-matter": "^4.0.3",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "remark": "^14.0.2",
-    "remark-html": "^15.0.1",
-    "gray-matter": "^4.0.3"
+    "remark-html": "^15.0.1"
   },
   "devDependencies": {
     "@types/node": "18.7.14",
