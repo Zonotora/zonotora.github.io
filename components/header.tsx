@@ -5,7 +5,7 @@ type Props = {
 };
 
 const Header = ({ active }: Props) => {
-  const links = ["posts", "mindpalace", "sketches", "instrumentum"];
+  const links = ["posts", "books", "mindpalace", "sketches", "instrumentum"];
 
   const capitalize = (name: string) =>
     name.charAt(0).toUpperCase() + name.slice(1);
