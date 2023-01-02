@@ -4,6 +4,7 @@ import {
   faArrowDownAZ,
   faCircleHalfStroke,
   faFilter,
+  faChartSimple,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   Lexicographical,
@@ -18,9 +19,17 @@ type Props = {
   filter: Filter;
   setFilter: any;
   validPredicates: ValidPredicates;
+  showStats: boolean;
+  setShowStats: any;
 };
 
-const BookHeader = ({ filter, setFilter, validPredicates }: Props) => {
+const BookHeader = ({
+  filter,
+  setFilter,
+  validPredicates,
+  showStats,
+  setShowStats,
+}: Props) => {
   const [predicateOptions, setPredicateOptions] = useState<string[][]>([]);
   const [currentPredicate, setCurrentPredicate] = useState<string>("");
 
@@ -132,6 +141,13 @@ const BookHeader = ({ filter, setFilter, validPredicates }: Props) => {
         </span>
         <span className={activePredicate("tag")} onClick={tagPredicate}>
           tag <FontAwesomeIcon icon={faFilter} />
+        </span>
+        |
+        <span
+          className={`icon${showStats ? " active" : ""}`}
+          onClick={() => setShowStats(!showStats)}
+        >
+          stats <FontAwesomeIcon icon={faChartSimple} />
         </span>
       </div>
       {predicateOptions ? (

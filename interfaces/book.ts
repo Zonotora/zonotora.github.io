@@ -43,6 +43,16 @@ export type ValidPredicates = {
   tags: Set<string>;
 };
 
+export type Statistics = {
+  books: number;
+  pages: number;
+};
+
+export type TotalStatistics = {
+  total: Statistics;
+  predicates: { [key: string]: Statistics };
+};
+
 export const toggle = (current: Lexicographical) => {
   if (current === Lexicographical.None) return Lexicographical.AZ;
   else if (current === Lexicographical.AZ) return Lexicographical.ZA;

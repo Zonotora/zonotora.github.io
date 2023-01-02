@@ -9,6 +9,8 @@ import {
   Filter,
   Lexicographical,
   ValidPredicates,
+  TotalStatistics,
+  Statistics,
 } from "../../interfaces/book";
 import { useEffect, useState } from "react";
 
@@ -34,6 +36,11 @@ export const Home = ({ summaries }: Props) => {
     year: new Set(),
     tags: new Set(),
   });
+  const [showStats, setShowStats] = useState<boolean>(false);
+  const [statistics, setStatistics] = useState<TotalStatistics>({
+    total: { books: 0, pages: 0 },
+    predicates: {},
+  });
 
   useEffect(() => {
     const tSlugs: { [id: string]: string } = {};
@@ -44,14 +51,39 @@ export const Home = ({ summaries }: Props) => {
     setSlugs(tSlugs);
 
     const tPredicates = { year: new Set<string>(), tags: new Set<string>() };
+    const stats: Statistics = {
+      books: 0,
+      pages: 0,
+    };
+    const tStatistics: TotalStatistics = {
+      total: structuredClone(stats),
+      predicates: {},
+    };
+
+    const addStatistics = (key: string, book: BookPreviewType) => {
+      if (!(key in tStatistics.predicates)) {
+        tStatistics.predicates[key] = structuredClone(stats);
+      }
+
+      tStatistics.predicates[key].books += 1;
+      tStatistics.predicates[key].pages += book.pages;
+    };
     for (const book of books) {
       const year = book.date.slice(0, 4);
       tPredicates.year.add(year);
+
       for (const tag of book.tags) {
         tPredicates.tags.add(tag);
+        addStatistics(tag, book);
       }
+      tStatistics.total.books += 1;
+      tStatistics.total.pages += book.pages;
+
+      addStatistics(year, book);
     }
+
     setValidPredicates(tPredicates);
+    setStatistics(tStatistics);
   }, []);
 
   useEffect(() => {
@@ -93,6 +125,51 @@ export const Home = ({ summaries }: Props) => {
     setActiveBooks(tBooks);
   }, [filter]);
 
+  const statsNode = (
+    <div className="center">
+      <table className="statistics">
+        <thead>
+          <tr>
+            <td></td>
+            <td>Books</td>
+            <td>Pages</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Total</td>
+            <td>{statistics.total.books}</td>
+            <td>{statistics.total.pages}</td>
+          </tr>
+          {Object.entries(statistics.predicates).map(([k, v]) => (
+            <tr key={k}>
+              <td>{k}</td>
+              <td>{v.books}</td>
+              <td>{v.pages}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+
+  const booksNode = (
+    <div className="books">
+      {activeBooks.map((book) => (
+        <BookPreview
+          key={book.title}
+          book={book}
+          summary={book.title.toLowerCase().replaceAll(" ", "-") in slugs}
+          slug={slugs[book.title.toLowerCase().replaceAll(" ", "-")]}
+        />
+      ))}
+
+      {[1, 2, 3].map((i) => (
+        <div key={i} className="book-preview-dummy" />
+      ))}
+    </div>
+  );
+
   return (
     <div className="main">
       <Header active="books" />
@@ -100,22 +177,11 @@ export const Home = ({ summaries }: Props) => {
         filter={filter}
         setFilter={setFilter}
         validPredicates={validPredicates}
+        showStats={showStats}
+        setShowStats={setShowStats}
       />
 
-      <div className="books">
-        {activeBooks.map((book) => (
-          <BookPreview
-            key={book.title}
-            book={book}
-            summary={book.title.toLowerCase().replaceAll(" ", "-") in slugs}
-            slug={slugs[book.title.toLowerCase().replaceAll(" ", "-")]}
-          />
-        ))}
-
-        {[1, 2, 3].map((i) => (
-          <div key={i} className="book-preview-dummy" />
-        ))}
-      </div>
+      {showStats ? statsNode : booksNode}
     </div>
   );
 };
