@@ -8,11 +8,12 @@ export type BookType = {
 export type BookPreviewType = {
   author: string;
   country: string;
+  date: string;
   language: string;
   pages: number;
+  tags: string[];
   title: string;
   year: string;
-  yearRead: string;
 };
 
 export enum Lexicographical {
@@ -21,11 +22,25 @@ export enum Lexicographical {
   ZA,
 }
 
-export type Filter = {
+export type Sort = {
   title: Lexicographical;
   author: Lexicographical;
-  yearSort: Lexicographical;
-  yearFilter: string | undefined;
+  year: Lexicographical;
+};
+
+export type Predicate = {
+  year: string | undefined;
+  tag: string | undefined;
+};
+
+export type Filter = {
+  sort: Sort;
+  predicate: Predicate;
+};
+
+export type ValidPredicates = {
+  year: Set<string>;
+  tags: Set<string>;
 };
 
 export const toggle = (current: Lexicographical) => {

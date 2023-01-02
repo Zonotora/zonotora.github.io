@@ -2,10 +2,11 @@
   {
     "author": "Leo Tolstoy",
     "country": "Russia",
+    "date": "2023-01-01",
     "language": "Russian",
     "pages": 77,
+    "tags": ["Bokklubben World Library"],
     "title": "The Death of Ivan Ilyich",
-    "year": "1886",
-    "yearRead": "2023"
+    "year": "1886"
   }
 ]

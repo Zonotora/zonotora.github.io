@@ -141,16 +141,21 @@ header {
   border-color: antiquewhite;
 }
 
-.book-header {
+.book-header-main,
+.book-header-secondary {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 10px;
+  color: var(--border-color);
+}
+
+.book-header-secondary {
+  margin-top: 0px;
 }
 
 .icon {
-  color: var(--border-color);
   cursor: pointer;
 }
 

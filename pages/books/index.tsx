@@ -8,6 +8,7 @@ import {
   BookPreviewType,
   Filter,
   Lexicographical,
+  ValidPredicates,
 } from "../../interfaces/book";
 import { useEffect, useState } from "react";
 
@@ -19,10 +20,19 @@ export const Home = ({ summaries }: Props) => {
   const [slugs, setSlugs] = useState<{ [id: string]: string }>({});
   const [activeBooks, setActiveBooks] = useState<BookPreviewType[]>(books);
   const [filter, setFilter] = useState<Filter>({
-    title: Lexicographical.None,
-    author: Lexicographical.None,
-    yearSort: Lexicographical.None,
-    yearFilter: undefined,
+    sort: {
+      title: Lexicographical.None,
+      author: Lexicographical.None,
+      year: Lexicographical.None,
+    },
+    predicate: {
+      year: undefined,
+      tag: undefined,
+    },
+  });
+  const [validPredicates, setValidPredicates] = useState<ValidPredicates>({
+    year: new Set(),
+    tags: new Set(),
   });
 
   useEffect(() => {
@@ -32,34 +42,47 @@ export const Home = ({ summaries }: Props) => {
       tSlugs[key] = summary.slug;
     }
     setSlugs(tSlugs);
+
+    const tPredicates = { year: new Set<string>(), tags: new Set<string>() };
+    for (const book of books) {
+      const year = book.date.slice(0, 4);
+      tPredicates.year.add(year);
+      for (const tag of book.tags) {
+        tPredicates.tags.add(tag);
+      }
+    }
+    setValidPredicates(tPredicates);
   }, []);
 
   useEffect(() => {
     const predicate = (book: BookPreviewType) => {
       let ret = true;
-      if (filter.yearFilter) {
-        ret &&= book.yearRead === filter.yearFilter;
+      if (filter.predicate.year) {
+        ret &&= book.date.slice(0, 4) === filter.predicate.year;
+      }
+      if (filter.predicate.tag) {
+        ret &&= book.tags.includes(filter.predicate.tag);
       }
       return ret;
     };
 
     const compareFn = (a: BookPreviewType, b: BookPreviewType) => {
       let ret = 0;
-      if (filter.yearSort !== Lexicographical.None) {
+      if (filter.sort.year !== Lexicographical.None) {
         ret ||=
-          filter.yearSort === Lexicographical.AZ
-            ? a.yearRead.localeCompare(b.yearRead)
-            : b.yearRead.localeCompare(a.yearRead);
+          filter.sort.year === Lexicographical.AZ
+            ? a.date.localeCompare(b.date)
+            : b.date.localeCompare(a.date);
       }
-      if (filter.title !== Lexicographical.None) {
+      if (filter.sort.title !== Lexicographical.None) {
         ret ||=
-          filter.title === Lexicographical.AZ
+          filter.sort.title === Lexicographical.AZ
             ? a.title.localeCompare(b.title)
             : b.title.localeCompare(a.title);
       }
-      if (filter.author !== Lexicographical.None) {
+      if (filter.sort.author !== Lexicographical.None) {
         ret ||=
-          filter.author === Lexicographical.AZ
+          filter.sort.author === Lexicographical.AZ
             ? a.author.localeCompare(b.author)
             : b.author.localeCompare(a.author);
       }
@@ -73,7 +96,11 @@ export const Home = ({ summaries }: Props) => {
   return (
     <div className="main">
       <Header active="books" />
-      <BookHeader filter={filter} setFilter={setFilter} />
+      <BookHeader
+        filter={filter}
+        setFilter={setFilter}
+        validPredicates={validPredicates}
+      />
 
       <div className="books">
         {activeBooks.map((book) => (

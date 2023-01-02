@@ -12,7 +12,7 @@ const BookPreview = ({ book, summary, slug }: Props) => {
     <div className={`book-preview${summary ? " summary" : ""}`}>
       <div>{book.title}</div>
       <div>{book.author}</div>
-      <div>{book.yearRead}</div>
+      <div style={{ fontSize: "10pt", color: "antiquewhite" }}>{book.date}</div>
     </div>
   );
   const withLink = <Link href={`/books/${slug}`}>{content}</Link>;
