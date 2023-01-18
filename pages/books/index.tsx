@@ -18,6 +18,10 @@ type Props = {
   summaries: BookType[];
 };
 
+const convertTitle = (title: string) => {
+  return title.toLowerCase().replaceAll(":", " ").replaceAll(/\s+/g, "-");
+};
+
 export const Home = ({ summaries }: Props) => {
   const [slugs, setSlugs] = useState<{ [id: string]: string }>({});
   const [activeBooks, setActiveBooks] = useState<BookPreviewType[]>(books);
@@ -45,10 +49,11 @@ export const Home = ({ summaries }: Props) => {
   useEffect(() => {
     const tSlugs: { [id: string]: string } = {};
     for (const summary of summaries) {
-      const key = summary.title.toLowerCase().replaceAll(" ", "-");
+      const key = convertTitle(summary.title);
       tSlugs[key] = summary.slug;
     }
     setSlugs(tSlugs);
+    console.log(tSlugs);
 
     const tPredicates = { year: new Set<string>(), tags: new Set<string>() };
     const stats: Statistics = {
@@ -159,8 +164,8 @@ export const Home = ({ summaries }: Props) => {
         <BookPreview
           key={book.title}
           book={book}
-          summary={book.title.toLowerCase().replaceAll(" ", "-") in slugs}
-          slug={slugs[book.title.toLowerCase().replaceAll(" ", "-")]}
+          summary={convertTitle(book.title) in slugs}
+          slug={slugs[convertTitle(book.title)]}
         />
       ))}
 
