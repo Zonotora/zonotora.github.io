@@ -9,6 +9,8 @@ on:
       - main
     paths:
       - "posts/**"
+      - "books/**"
+      - "data/**"
       - "pages/**"
       - ".github/workflows/**"
 
