@@ -9,15 +9,26 @@ type Props = {
 
 const BookPreview = ({ book, summary, slug }: Props) => {
   const content = (
-    <div className={`book-preview${summary ? " summary" : ""}`}>
+    <>
       <div>{book.title}</div>
       <div>{book.author}</div>
       <div style={{ fontSize: "10pt", color: "antiquewhite" }}>{book.date}</div>
-    </div>
+    </>
   );
-  const withLink = <Link href={`/books/${slug}`}>{content}</Link>;
+  const withLink = (
+    <Link
+      href={`/books/${slug}`}
+      className={`book-preview${summary ? " summary" : ""}`}
+    >
+      {content}
+    </Link>
+  );
 
-  return summary ? withLink : content;
+  const withoutLink = (
+    <div className={`book-preview${summary ? " summary" : ""}`}>{content}</div>
+  );
+
+  return summary ? withLink : withoutLink;
 };
 
 export default BookPreview;

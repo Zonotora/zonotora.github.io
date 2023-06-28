@@ -11,21 +11,19 @@ type Props = {
 
 const PostPreview = ({ title, date, description, tags, slug }: Props) => {
   return (
-    <Link href={`/posts/${slug}`}>
-      <div className="post-preview">
-        <div className="post-preview-title">
-          <b>{title}</b>
-        </div>
-        <div className="post-preview-info">
-          {date}
-          <div className="tags">
-            {tags.map((tag) => (
-              <Tag key={tag} name={tag} />
-            ))}
-          </div>
-        </div>
-        <div className="post-preview-content">{description}</div>
+    <Link href={`/posts/${slug}`} className="post-preview">
+      <div className="post-preview-title">
+        <b>{title}</b>
       </div>
+      <div className="post-preview-info">
+        {date}
+        <div className="tags">
+          {tags.map((tag) => (
+            <Tag key={tag} name={tag} />
+          ))}
+        </div>
+      </div>
+      <div className="post-preview-content">{description}</div>
     </Link>
   );
 };
