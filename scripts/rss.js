@@ -25,7 +25,8 @@ async function process(data) {
 }
 
 async function xmlItem(file, options) {
-  const url = "";
+  const url =
+    options.postsUrl + "/" + file.title.toLowerCase().replaceAll(" ", "-");
   return `
   <entry>
     <title type="html">
@@ -74,30 +75,36 @@ async function xmlFeed(items, updated, options) {
   `;
 }
 
-// main();
 async function main() {
   const files = fs.readdirSync("posts", { withFileTypes: true });
   const options = {
-    title: "",
-    feedUrl: "",
-    postsUrl: "",
+    title: "Axel Lundberg",
+    feedUrl: "http://axellundberg.se/feed.xml",
+    postsUrl: "http://axellundberg.se/posts",
     author: {
-      name: "Example",
+      name: "Axel Lundberg",
       email: "",
     },
   };
 
   const items = [];
+  let updated = "";
 
   for (const file of files) {
     const data = fs.readFileSync(`posts/${file.name}`, "utf8");
     const fileData = await process(data);
     const xml = await xmlItem(fileData, options);
+    if (updated === "") updated = fileData.updated;
+    else {
+      const value = updated.localeCompare(fileData.updated);
+      if (value < 0) updated = fileData.updated;
+    }
+
     items.push(xml);
   }
 
-  const xml = await xmlFeed(items, "", options);
-  fs.writeFileSync("out/rss.xml", xml, "utf8");
+  const xml = await xmlFeed(items, updated, options);
+  fs.writeFileSync("out/feed.xml", xml, "utf8");
 }
 
 main();

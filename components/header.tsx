@@ -30,7 +30,7 @@ const Header = ({ active }: Props) => {
           )
         )}
         <div className="header-icons">
-          <Link href={`/rss.xml`}>
+          <Link href={`/feed.xml`}>
             <FontAwesomeIcon className="darkmode-toggle" icon={faRss} />
           </Link>
           <FontAwesomeIcon className="darkmode-toggle" icon={faToggleOff} />
