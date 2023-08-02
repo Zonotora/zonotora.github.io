@@ -1,4 +1,10 @@
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faToggleOff,
+  faToggleOn,
+  faRss,
+} from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
   active: string;
@@ -23,6 +29,12 @@ const Header = ({ active }: Props) => {
             </Link>
           )
         )}
+        <div className="header-icons">
+          <Link href={`/rss.xml`}>
+            <FontAwesomeIcon className="darkmode-toggle" icon={faRss} />
+          </Link>
+          <FontAwesomeIcon className="darkmode-toggle" icon={faToggleOff} />
+        </div>
       </div>
     </header>
   );

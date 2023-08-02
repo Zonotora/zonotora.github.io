@@ -48,6 +48,18 @@ header {
   border-radius: 5px;
   gap: 50px;
   padding: 2px 10px;
+  position: relative;
+}
+
+.header-icons {
+  position: absolute;
+  right: 0px;
+}
+
+.header-icons > a,
+.header-icons > svg {
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 .tags {

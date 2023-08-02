@@ -53,7 +53,6 @@ export const Home = ({ summaries }: Props) => {
       tSlugs[key] = summary.slug;
     }
     setSlugs(tSlugs);
-    console.log(tSlugs);
 
     const tPredicates = { year: new Set<string>(), tags: new Set<string>() };
     const stats: Statistics = {

@@ -15,6 +15,13 @@ const nextConfig = {
       },
     ];
   },
+  webpack: (
+    config,
+    { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
+  ) => {
+    config.module.rules.push({ test: /\.xml$/, use: "raw-loader" });
+    return config;
+  },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
