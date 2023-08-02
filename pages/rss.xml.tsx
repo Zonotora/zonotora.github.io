@@ -1,6 +1,6 @@
 import { GetServerSideProps } from "next";
 import React from "react";
-import content from "../data/rss.xml";
+import feed from "../data/rss.json";
 
 const Sitemap: React.FC = () => null;
 
@@ -9,7 +9,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     res.setHeader("Content-Type", "text/xml");
     res.write(
       `<?xml version="1.0" encoding="UTF-8"?>
-      ${content}
+      ${feed.xml}
       `
     );
     res.end();

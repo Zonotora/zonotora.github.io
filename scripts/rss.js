@@ -97,7 +97,8 @@ async function main() {
   }
 
   const xml = await xmlFeed(items, "", options);
-  fs.writeFileSync("data/rss.xml", xml);
+  const feed = { xml };
+  fs.writeFileSync("data/rss.json", JSON.stringify(feed, null, 2), "utf8");
 }
 
 main();
