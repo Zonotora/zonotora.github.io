@@ -1,0 +1,24 @@
+{
+  "light": {
+    "color": "#4d535c",
+    "background": {
+      "color": "#fff7ed",
+      "hover": "#bcbcbc"
+    },
+    "border": {
+      "color": "#0d1117",
+      "hover": "#ababab"
+    }
+  },
+  "dark": {
+    "color": "antiquewhite",
+    "background": {
+      "color": "#0d1117",
+      "hover": "#0d1117"
+    },
+    "border": {
+      "color": "#4d535c",
+      "hover": "antiquewhite"
+    }
+  }
+}

@@ -12,7 +12,7 @@ const BookPreview = ({ book, summary, slug }: Props) => {
     <>
       <div>{book.title}</div>
       <div>{book.author}</div>
-      <div style={{ fontSize: "10pt", color: "antiquewhite" }}>{book.date}</div>
+      <div style={{ fontSize: "10pt" }}>{book.date}</div>
     </>
   );
   const withLink = (
