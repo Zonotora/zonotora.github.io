@@ -32,7 +32,7 @@ const dark = (
 
 const Header = ({ active }: Props) => {
   const [darkmode, setDarkmode] = useState(true);
-  const links = ["posts", "books", "mindpalace", "sketches", "instrumentum"];
+  const links = ["posts", "books", "projects"];
 
   const capitalize = (name: string) =>
     name.charAt(0).toUpperCase() + name.slice(1);

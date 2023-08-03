@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Mindpalace",
+    "description": "A place for knowledge",
+    "tags": ["web", "react", "gatsby", "javascript"],
+    "link": "mindpalace",
+    "githubLink": "https://github.com/Zonotora/mindpalace"
+  },
+  {
+    "title": "Sketches",
+    "description": "Small simulations with p5.js",
+    "tags": ["web", "javascript"],
+    "link": "sketches",
+    "githubLink": "https://github.com/Zonotora/sketches"
+  }
+]

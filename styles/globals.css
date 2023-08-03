@@ -95,7 +95,8 @@ svg {
   gap: 5px;
 }
 
-.post-preview {
+.post-preview,
+.project-preview {
   min-width: 100px;
   height: 100px;
   width: 50%;
@@ -106,10 +107,17 @@ svg {
   cursor: pointer;
 }
 
-.post-preview-title {
+.project-preview {
+  position: relative;
+  cursor: auto;
+}
+
+.post-preview-title,
+.project-preview-title {
   font-size: 16pt;
 }
-.post-preview-info {
+.post-preview-info,
+.project-preview-info {
   color: var(--color);
   font-size: 10pt;
   margin-bottom: 15px;
@@ -117,12 +125,18 @@ svg {
   flex-direction: row;
 }
 
-.post-preview:hover {
+.project-preview-info {
+  padding-left: 0px;
+}
+
+.post-preview:hover,
+.project-preview:hover {
   border-color: var(--border-hover-color);
   background-color: var(--background-hover-color);
 }
 
-.post-preview-content {
+.post-preview-content,
+.project-preview-content {
   font-family: "Abel", sans-serif;
 }
 
@@ -202,6 +216,7 @@ svg {
 @media only screen and (max-width: 1200px) {
   .header,
   .post-preview,
+  .project-preview,
   .post,
   .statistics {
     width: 90%;
