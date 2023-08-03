@@ -1,5 +1,25 @@
 [
   {
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "country": "",
+    "date": "2023-07-19",
+    "language": "English",
+    "pages": 254,
+    "tags": [],
+    "year": "180"
+  },
+  {
+    "title": "Ultralearning",
+    "author": "Scott H Young",
+    "country": "USA",
+    "date": "2023-07-15",
+    "language": "English",
+    "pages": 305,
+    "tags": [],
+    "year": "2019"
+  },
+  {
     "author": "Marcel Proust",
     "country": "France",
     "date": "2023-06-26",
