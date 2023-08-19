@@ -55,9 +55,8 @@ async function xmlItem(file, options) {
 }
 
 async function xmlFeed(items, updated, options) {
-  return `
-<?xml version="1.0" encoding="utf-8"?>
-<feed>
+  return `<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
   <link
     href="${options.feedUrl}"
     rel="self"
@@ -72,8 +71,7 @@ async function xmlFeed(items, updated, options) {
     <email>${options.author.email}</email>
   </author>
   ${items.join("")}
-</feed>
-  `;
+</feed>`;
 }
 
 async function main() {
