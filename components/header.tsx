@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useContext } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRss } from "@fortawesome/free-solid-svg-icons";
-import colors from "../data/colors.json";
+import { UserContext } from "../pages/_app";
 
 type Props = {
   active: string;
@@ -31,38 +31,13 @@ const dark = (
 );
 
 const Header = ({ active }: Props) => {
-  const [darkmode, setDarkmode] = useState(true);
+  const { darkmode, setDarkmode } = useContext(UserContext);
   const links = ["posts", "books", "projects"];
 
   const capitalize = (name: string) =>
     name.charAt(0).toUpperCase() + name.slice(1);
 
   const toggleDarkmode = () => {
-    let background, backgroundHover, border, borderHover, color;
-
-    // new_mode = !darkmode,  as we are toggling
-    const mode = !darkmode ? "dark" : "light";
-
-    background = colors[mode].background.color;
-    backgroundHover = colors[mode].background.hover;
-    color = colors[mode].color;
-    border = colors[mode].border.color;
-    borderHover = colors[mode].border.hover;
-
-    document.documentElement.style.setProperty(
-      "--background-color",
-      background
-    );
-    document.documentElement.style.setProperty(
-      "--background-hover-color",
-      backgroundHover
-    );
-    document.documentElement.style.setProperty("--color", color);
-    document.documentElement.style.setProperty("--border-color", border);
-    document.documentElement.style.setProperty(
-      "--border-hover-color",
-      borderHover
-    );
     setDarkmode(!darkmode);
   };
 
