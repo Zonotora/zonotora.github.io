@@ -56,6 +56,7 @@ async function xmlItem(file, options) {
 
 async function xmlFeed(items, updated, options) {
   return `
+<?xml version="1.0" encoding="utf-8"?>
 <feed>
   <link
     href="${options.feedUrl}"
@@ -79,8 +80,8 @@ async function main() {
   const files = fs.readdirSync("posts", { withFileTypes: true });
   const options = {
     title: "Axel Lundberg",
-    feedUrl: "http://axellundberg.se/feed.xml",
-    postsUrl: "http://axellundberg.se/posts",
+    feedUrl: "https://axellundberg.se/feed.xml",
+    postsUrl: "https://axellundberg.se/posts",
     author: {
       name: "Axel Lundberg",
       email: "",
