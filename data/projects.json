@@ -12,5 +12,12 @@
     "tags": ["web", "javascript"],
     "link": "sketches",
     "githubLink": "https://github.com/Zonotora/sketches"
+  },
+  {
+    "title": "Regxcross",
+    "description": "Regex crossword",
+    "tags": ["web", "typescript"],
+    "link": "regxcross",
+    "githubLink": "https://github.com/Zonotora/regxcross"
   }
 ]
