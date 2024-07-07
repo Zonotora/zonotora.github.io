@@ -1,5 +1,45 @@
 [
   {
+    "author": "Viktor Frankl",
+    "country": "Austria",
+    "date": "2024-01-03",
+    "language": "German",
+    "pages": 200,
+    "tags": [],
+    "title": "Man's search for meaning",
+    "year": "1946"
+  },
+  {
+    "author": "George Orwell",
+    "country": "England",
+    "date": "2024-03-02",
+    "language": "English",
+    "pages": 328,
+    "tags": [],
+    "title": "1984",
+    "year": "1949"
+  },
+  {
+    "author": "Frank Herbert",
+    "country": "United States",
+    "date": "2024-03-14",
+    "language": "English",
+    "pages": 412,
+    "tags": [],
+    "title": "Dune",
+    "year": "1965"
+  },
+  {
+    "author": "Nick Bostrom",
+    "country": "Sweden",
+    "date": "2024-06-23",
+    "language": "English",
+    "pages": 536,
+    "tags": [],
+    "title": "Deep Utopia",
+    "year": "2024"
+  },
+  {
     "title": "Meditations",
     "author": "Marcus Aurelius",
     "country": "",
