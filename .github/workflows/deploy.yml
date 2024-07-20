@@ -51,10 +51,8 @@ jobs:
           git checkout --progress --force $LATEST_COMMIT
           git fetch $REPOSITORY_URL
           git worktree add --checkout temporary origin/gh-pages
-          cp temporary/CNAME .
           rm -r temporary/*
           rsync -q -av --checksum --progress out/. temporary --exclude .ssh --exclude .git --exclude .github
-          mv CNAME temporary/
           cd temporary
           git checkout -b temporary
           git status --porcelain
