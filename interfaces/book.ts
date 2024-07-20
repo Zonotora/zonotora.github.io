@@ -14,6 +14,7 @@ export type BookPreviewType = {
   tags: string[];
   title: string;
   year: string;
+  type: string;
 };
 
 export enum Lexicographical {

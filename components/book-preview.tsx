@@ -13,6 +13,13 @@ const BookPreview = ({ book, summary, slug }: Props) => {
       <div>{book.title}</div>
       <div>{book.author}</div>
       <div style={{ fontSize: "10pt" }}>{book.date}</div>
+      {book.type === "" ? (
+        <></>
+      ) : (
+        <span className="book-preview-type" style={{ fontSize: "10pt" }}>
+          {book.type}
+        </span>
+      )}
     </>
   );
   const withLink = (

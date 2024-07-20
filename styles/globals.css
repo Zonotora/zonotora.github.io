@@ -173,6 +173,14 @@ svg {
   padding: 0 11px;
 }
 
+.book-preview-type {
+  background-color: var(--border-color);
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
 .book-preview.summary {
   cursor: pointer;
 }

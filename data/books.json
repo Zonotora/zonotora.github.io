@@ -7,7 +7,8 @@
     "pages": 536,
     "tags": [],
     "title": "Deep Utopia",
-    "year": "2024"
+    "year": "2024",
+    "type": ""
   },
   {
     "author": "Frank Herbert",
@@ -17,7 +18,8 @@
     "pages": 412,
     "tags": [],
     "title": "Dune",
-    "year": "1965"
+    "year": "1965",
+    "type": ""
   },
   {
     "author": "George Orwell",
@@ -27,7 +29,8 @@
     "pages": 328,
     "tags": [],
     "title": "1984",
-    "year": "1949"
+    "year": "1949",
+    "type": ""
   },
   {
     "author": "Viktor Frankl",
@@ -37,7 +40,8 @@
     "pages": 200,
     "tags": [],
     "title": "Man's search for meaning",
-    "year": "1946"
+    "year": "1946",
+    "type": ""
   },
   {
     "title": "Meditations",
@@ -47,7 +51,8 @@
     "language": "English",
     "pages": 254,
     "tags": [],
-    "year": "180"
+    "year": "180",
+    "type": ""
   },
   {
     "title": "Ultralearning",
@@ -57,7 +62,8 @@
     "language": "English",
     "pages": 305,
     "tags": [],
-    "year": "2019"
+    "year": "2019",
+    "type": ""
   },
   {
     "author": "Marcel Proust",
@@ -67,7 +73,8 @@
     "pages": 418,
     "tags": ["Bokklubben World Library"],
     "title": "Swann's Way",
-    "year": "1913"
+    "year": "1913",
+    "type": ""
   },
   {
     "author": "Richard Thaler",
@@ -77,7 +84,8 @@
     "pages": 455,
     "tags": [],
     "title": "Misbehaving: The Making of Behavioral Economics",
-    "year": "2015"
+    "year": "2015",
+    "type": ""
   },
   {
     "author": "Leo Tolstoy",
@@ -87,6 +95,7 @@
     "pages": 77,
     "tags": ["Bokklubben World Library"],
     "title": "The Death of Ivan Ilyich",
-    "year": "1886"
+    "year": "1886",
+    "type": ""
   }
 ]
