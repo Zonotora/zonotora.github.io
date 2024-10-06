@@ -1,17 +1,17 @@
 [
   {
-    "title": "Mindpalace",
-    "description": "A place for knowledge",
-    "tags": ["web", "react", "gatsby", "javascript"],
-    "link": "mindpalace",
-    "githubLink": "https://github.com/Zonotora/mindpalace"
+    "title": "Graphics Engine",
+    "description": "OpenGL graphics engine.",
+    "tags": ["c", "OpenGL"],
+    "link": "",
+    "githubLink": "https://github.com/Zonotora/ngine"
   },
   {
-    "title": "Sketches",
-    "description": "Small simulations with p5.js",
-    "tags": ["web", "javascript"],
-    "link": "sketches",
-    "githubLink": "https://github.com/Zonotora/sketches"
+    "title": "Operating System",
+    "description": "An operating system from scratch.",
+    "tags": ["c", "assembly", "x86"],
+    "link": "os/book/index.html",
+    "githubLink": "https://github.com/Zonotora/os"
   },
   {
     "title": "Regxcross",
@@ -19,5 +19,26 @@
     "tags": ["web", "typescript"],
     "link": "regxcross",
     "githubLink": "https://github.com/Zonotora/regxcross"
+  },
+  {
+    "title": "Mindpalace",
+    "description": "A place for knowledge",
+    "tags": ["web", "react", "gatsby", "javascript"],
+    "link": "mindpalace",
+    "githubLink": "https://github.com/Zonotora/mindpalace"
+  },
+  {
+    "title": "CHIP-8",
+    "description": "Simple emulator for CHIP-8 written in Rust.",
+    "tags": ["rust", "emulator"],
+    "link": "",
+    "githubLink": "https://github.com/Zonotora/chip-8"
+  },
+  {
+    "title": "Sketches",
+    "description": "Small simulations with p5.js",
+    "tags": ["web", "javascript"],
+    "link": "sketches",
+    "githubLink": "https://github.com/Zonotora/sketches"
   }
 ]
