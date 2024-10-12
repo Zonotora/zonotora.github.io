@@ -1,5 +1,16 @@
 [
   {
+    "author": "Johann Wolfgang von Goethe",
+    "country": "Germany",
+    "date": "2024-10-10",
+    "language": "English",
+    "pages": 168,
+    "tags": [],
+    "title": "Faust",
+    "year": "1808",
+    "type": ""
+  },
+  {
     "author": "Yukio Mishima",
     "country": "Japan",
     "date": "2024-08-11",
@@ -49,7 +60,7 @@
     "date": "2024-03-02",
     "language": "English",
     "pages": 328,
-    "tags": [],
+    "tags": ["Bokklubben World Library"],
     "title": "1984",
     "year": "1949",
     "type": ""

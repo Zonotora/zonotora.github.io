@@ -1,27 +1,20 @@
 [
   {
-    "title": "Graphics Engine",
-    "description": "OpenGL graphics engine.",
-    "tags": ["c", "OpenGL"],
-    "link": "",
-    "githubLink": "https://github.com/Zonotora/ngine"
-  },
-  {
-    "title": "Operating System",
+    "title": "os",
     "description": "An operating system from scratch.",
     "tags": ["c", "assembly", "x86"],
     "link": "os/book/index.html",
     "githubLink": "https://github.com/Zonotora/os"
   },
   {
-    "title": "Regxcross",
+    "title": "regxcross",
     "description": "Regex crossword",
     "tags": ["web", "typescript"],
     "link": "regxcross",
     "githubLink": "https://github.com/Zonotora/regxcross"
   },
   {
-    "title": "Mindpalace",
+    "title": "mindpalace",
     "description": "A place for knowledge",
     "tags": ["web", "react", "gatsby", "javascript"],
     "link": "mindpalace",
@@ -35,7 +28,7 @@
     "githubLink": "https://github.com/Zonotora/chip-8"
   },
   {
-    "title": "Sketches",
+    "title": "sketches",
     "description": "Small simulations with p5.js",
     "tags": ["web", "javascript"],
     "link": "sketches",

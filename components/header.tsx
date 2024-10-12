@@ -32,7 +32,7 @@ const dark = (
 
 const Header = ({ active }: Props) => {
   const { darkmode, setDarkmode } = useContext(UserContext);
-  const links = ["posts", "books", "projects"];
+  const links = ["about", "posts", "publications", "projects", "books", "docs"];
 
   const capitalize = (name: string) =>
     name.charAt(0).toUpperCase() + name.slice(1);
@@ -47,11 +47,11 @@ const Header = ({ active }: Props) => {
         {links.map((link) =>
           link === active ? (
             <span key={link} style={{ textDecoration: "underline" }}>
-              <Link href={`/${link}`}>{capitalize(link)}</Link>
+              <Link href={`/${link}`}>{link}</Link>
             </span>
           ) : (
             <Link key={link} href={`/${link}`}>
-              {capitalize(link)}
+              {link}
             </Link>
           )
         )}
