@@ -1,8 +1,8 @@
 [
   {
-    "title": "os",
-    "description": "An operating system from scratch.",
-    "tags": ["c", "assembly", "x86"],
+    "title": "guidos",
+    "description": "Operating system from scratch.",
+    "tags": ["os", "c", "assembly", "x86"],
     "link": "guidos/book/index.html",
     "githubLink": "https://github.com/Zonotora/guidos"
   },
