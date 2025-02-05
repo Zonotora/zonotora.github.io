@@ -78,6 +78,7 @@ svg {
 .tags {
   padding-left: 10px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 5px;
 }
@@ -103,13 +104,13 @@ svg {
 .post-preview,
 .project-preview {
   min-width: 100px;
-  height: 100px;
   width: var(--page-width);
   border: var(--border);
   text-align: left;
   padding: 0 10px;
   cursor: pointer;
   padding-top: 5px;
+  min-height: 100px;
 }
 
 .project-preview {

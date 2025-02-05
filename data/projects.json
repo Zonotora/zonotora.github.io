@@ -18,14 +18,16 @@
     "description": "A place for knowledge",
     "tags": ["web", "react", "gatsby", "javascript"],
     "link": "mindpalace",
-    "githubLink": "https://github.com/Zonotora/mindpalace"
+    "githubLink": "https://github.com/Zonotora/mindpalace",
+    "archived": true
   },
   {
     "title": "CHIP-8",
     "description": "Simple emulator for CHIP-8 written in Rust.",
     "tags": ["rust", "emulator"],
     "link": "",
-    "githubLink": "https://github.com/Zonotora/chip-8"
+    "githubLink": "https://github.com/Zonotora/chip-8",
+    "archived": true
   },
   {
     "title": "sketches",
