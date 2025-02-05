@@ -12,6 +12,8 @@ on:
       - "books/**"
       - "data/**"
       - "pages/**"
+      - "interfaces/**"
+      - "styles/**"
       - ".github/workflows/**"
       - "scripts/rss.js"
 
