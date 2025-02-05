@@ -1,12 +1,10 @@
 import ProjectPreview from "../components/project-preview";
-import Header from "../components/header";
+import Page from "../components/page";
 import projects from "../data/projects.json";
 
 export const Home = () => {
   return (
-    <div className="main">
-      <Header active="projects" />
-
+    <Page active="projects">
       <div className="posts">
         {projects.map((project) => (
           <ProjectPreview
@@ -16,10 +14,11 @@ export const Home = () => {
             tags={project.tags}
             link={project.link}
             githubLink={project.githubLink}
+            archived={project.archived}
           />
         ))}
       </div>
-    </div>
+    </Page>
   );
 };
 

@@ -1,4 +1,4 @@
-import Header from "../../components/header";
+import Page from "../../components/page";
 import Tag from "../../components/tag";
 import Link from "next/link";
 
@@ -13,8 +13,7 @@ const docs = [
 
 export const Home = () => {
   return (
-    <div className="main">
-      <Header active="docs" />
+    <Page active="docs">
       <div className="posts">
         {docs.map((doc) => (
           <Link
@@ -36,7 +35,7 @@ export const Home = () => {
           </Link>
         ))}
       </div>
-    </div>
+    </Page>
   );
 };
 

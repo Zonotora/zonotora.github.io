@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Router from "next/router";
-import Header from "../components/header";
+import Page from "../components/page";
 
 export const Home = () => {
   useEffect(() => {
@@ -11,11 +11,7 @@ export const Home = () => {
     }
   }, []);
 
-  return (
-    <div className="main">
-      <Header active="" />
-    </div>
-  );
+  return <Page active=""></Page>;
 };
 
 export default Home;

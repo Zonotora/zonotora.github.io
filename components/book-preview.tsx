@@ -16,7 +16,7 @@ const BookPreview = ({ book, summary, slug }: Props) => {
       {book.type === "" ? (
         <></>
       ) : (
-        <span className="book-preview-type" style={{ fontSize: "10pt" }}>
+        <span className="book-preview-type tag" style={{ fontSize: "10pt" }}>
           {book.type}
         </span>
       )}

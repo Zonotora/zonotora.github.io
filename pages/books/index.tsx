@@ -1,5 +1,5 @@
 import BookPreview from "../../components/book-preview";
-import Header from "../../components/header";
+import Page from "../../components/page";
 import BookHeader from "../../components/book-header";
 import books from "../../data/books.json";
 import { getAllBooks } from "../../lib/api";
@@ -175,8 +175,7 @@ export const Home = ({ summaries }: Props) => {
   );
 
   return (
-    <div className="main">
-      <Header active="books" />
+    <Page active="books">
       <BookHeader
         filter={filter}
         setFilter={setFilter}
@@ -186,7 +185,7 @@ export const Home = ({ summaries }: Props) => {
       />
 
       {showStats ? statsNode : booksNode}
-    </div>
+    </Page>
   );
 };
 

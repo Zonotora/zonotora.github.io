@@ -7,6 +7,7 @@ type Props = {
   tags: string[];
   link: string;
   githubLink: string | undefined;
+  archived?: boolean;
 };
 
 const arrowlink = (
@@ -31,7 +32,14 @@ const github = (
   </svg>
 );
 
-const PostPreview = ({ title, description, tags, link, githubLink }: Props) => {
+const PostPreview = ({
+  title,
+  description,
+  tags,
+  link,
+  githubLink,
+  archived,
+}: Props) => {
   const githubIcon = githubLink ? (
     <Link href={githubLink}>{github}</Link>
   ) : (
@@ -47,6 +55,7 @@ const PostPreview = ({ title, description, tags, link, githubLink }: Props) => {
       </div>
       <div className="project-preview-title">
         <b>{title}</b>
+        {archived ? <span className="archived">archived</span> : <></>}
       </div>
       <div className="project-preview-info tags">
         {tags.map((tag) => (

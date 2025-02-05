@@ -46,9 +46,9 @@ const Header = ({ active }: Props) => {
       <div className="header">
         {links.map((link) =>
           link === active ? (
-            <span key={link} style={{ textDecoration: "underline" }}>
-              <Link href={`/${link}`}>{link}</Link>
-            </span>
+            <Link style={{ textDecoration: "underline" }} href={`/${link}`}>
+              {link}
+            </Link>
           ) : (
             <Link key={link} href={`/${link}`}>
               {link}

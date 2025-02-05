@@ -36,12 +36,13 @@ header {
   padding-right: 10px;
 }
 
-svg {
-  fill: var(--color);
+main {
+  margin-top: 20px;
+  text-align: center;
 }
 
-.main {
-  text-align: center;
+svg {
+  fill: var(--color);
 }
 
 .center {
@@ -82,11 +83,11 @@ svg {
 }
 
 .tag {
-  background-color: var(--color);
+  background-color: var(--border-color);
+  color: white;
   margin-top: 5px;
   padding-left: 5px;
   padding-right: 5px;
-  color: var(--background-color);
   min-width: 25px;
   text-align: center;
 }
@@ -96,7 +97,6 @@ svg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
   gap: 5px;
 }
 
@@ -109,6 +109,7 @@ svg {
   text-align: left;
   padding: 0 10px;
   cursor: pointer;
+  padding-top: 5px;
 }
 
 .project-preview {
@@ -134,13 +135,20 @@ svg {
   background-color: var(--background-hover-color);
 }
 
+.archived {
+  background-color: #aa8c50;
+  color: black;
+  margin-left: 5px;
+  padding: 0px 5px;
+}
+
 .post {
   width: var(--page-width);
   padding: 2px 10px;
 }
 
 .books {
-  margin-top: 50px;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -164,8 +172,6 @@ svg {
 }
 
 .book-preview-type {
-  background-color: var(--border-color);
-  color: white;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -212,6 +218,9 @@ svg {
 }
 
 @media only screen and (max-width: 1200px) {
+  main {
+    margin-top: 40px;
+  }
   header,
   .post-preview,
   .project-preview,

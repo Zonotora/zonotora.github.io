@@ -1,7 +1,7 @@
 import { getAllPosts } from "../../lib/api";
 import PostType from "../../interfaces/post";
 import PostPreview from "../../components/post-preview";
-import Header from "../../components/header";
+import Page from "../../components/page";
 
 type Props = {
   posts: PostType[];
@@ -9,9 +9,7 @@ type Props = {
 
 export const Home = ({ posts }: Props) => {
   return (
-    <div className="main">
-      <Header active="posts" />
-
+    <Page active="posts">
       <div className="posts">
         {posts.map((post) => (
           <PostPreview
@@ -24,7 +22,7 @@ export const Home = ({ posts }: Props) => {
           />
         ))}
       </div>
-    </div>
+    </Page>
   );
 };
 

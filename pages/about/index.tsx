@@ -1,12 +1,7 @@
-import Header from "../../components/header";
+import Page from "../../components/page";
 
 export const Home = () => {
-  return (
-    <div className="main">
-      <Header active="about" />
-      WIP
-    </div>
-  );
+  return <Page active="about">WIP</Page>;
 };
 
 export default Home;
