@@ -118,6 +118,14 @@ svg {
   cursor: auto;
 }
 
+.project-preview-links {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .post-preview-info,
 .project-preview-info {
   color: var(--color);

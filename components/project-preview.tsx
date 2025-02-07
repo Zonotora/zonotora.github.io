@@ -6,7 +6,8 @@ type Props = {
   description: string;
   tags: string[];
   link: string;
-  githubLink: string | undefined;
+  githubLink?: string;
+  documentationLink?: string;
   archived?: boolean;
 };
 
@@ -32,12 +33,24 @@ const github = (
   </svg>
 );
 
+const documentation = (
+  <svg
+    fill="#000000"
+    height="27px"
+    viewBox="1 -1 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.477.477 0 0 1-.475-.475V3.046a.477.477 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.924H8.059a.575.575 0 0 1-.574-.574V3.679H1.95v11.84h8.102zM3.907 4.92a1.03 1.03 0 1 0 1.029 1.03 1.03 1.03 0 0 0-1.03-1.03zm4.958 3.253h-5.87v1.108h5.87zm0 2.354h-5.87v1.109h5.87zm0 2.354h-5.87v1.109h5.87z" />
+  </svg>
+);
+
 const PostPreview = ({
   title,
   description,
   tags,
   link,
   githubLink,
+  documentationLink,
   archived,
 }: Props) => {
   const githubIcon = githubLink ? (
@@ -46,10 +59,16 @@ const PostPreview = ({
     <></>
   );
   const linkIcon = link ? <Link href={link}>{arrowlink}</Link> : <></>;
+  const documentationIcon = documentationLink ? (
+    <Link href={documentationLink}>{documentation}</Link>
+  ) : (
+    <></>
+  );
 
   return (
     <div className="project-preview">
-      <div style={{ position: "absolute", right: "0" }}>
+      <div className="project-preview-links">
+        {documentationIcon}
         {githubIcon}
         {linkIcon}
       </div>

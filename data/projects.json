@@ -4,7 +4,8 @@
     "description": "Operating system from scratch.",
     "tags": ["os", "c", "assembly", "x86"],
     "link": "guidos/book/index.html",
-    "githubLink": "https://github.com/Zonotora/guidos"
+    "githubLink": "https://github.com/Zonotora/guidos",
+    "documentationLink": "https://zonotora.github.io/guidos/book/index.html"
   },
   {
     "title": "regxcross",

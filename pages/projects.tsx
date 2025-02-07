@@ -14,6 +14,7 @@ export const Home = () => {
             tags={project.tags}
             link={project.link}
             githubLink={project.githubLink}
+            documentationLink={project.documentationLink}
             archived={project.archived}
           />
         ))}
