@@ -130,12 +130,6 @@ svg {
   padding-left: 0px;
 }
 
-.post-preview:hover,
-.project-preview:hover {
-  border-color: var(--border-hover-color);
-  background-color: var(--background-hover-color);
-}
-
 .archived {
   background-color: #aa8c50;
   color: black;
@@ -179,11 +173,6 @@ svg {
 
 .book-preview.summary {
   cursor: pointer;
-}
-
-.book-preview.summary:hover {
-  border-color: var(--border-hover-color);
-  background-color: var(--background-hover-color);
 }
 
 .book-header-main,
@@ -241,5 +230,18 @@ svg {
 @media only screen and (max-width: 600px) {
   .book-preview {
     width: 90%;
+  }
+}
+
+@media (hover: hover) {
+  .post-preview:hover,
+  .project-preview:hover {
+    border-color: var(--border-hover-color);
+    background-color: var(--background-hover-color);
+  }
+
+  .book-preview.summary:hover {
+    border-color: var(--border-hover-color);
+    background-color: var(--background-hover-color);
   }
 }
