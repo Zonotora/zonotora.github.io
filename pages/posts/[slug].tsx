@@ -5,6 +5,8 @@ import Header from "../../components/header";
 import markdownToHtml from "../../lib/markdown";
 import type PostType from "../../interfaces/post";
 
+import "katex/dist/katex.min.css";
+
 type Props = {
   post: PostType;
 };
