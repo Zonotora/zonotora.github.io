@@ -6,7 +6,7 @@
     type="application/atom+xml"
   />
   <link href="https://axellundberg.se/posts" rel="alternate" type="text/html" />
-  <updated>2023-01-01T00:00:00+00:00</updated>
+  <updated>2024-01-05T00:00:00+00:00</updated>
   <id>https://axellundberg.se/feed.xml</id>
   <title type="html">Axel Lundberg</title>
   <author>
@@ -16,29 +16,86 @@
   
   <entry>
     <title type="html">
-      Placeholder
+      Wrapping C functions
     </title>
     <link
-      href="https://axellundberg.se/posts/placeholder"
+      href="https://axellundberg.se/posts/wrapping-c-functions"
       rel="alternate"
       type="text/html"
-      title="Placeholder"
+      title="Wrapping C functions"
     />
-    <published>2023-01-01T00:00:00+00:00</published>
-    <updated>2023-01-01T00:00:00+00:00</updated>
-    <id>https://axellundberg.se/posts/placeholder</id>
-    <content type="html" xml:base="https://axellundberg.se/posts/placeholder">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.</p>
-<p>Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.</p>
-<h2>Lorem Ipsum</h2>
-<p>Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.</p>
+    <published>2024-01-05T00:00:00+00:00</published>
+    <updated>2024-01-05T00:00:00+00:00</updated>
+    <id>https://axellundberg.se/posts/wrapping-c-functions</id>
+    <content type="html" xml:base="https://axellundberg.se/posts/wrapping-c-functions">
+      <p>Let's say you want to overwrite an API-function located in a library that you don't have any control over or a standard
+library function. This is useful when you want to stub that function in some test bench or insert debugging information
+in the function itself. To do this, we can make use of C-macros. Let's say we want to overwrite <code>malloc</code>. We first
+define our own malloc like so:</p>
+<pre><code class="language-c">void* my_malloc( size_t size )
+{
+  printf("my_malloc");
+  return NULL;
+}
+</code></pre>
+<p>Then we can define the following macro to replace all instances of <code>malloc</code> with our newly defined <code>my_malloc</code>:</p>
+<pre><code class="language-c">#define malloc my_malloc
+</code></pre>
+<p>Compiling and running yields us:</p>
+<pre><code class="language-bash">> clang main.c &#x26;&#x26; ./a.out
+my_malloc
+</code></pre>
+<p>What if we want to make use of the original <code>malloc</code> in our newly created <code>my_malloc</code>? This could be problematic as the define replaces all instances of <code>malloc</code> with <code>my_malloc</code>. So creating a <code>my_malloc</code> like this will cause the macro to be recursively executed:</p>
+<pre><code class="language-c">void* my_malloc( size_t size )
+{
+  printf("my_malloc");
+  return malloc(size);
+}
+</code></pre>
+<p>Compling and running this instead will result in:</p>
+<pre><code class="language-bash">> clang main.c &#x26;&#x26; ./a.out
+my_mallocmy_mallocm....y_malloSegmentation fault (core dumped)
+</code></pre>
+<p>Where the dots represent <code>my_malloc</code> being printed MANY times.</p>
+<p>To make this work, we have to place <code>my_malloc</code> in a separate source file. Since source files are preprocessed to
+translation units along with all the includes and compiled separately from each other, a define in e.g., <code>main.c</code> will not affect a wrapper in e.g., <code>malloc.c</code>. So we create the following files:</p>
+<pre><code class="language-c">// malloc.c
+void* my_malloc(size_t size)
+{
+  printf("my_malloc");
+  return malloc(size);
+}
+</code></pre>
+<pre><code class="language-c">// main.c
+#define malloc my_malloc
+
+void* my_malloc(size_t size);
+
+int main(int)
+{
+  void* ptr = malloc(4);
+  return 0;
+}
+</code></pre>
+<p>Now it is possible to compile and execute without all those recursive calls:</p>
+<pre><code class="language-bash">> clang main.c malloc.c &#x26;&#x26; ./a.out
+my_malloc
+</code></pre>
+<p>We can now wrap the function declaration in a header file and include it wherever we want to
+overwrite <code>malloc</code>:</p>
+<pre><code class="language-c">// malloc.h
+void* my_malloc(size_t size);
+</code></pre>
+<p>This is useful. This header file can be included for source files in a test bench to add behavior that we only
+want to execute during a test. Thinking more broadly, this could e.g., be us stubbing some API to give as a
+behavior or value that we are in control over during a test.</p>
 
     </content>
     <author>
       <name>Axel Lundberg</name>
       <email></email>
     </author>
-    <category>tag1"</category><category>tag2"</category>
+    <category>c"</category>
     <summary type="html" />
   </entry>
   
