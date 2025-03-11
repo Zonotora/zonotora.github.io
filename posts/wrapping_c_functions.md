@@ -1,7 +1,7 @@
 ---
 title: "Wrapping C functions"
 description: ""
-date: "2024-01-05"
+date: "2025-03-11"
 tags: ["c"]
 ---
 
