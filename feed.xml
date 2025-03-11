@@ -6,7 +6,7 @@
     type="application/atom+xml"
   />
   <link href="https://axellundberg.se/posts" rel="alternate" type="text/html" />
-  <updated>2024-01-05T00:00:00+00:00</updated>
+  <updated>2025-03-11T00:00:00+00:00</updated>
   <id>https://axellundberg.se/feed.xml</id>
   <title type="html">Axel Lundberg</title>
   <author>
@@ -24,8 +24,8 @@
       type="text/html"
       title="Wrapping C functions"
     />
-    <published>2024-01-05T00:00:00+00:00</published>
-    <updated>2024-01-05T00:00:00+00:00</updated>
+    <published>2025-03-11T00:00:00+00:00</published>
+    <updated>2025-03-11T00:00:00+00:00</updated>
     <id>https://axellundberg.se/posts/wrapping-c-functions</id>
     <content type="html" xml:base="https://axellundberg.se/posts/wrapping-c-functions">
       <p>Let's say you want to overwrite an API-function located in a library that you don't have any control over or a standard
