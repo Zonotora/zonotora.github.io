@@ -94,5 +94,5 @@ pre[class*="language-"] {
   cursor: help;
 }
 .token.inserted {
-  color: rgb(129, 221, 129);
+  color: #78d683;
 }
