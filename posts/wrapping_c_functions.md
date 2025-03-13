@@ -10,7 +10,7 @@ library function. This is useful when you want to stub that function in some tes
 in the function itself. To do this, we can make use of C-macros. Let's say we want to overwrite `malloc`. We first
 define our own malloc like so:
 ```c
-void* my_malloc( size_t size )
+void* my_malloc(size_t size)
 {
   printf("my_malloc");
   return NULL;
@@ -28,7 +28,7 @@ my_malloc
 ```
 What if we want to make use of the original `malloc` in our newly created `my_malloc`? This could be problematic as the define replaces all instances of `malloc` with `my_malloc`. So creating a `my_malloc` like this will cause the macro to be recursively executed:
 ```c
-void* my_malloc( size_t size )
+void* my_malloc(size_t size)
 {
   printf("my_malloc");
   return malloc(size);
@@ -38,7 +38,7 @@ Compling and running this instead will result in:
 
 ```bash
 > clang main.c && ./a.out
-my_mallocmy_mallocm....y_malloSegmentation fault (core dumped)
+my_mallocmy_mallocm...y_malloSegmentation fault (core dumped)
 ```
 Where the dots represent `my_malloc` being printed MANY times.
 
@@ -75,8 +75,7 @@ We can now wrap the function declaration in a header file and include it whereve
 overwrite `malloc`:
 ```c
 // malloc.h
+#define malloc my_malloc
+
 void* my_malloc(size_t size);
 ```
-This is useful. This header file can be included for source files in a test bench to add behavior that we only
-want to execute during a test. Thinking more broadly, this could e.g., be us stubbing some API to give as a
-behavior or value that we are in control over during a test.
