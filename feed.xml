@@ -32,7 +32,7 @@
 library function. This is useful when you want to stub that function in some test bench or insert debugging information
 in the function itself. To do this, we can make use of C-macros. Let's say we want to overwrite <code>malloc</code>. We first
 define our own malloc like so:</p>
-<pre><code class="language-c">void* my_malloc( size_t size )
+<pre><code class="language-c">void* my_malloc(size_t size)
 {
   printf("my_malloc");
   return NULL;
@@ -46,7 +46,7 @@ define our own malloc like so:</p>
 my_malloc
 </code></pre>
 <p>What if we want to make use of the original <code>malloc</code> in our newly created <code>my_malloc</code>? This could be problematic as the define replaces all instances of <code>malloc</code> with <code>my_malloc</code>. So creating a <code>my_malloc</code> like this will cause the macro to be recursively executed:</p>
-<pre><code class="language-c">void* my_malloc( size_t size )
+<pre><code class="language-c">void* my_malloc(size_t size)
 {
   printf("my_malloc");
   return malloc(size);
