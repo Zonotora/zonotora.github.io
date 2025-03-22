@@ -11,7 +11,7 @@
     }
   },
   "dark": {
-    "color": "antiquewhite",
+    "color": "#d7d7d7",
     "background": {
       "color": "#0d1117",
       "hover": "#0d1117"
