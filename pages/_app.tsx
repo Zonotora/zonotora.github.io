@@ -54,7 +54,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     if (!cookie) {
       // cookie does not exist yet
-      cookies.set("darkmode", darkmode, { sameSite: "strict" });
+      // if the client prefers dark mode, set that appropriately
+      const prefersDarkMode = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      console.log(prefersDarkMode);
+      cookies.set("darkmode", prefersDarkMode, { sameSite: "strict" });
     } else {
       setDarkmode(mode);
     }
