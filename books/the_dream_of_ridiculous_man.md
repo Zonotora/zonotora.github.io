@@ -16,7 +16,7 @@ He lives in their world for a long time, but one day he accidentally teaches the
 
 > "We have science, and with its help we shall again find the truth, but now we shall accept it consciusly. Knowledge is higher than feeling, consciousness of life is higher than life... a knowledge of the laws of happiness is higher than happiness."
 
-He wants the people to punish him for what he has done, but they just laugh at the ridiculuous man. When sorrow enters his sould he abruptly awakes. Once he realized that he is awake he shines up in amazement. He reaches for the gun, but he is a changed man now, and pushes the gun away. He is convinced of the goodness and potential for limitless love and decides to dedicate his life to achieve this goal.
+He wants the people to punish him for what he has done, but they just laugh at the ridiculuous man. When sorrow enters his soul he abruptly awakes. Once he realized that he is awake he shines up in amazement. He reaches for the gun, but he is a changed man now, and pushes the gun away. He is convinced of the goodness and potential for limitless love and decides to dedicate his life to achieve this goal.
 
 ## Themes
 
