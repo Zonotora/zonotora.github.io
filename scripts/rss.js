@@ -78,8 +78,8 @@ async function main() {
   const files = fs.readdirSync("static/posts", { withFileTypes: true });
   const options = {
     title: "Axel Lundberg",
-    feedUrl: "https://axellundberg.se/feed.xml",
-    postsUrl: "https://axellundberg.se/posts",
+    feedUrl: "https://zonotora.github.io/feed.xml",
+    postsUrl: "https://zonotora.github.io/posts",
     author: {
       name: "Axel Lundberg",
       email: "",
