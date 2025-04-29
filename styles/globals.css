@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
   --color: antiquewhite;
@@ -12,12 +12,24 @@
 
 html,
 body {
-  font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: "Fira Code", monospace;
   font-size: 1rem;
   margin: 0px;
   padding: 0px;
   background-color: var(--background-color);
   color: var(--color);
+}
+
+p,
+h1,
+h2,
+h3,
+li {
+  font-family: "PT Serif", serif;
+}
+
+code {
+  color: #ffa569;
 }
 
 a {
@@ -39,10 +51,30 @@ header {
 main {
   margin-top: 10px;
   text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 svg {
   fill: var(--color);
+}
+
+table {
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.content {
+  width: var(--page-width);
+  margin: 0 -10px;
+  position: relative;
 }
 
 .center {
@@ -59,6 +91,12 @@ svg {
   gap: 10px;
   position: relative;
   flex-wrap: wrap;
+}
+
+.toc {
+  position: fixed;
+  top: 40px;
+  transform: translateX(calc(-100% - 20px));
 }
 
 .header-icons {
@@ -110,7 +148,6 @@ svg {
   padding: 0 10px;
   cursor: pointer;
   padding-top: 5px;
-  min-height: 100px;
 }
 
 .project-preview {
@@ -160,11 +197,9 @@ svg {
 }
 
 .book-preview {
-  min-width: 180px;
-  height: 150px;
-  width: 20%;
+  min-width: 100px;
+  width: var(--page-width);
   border: var(--border);
-  text-align: left;
   padding: 0 10px;
 }
 
@@ -206,9 +241,9 @@ svg {
 }
 
 .statistics {
-  margin-top: 20px;
-  text-align: left;
   width: var(--page-width);
+  border: var(--border);
+  padding: 0 10px;
 }
 
 .post a {

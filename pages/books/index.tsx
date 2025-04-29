@@ -130,8 +130,8 @@ export const Home = ({ summaries }: Props) => {
   }, [filter]);
 
   const statsNode = (
-    <div className="center">
-      <table className="statistics">
+    <div className="statistics">
+      <table>
         <thead>
           <tr>
             <td></td>
@@ -145,20 +145,22 @@ export const Home = ({ summaries }: Props) => {
             <td>{statistics.total.books}</td>
             <td>{statistics.total.pages}</td>
           </tr>
-          {Object.entries(statistics.predicates).map(([k, v]) => (
-            <tr key={k}>
-              <td>{k}</td>
-              <td>{v.books}</td>
-              <td>{v.pages}</td>
-            </tr>
-          ))}
+          {Object.entries(statistics.predicates)
+            .sort(([a], [b]) => b.localeCompare(a))
+            .map(([k, v]) => (
+              <tr key={k}>
+                <td>{k}</td>
+                <td>{v.books}</td>
+                <td>{v.pages}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
   );
 
   const booksNode = (
-    <div className="books">
+    <>
       {activeBooks.map((book) => (
         <BookPreview
           key={book.title}
@@ -167,11 +169,7 @@ export const Home = ({ summaries }: Props) => {
           slug={slugs[convertTitle(book.title)]}
         />
       ))}
-
-      {[1, 2, 3].map((i) => (
-        <div key={i} className="book-preview-dummy" />
-      ))}
-    </div>
+    </>
   );
 
   return (

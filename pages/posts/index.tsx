@@ -10,18 +10,16 @@ type Props = {
 export const Home = ({ posts }: Props) => {
   return (
     <Page active="posts">
-      <div className="posts">
-        {posts.map((post) => (
-          <PostPreview
-            key={post.title}
-            title={post.title}
-            date={post.date}
-            description={post.description}
-            tags={post.tags}
-            slug={post.slug}
-          />
-        ))}
-      </div>
+      {posts.map((post) => (
+        <PostPreview
+          key={post.title}
+          title={post.title}
+          date={post.date}
+          description={post.description}
+          tags={post.tags}
+          slug={post.slug}
+        />
+      ))}
     </Page>
   );
 };

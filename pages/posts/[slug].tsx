@@ -5,6 +5,8 @@ import Header from "../../components/header";
 import markdownToHtml from "../../lib/markdown";
 import type PostType from "../../interfaces/post";
 
+import Page from "../../components/page";
+
 import "katex/dist/katex.min.css";
 
 type Props = {
@@ -19,16 +21,12 @@ export default function Post({ post }: Props) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <main>
-      <Header active="" />
-
-      <div className="posts">
-        <div className="post">
-          <h1>{post.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
-        </div>
+    <Page active="posts">
+      <div className="post">
+        <h1>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
-    </main>
+    </Page>
   );
 }
 

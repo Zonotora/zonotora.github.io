@@ -2,8 +2,8 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 
-const postsDirectory = join(process.cwd(), "posts");
-const booksDirectory = join(process.cwd(), "books");
+const postsDirectory = join(process.cwd(), "static", "posts");
+const booksDirectory = join(process.cwd(), "static", "books");
 
 export function getPostSlugs() {
   return getSlugs(postsDirectory);
@@ -27,6 +27,12 @@ export function getBookBySlug(slug: string, fields: string[] = []) {
 
 export function getAllBooks(fields: string[] = []) {
   return getAll(fields, getBookSlugs, getBookBySlug);
+}
+
+export function readFile(filename: string) {
+  const path = join(process.cwd(), "static", filename);
+  const fileContents = fs.readFileSync(path, "utf8");
+  return matter(fileContents);
 }
 
 function getSlugs(directory: string) {
