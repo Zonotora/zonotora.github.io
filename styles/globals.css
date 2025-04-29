@@ -29,6 +29,7 @@ li {
 }
 
 code {
+  font-family: "Fira Code", monospace;
   color: #ffa569;
 }
 
@@ -67,10 +68,6 @@ table {
   width: 100%;
 }
 
-li {
-  list-style-type: none;
-}
-
 .content {
   width: var(--page-width);
   margin: 0 -10px;
@@ -97,6 +94,10 @@ li {
   position: fixed;
   top: 40px;
   transform: translateX(calc(-100% - 20px));
+}
+
+.toc li {
+  list-style-type: none;
 }
 
 .header-icons {
@@ -257,22 +258,20 @@ li {
   header,
   .post-preview,
   .project-preview,
+  .book-preview,
   .post,
-  .statistics {
+  .statistics,
+  .content {
     width: 90%;
   }
   .header-icons {
     left: calc(50% - 20px);
     bottom: -30px;
   }
-  .book-header-main {
-    margin-top: 40px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .book-preview {
-    width: 90%;
+  .toc {
+    /* display: none; */
+    position: unset;
+    transform: translateX(0);
   }
 }
 

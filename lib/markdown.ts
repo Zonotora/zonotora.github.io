@@ -15,9 +15,9 @@ export default async function markdownToHtml(markdown: string) {
     .use(remarkPrism)
     .use(remarkRehype)
     .use(rehypeKatex)
-    .use(rehypeStringify)
     .use(rehypeSlug)
     .use(rehypeToc)
+    .use(rehypeStringify)
     .process(markdown);
 
   return result.toString();
