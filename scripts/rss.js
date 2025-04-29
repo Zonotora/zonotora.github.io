@@ -75,7 +75,7 @@ async function xmlFeed(items, updated, options) {
 }
 
 async function main() {
-  const files = fs.readdirSync("posts", { withFileTypes: true });
+  const files = fs.readdirSync("static/posts", { withFileTypes: true });
   const options = {
     title: "Axel Lundberg",
     feedUrl: "https://axellundberg.se/feed.xml",
@@ -90,7 +90,7 @@ async function main() {
   let updated = "";
 
   for (const file of files) {
-    const data = fs.readFileSync(`posts/${file.name}`, "utf8");
+    const data = fs.readFileSync(`static/posts/${file.name}`, "utf8");
     const fileData = await process(data);
     const xml = await xmlItem(fileData, options);
     if (updated === "") updated = fileData.updated;
