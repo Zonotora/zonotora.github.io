@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <link
-    href="https://axellundberg.se/feed.xml"
+    href="https://zonotora.github.io/feed.xml"
     rel="self"
     type="application/atom+xml"
   />
-  <link href="https://axellundberg.se/posts" rel="alternate" type="text/html" />
+  <link href="https://zonotora.github.io/posts" rel="alternate" type="text/html" />
   <updated>2025-03-11T00:00:00+00:00</updated>
-  <id>https://axellundberg.se/feed.xml</id>
+  <id>https://zonotora.github.io/feed.xml</id>
   <title type="html">Axel Lundberg</title>
   <author>
     <name>Axel Lundberg</name>
@@ -19,15 +19,15 @@
       Wrapping C functions
     </title>
     <link
-      href="https://axellundberg.se/posts/wrapping-c-functions"
+      href="https://zonotora.github.io/posts/wrapping-c-functions"
       rel="alternate"
       type="text/html"
       title="Wrapping C functions"
     />
     <published>2025-03-11T00:00:00+00:00</published>
     <updated>2025-03-11T00:00:00+00:00</updated>
-    <id>https://axellundberg.se/posts/wrapping-c-functions</id>
-    <content type="html" xml:base="https://axellundberg.se/posts/wrapping-c-functions">
+    <id>https://zonotora.github.io/posts/wrapping-c-functions</id>
+    <content type="html" xml:base="https://zonotora.github.io/posts/wrapping-c-functions">
       <p>Let's say you want to overwrite an API-function located in a library that you don't have any control over or a standard
 library function. This is useful when you want to stub that function in some test bench or insert debugging information
 in the function itself. To do this, we can make use of C-macros. Let's say we want to overwrite <code>malloc</code>. We first
