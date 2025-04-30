@@ -72,6 +72,7 @@ table {
   width: var(--page-width);
   margin: 0 -10px;
   position: relative;
+  overflow-wrap: break-word;
 }
 
 .center {
@@ -269,7 +270,6 @@ table {
     bottom: -30px;
   }
   .toc {
-    /* display: none; */
     position: unset;
     transform: translateX(0);
   }

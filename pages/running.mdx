@@ -1,0 +1,155 @@
+import { XAxis, Tooltip, CartesianGrid, Line } from "recharts";
+import Page from "../components/page";
+import dynamic from "next/dynamic";
+export const LineChart = dynamic(() => import("recharts").then(r => r.LineChart), { ssr: false});
+
+
+# Training
+
+## Different zones
+
+
+## The Norwegian Method
+
+The philosophy of the Norwegian Method is mainly applied to endurance sports like running, cycling and swimming with a focus on increasing the anaerobic threshold. The foundation of the Norwegian Method is to measure the lactate levels to control the intensity during runs. It is split into 3 different training zones based on the intensity levels as different energy systems are trained optimally in different zones:
+
+- `Zone 1: Low intensity`. Zone 1 focuses mainly on the `oxidative energy system` which is responsible for low-intensity work.
+- `Zone 2: Sub threshold`. Zone 2 focuses on the `anaerobic energy system` which is required for high-intensity work. The anaerobic energy system gets activated when a lot of energy is released within a small period of time, and when the oxygen demand is greater than the oxygen supply. Utilizing the anaerobic energy system will more quickly drain your energy.
+- `Zone 3: Above threshold`. Zone 3 also focuses on the `anaerobic energy system`.
+
+The key idea of the Norwegian method is to perform the most important workouts in zone 2. As stated above, zone 2 lies at or below the `anaerobic threshold`.
+By staying close to the threshold, we can stimulate the anaerobic energy system without becoming to fatigued.
+
+This means that a workout in zone 2 should not stay in the anaerobic zone for too long as that accumulates fatigue. [^1]
+
+## 80/20 training
+
+## Double threshold
+
+# Nutrition
+
+|adsasd|asdasd|
+|-|-|
+|asda|asdasd|
+
+```chart
+---
+x: [123]
+---
+x: 1231
+{
+  "x": [],
+  "y": []
+}
+```
+
+# Recovery
+
+## Avoiding injury
+
+### Knee
+
+### Hip
+
+### Back
+
+### Stress fracture
+
+# Runners
+
+## Eliud Kipchoge
+
+
+# Keywords
+
+## Aerobic
+## Anaerobic
+## Anaerobic threshold
+## Lactate threshold
+## Lactate concentration
+## VO2Max
+## VLamax
+## Zone levels
+## Oxidative energy system
+## Cadence
+## Pronation
+## Supination
+
+
+export const data = [
+  {
+    name: "Page A",
+    uv: 4000,
+    pv: 2400,
+    amt: 2400,
+  },
+  {
+    name: "Page B",
+    uv: 3000,
+    pv: 1398,
+    amt: 2210,
+  },
+  {
+    name: "Page C",
+    uv: 2000,
+    pv: 9800,
+    amt: 2290,
+  },
+  {
+    name: "Page D",
+    uv: 2780,
+    pv: 3908,
+    amt: 2000,
+  },
+  {
+    name: "Page E",
+    uv: 1890,
+    pv: 4800,
+    amt: 2181,
+  },
+  {
+    name: "Page F",
+    uv: 2390,
+    pv: 3800,
+    amt: 2500,
+  },
+  {
+    name: "Page G",
+    uv: 3490,
+    pv: 4300,
+    amt: 2100,
+  },
+];
+
+<LineChart width={400} height={400} data={data}>
+  <XAxis dataKey="name" />
+  <Tooltip />
+  <CartesianGrid stroke="#f5f5f5" />
+  <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+  <Line type="monotone" dataKey="pv" stroke="#387908" />
+</LineChart>
+
+<LineChart width={400} height={400} data={data}>
+  <XAxis dataKey="name" />
+  <Tooltip />
+  <CartesianGrid stroke="#f5f5f5" />
+  <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+  <Line type="monotone" dataKey="pv" stroke="#387908" />
+</LineChart>
+
+# References
+
+[^1]: https://inscyd.com/article/the-norwegian-method-how-to-apply-it-in-training/
+2. https://www.runnersworld.com/uk/training/marathon/a42722004/eliud-kipchoge-training/
+
+
+
+export default function MDXPage({ children }) {
+  return (
+    <Page active="running">
+      <div className="content">
+        {children}
+      </div>
+    </Page>
+  );
+}
