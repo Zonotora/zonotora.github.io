@@ -66,6 +66,20 @@ svg {
 
 table {
   width: 100%;
+  border: var(--border);
+}
+
+th {
+  color: antiquewhite;
+  background-color: var(--border-color);
+}
+
+td {
+  border-top: var(--border);
+}
+
+tr:hover {
+  opacity: 0.8;
 }
 
 .content {

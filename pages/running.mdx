@@ -1,13 +1,16 @@
 import { XAxis, Tooltip, CartesianGrid, Line } from "recharts";
 import Page from "../components/page";
 import dynamic from "next/dynamic";
-export const LineChart = dynamic(() => import("recharts").then(r => r.LineChart), { ssr: false});
+export const LineChart = dynamic(
+  () => import("recharts").then((r) => r.LineChart),
+  { ssr: false }
+);
 
+# The running protocol
 
 # Training
 
 ## Different zones
-
 
 ## The Norwegian Method
 
@@ -18,34 +21,46 @@ The philosophy of the Norwegian Method is mainly applied to endurance sports lik
 - `Zone 3: Above threshold`. Zone 3 also focuses on the `anaerobic energy system`.
 
 The key idea of the Norwegian method is to perform the most important workouts in zone 2. As stated above, zone 2 lies at or below the `anaerobic threshold`.
-By staying close to the threshold, we can stimulate the anaerobic energy system without becoming to fatigued.
+By staying close to the threshold, we can stimulate the anaerobic energy system without becoming to fatigued. The problem with only performing zone 2 workouts is that you will not be able to recover enough between each workout. To have a high training volume (high mileage each week) we have to space out zone 2 training with zone 1 training (low intensity training). The idea here being that zone 1 training does not impact your zone 2 workouts and is much quicker to recover from. So what about zone 3? The Norwegian Method does include high intensity workouts, but it is not the main focus of the method since training above threshold has a higher risk of injuries and is slower to recover from.
 
-This means that a workout in zone 2 should not stay in the anaerobic zone for too long as that accumulates fatigue. [^1]
+As stated above, measuring lactate levels is a common approach to control the intensity during workouts. In zone 2 training we would like to approach the highest intensity at which lactate concentration does not increase over time which is why it is called `sub-threshold`. This lactate concentration level is also known as the `Maximal Lactate Steady State (MLSS)`. To get these measurements you typically measure the amount of lactate in the bloodstream during your workouts at different intensities. So again, when you work out close to the MLSS, you can train at a high intensity without accumulating to much lactate which leads to fatigue, reduced performance, slower recovery times and a higher risk of injuries. By continuously measuring the lactate levels you can adjust and adopt your training intensity for optimal progress.[^1]
+
+---
 
 ## 80/20 training
+
+In the spirit of Kipchoge[^3] [^5] (and almost every other sane runner!), do most of your runs at a pace that feel almost too relaxed, then come race day and absolutely crush your goals. The idea is to run 80% (in time) of your runs at low intensity (easy runs) and the 20% that is left to higher intensity workouts. Conceptually, this is very similar to how the Norwegian Method organizes its workouts, with the exception that the Norwegian Method really focuses on measuring and basing higher intensity workouts on data.
+
+No matter how many hours you are spending running every week, there are research[^5] to support the 80/20 split. It is arguably more important for recreational runners as it can be quite tricky to know how to plan your runs in terms of intensity every week. One common problem is to go all out every single workout. It works initially, but progress will stagnate quite quickly due to fatigue or injuries.
+
+Easy runs have a lot of benefits besides keeping the circulation going on recovery days. Easy runs
+
+- train the cardio and respiratory systems to work more efficiently, which will allow you to have greater performance at your higher intensity runs.
+- train your `slow twitch muscle fibres`.
+- helps to strengthen the tendons, ligaments, joints and bones without causing excessive stress to them.
+
+The pace of an easy run is where you can comfortably hold a conversation at.
+
+---
 
 ## Double threshold
 
 # Nutrition
 
-|adsasd|asdasd|
-|-|-|
-|asda|asdasd|
-
-```chart
----
-x: [123]
----
-x: 1231
-{
-  "x": [],
-  "y": []
-}
-```
+# Running form
 
 # Recovery
 
+## Rest days vs recovery days
+
+It is important to note that `rest days` are not the same as `recovery days`.
+
+- `Rest days` refers no running AT ALL.
+- `Recovery days` refers to easy exercise days to stimulate circulation in your legs which can aid recovery from more intense efforts.
+
 ## Avoiding injury
+
+Generally it is important to incorporate strength and flexibility exercises into your workouts as these workouts will strengthen weak areas that may lead to injury.
 
 ### Knee
 
@@ -59,22 +74,45 @@ x: 1231
 
 ## Eliud Kipchoge
 
+| Day       | Morning                           | Afternoon  |
+| --------- | --------------------------------- | ---------- |
+| Monday    | 19 km easy                        | 10 km easy |
+| Tuesday   | 16 km marathon pace               | 10 km easy |
+| Wednesday | 19 km easy                        | 10 km easy |
+| Thursday  | 30-40 km (alternative weeks)      |            |
+| Friday    | 19 km easy                        | 10 km easy |
+| Saturday  | 13 x 3 min fast/1 min jog fartlek | 10 km easy |
+| Sunday    | 2 hours easy                      |            |
+
+Source [^2]
 
 # Keywords
 
 ## Aerobic
+
 ## Anaerobic
+
 ## Anaerobic threshold
+
 ## Lactate threshold
+
 ## Lactate concentration
+
 ## VO2Max
+
 ## VLamax
+
 ## Zone levels
+
 ## Oxidative energy system
+
 ## Cadence
+
 ## Pronation
+
 ## Supination
 
+## Maximal lactate steady state (MLSS)
 
 export const data = [
   {
@@ -129,20 +167,14 @@ export const data = [
   <Line type="monotone" dataKey="pv" stroke="#387908" />
 </LineChart>
 
-<LineChart width={400} height={400} data={data}>
-  <XAxis dataKey="name" />
-  <Tooltip />
-  <CartesianGrid stroke="#f5f5f5" />
-  <Line type="monotone" dataKey="uv" stroke="#ff7300" />
-  <Line type="monotone" dataKey="pv" stroke="#387908" />
-</LineChart>
-
 # References
 
 [^1]: https://inscyd.com/article/the-norwegian-method-how-to-apply-it-in-training/
-2. https://www.runnersworld.com/uk/training/marathon/a42722004/eliud-kipchoge-training/
-
-
+[^2]: https://run.outsideonline.com/training/training-plans/marathon/eliud-kipchoge-marathon-workout-training-principles/
+[^3]: https://www.runnersworld.com/uk/training/marathon/a42722004/eliud-kipchoge-training/
+[^4]: https://www.runnersworld.com/uk/training/beginners/a772514/how-often-should-you-run/
+[^5]: https://www.runnersworld.com/uk/training/motivation/a27718661/what-is-80-20-running/
+[^6]: https://www.runnersworld.com/uk/training/a776622/how-slowing-down-can-help-you-speed-up/
 
 export default function MDXPage({ children }) {
   return (
@@ -152,4 +184,5 @@ export default function MDXPage({ children }) {
       </div>
     </Page>
   );
+
 }
