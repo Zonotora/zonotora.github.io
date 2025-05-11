@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import { getBookBySlug, getAllBooks } from "../../lib/api";
-import Header from "../../components/header";
+import Page from "../../components/page";
 import markdownToHtml from "../../lib/markdown";
 import type PostType from "../../interfaces/post";
 
@@ -17,16 +17,14 @@ export default function Post({ post }: Props) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <main>
-      <Header active="" />
-
+    <Page active="books">
       <div className="posts">
         <div className="post">
           <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </div>
       </div>
-    </main>
+    </Page>
   );
 }
 

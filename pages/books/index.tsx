@@ -134,9 +134,9 @@ export const Home = ({ summaries }: Props) => {
       <table>
         <thead>
           <tr>
-            <td></td>
-            <td>Books</td>
-            <td>Pages</td>
+            <th></th>
+            <th>Books</th>
+            <th>Pages</th>
           </tr>
         </thead>
         <tbody>
