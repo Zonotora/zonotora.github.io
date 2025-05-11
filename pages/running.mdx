@@ -1,4 +1,11 @@
-import { XAxis, Tooltip, CartesianGrid, Line } from "recharts";
+import {
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  Line,
+  ReferenceLine,
+} from "recharts";
 import Page from "../components/page";
 import dynamic from "next/dynamic";
 export const LineChart = dynamic(
@@ -8,6 +15,27 @@ export const LineChart = dynamic(
 
 # The running protocol
 
+| Distance      | Time       |
+| ------------- | ---------- |
+| 400m          | 1m 24s     |
+| 1/2 mile      | 2m 45s     |
+| 1K            | 3m 43s     |
+| 1 mile        | 6m 14s     |
+| 2 mile        | 12m 46s    |
+| 5K            | 19m 58s    |
+| 10K           | 44m 9s     |
+| 15K           | 1h 15m 30s |
+| 10 mile       | 1h 21m 56s |
+| 20K           | 1h 42m 9s  |
+| Half-Marathon | 1h 47m 34s |
+| 30K           | 2h 45m 57s |
+| Marathon      | 3h 58m 57s |
+
+| Year | Distance (km) |
+| ---- | ------------- |
+| 2025 | 269           |
+| 2024 | 345           |
+
 # Training
 
 ## Different zones
@@ -16,14 +44,14 @@ export const LineChart = dynamic(
 
 The philosophy of the Norwegian Method is mainly applied to endurance sports like running, cycling and swimming with a focus on increasing the anaerobic threshold. The foundation of the Norwegian Method is to measure the lactate levels to control the intensity during runs. It is split into 3 different training zones based on the intensity levels as different energy systems are trained optimally in different zones:
 
-- `Zone 1: Low intensity`. Zone 1 focuses mainly on the `oxidative energy system` which is responsible for low-intensity work.
-- `Zone 2: Sub threshold`. Zone 2 focuses on the `anaerobic energy system` which is required for high-intensity work. The anaerobic energy system gets activated when a lot of energy is released within a small period of time, and when the oxygen demand is greater than the oxygen supply. Utilizing the anaerobic energy system will more quickly drain your energy.
-- `Zone 3: Above threshold`. Zone 3 also focuses on the `anaerobic energy system`.
+- **_Zone 1: Low intensity_**. Zone 1 focuses mainly on the _oxidative energy system_ which is responsible for low-intensity work.
+- **_Zone 2: Sub threshold_**. Zone 2 focuses on the _anaerobic energy system_ which is required for high-intensity work. The anaerobic energy system gets activated when a lot of energy is released within a small period of time, and when the oxygen demand is greater than the oxygen supply. Utilizing the anaerobic energy system will more quickly drain your energy.
+- **_Zone 3: Above threshold_**. Zone 3 also focuses on the _anaerobic energy system_.
 
-The key idea of the Norwegian method is to perform the most important workouts in zone 2. As stated above, zone 2 lies at or below the `anaerobic threshold`.
+The key idea of the Norwegian method is to perform the most important workouts in zone 2. As stated above, zone 2 lies at or below the _anaerobic threshold_.
 By staying close to the threshold, we can stimulate the anaerobic energy system without becoming to fatigued. The problem with only performing zone 2 workouts is that you will not be able to recover enough between each workout. To have a high training volume (high mileage each week) we have to space out zone 2 training with zone 1 training (low intensity training). The idea here being that zone 1 training does not impact your zone 2 workouts and is much quicker to recover from. So what about zone 3? The Norwegian Method does include high intensity workouts, but it is not the main focus of the method since training above threshold has a higher risk of injuries and is slower to recover from.
 
-As stated above, measuring lactate levels is a common approach to control the intensity during workouts. In zone 2 training we would like to approach the highest intensity at which lactate concentration does not increase over time which is why it is called `sub-threshold`. This lactate concentration level is also known as the `Maximal Lactate Steady State (MLSS)`. To get these measurements you typically measure the amount of lactate in the bloodstream during your workouts at different intensities. So again, when you work out close to the MLSS, you can train at a high intensity without accumulating to much lactate which leads to fatigue, reduced performance, slower recovery times and a higher risk of injuries. By continuously measuring the lactate levels you can adjust and adopt your training intensity for optimal progress.[^1]
+As stated above, measuring lactate levels is a common approach to control the intensity during workouts. In zone 2 training we would like to approach the highest intensity at which lactate concentration does not increase over time which is why it is called _sub-threshold_. This lactate concentration level is also known as the _Maximal Lactate Steady State (MLSS)_. To get these measurements you typically measure the amount of lactate in the bloodstream during your workouts at different intensities. So again, when you work out close to the MLSS, you can train at a high intensity without accumulating to much lactate which leads to fatigue, reduced performance, slower recovery times and a higher risk of injuries. By continuously measuring the lactate levels you can adjust and adopt your training intensity for optimal progress.[^1]
 
 ---
 
@@ -36,27 +64,102 @@ No matter how many hours you are spending running every week, there are research
 Easy runs have a lot of benefits besides keeping the circulation going on recovery days. Easy runs
 
 - train the cardio and respiratory systems to work more efficiently, which will allow you to have greater performance at your higher intensity runs.
-- train your `slow twitch muscle fibres`.
+- train your _slow twitch muscle fibres_.
 - helps to strengthen the tendons, ligaments, joints and bones without causing excessive stress to them.
 
 The pace of an easy run is where you can comfortably hold a conversation at.
 
----
-
 ## Double threshold
+
+---
 
 # Nutrition
 
+## Energy forms
+
+https://en.wikipedia.org/wiki/Glycogen
+
+---
+
 # Running form
+
+---
+
+# Lactate thresholds
+
+export const data = [
+  {
+    name: "",
+    y: 1,
+  },
+  {
+    name: "LT1",
+    y: 2,
+  },
+  {
+    name: "LT2",
+    y: 4,
+  },
+  {
+    name: "",
+    y: 8,
+  },
+];
+
+<LineChart width={400} height={200} data={data}>
+  <XAxis
+    dataKey="name"
+    label={{ value: "Heart rate", position: "insideBottom" }}
+  />
+  <YAxis
+    label={{ value: "Lactate", angle: -90, position: "insideLeft" }}
+    offset={2}
+    opacity={0}
+  />
+  <CartesianGrid strokeDasharray="3 3" />
+  <ReferenceLine
+    x="LT1"
+    stroke="green"
+    label="Min PAGE"
+    strokeDasharray="3 3"
+  />
+  <ReferenceLine y={10} label="Max" stroke="red" strokeDasharray="3 3" />
+  <Line type="monotone" dataKey="y" stroke="#387908" />
+</LineChart>
+
+- LT1 = aerobic threshold
+- LT2 = anaerobic threshold
+
+- https://www.totaltritraining.com/2019/10/24/lactate-thresholds-made-simple-by-rob-bridges/
+
+  > Threshold training loosely refers to doing most of your training in zone 2 (see figure 1), and polarised training refers to doing 80% of your training in zone 1 and 20% in zone 3. A study in 2012 showed the effects of both types of training on 40k TT cycling performance (ave watts). After 6 weeks of training at both methods the results showed an average of 8% increase for polarised and only just over 1% increase using the threshold training method (see figure 2).
+
+  > Now you can’t always take everything from studies as gospel, however you can’t ignore the results. Most coaches and elite athletes now will suggest using the polarised model of 80:20. What people can often get wrong is the thinking that all year round I should do 80% of my training really easy and 20% really hard (very polarised), this will give you improvements in the short term but will mean that you peak really quickly and then plateau. Most elite coaches and athletes will manipulate the thresholds so that most of their program is polarised but potentially isn’t as polarised as a lot of studies will suggest.
+
+## Lacate
+
+In simple terms lactate is the by-product of burning fuel (glucose) in the muscles.
+Lactate is measured in millimoles per litre of blood (mmol/L)
+
+## Lactate Turnpoint 1 (LT1)
+
+**_Lactate Turnpoint 1 (LT1)_** is the point at which there is a measurable rise in blood lactate
+above baseline.
+
+## Lactate Turnpoint 2 (LT1)
+
+**_Lactate Turnpoint 2 (LT2)_** is the point at which lactate starts to rise at an accelerated rate.
+
+---
 
 # Recovery
 
 ## Rest days vs recovery days
 
-It is important to note that `rest days` are not the same as `recovery days`.
+It is important to note that _rest days_ are not the same as _recovery days_.
 
-- `Rest days` refers no running AT ALL.
-- `Recovery days` refers to easy exercise days to stimulate circulation in your legs which can aid recovery from more intense efforts.
+- **_Rest days_** refers no running AT ALL.
+- **_Recovery days_** refers to easy exercise days to stimulate circulation in your legs which can aid recovery from more intense efforts.
 
 ## Avoiding injury
 
@@ -69,6 +172,19 @@ Generally it is important to incorporate strength and flexibility exercises into
 ### Back
 
 ### Stress fracture
+
+---
+
+# Hitting the wall
+
+- https://en.wikipedia.org/wiki/Hitting_the_wall
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC8133477/
+
+**_Hitting the wall_** is a condition of sudden fatigue and loss of energy caused by the lack of glycogen stored in the liver and mucles due to depletion.
+
+Whether a runner will hit the wall depends on how quickly their glycogen stores deplete, which Rapaport found depends on a combination of a runner’s aerobic capacity (or VO2 max), the density of muscle glycogen, and the relative mass of their leg musculature.
+
+---
 
 # Runners
 
@@ -85,6 +201,8 @@ Generally it is important to incorporate strength and flexibility exercises into
 | Sunday    | 2 hours easy                      |            |
 
 Source [^2]
+
+---
 
 # Keywords
 
@@ -114,58 +232,7 @@ Source [^2]
 
 ## Maximal lactate steady state (MLSS)
 
-export const data = [
-  {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
-
-<LineChart width={400} height={400} data={data}>
-  <XAxis dataKey="name" />
-  <Tooltip />
-  <CartesianGrid stroke="#f5f5f5" />
-  <Line type="monotone" dataKey="uv" stroke="#ff7300" />
-  <Line type="monotone" dataKey="pv" stroke="#387908" />
-</LineChart>
+---
 
 # References
 
