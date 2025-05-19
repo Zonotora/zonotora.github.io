@@ -92,11 +92,28 @@ tr:hover {
   opacity: 0.8;
 }
 
+#refs {
+  font-family: "PT Serif", serif;
+}
+
 .content {
   width: var(--page-width);
   margin: 0 -10px;
   position: relative;
   overflow-wrap: break-word;
+}
+
+.box {
+  margin: 0 -10px;
+  padding: 10px;
+  border: var(--border);
+  background-color: var(--background-color);
+}
+
+.box > h1,
+.box > h2,
+.box > h3 {
+  margin-top: 0px;
 }
 
 .center {

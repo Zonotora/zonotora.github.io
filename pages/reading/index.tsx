@@ -173,7 +173,7 @@ export const Home = ({ summaries }: Props) => {
   );
 
   return (
-    <Page active="books">
+    <Page active="reading">
       <BookHeader
         filter={filter}
         setFilter={setFilter}

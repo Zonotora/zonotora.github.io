@@ -7,7 +7,7 @@ export const Home = () => {
     const { pathname } = Router;
 
     if (pathname == "/") {
-      location.replace("/posts");
+      location.replace("/about");
     }
   }, []);
 

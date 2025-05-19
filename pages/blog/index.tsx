@@ -9,7 +9,7 @@ type Props = {
 
 export const Home = ({ posts }: Props) => {
   return (
-    <Page active="posts">
+    <Page active="blog">
       {posts.map((post) => (
         <PostPreview
           key={post.title}
