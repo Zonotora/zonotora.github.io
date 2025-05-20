@@ -106,26 +106,28 @@ export const data = [
   },
 ];
 
-<LineChart width={400} height={200} data={data}>
-  <XAxis
-    dataKey="name"
-    label={{ value: "Heart rate", position: "insideBottom" }}
-  />
-  <YAxis
-    label={{ value: "Lactate", angle: -90, position: "insideLeft" }}
-    offset={2}
-    opacity={0}
-  />
-  <CartesianGrid strokeDasharray="3 3" />
-  <ReferenceLine
-    x="LT1"
-    stroke="green"
-    label="Min PAGE"
-    strokeDasharray="3 3"
-  />
-  <ReferenceLine y={10} label="Max" stroke="red" strokeDasharray="3 3" />
-  <Line type="monotone" dataKey="y" stroke="#387908" />
-</LineChart>
+<div className="box center overflow-x">
+  <LineChart width={400} height={200} data={data}>
+    <XAxis
+      dataKey="name"
+      label={{ value: "Heart rate", position: "insideBottom" }}
+    />
+    <YAxis
+      label={{ value: "Lactate", angle: -90, position: "insideLeft" }}
+      offset={2}
+      opacity={0}
+    />
+    <CartesianGrid strokeDasharray="3 3" />
+    <ReferenceLine
+      x="LT1"
+      stroke="green"
+      label="Min PAGE"
+      strokeDasharray="3 3"
+    />
+    <ReferenceLine y={10} label="Max" stroke="red" strokeDasharray="3 3" />
+    <Line type="monotone" dataKey="y" stroke="#387908" />
+  </LineChart>
+</div>
 
 - LT1 = aerobic threshold
 - LT2 = anaerobic threshold

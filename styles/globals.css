@@ -27,6 +27,7 @@ h3,
 li,
 svg {
   font-family: "PT Serif", serif;
+  scroll-margin-top: 32px;
 }
 
 code {
@@ -48,26 +49,34 @@ main a {
 }
 
 header {
-  position: sticky;
+  position: fixed;
   background-color: var(--background-color);
   width: var(--page-width);
-  top: 0px;
-  margin: 10px auto 0px auto;
+  height: 21px;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0%);
   border: var(--border);
   padding-left: 10px;
   padding-right: 10px;
   z-index: 100;
+  display: flex;
+  border-spacing: 5px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 main {
-  margin-top: 10px;
+  margin-top: 43px;
   text-align: left;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
+  overflow-y: auto;
 }
 
 svg {
@@ -94,6 +103,18 @@ tr:hover {
 
 #refs {
   font-family: "PT Serif", serif;
+}
+
+.helper-icons {
+  position: fixed;
+  margin: 0 !important;
+  padding: 0 3px !important;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+}
+.helper-icons > a {
+  cursor: pointer;
 }
 
 .heatmap td {
@@ -134,15 +155,8 @@ tr:hover {
   justify-content: center;
 }
 
-.header {
-  display: flex;
-  border-spacing: 5px;
-  flex-direction: row;
-  justify-content: center;
-  gap: 5px;
-  gap: 10px;
-  position: relative;
-  flex-wrap: wrap;
+.overflow-x {
+  overflow-x: auto;
 }
 
 .toc {
@@ -153,20 +167,6 @@ tr:hover {
 
 .toc li {
   list-style-type: none;
-}
-
-.header-icons {
-  width: 40px;
-  position: absolute;
-  right: 0px;
-  display: flex;
-  justify-content: center;
-}
-
-.header-icons > a,
-.header-icons > span {
-  margin-right: 5px;
-  cursor: pointer;
 }
 
 .tags {
@@ -307,20 +307,22 @@ tr:hover {
 
 @media only screen and (max-width: 1200px) {
   main {
-    margin-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  header,
   .post-preview,
   .project-preview,
   .book-preview,
   .post,
   .statistics,
   .content {
-    width: 90%;
+    width: calc(100% - 20px);
   }
-  .header-icons {
-    left: calc(50% - 20px);
-    bottom: -30px;
+  header {
+    width: calc(100% - 82px);
+    left: 10px;
+    right: 72px;
+    transform: translateX(0);
   }
   .toc {
     position: unset;
