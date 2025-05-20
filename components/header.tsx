@@ -18,9 +18,10 @@ type HeaderLinkProps = {
 function HeaderLink({ active, link, alternativeLink }: HeaderLinkProps) {
   const style: CSSProperties = {};
   if (active == link) style["textDecoration"] = "underline";
+  const href = alternativeLink != "" ? alternativeLink : link;
 
   return (
-    <Link key={link} style={style} href={`/${link}`}>
+    <Link key={link} style={style} href={`/${href}`}>
       {link}
     </Link>
   );
@@ -41,6 +42,11 @@ const Header = ({ active }: HeaderProps) => {
         <HeaderLink active={active} link="reading" />
         <HeaderLink active={active} link="running" />
         <HeaderLink active={active} link="c" />
+        <HeaderLink
+          active={active}
+          link="os"
+          alternativeLink="guidos/book/index.html"
+        />
       </header>
       <div className="box helper-icons">
         <Link href={`/feed.xml`}>
