@@ -3,6 +3,7 @@ import remarkParse from "remark-parse";
 import remarkHtml from "remark-html";
 import matter from "gray-matter";
 import fs from "fs";
+import path from "path";
 
 async function process(data) {
   const text = matter(data);
@@ -19,7 +20,7 @@ async function process(data) {
     description: meta.description,
     published: meta.date,
     updated: meta.date,
-    category: meta.tags,
+    category: [],
     content: file,
   };
 }
@@ -75,7 +76,7 @@ async function xmlFeed(items, updated, options) {
 }
 
 async function main() {
-  const files = fs.readdirSync("static/blog", { withFileTypes: true });
+  const files = fs.readdirSync("pages/blog", { withFileTypes: true });
   const options = {
     title: "Axel Lundberg",
     feedUrl: "https://zonotora.github.io/feed.xml",
@@ -90,7 +91,9 @@ async function main() {
   let updated = "";
 
   for (const file of files) {
-    const data = fs.readFileSync(`static/blog/${file.name}`, "utf8");
+    const data = fs.readFileSync(`pages/blog/${file.name}`, "utf8");
+    const extname = path.extname(file.name);
+    if (extname !== ".md" && extname !== ".mdx") continue;
     const fileData = await process(data);
     const xml = await xmlItem(fileData, options);
     if (updated === "") updated = fileData.updated;
