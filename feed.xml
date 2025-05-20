@@ -6,36 +6,12 @@
     type="application/atom+xml"
   />
   <link href="https://zonotora.github.io/blog" rel="alternate" type="text/html" />
-  <updated>2025-05-18T00:00:00+00:00</updated>
+  <updated>T00:00:00+00:00</updated>
   <id>https://zonotora.github.io/feed.xml</id>
   <title type="html">Axel Lundberg</title>
   <author>
     <name>Axel Lundberg</name>
     <email></email>
   </author>
-  
-  <entry>
-    <title type="html">
-      Test
-    </title>
-    <link
-      href="https://zonotora.github.io/blog/test"
-      rel="alternate"
-      type="text/html"
-      title="Test"
-    />
-    <published>2025-05-18T00:00:00+00:00</published>
-    <updated>2025-05-18T00:00:00+00:00</updated>
-    <id>https://zonotora.github.io/blog/test</id>
-    <content type="html" xml:base="https://zonotora.github.io/blog/test">
-      
-    </content>
-    <author>
-      <name>Axel Lundberg</name>
-      <email></email>
-    </author>
-    
-    <summary type="html" />
-  </entry>
   
 </feed>
