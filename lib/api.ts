@@ -1,82 +1,34 @@
 import fs from "fs";
+import path from "path";
 import { join } from "path";
 import matter from "gray-matter";
+import { StaticFileType } from "./types";
 
-const postsDirectory = join(process.cwd(), "static", "posts");
-const booksDirectory = join(process.cwd(), "static", "books");
+const PAGES_PATH = join(process.cwd(), "pages");
 
-export function getPostSlugs() {
-  return getSlugs(postsDirectory);
-}
+export function getStaticFiles(directory: string): StaticFileType[] {
+  const files = fs.readdirSync(join(PAGES_PATH, directory));
+  const staticFiles: StaticFileType[] = [];
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
-  return getBySlug(slug, fields, postsDirectory);
-}
-
-export function getAllPosts(fields: string[] = []) {
-  return getAll(fields, getPostSlugs, getPostBySlug);
-}
-
-export function getBookSlugs() {
-  return getSlugs(booksDirectory);
-}
-
-export function getBookBySlug(slug: string, fields: string[] = []) {
-  return getBySlug(slug, fields, booksDirectory);
-}
-
-export function getAllBooks(fields: string[] = []) {
-  return getAll(fields, getBookSlugs, getBookBySlug);
-}
-
-export function readFile(filename: string) {
-  const path = join(process.cwd(), "static", filename);
-  const fileContents = fs.readFileSync(path, "utf8");
-  return matter(fileContents);
-}
-
-function getSlugs(directory: string) {
-  return fs.readdirSync(directory);
-}
-
-function getAll(
-  fields: string[],
-  getSlugs: () => any[],
-  getBySlug: (slug: string, fields: string[]) => any
-) {
-  const slugs = getSlugs();
-  const posts = slugs
-    .map((slug) => getBySlug(slug, fields))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return posts;
-}
-
-function getBySlug(slug: string, fields: string[], directory: string) {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(directory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
-
-  type Items = {
-    [key: string]: string;
-  };
-
-  const items: Items = {};
-
-  // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === "slug") {
-      items[field] = realSlug;
+  for (const file of files) {
+    const filePath = join(PAGES_PATH, directory, file);
+    const fileWebPath = path.join(directory, file);
+    const fileContents = fs.readFileSync(filePath, "utf8");
+    const extname = path.extname(filePath);
+    if (extname !== ".mdx") {
+      continue;
     }
-    if (field === "content") {
-      items[field] = content;
-    }
+    const { data } = matter(fileContents);
+    const { title, date } = data;
+    const link = fileWebPath.replace(/\.mdx$/, "");
+    const content = {
+      title,
+      date,
+      link,
+    };
+    staticFiles.push(content);
+  }
+  console.log(staticFiles);
 
-    if (typeof data[field] !== "undefined") {
-      items[field] = data[field];
-    }
-  });
-
-  return items;
+  return staticFiles.sort((a, b) => (a.date > b.date ? -1 : 1));
 }

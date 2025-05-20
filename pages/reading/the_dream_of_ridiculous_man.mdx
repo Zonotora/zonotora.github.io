@@ -1,9 +1,10 @@
 ---
 title: "The dream of a Ridiculous Man"
-description: ""
+date: "2025-08-08"
 ---
 
-##  Plot
+## Plot
+
 "The dream of a Ridiculous Man" by Fyodor Dostoevsky is about a man contemplating the bizarre nature of his life. Upon the relalization that nothing matters anymore he comes up with the idea of suicide. He had bought a revolver 6 months ago, and he intends to use it later that night.
 
 While walking down the streets of St. Petersburg he encounters a girl seeking his help. Although, he can not quite hear what she is saying because of her trembling voice, he understands that her mother might be in danger. He dismisses her, and when she persists, he shouts and stamp his foot against her.
@@ -26,3 +27,12 @@ He wants the people to punish him for what he has done, but they just laugh at t
 4. The idea of utopia as a power of unconditioned love for each other.
 5. The dream as a means from above.
 6. The instantaneous change as he was enlighted from the dream.
+
+import Page from "../../components/page";
+export default function MDXPage({ children }) {
+  return (
+    <Page active="reading">
+      <div className="content">{children}</div>
+    </Page>
+  );
+}

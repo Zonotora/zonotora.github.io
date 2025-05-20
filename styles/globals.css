@@ -96,6 +96,19 @@ tr:hover {
   font-family: "PT Serif", serif;
 }
 
+.heatmap td {
+  border: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.heatmap tr:hover {
+  opacity: 1;
+}
+.heatmap td:hover {
+  opacity: 0.8;
+}
+
 .content {
   width: var(--page-width);
   margin: 0 -10px;

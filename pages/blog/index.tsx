@@ -1,35 +1,26 @@
-import { getAllPosts } from "../../lib/api";
-import PostType from "../../interfaces/post";
-import PostPreview from "../../components/post-preview";
+import { getStaticFiles } from "../../lib/api";
+import { StaticFileType } from "../../lib/types";
 import Page from "../../components/page";
 
-type Props = {
-  posts: PostType[];
-};
-
-export const Home = ({ posts }: Props) => {
+export const Blog = ({ files }: { files: StaticFileType[] }) => {
   return (
     <Page active="blog">
-      {posts.map((post) => (
-        <PostPreview
-          key={post.title}
-          title={post.title}
-          date={post.date}
-          description={post.description}
-          tags={post.tags}
-          slug={post.slug}
-        />
+      {files.map((file) => (
+        <div>
+          {file.title}
+          {file.date}
+        </div>
       ))}
     </Page>
   );
 };
 
 export const getStaticProps = async () => {
-  const posts = getAllPosts(["title", "date", "description", "slug", "tags"]);
+  const files = getStaticFiles("blog");
 
   return {
-    props: { posts },
+    props: { files },
   };
 };
 
-export default Home;
+export default Blog;

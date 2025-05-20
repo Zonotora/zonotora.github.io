@@ -11,7 +11,7 @@ type Props = {
 
 const PostPreview = ({ title, date, description, tags, slug }: Props) => {
   return (
-    <Link href={`/posts/${slug}`} className="post-preview">
+    <Link href={`/blog/${slug}`} className="post-preview">
       <div className="post-preview-title">
         <b>{title}</b>
       </div>

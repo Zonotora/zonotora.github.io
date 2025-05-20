@@ -12,7 +12,7 @@ import {
   Filter,
   ValidPredicates,
   Predicate,
-} from "../interfaces/book";
+} from "../lib/types";
 import { useState } from "react";
 
 type Props = {

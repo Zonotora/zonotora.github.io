@@ -1,3 +1,9 @@
+export type StaticFileType = {
+  title: string;
+  date: string;
+  link: string;
+};
+
 export type BookType = {
   slug: string;
   title: string;

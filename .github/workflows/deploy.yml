@@ -8,11 +8,8 @@ on:
     branches:
       - main
     paths:
-      - "posts/**"
-      - "books/**"
       - "data/**"
       - "pages/**"
-      - "interfaces/**"
       - "styles/**"
       - ".github/workflows/**"
       - "scripts/rss.js"

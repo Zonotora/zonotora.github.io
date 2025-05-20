@@ -26,7 +26,7 @@ async function process(data) {
 
 async function xmlItem(file, options) {
   const url =
-    options.postsUrl + "/" + file.title.toLowerCase().replaceAll(" ", "-");
+    options.blogUrl + "/" + file.title.toLowerCase().replaceAll(" ", "-");
   return `
   <entry>
     <title type="html">
@@ -62,7 +62,7 @@ async function xmlFeed(items, updated, options) {
     rel="self"
     type="application/atom+xml"
   />
-  <link href="${options.postsUrl}" rel="alternate" type="text/html" />
+  <link href="${options.blogUrl}" rel="alternate" type="text/html" />
   <updated>${updated}T00:00:00+00:00</updated>
   <id>${options.feedUrl}</id>
   <title type="html">${options.title}</title>
@@ -75,11 +75,11 @@ async function xmlFeed(items, updated, options) {
 }
 
 async function main() {
-  const files = fs.readdirSync("static/posts", { withFileTypes: true });
+  const files = fs.readdirSync("static/blog", { withFileTypes: true });
   const options = {
     title: "Axel Lundberg",
     feedUrl: "https://zonotora.github.io/feed.xml",
-    postsUrl: "https://zonotora.github.io/posts",
+    blogUrl: "https://zonotora.github.io/blog",
     author: {
       name: "Axel Lundberg",
       email: "",
@@ -90,7 +90,7 @@ async function main() {
   let updated = "";
 
   for (const file of files) {
-    const data = fs.readFileSync(`static/posts/${file.name}`, "utf8");
+    const data = fs.readFileSync(`static/blog/${file.name}`, "utf8");
     const fileData = await process(data);
     const xml = await xmlItem(fileData, options);
     if (updated === "") updated = fileData.updated;

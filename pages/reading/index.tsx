@@ -2,7 +2,6 @@ import BookPreview from "../../components/book-preview";
 import Page from "../../components/page";
 import BookHeader from "../../components/book-header";
 import books from "../../data/books.json";
-import { getAllBooks } from "../../lib/api";
 import {
   BookType,
   BookPreviewType,
@@ -11,18 +10,16 @@ import {
   ValidPredicates,
   TotalStatistics,
   Statistics,
-} from "../../interfaces/book";
+  StaticFileType,
+} from "../../lib/types";
+import { getStaticFiles } from "../../lib/api";
 import { useEffect, useState } from "react";
-
-type Props = {
-  summaries: BookType[];
-};
 
 const convertTitle = (title: string) => {
   return title.toLowerCase().replaceAll(":", " ").replaceAll(/\s+/g, "-");
 };
 
-export const Home = ({ summaries }: Props) => {
+export const Reading = ({ files }: { files: StaticFileType[] }) => {
   const [slugs, setSlugs] = useState<{ [id: string]: string }>({});
   const [activeBooks, setActiveBooks] = useState<BookPreviewType[]>(books);
   const [filter, setFilter] = useState<Filter>({
@@ -48,9 +45,9 @@ export const Home = ({ summaries }: Props) => {
 
   useEffect(() => {
     const tSlugs: { [id: string]: string } = {};
-    for (const summary of summaries) {
+    for (const summary of files) {
       const key = convertTitle(summary.title);
-      tSlugs[key] = summary.slug;
+      tSlugs[key] = summary.link;
     }
     setSlugs(tSlugs);
 
@@ -188,11 +185,12 @@ export const Home = ({ summaries }: Props) => {
 };
 
 export const getStaticProps = async () => {
-  const summaries = getAllBooks(["title", "date", "description", "slug"]);
+  const files = getStaticFiles("reading");
+  console.log(files);
 
   return {
-    props: { summaries },
+    props: { files },
   };
 };
 
-export default Home;
+export default Reading;

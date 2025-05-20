@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookPreviewType } from "../interfaces/book";
+import { BookPreviewType } from "../lib/types";
 
 type Props = {
   book: BookPreviewType;
@@ -24,7 +24,7 @@ const BookPreview = ({ book, summary, slug }: Props) => {
   );
   const withLink = (
     <Link
-      href={`/books/${slug}`}
+      href={`/${slug}`}
       className={`book-preview${summary ? " summary" : ""}`}
     >
       {content}
