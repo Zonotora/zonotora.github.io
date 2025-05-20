@@ -13,11 +13,11 @@
 html,
 body {
   font-family: "Fira Code", monospace;
-  font-size: 1rem;
   margin: 0px;
   padding: 0px;
   background-color: var(--background-color);
   color: var(--color);
+  font-size: 12pt;
 }
 
 p,
