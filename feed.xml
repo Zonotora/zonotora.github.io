@@ -5,8 +5,8 @@
     rel="self"
     type="application/atom+xml"
   />
-  <link href="https://zonotora.github.io/posts" rel="alternate" type="text/html" />
-  <updated>2025-03-11T00:00:00+00:00</updated>
+  <link href="https://zonotora.github.io/blog" rel="alternate" type="text/html" />
+  <updated>2025-05-18T00:00:00+00:00</updated>
   <id>https://zonotora.github.io/feed.xml</id>
   <title type="html">Axel Lundberg</title>
   <author>
@@ -16,85 +16,25 @@
   
   <entry>
     <title type="html">
-      Wrapping C functions
+      Test
     </title>
     <link
-      href="https://zonotora.github.io/posts/wrapping-c-functions"
+      href="https://zonotora.github.io/blog/test"
       rel="alternate"
       type="text/html"
-      title="Wrapping C functions"
+      title="Test"
     />
-    <published>2025-03-11T00:00:00+00:00</published>
-    <updated>2025-03-11T00:00:00+00:00</updated>
-    <id>https://zonotora.github.io/posts/wrapping-c-functions</id>
-    <content type="html" xml:base="https://zonotora.github.io/posts/wrapping-c-functions">
-      <p>Let's say you want to overwrite an API-function located in a library that you don't have any control over or a standard
-library function. This is useful when you want to stub that function in some test bench or insert debugging information
-in the function itself. To do this, we can make use of C-macros. Let's say we want to overwrite <code>malloc</code>. We first
-define our own malloc like so:</p>
-<pre><code class="language-c">void* my_malloc(size_t size)
-{
-  printf("my_malloc");
-  return NULL;
-}
-</code></pre>
-<p>Then we can define the following macro to replace all instances of <code>malloc</code> with our newly defined <code>my_malloc</code>:</p>
-<pre><code class="language-c">#define malloc my_malloc
-</code></pre>
-<p>Compiling and running yields us:</p>
-<pre><code class="language-bash">> clang main.c &#x26;&#x26; ./a.out
-my_malloc
-</code></pre>
-<p>What if we want to make use of the original <code>malloc</code> in our newly created <code>my_malloc</code>? This could be problematic as the define replaces all instances of <code>malloc</code> with <code>my_malloc</code>. So creating a <code>my_malloc</code> like this will cause the macro to be recursively executed:</p>
-<pre><code class="language-c">void* my_malloc(size_t size)
-{
-  printf("my_malloc");
-  return malloc(size);
-}
-</code></pre>
-<p>Compling and running this instead will result in:</p>
-<pre><code class="language-bash">> clang main.c &#x26;&#x26; ./a.out
-my_mallocmy_mallocm...y_malloSegmentation fault (core dumped)
-</code></pre>
-<p>Where the dots represent <code>my_malloc</code> being printed MANY times.</p>
-<p>To make this work, we have to place <code>my_malloc</code> in a separate source file. Since source files are preprocessed to
-translation units along with all the includes and compiled separately from each other, a define in e.g., <code>main.c</code> will not affect a wrapper in e.g., <code>malloc.c</code>. So we create the following files:</p>
-<pre><code class="language-c">// malloc.c
-void* my_malloc(size_t size)
-{
-  printf("my_malloc");
-  return malloc(size);
-}
-</code></pre>
-<pre><code class="language-c">// main.c
-#define malloc my_malloc
-
-void* my_malloc(size_t size);
-
-int main(int)
-{
-  void* ptr = malloc(4);
-  return 0;
-}
-</code></pre>
-<p>Now it is possible to compile and execute without all those recursive calls:</p>
-<pre><code class="language-bash">> clang main.c malloc.c &#x26;&#x26; ./a.out
-my_malloc
-</code></pre>
-<p>We can now wrap the function declaration in a header file and include it wherever we want to
-overwrite <code>malloc</code>:</p>
-<pre><code class="language-c">// malloc.h
-#define malloc my_malloc
-
-void* my_malloc(size_t size);
-</code></pre>
-
+    <published>2025-05-18T00:00:00+00:00</published>
+    <updated>2025-05-18T00:00:00+00:00</updated>
+    <id>https://zonotora.github.io/blog/test</id>
+    <content type="html" xml:base="https://zonotora.github.io/blog/test">
+      
     </content>
     <author>
       <name>Axel Lundberg</name>
       <email></email>
     </author>
-    <category>c"</category>
+    
     <summary type="html" />
   </entry>
   
