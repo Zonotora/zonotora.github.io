@@ -7,12 +7,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "data/**"
-      - "pages/**"
-      - "styles/**"
-      - ".github/workflows/**"
-      - "scripts/rss.js"
 
 jobs:
   build:
