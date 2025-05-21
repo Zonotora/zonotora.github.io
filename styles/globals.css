@@ -44,6 +44,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #aa8c50;
+}
+
 main a {
   text-decoration: underline;
 }
