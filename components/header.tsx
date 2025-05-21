@@ -18,7 +18,7 @@ type HeaderLinkProps = {
 function HeaderLink({ active, link, alternativeLink }: HeaderLinkProps) {
   const style: CSSProperties = {};
   if (active == link) style["textDecoration"] = "underline";
-  const href = alternativeLink != "" ? alternativeLink : link;
+  const href = alternativeLink ? alternativeLink : link;
 
   return (
     <Link key={link} style={style} href={`/${href}`}>
