@@ -1,5 +1,4 @@
 import { CSSProperties, useContext } from "react";
-import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRss } from "@fortawesome/free-solid-svg-icons";
 import { UserContext } from "../pages/_app";
@@ -18,12 +17,22 @@ type HeaderLinkProps = {
 function HeaderLink({ active, link, alternativeLink }: HeaderLinkProps) {
   const style: CSSProperties = {};
   if (active == link) style["textDecoration"] = "underline";
-  const href = alternativeLink ? alternativeLink : link;
-
+  if (alternativeLink) {
+    return (
+      <a
+        style={style}
+        href={`/${alternativeLink}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {link}
+      </a>
+    );
+  }
   return (
-    <Link key={link} style={style} href={`/${href}`}>
+    <a style={style} href={`/${link}`}>
       {link}
-    </Link>
+    </a>
   );
 }
 
@@ -49,9 +58,9 @@ const Header = ({ active }: HeaderProps) => {
         />
       </header>
       <div className="box helper-icons">
-        <Link href={`/feed.xml`}>
+        <a href={`/feed.xml`}>
           <FontAwesomeIcon icon={faRss} />
-        </Link>
+        </a>
         <a onClick={toggleDarkmode}>{darkmode ? dark : light}</a>
       </div>
     </>
