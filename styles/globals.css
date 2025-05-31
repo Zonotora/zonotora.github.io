@@ -111,6 +111,11 @@ li .active {
   color: #aa8c50;
 }
 
+hr {
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
 #refs {
   font-family: "PT Serif", serif;
 }

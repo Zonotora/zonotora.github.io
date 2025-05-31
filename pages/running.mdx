@@ -15,11 +15,19 @@ export const LineChart = dynamic(
 
 # The running protocol
 
+---
+
 # Training
+
+---
 
 ## Different zones
 
+---
+
 ## The Norwegian Method
+
+---
 
 The philosophy of the Norwegian Method is mainly applied to endurance sports like running, cycling and swimming with a focus on increasing the anaerobic threshold. The foundation of the Norwegian Method is to measure the lactate levels to control the intensity during runs. It is split into 3 different training zones based on the intensity levels as different energy systems are trained optimally in different zones:
 
@@ -32,9 +40,9 @@ By staying close to the threshold, we can stimulate the anaerobic energy system 
 
 As stated above, measuring lactate levels is a common approach to control the intensity during workouts. In zone 2 training we would like to approach the highest intensity at which lactate concentration does not increase over time which is why it is called _sub-threshold_. This lactate concentration level is also known as the _Maximal Lactate Steady State (MLSS)_. To get these measurements you typically measure the amount of lactate in the bloodstream during your workouts at different intensities. So again, when you work out close to the MLSS, you can train at a high intensity without accumulating to much lactate which leads to fatigue, reduced performance, slower recovery times and a higher risk of injuries. By continuously measuring the lactate levels you can adjust and adopt your training intensity for optimal progress.[^1]
 
----
-
 ## 80/20 training
+
+---
 
 In the spirit of Kipchoge[^3] [^5] (and almost every other sane runner!), do most of your runs at a pace that feel almost too relaxed, then come race day and absolutely crush your goals. The idea is to run 80% (in time) of your runs at low intensity (easy runs) and the 20% that is left to higher intensity workouts. Conceptually, this is very similar to how the Norwegian Method organizes its workouts, with the exception that the Norwegian Method really focuses on measuring and basing higher intensity workouts on data.
 
@@ -54,17 +62,21 @@ The pace of an easy run is where you can comfortably hold a conversation at.
 
 # Nutrition
 
+---
+
 ## Energy forms
 
-https://en.wikipedia.org/wiki/Glycogen
-
 ---
+
+https://en.wikipedia.org/wiki/Glycogen
 
 # Running form
 
 ---
 
 # Lactate thresholds
+
+---
 
 export const data = [
   {
@@ -89,10 +101,10 @@ export const data = [
   <LineChart width={400} height={200} data={data}>
     <XAxis
       dataKey="name"
-      label={{ value: "Heart rate", position: "insideBottom" }}
+      label={{ value: "Heart rate", position: "insideBottom", dy: 10 }}
     />
     <YAxis
-      label={{ value: "Lactate", angle: -90, position: "insideLeft" }}
+      label={{ value: "Lactate", angle: -90, dx: 10 }}
       offset={2}
       opacity={0}
     />
@@ -119,23 +131,31 @@ export const data = [
 
 ## Lacate
 
+---
+
 In simple terms lactate is the by-product of burning fuel (glucose) in the muscles.
 Lactate is measured in millimoles per litre of blood (mmol/L)
 
 ## Lactate Turnpoint 1 (LT1)
+
+---
 
 **_Lactate Turnpoint 1 (LT1)_** is the point at which there is a measurable rise in blood lactate
 above baseline.
 
 ## Lactate Turnpoint 2 (LT1)
 
-**_Lactate Turnpoint 2 (LT2)_** is the point at which lactate starts to rise at an accelerated rate.
-
 ---
+
+**_Lactate Turnpoint 2 (LT2)_** is the point at which lactate starts to rise at an accelerated rate.
 
 # Recovery
 
+---
+
 ## Rest days vs recovery days
+
+---
 
 It is important to note that _rest days_ are not the same as _recovery days_.
 
@@ -144,13 +164,21 @@ It is important to note that _rest days_ are not the same as _recovery days_.
 
 ## Avoiding injury
 
+---
+
 Generally it is important to incorporate strength and flexibility exercises into your workouts as these workouts will strengthen weak areas that may lead to injury.
 
 ### Knee
 
+---
+
 ### Hip
 
+---
+
 ### Back
+
+---
 
 ### Stress fracture
 
@@ -165,11 +193,13 @@ Generally it is important to incorporate strength and flexibility exercises into
 
 Whether a runner will hit the wall depends on how quickly their glycogen stores deplete, which Rapaport found depends on a combination of a runner’s aerobic capacity (or VO2 max), the density of muscle glycogen, and the relative mass of their leg musculature.
 
----
-
 # Runners
 
+---
+
 ## Eliud Kipchoge
+
+---
 
 | Day       | Morning                           | Afternoon  |
 | --------- | --------------------------------- | ---------- |
@@ -183,33 +213,57 @@ Whether a runner will hit the wall depends on how quickly their glycogen stores 
 
 Source [^2]
 
----
-
 # Keywords
+
+---
 
 ## Aerobic
 
+---
+
 ## Anaerobic
+
+---
 
 ## Anaerobic threshold
 
+---
+
 ## Lactate threshold
+
+---
 
 ## Lactate concentration
 
+---
+
 ## VO2Max
+
+---
 
 ## VLamax
 
+---
+
 ## Zone levels
+
+---
 
 ## Oxidative energy system
 
+---
+
 ## Cadence
+
+---
 
 ## Pronation
 
+---
+
 ## Supination
+
+---
 
 ## Maximal lactate steady state (MLSS)
 
@@ -217,10 +271,14 @@ Source [^2]
 
 # Links
 
+---
+
 1. https://norwegiansingles.run/
 2. https://github.com/bart6114/norwegian-singles
 
 # References
+
+---
 
 [^1]: https://inscyd.com/article/the-norwegian-method-how-to-apply-it-in-training/
 [^2]: https://run.outsideonline.com/training/training-plans/marathon/eliud-kipchoge-marathon-workout-training-principles/
