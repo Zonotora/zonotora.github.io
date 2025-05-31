@@ -59,7 +59,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       const prefersDarkMode = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;
-      console.log(prefersDarkMode);
       cookies.set("darkmode", prefersDarkMode, { sameSite: "strict" });
     } else {
       setDarkmode(mode);

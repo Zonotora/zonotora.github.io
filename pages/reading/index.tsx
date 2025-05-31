@@ -186,7 +186,6 @@ export const Reading = ({ files }: { files: StaticFileType[] }) => {
 
 export const getStaticProps = async () => {
   const files = getStaticFiles("reading");
-  console.log(files);
 
   return {
     props: { files },

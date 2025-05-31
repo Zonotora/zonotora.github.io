@@ -28,7 +28,6 @@ export function getStaticFiles(directory: string): StaticFileType[] {
     };
     staticFiles.push(content);
   }
-  console.log(staticFiles);
 
   return staticFiles.sort((a, b) => (a.date > b.date ? -1 : 1));
 }

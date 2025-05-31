@@ -107,6 +107,10 @@ tr:hover {
   opacity: 0.8;
 }
 
+li .active {
+  color: #aa8c50;
+}
+
 #refs {
   font-family: "PT Serif", serif;
 }
