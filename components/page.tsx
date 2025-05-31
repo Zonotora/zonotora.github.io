@@ -37,7 +37,8 @@ const Page = ({ active, children }: Props) => {
 
         // then iterate backwards, on the first match highlight it and break
         for (var i = anchors.length - 1; i >= 0; i--) {
-          if (scrollTop > anchors[i].offsetTop - 75) {
+          const anchor = anchors[i] as HTMLDivElement;
+          if (anchor != null && scrollTop > anchor.offsetTop - 75) {
             links[i].classList.add("active");
             break;
           }
