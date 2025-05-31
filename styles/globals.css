@@ -13,6 +13,7 @@
 html,
 body {
   font-family: "Fira Code", monospace;
+  line-height: normal;
   margin: 0px;
   padding: 0px;
   background-color: var(--background-color);
@@ -74,6 +75,7 @@ header {
 
 main {
   margin-top: 43px;
+  line-height: 1.5;
   text-align: left;
   display: flex;
   flex-direction: column;
