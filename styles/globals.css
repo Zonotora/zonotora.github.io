@@ -8,6 +8,8 @@
   --border-hover-color: antiquewhite;
   --page-width: 45%;
   --border: 1px solid var(--border-color);
+  /* --primary: #1183c3; */
+  --primary: #e9966d;
 }
 
 html,
@@ -46,11 +48,16 @@ a {
 }
 
 a:hover {
-  color: #aa8c50;
+  color: var(--primary);
 }
 
 main a {
   text-decoration: underline;
+  color: var(--primary);
+}
+
+main a:hover {
+  opacity: 0.8;
 }
 
 header {
@@ -83,6 +90,7 @@ main {
   justify-content: center;
   gap: 5px;
   overflow-y: auto;
+  padding-bottom: 100px;
 }
 
 svg {
@@ -105,10 +113,6 @@ td {
 
 tr:hover {
   opacity: 0.8;
-}
-
-li .active {
-  color: #aa8c50;
 }
 
 hr {
@@ -182,6 +186,18 @@ hr {
 
 .toc li {
   list-style-type: none;
+}
+
+.toc a {
+  color: var(--color);
+}
+
+.toc a:hover {
+  color: var(--primary);
+}
+
+.toc .active {
+  color: var(--primary);
 }
 
 .tags {
@@ -318,6 +334,11 @@ hr {
 
 .post a {
   text-decoration: underline;
+}
+
+.reference-item {
+  text-indent: -1em;
+  margin-left: 1em;
 }
 
 @media only screen and (max-width: 1200px) {

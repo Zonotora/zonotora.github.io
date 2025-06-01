@@ -6,6 +6,8 @@ import remarkMath from "remark-math";
 import remarkGfm from "remark-gfm";
 import remarkPrism from "remark-prism";
 import mdx from "@next/mdx";
+import remarkCitation from "./plugins/remark-citation.ts";
+import remarkHeadingHr from "./plugins/remark-heading-hr.ts";
 
 const nextConfig = {
   reactStrictMode: true,
@@ -27,7 +29,13 @@ const nextConfig = {
 
 const withMDX = mdx({
   options: {
-    remarkPlugins: [remarkGfm, remarkMath, remarkPrism],
+    remarkPlugins: [
+      remarkGfm,
+      remarkMath,
+      remarkPrism,
+      remarkCitation,
+      remarkHeadingHr,
+    ],
     rehypePlugins: [rehypeKatex, rehypeSlug, rehypeToc],
   },
 });
