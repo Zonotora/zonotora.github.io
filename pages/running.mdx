@@ -46,6 +46,33 @@ Easy runs have a lot of benefits besides keeping the circulation going on recove
 
 The pace of an easy run is where you can comfortably hold a conversation at.
 
+## Norwegian singles
+
+The _Norwegian singles_ training approach is adapted from the high-volume Norwegian model. It is often associated with double threshold sessions. However, this variant emphasizes _single_ sub-threshold workouts per day instead of two as in double threshold sessions. The core principle is to maximizing repeatable training load while keeping the fatigue at manageable levels. This section is heavily inspired by @NorwegianSingles.
+
+As in every training plan, the goal is to shift the lactate curve to the right (see #fig-lactate). This will of course allow higher speeds at lower lactate levels as we would accumulate lactate slower. As with the \_Norwegian method\*, the core training efforts will occur below the second lactate threshold (LT2).
+Like the _80/20 split_ we would want to spend around 20-25% of weekly time in this training intensity.
+As stated above, this intensity level provides aerobic stimulus without the negative effects that often comes with training above threshold such as fatigue and injures. As such, high-intensity VO2max work is generally avoided because of its high cost-to-benefit ratio.
+
+To avoid exceeding the sub-threshold level, we have to make use of some sort of intensity control. Measuring effort at a finer grained level allows for more repeatable quality work. It is often better (at least safer) to aim for a slightly lower control level than going too fast in each sub-threshold workout due reduce the risk of exceeding the intensity level. A weekly training load can be seen in #tab-norwegian-singles.
+
+<div className="table">
+  <label id="tab-norwegian-singles">
+    An example of a weekly workout plan for _Norwegian singles_.
+  </label>
+
+| Day       | Beginner                        | Advanced                           |
+| --------- | ------------------------------- | ---------------------------------- |
+| Monday    | Easy                            | Easy                               |
+| Tuesday   | Sub (e.g., 1 x 3000m)           | Sub (e.g., 3 x 3000m)              |
+| Wednesday | Easy                            | Easy (+-Double)                    |
+| Thursday  | Sub (e.g., 2 x 2000m, 90s rest) | Sub (e.g., 4 x 2000m, 90s rest)    |
+| Friday    | Easy                            | Easy (+-Double)                    |
+| Saturday  | Sub (e.g., 4 x 1000m, 60s rest) | Sub (e.g., 8-10 x 1000m, 60s rest) |
+| Sunday    | Rest or Easy/Long run           | Long run                           |
+
+</div>
+
 ## Double threshold
 
 # Nutrition
@@ -77,27 +104,32 @@ export const data = [
   },
 ];
 
-<div className="box center overflow-x">
-  <LineChart width={400} height={200} data={data}>
-    <XAxis
-      dataKey="name"
-      label={{ value: "Heart rate", position: "insideBottom", dy: 10 }}
-    />
-    <YAxis
-      label={{ value: "Lactate", angle: -90, dx: 10 }}
-      offset={2}
-      opacity={0}
-    />
-    <CartesianGrid strokeDasharray="3 3" />
-    <ReferenceLine
-      x="LT1"
-      stroke="green"
-      label="Min PAGE"
-      strokeDasharray="3 3"
-    />
-    <ReferenceLine y={10} label="Max" stroke="red" strokeDasharray="3 3" />
-    <Line type="monotone" dataKey="y" stroke="#387908" />
-  </LineChart>
+<div className="figure">
+  <label id="fig-lactate">
+    Curve highlighting the lactate threshold levels LT1 and LT2.
+  </label>
+  <div className="center overflow-x">
+    <LineChart width={400} height={200} data={data}>
+      <XAxis
+        dataKey="name"
+        label={{ value: "Heart rate", position: "insideBottom", dy: 10 }}
+      />
+      <YAxis
+        label={{ value: "Lactate", angle: -90, dx: 10 }}
+        offset={2}
+        opacity={0}
+      />
+      <CartesianGrid strokeDasharray="3 3" />
+      <ReferenceLine
+        x="LT1"
+        stroke="green"
+        label="Min PAGE"
+        strokeDasharray="3 3"
+      />
+      <ReferenceLine y={10} label="Max" stroke="red" strokeDasharray="3 3" />
+      <Line type="monotone" dataKey="y" stroke="#387908" />
+    </LineChart>
+  </div>
 </div>
 
 - LT1 = aerobic threshold
@@ -119,9 +151,11 @@ Lactate is measured in millimoles per litre of blood (mmol/L)
 **_Lactate Turnpoint 1 (LT1)_** is the point at which there is a measurable rise in blood lactate
 above baseline.
 
-## Lactate Turnpoint 2 (LT1)
+## Lactate Turnpoint 2 (LT2)
 
 **_Lactate Turnpoint 2 (LT2)_** is the point at which lactate starts to rise at an accelerated rate.
+
+# Intensity control
 
 # Recovery
 
@@ -210,78 +244,6 @@ Source @HowTrainEliud2023
 8. https://www.runnersworld.com/uk/training/a776622/how-slowing-down-can-help-you-speed-up/
 
 - https://lactate.barts.space/
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
-
-# Links
 
 # References
 

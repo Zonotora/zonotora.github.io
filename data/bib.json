@@ -110,38 +110,6 @@
   "collections": {},
   "items": [
     {
-      "version": 3255,
-      "itemType": "webpage",
-      "title": "Applicability to Different Distances – Norwegian Singles",
-      "url": "https://norwegiansingles.run/section5_applicability_distances.html",
-      "accessDate": "2025-06-01T17:04:23Z",
-      "creators": [],
-      "tags": [],
-      "relations": {},
-      "dateAdded": "2025-06-01T17:04:23Z",
-      "dateModified": "2025-06-01T17:04:23Z",
-      "uri": "http://zotero.org/users/11037809/items/8D94XUVC",
-      "attachments": [
-        {
-          "itemType": "attachment",
-          "title": "Applicability to Different Distances – Norwegian Singles",
-          "tags": [],
-          "relations": {},
-          "dateAdded": "2025-06-01T17:04:28Z",
-          "dateModified": "2025-06-01T17:04:28Z",
-          "uri": "http://zotero.org/users/11037809/items/8NRPLM32",
-          "path": "/Zotero/storage/8NRPLM32/section5_applicability_distances.html",
-          "select": "zotero://select/library/items/8NRPLM32"
-        }
-      ],
-      "notes": [],
-      "citationKey": "ApplicabilityDifferentDistances",
-      "itemID": 2701,
-      "itemKey": "8D94XUVC",
-      "libraryID": 1,
-      "select": "zotero://select/library/items/8D94XUVC"
-    },
-    {
       "version": 3259,
       "itemType": "webpage",
       "title": "How To Apply The Norwegian Method To Training",
@@ -372,6 +340,77 @@
       "itemKey": "9ESI32EC",
       "libraryID": 1,
       "select": "zotero://select/library/items/9ESI32EC"
+    },
+    {
+      "version": 3277,
+      "itemType": "webpage",
+      "title": "Norwegian Singles",
+      "url": "https://norwegiansingles.run/",
+      "accessDate": "2025-06-01T17:30:54Z",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2025-06-01T17:30:54Z",
+      "dateModified": "2025-06-01T17:30:54Z",
+      "uri": "http://zotero.org/users/11037809/items/ADHQHHTQ",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Norwegian Singles",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-06-01T17:30:59Z",
+          "dateModified": "2025-06-01T17:30:59Z",
+          "uri": "http://zotero.org/users/11037809/items/MYJGTZR8",
+          "path": "/Zotero/storage/MYJGTZR8/norwegiansingles.run.html",
+          "select": "zotero://select/library/items/MYJGTZR8"
+        }
+      ],
+      "notes": [],
+      "citationKey": "NorwegianSingles",
+      "itemID": 2719,
+      "itemKey": "ADHQHHTQ",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/ADHQHHTQ"
+    },
+    {
+      "version": 3283,
+      "itemType": "encyclopediaArticle",
+      "title": "Glycogen",
+      "abstractNote": "Glycogen is a multibranched polysaccharide of glucose that serves as a form of energy storage in animals, fungi, and bacteria. It is the main storage form of glucose in the human body. \nGlycogen functions as one of three regularly used forms of energy reserves, creatine phosphate being for very short-term, glycogen being for short-term and the triglyceride stores in adipose tissue (i.e., body fat) being for long-term storage. Protein, broken down into amino acids, is seldom used as a main energy source except during starvation and glycolytic crisis (see bioenergetic systems). \nIn humans, glycogen is made and stored primarily in the cells of the liver and skeletal muscle. In the liver, glycogen can make up 5–6% of the organ's fresh weight: the liver of an adult, weighing 1.5 kg, can store roughly 100–120 grams of glycogen. In skeletal muscle, glycogen is found in a low concentration (1–2% of the muscle mass): the skeletal muscle of an adult weighing 70 kg stores roughly 400 grams of glycogen. Small amounts of glycogen are also found in other tissues and cells, including the kidneys, red blood cells, white blood cells, and glial cells in the brain. The uterus also stores glycogen during pregnancy to nourish the embryo.\nThe amount of glycogen stored in the body mostly depends on oxidative type 1 fibres, physical training, basal metabolic rate, and eating habits. Different levels of resting muscle glycogen are reached by changing the number of glycogen particles, rather than increasing the size of existing particles though most glycogen particles at rest are smaller than their theoretical maximum.\nApproximately 4 grams of glucose are present in the blood of humans at all times; in fasting individuals, blood glucose is maintained constant at this level at the expense of glycogen stores, primarily from the liver (glycogen in skeletal muscle is mainly used as an immediate source of energy for that muscle rather than being used to maintain physiological blood glucose levels). Glycogen stores in skeletal muscle serve as a form of energy storage for the muscle itself; however, the breakdown of muscle glycogen impedes muscle glucose uptake from the blood, thereby increasing the amount of blood glucose available for use in other tissues. Liver glycogen stores serve as a store of glucose for use throughout the body, particularly the central nervous system. The human brain consumes approximately 60% of blood glucose in fasted, sedentary individuals.\nGlycogen is an analogue of starch, a glucose polymer that functions as energy storage in plants. It has a structure similar to amylopectin (a component of starch), but is more extensively branched and compact than starch. Both are white powders in their dry state. Glycogen is found in the form of granules in the cytosol/cytoplasm in many cell types, and plays an important role in the glucose cycle. Glycogen forms an energy reserve that can be quickly mobilized to meet a sudden need for glucose, but one that is less compact than the energy reserves of triglycerides (lipids). As such it is also found as storage reserve in many parasitic protozoa.",
+      "date": "2025-05-23T00:08:44Z",
+      "language": "en",
+      "libraryCatalog": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?title=Glycogen&oldid=1291722555",
+      "accessDate": "2025-06-01T17:36:39Z",
+      "rights": "Creative Commons Attribution-ShareAlike License",
+      "extra": "Page Version ID: 1291722555",
+      "encyclopediaTitle": "Wikipedia",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2025-06-01T17:36:39Z",
+      "dateModified": "2025-06-01T17:36:39Z",
+      "uri": "http://zotero.org/users/11037809/items/3BRPPM7B",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-06-01T17:36:46Z",
+          "dateModified": "2025-06-01T17:36:46Z",
+          "uri": "http://zotero.org/users/11037809/items/4X26BPML",
+          "path": "/Zotero/storage/4X26BPML/Glycogen.html",
+          "select": "zotero://select/library/items/4X26BPML"
+        }
+      ],
+      "notes": [],
+      "citationKey": "Glycogen2025",
+      "itemID": 2721,
+      "itemKey": "3BRPPM7B",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/3BRPPM7B"
     }
   ]
 }
