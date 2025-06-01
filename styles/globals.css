@@ -182,6 +182,8 @@ hr {
   position: fixed;
   top: 40px;
   transform: translateX(calc(-100% - 20px));
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
 }
 
 .toc li {
@@ -367,6 +369,7 @@ hr {
     background-color: var(--background-color);
     padding-right: 10px;
     height: 100vh;
+    max-height: 100vh;
     transition: transform 0.2s ease-in;
   }
   .toc.open {
