@@ -28,7 +28,10 @@ h1,
 h2,
 h3,
 li,
-svg {
+svg,
+span,
+label,
+table {
   font-family: "PT Serif", serif;
   scroll-margin-top: 32px;
 }
@@ -100,6 +103,7 @@ svg {
 table {
   width: 100%;
   border: var(--border);
+  text-align: left;
 }
 
 th {
@@ -172,6 +176,7 @@ hr {
 .center {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .overflow-x {
@@ -336,6 +341,11 @@ hr {
 
 .post a {
   text-decoration: underline;
+}
+
+.figure,
+.table {
+  text-align: center;
 }
 
 .reference-item {
