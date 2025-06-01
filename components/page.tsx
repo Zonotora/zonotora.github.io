@@ -45,6 +45,17 @@ const Page = ({ active, children }: Props) => {
         }
       }
     });
+
+    window.addEventListener("click", (event) => {
+      nav.classList.remove("open");
+    });
+
+    for (const a of anchors) {
+      a.addEventListener("click", (event) => {
+        event.stopPropagation();
+        nav.classList.add("open");
+      });
+    }
   }, []);
 
   return (
