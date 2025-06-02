@@ -137,7 +137,7 @@ function createReferenceNode(bibItem: BibType) {
 
 export default function remarkCitation(options?: Options) {
   const filepath = options?.filepath ? options.filepath : DEFAULT_FILEPATH;
-  let bibtex = {};
+  let bibtex: { [key: string]: BibType } = {};
   for (const path of filepath) {
     const ret = parseBibtex(path);
     bibtex = Object.assign({}, ret, bibtex);
