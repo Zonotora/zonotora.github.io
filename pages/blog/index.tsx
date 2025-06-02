@@ -5,6 +5,7 @@ import Page from "../../components/page";
 export const Blog = ({ files }: { files: StaticFileType[] }) => {
   return (
     <Page active="blog">
+      Wow. So empty.
       {files.map((file) => (
         <div>
           {file.title}

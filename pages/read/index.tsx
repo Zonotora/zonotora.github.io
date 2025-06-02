@@ -170,7 +170,7 @@ export const Reading = ({ files }: { files: StaticFileType[] }) => {
   );
 
   return (
-    <Page active="reading">
+    <Page active="read">
       <BookHeader
         filter={filter}
         setFilter={setFilter}
@@ -185,7 +185,7 @@ export const Reading = ({ files }: { files: StaticFileType[] }) => {
 };
 
 export const getStaticProps = async () => {
-  const files = getStaticFiles("reading");
+  const files = getStaticFiles("read");
 
   return {
     props: { files },

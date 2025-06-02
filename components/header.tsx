@@ -48,14 +48,15 @@ const Header = ({ active }: HeaderProps) => {
       <header>
         <HeaderLink active={active} link="about" />
         <HeaderLink active={active} link="blog" />
-        <HeaderLink active={active} link="reading" />
-        <HeaderLink active={active} link="running" />
+        <HeaderLink active={active} link="read" />
+        <HeaderLink active={active} link="run" />
         <HeaderLink active={active} link="c" />
         <HeaderLink
           active={active}
           link="os"
           alternativeLink="guidos/book/index.html"
         />
+        <HeaderLink active={active} link="ml" />
       </header>
       <div className="box helper-icons">
         <a href={`/feed.xml`}>

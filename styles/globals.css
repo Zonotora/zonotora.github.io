@@ -45,6 +45,10 @@ code {
   padding-right: 3px;
 }
 
+code span {
+  font-family: "Fira Code", monospace;
+}
+
 a {
   color: var(--color);
   text-decoration: none;
