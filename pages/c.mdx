@@ -1,5 +1,55 @@
 import Page from "../components/page";
 
+# Forward declaration for APIs
+
+A nice trick to conceal the field members of a struct in a public API function for a library function is to use forward declarations in the public header for the specified struct like so:
+
+```c
+// private-api.h
+struct my_struct {
+    int field1;
+    int field2;
+}
+
+```
+
+```c
+// public-api.c
+#include "private-api.h"
+
+my_struct* a_function(void) {
+    // contents
+    return NULL;
+}
+```
+
+```c
+// api.h
+typedef struct my_struct my_struct;
+
+// Here we use the forward declared type
+my_struct* a_function(void);
+
+```
+
+Then we can use the function like follows:
+
+```c
+// main.c
+#include "api.h"
+
+int main(void) {
+    // Ok
+    my_struct* ptr = a_function();
+
+    // Invalid! We CAN'T do this, as the compiler does not know
+    // how my_struct looks like during the compilation of main.c
+    ptr->field1 = 0;
+    return 0;
+}
+
+```
+
 # Overloading
 
 Let's say you want to overwrite an API-function located in a library that you don't have any control over or a standard
