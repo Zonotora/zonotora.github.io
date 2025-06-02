@@ -1,7 +1,7 @@
 import { visit, SKIP } from "unist-util-visit";
 import fs from "fs";
 
-const DEFAULT_FILEPATH = "./data/bib.json";
+const DEFAULT_FILEPATH = "./bib/running.json";
 
 type Options = {
   filepath: string;
