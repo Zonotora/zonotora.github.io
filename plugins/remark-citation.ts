@@ -1,7 +1,7 @@
 import { visit, SKIP } from "unist-util-visit";
 import fs from "fs";
 
-const DEFAULT_FILEPATH = "./bib/running.json";
+const DEFAULT_FILEPATH = ["./bib/running.json", "./bib/ml.json"];
 
 type Options = {
   filepath: string;
@@ -137,12 +137,17 @@ function createReferenceNode(bibItem: BibType) {
 
 export default function remarkCitation(options?: Options) {
   const filepath = options?.filepath ? options.filepath : DEFAULT_FILEPATH;
-  const bibtex = parseBibtex(filepath);
+  let bibtex = {};
+  for (const path of filepath) {
+    const ret = parseBibtex(path);
+    bibtex = Object.assign({}, ret, bibtex);
+  }
+
   const used: string[] = [];
 
   return (tree: any) => {
     visit(tree, "text", (node, index, parent) => {
-      const regex = /@([a-zA-Z0-9_,]+)/g;
+      const regex = /@([a-zA-Z0-9_,\-]+)/g;
       let match;
       let lastIndex = 0;
       const newNodes = [];

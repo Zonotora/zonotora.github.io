@@ -1,0 +1,4823 @@
+{
+  "config": {
+    "id": "36a3b0b5-bad0-4a04-b79b-441c7cef77db",
+    "label": "BetterBibTeX JSON",
+    "preferences": {
+      "ascii": "",
+      "asciiBibLaTeX": false,
+      "asciiBibTeX": true,
+      "autoAbbrev": false,
+      "autoAbbrevStyle": "",
+      "autoExport": "immediate",
+      "autoExportDelay": 5,
+      "autoExportIdleWait": 10,
+      "autoExportPathReplaceDiacritics": false,
+      "autoExportPathReplaceDirSep": "-",
+      "autoExportPathReplaceSpace": " ",
+      "automaticTags": true,
+      "autoPinDelay": 0,
+      "auxImport": false,
+      "baseAttachmentPath": "",
+      "biblatexExtendedDateFormat": true,
+      "biblatexExtendedNameFormat": true,
+      "biblatexExtractEprint": true,
+      "bibtexEditionOrdinal": false,
+      "bibtexParticleNoOp": false,
+      "bibtexURL": "off",
+      "cache": true,
+      "charmap": "",
+      "citeCommand": "cite",
+      "citekeyCaseInsensitive": true,
+      "citekeyFold": true,
+      "citekeyFormat": "auth.lower + shorttitle(3,3) + year",
+      "citekeySearch": true,
+      "citekeyUnsafeChars": "\\\"#%'(),={}~",
+      "csquotes": "",
+      "DOIandURL": "both",
+      "exportBibTeXStrings": "off",
+      "exportBraceProtection": true,
+      "exportSort": "id",
+      "exportTitleCase": true,
+      "extraMergeCitekeys": false,
+      "extraMergeCSL": false,
+      "extraMergeTeX": false,
+      "git": "config",
+      "import": true,
+      "importBibTeXStrings": true,
+      "importCaseProtection": "as-needed",
+      "importCitationKey": true,
+      "importDetectURLs": true,
+      "importExtra": true,
+      "importJabRefAbbreviations": true,
+      "importJabRefStrings": true,
+      "importNoteToExtra": "",
+      "importSentenceCase": "on+guess",
+      "importSentenceCaseQuoted": true,
+      "importUnknownTexCommand": "ignore",
+      "itemObserverDelay": 5,
+      "jabrefFormat": 0,
+      "jieba": false,
+      "keyConflictPolicy": "keep",
+      "keyScope": "library",
+      "kuroshiro": false,
+      "language": "langid",
+      "mapMath": "",
+      "mapText": "",
+      "packages": "",
+      "parseParticles": true,
+      "patchDates": "dateadded=dateAdded, date-added=dateAdded, datemodified=dateModified, date-modified=dateModified",
+      "postscript": "",
+      "postscriptOverride": "",
+      "preferencesOverride": "",
+      "qualityReport": false,
+      "quickCopyEta": "",
+      "quickCopyMode": "latex",
+      "quickCopyOrgMode": "zotero",
+      "quickCopyPandocBrackets": false,
+      "quickCopySelectLink": "zotero",
+      "rawImports": false,
+      "rawLaTag": "#LaTeX",
+      "relativeFilePaths": false,
+      "retainCache": false,
+      "separatorList": "and",
+      "separatorNames": "and",
+      "skipFields": "",
+      "skipWords": "a,ab,aboard,about,above,across,after,against,al,along,amid,among,an,and,anti,around,as,at,before,behind,below,beneath,beside,besides,between,beyond,but,by,d,da,das,de,del,dell,dello,dei,degli,della,dell,delle,dem,den,der,des,despite,die,do,down,du,during,ein,eine,einem,einen,einer,eines,el,en,et,except,for,from,gli,i,il,in,inside,into,is,l,la,las,le,les,like,lo,los,near,nor,of,off,on,onto,or,over,past,per,plus,round,save,since,so,some,sur,than,the,through,to,toward,towards,un,una,unas,under,underneath,une,unlike,uno,unos,until,up,upon,versus,via,von,while,with,within,without,yet,zu,zum",
+      "startupProgress": "popup",
+      "strings": "",
+      "stringsOverride": "",
+      "verbatimFields": "url,doi,file,pdf,ids,eprint,/^verb[a-z]$/,groups,/^citeulike-linkout-[0-9]+$/, /^bdsk-url-[0-9]+$/, keywords",
+      "warnBulkModify": 10,
+      "warnTitleCased": false
+    },
+    "options": {
+      "Items": true,
+      "Normalize": false,
+      "Preferences": true,
+      "cache": true,
+      "exportDir": "",
+      "exportFileData": false,
+      "exportNotes": false,
+      "exportPath": "/ml.json",
+      "keepUpdated": false,
+      "worker": false
+    }
+  },
+  "version": {
+    "zotero": "6.0.22",
+    "bbt": "6.7.226"
+  },
+  "collections": {},
+  "items": [
+    {
+      "version": 3290,
+      "itemType": "preprint",
+      "title": "Recurrent Neural Networks (RNNs): A gentle Introduction and Overview",
+      "abstractNote": "State-of-the-art solutions in the areas of \"Language Modelling & Generating Text\", \"Speech Recognition\", \"Generating Image Descriptions\" or \"Video Tagging\" have been using Recurrent Neural Networks as the foundation for their approaches. Understanding the underlying concepts is therefore of tremendous importance if we want to keep up with recent or upcoming publications in those areas. In this work we give a short overview over some of the most important concepts in the realm of Recurrent Neural Networks which enables readers to easily understand the fundamentals such as but not limited to \"Backpropagation through Time\" or \"Long Short-Term Memory Units\" as well as some of the more recent advances like the \"Attention Mechanism\" or \"Pointer Networks\". We also give recommendations for further reading regarding more complex topics where it is necessary.",
+      "date": "2019-11-23",
+      "shortTitle": "Recurrent Neural Networks (RNNs)",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/1912.05911",
+      "accessDate": "2022-06-12T16:16:29Z",
+      "extra": "Number: arXiv:1912.05911\narXiv:1912.05911 [cs, stat]",
+      "DOI": "10.48550/arXiv.1912.05911",
+      "repository": "arXiv",
+      "archiveID": "arXiv:1912.05911",
+      "creators": [
+        {
+          "firstName": "Robin M.",
+          "lastName": "Schmidt",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Statistics - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2022-06-12T16:16:30Z",
+      "dateModified": "2022-06-12T16:16:30Z",
+      "uri": "http://zotero.org/users/11037809/items/H2VF2IJ7",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2022-06-12T16:16:34Z",
+          "dateModified": "2022-06-12T16:16:34Z",
+          "uri": "http://zotero.org/users/11037809/items/ABLSZHJG",
+          "path": "/Zotero/storage/ABLSZHJG/Schmidt - 2019 - Recurrent Neural Networks (RNNs) A gentle Introdu.pdf",
+          "select": "zotero://select/library/items/ABLSZHJG"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2022-06-12T16:16:40Z",
+          "dateModified": "2022-06-12T16:16:40Z",
+          "uri": "http://zotero.org/users/11037809/items/CYIB9EBZ",
+          "path": "/Zotero/storage/CYIB9EBZ/1912.html",
+          "select": "zotero://select/library/items/CYIB9EBZ"
+        }
+      ],
+      "notes": [],
+      "citationKey": "schmidtRecurrentNeuralNetworks2019",
+      "itemID": 98,
+      "itemKey": "H2VF2IJ7",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/H2VF2IJ7"
+    },
+    {
+      "version": 3290,
+      "itemType": "preprint",
+      "title": "Improving language models by retrieving from trillions of tokens",
+      "abstractNote": "We enhance auto-regressive language models by conditioning on document chunks retrieved from a large corpus, based on local similarity with preceding tokens. With a $2$ trillion token database, our Retrieval-Enhanced Transformer (RETRO) obtains comparable performance to GPT-3 and Jurassic-1 on the Pile, despite using 25$\\times$ fewer parameters. After fine-tuning, RETRO performance translates to downstream knowledge-intensive tasks such as question answering. RETRO combines a frozen Bert retriever, a differentiable encoder and a chunked cross-attention mechanism to predict tokens based on an order of magnitude more data than what is typically consumed during training. We typically train RETRO from scratch, yet can also rapidly RETROfit pre-trained transformers with retrieval and still achieve good performance. Our work opens up new avenues for improving language models through explicit memory at unprecedented scale.",
+      "date": "2021-12-08",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2112.04426",
+      "accessDate": "2023-02-05T12:42:17Z",
+      "extra": "arXiv:2112.04426 [cs]\nversion: 1",
+      "DOI": "10.48550/arXiv.2112.04426",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2112.04426",
+      "creators": [
+        {
+          "firstName": "Sebastian",
+          "lastName": "Borgeaud",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Arthur",
+          "lastName": "Mensch",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jordan",
+          "lastName": "Hoffmann",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Trevor",
+          "lastName": "Cai",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Eliza",
+          "lastName": "Rutherford",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Katie",
+          "lastName": "Millican",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "George van den",
+          "lastName": "Driessche",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jean-Baptiste",
+          "lastName": "Lespiau",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bogdan",
+          "lastName": "Damoc",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Aidan",
+          "lastName": "Clark",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Diego de Las",
+          "lastName": "Casas",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Aurelia",
+          "lastName": "Guy",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jacob",
+          "lastName": "Menick",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Roman",
+          "lastName": "Ring",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tom",
+          "lastName": "Hennigan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Saffron",
+          "lastName": "Huang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Loren",
+          "lastName": "Maggiore",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chris",
+          "lastName": "Jones",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Albin",
+          "lastName": "Cassirer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Andy",
+          "lastName": "Brock",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Michela",
+          "lastName": "Paganini",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Geoffrey",
+          "lastName": "Irving",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Oriol",
+          "lastName": "Vinyals",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Simon",
+          "lastName": "Osindero",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Karen",
+          "lastName": "Simonyan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jack W.",
+          "lastName": "Rae",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Erich",
+          "lastName": "Elsen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Laurent",
+          "lastName": "Sifre",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:42:17Z",
+      "dateModified": "2023-02-05T12:42:17Z",
+      "uri": "http://zotero.org/users/11037809/items/W5IYEBUD",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:22Z",
+          "dateModified": "2023-02-05T12:42:22Z",
+          "uri": "http://zotero.org/users/11037809/items/WNWFUX9V",
+          "path": "/Zotero/storage/WNWFUX9V/Borgeaud et al. - 2021 - Improving language models by retrieving from trill.pdf",
+          "select": "zotero://select/library/items/WNWFUX9V"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:28Z",
+          "dateModified": "2023-02-05T12:42:28Z",
+          "uri": "http://zotero.org/users/11037809/items/3UTMR64H",
+          "path": "/Zotero/storage/3UTMR64H/2112.html",
+          "select": "zotero://select/library/items/3UTMR64H"
+        }
+      ],
+      "notes": [
+        {
+          "key": "X5JMTK33",
+          "version": 189,
+          "itemType": "note",
+          "parentItem": "W5IYEBUD",
+          "note": "Comment: Fix incorrect reported numbers in Table 14",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:17Z",
+          "dateModified": "2023-02-05T12:42:17Z",
+          "uri": "http://zotero.org/users/11037809/items/X5JMTK33"
+        }
+      ],
+      "citationKey": "borgeaudImprovingLanguageModels2021",
+      "itemID": 29,
+      "itemKey": "W5IYEBUD",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/W5IYEBUD"
+    },
+    {
+      "version": 3290,
+      "itemType": "preprint",
+      "title": "The Pile: An 800GB Dataset of Diverse Text for Language Modeling",
+      "abstractNote": "Recent work has demonstrated that increased training dataset diversity improves general cross-domain knowledge and downstream generalization capability for large-scale language models. With this in mind, we present \\textit{the Pile}: an 825 GiB English text corpus targeted at training large-scale language models. The Pile is constructed from 22 diverse high-quality subsets -- both existing and newly constructed -- many of which derive from academic or professional sources. Our evaluation of the untuned performance of GPT-2 and GPT-3 on the Pile shows that these models struggle on many of its components, such as academic writing. Conversely, models trained on the Pile improve significantly over both Raw CC and CC-100 on all components of the Pile, while improving performance on downstream evaluations. Through an in-depth exploratory analysis, we document potentially concerning aspects of the data for prospective users. We make publicly available the code used in its construction.",
+      "date": "2020-12-31",
+      "shortTitle": "The Pile",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2101.00027",
+      "accessDate": "2023-02-05T12:42:27Z",
+      "extra": "arXiv:2101.00027 [cs]",
+      "DOI": "10.48550/arXiv.2101.00027",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2101.00027",
+      "creators": [
+        {
+          "firstName": "Leo",
+          "lastName": "Gao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Stella",
+          "lastName": "Biderman",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sid",
+          "lastName": "Black",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Laurence",
+          "lastName": "Golding",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Travis",
+          "lastName": "Hoppe",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Charles",
+          "lastName": "Foster",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jason",
+          "lastName": "Phang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Horace",
+          "lastName": "He",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Anish",
+          "lastName": "Thite",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Noa",
+          "lastName": "Nabeshima",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shawn",
+          "lastName": "Presser",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Connor",
+          "lastName": "Leahy",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:42:28Z",
+      "dateModified": "2023-02-05T12:42:28Z",
+      "uri": "http://zotero.org/users/11037809/items/95IZAX3Y",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:33Z",
+          "dateModified": "2023-02-05T12:42:33Z",
+          "uri": "http://zotero.org/users/11037809/items/CFAMB8FZ",
+          "path": "/Zotero/storage/CFAMB8FZ/Gao et al. - 2020 - The Pile An 800GB Dataset of Diverse Text for Lan.pdf",
+          "select": "zotero://select/library/items/CFAMB8FZ"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:38Z",
+          "dateModified": "2023-02-05T12:42:38Z",
+          "uri": "http://zotero.org/users/11037809/items/CTLGGVDC",
+          "path": "/Zotero/storage/CTLGGVDC/2101.html",
+          "select": "zotero://select/library/items/CTLGGVDC"
+        }
+      ],
+      "notes": [],
+      "citationKey": "gaoPile800GBDataset2020",
+      "itemID": 28,
+      "itemKey": "95IZAX3Y",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/95IZAX3Y"
+    },
+    {
+      "version": 3290,
+      "itemType": "preprint",
+      "title": "An Attention Free Transformer",
+      "abstractNote": "We introduce Attention Free Transformer (AFT), an efficient variant of Transformers that eliminates the need for dot product self attention. In an AFT layer, the key and value are first combined with a set of learned position biases, the result of which is multiplied with the query in an element-wise fashion. This new operation has a memory complexity linear w.r.t. both the context size and the dimension of features, making it compatible to both large input and model sizes. We also introduce AFT-local and AFT-conv, two model variants that take advantage of the idea of locality and spatial weight sharing while maintaining global connectivity. We conduct extensive experiments on two autoregressive modeling tasks (CIFAR10 and Enwik8) as well as an image recognition task (ImageNet-1K classification). We show that AFT demonstrates competitive performance on all the benchmarks, while providing excellent efficiency at the same time.",
+      "date": "2021-09-21",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2105.14103",
+      "accessDate": "2023-02-05T12:42:33Z",
+      "extra": "arXiv:2105.14103 [cs]",
+      "DOI": "10.48550/arXiv.2105.14103",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2105.14103",
+      "creators": [
+        {
+          "firstName": "Shuangfei",
+          "lastName": "Zhai",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Walter",
+          "lastName": "Talbott",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nitish",
+          "lastName": "Srivastava",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chen",
+          "lastName": "Huang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hanlin",
+          "lastName": "Goh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ruixiang",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Josh",
+          "lastName": "Susskind",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computer Vision and Pattern Recognition",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:42:33Z",
+      "dateModified": "2023-02-05T12:42:33Z",
+      "uri": "http://zotero.org/users/11037809/items/9JUYWQ7X",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:45Z",
+          "dateModified": "2023-02-05T12:42:45Z",
+          "uri": "http://zotero.org/users/11037809/items/WMJQ5N7K",
+          "path": "/Zotero/storage/WMJQ5N7K/Zhai et al. - 2021 - An Attention Free Transformer.pdf",
+          "select": "zotero://select/library/items/WMJQ5N7K"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:49Z",
+          "dateModified": "2023-02-05T12:42:49Z",
+          "uri": "http://zotero.org/users/11037809/items/DNHXWQMC",
+          "path": "/Zotero/storage/DNHXWQMC/2105.html",
+          "select": "zotero://select/library/items/DNHXWQMC"
+        }
+      ],
+      "notes": [],
+      "citationKey": "zhaiAttentionFreeTransformer2021",
+      "itemID": 27,
+      "itemKey": "9JUYWQ7X",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/9JUYWQ7X"
+    },
+    {
+      "version": 3290,
+      "itemType": "preprint",
+      "title": "RoboFly: An insect-sized robot with simplified fabrication that is capable of flight, ground, and water surface locomotion",
+      "abstractNote": "Aerial robots the size of a honeybee (~100 mg) have advantages over larger robots because of their small size, low mass and low materials cost. Previous iterations have demonstrated controlled flight but were difficult to fabricate because they consisted of many separate parts assembled together. They also were unable to perform locomotion modes besides flight. This paper presents a new design of a 74 mg flapping-wing robot that dramatically reduces the number of parts and simplifies fabrication. It also has a lower center of mass, which allows the robot to additionally land without the need for long legs, even in case of unstable flight. Furthermore, we show that the new design allows for wing-driven ground and air-water interfacial locomotion, improving the versatility of the robot. Forward thrust is generated by increasing the speed of downstroke relative to the upstroke of the flapping wings. This also allows for steering. The ability to land and subsequently move along the ground allows the robot to negotiate extremely confined spaces, underneath obstacles, and to precise locations. We describe the new design in detail and present results demonstrating these capabilities, as well as hovering flight and controlled landing.",
+      "date": "2020-10-25",
+      "shortTitle": "RoboFly",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2001.02320",
+      "accessDate": "2023-02-05T12:42:40Z",
+      "extra": "arXiv:2001.02320 [cs, eess]\nversion: 2",
+      "DOI": "10.48550/arXiv.2001.02320",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2001.02320",
+      "creators": [
+        {
+          "firstName": "Yogesh M.",
+          "lastName": "Chukewad",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Johannes",
+          "lastName": "James",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Avinash",
+          "lastName": "Singh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sawyer",
+          "lastName": "Fuller",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Robotics",
+          "type": 1
+        },
+        {
+          "tag": "Electrical Engineering and Systems Science - Systems and Control",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:42:40Z",
+      "dateModified": "2023-02-05T12:42:40Z",
+      "uri": "http://zotero.org/users/11037809/items/YDLWVCN4",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:46Z",
+          "dateModified": "2023-02-05T12:42:46Z",
+          "uri": "http://zotero.org/users/11037809/items/2CCTLYHL",
+          "path": "/Zotero/storage/2CCTLYHL/Chukewad et al. - 2020 - RoboFly An insect-sized robot with simplified fab.pdf",
+          "select": "zotero://select/library/items/2CCTLYHL"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:51Z",
+          "dateModified": "2023-02-05T12:42:51Z",
+          "uri": "http://zotero.org/users/11037809/items/FXSMDMVI",
+          "path": "/Zotero/storage/FXSMDMVI/2001.html",
+          "select": "zotero://select/library/items/FXSMDMVI"
+        }
+      ],
+      "notes": [
+        {
+          "key": "YGMC2G4D",
+          "version": 192,
+          "itemType": "note",
+          "parentItem": "YDLWVCN4",
+          "note": "Comment: 15 pages. Submitted to IEEE Transactions on Robotics (T-RO)",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:40Z",
+          "dateModified": "2023-02-05T12:42:40Z",
+          "uri": "http://zotero.org/users/11037809/items/YGMC2G4D"
+        }
+      ],
+      "citationKey": "chukewadRoboFlyInsectsizedRobot2020",
+      "itemID": 26,
+      "itemKey": "YDLWVCN4",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/YDLWVCN4"
+    },
+    {
+      "version": 3290,
+      "itemType": "preprint",
+      "title": "FiLM: Visual Reasoning with a General Conditioning Layer",
+      "abstractNote": "We introduce a general-purpose conditioning method for neural networks called FiLM: Feature-wise Linear Modulation. FiLM layers influence neural network computation via a simple, feature-wise affine transformation based on conditioning information. We show that FiLM layers are highly effective for visual reasoning - answering image-related questions which require a multi-step, high-level process - a task which has proven difficult for standard deep learning methods that do not explicitly model reasoning. Specifically, we show on visual reasoning tasks that FiLM layers 1) halve state-of-the-art error for the CLEVR benchmark, 2) modulate features in a coherent manner, 3) are robust to ablations and architectural modifications, and 4) generalize well to challenging, new data from few examples or even zero-shot.",
+      "date": "2017-12-18",
+      "shortTitle": "FiLM",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/1709.07871",
+      "accessDate": "2023-02-05T12:42:45Z",
+      "extra": "arXiv:1709.07871 [cs, stat]",
+      "DOI": "10.48550/arXiv.1709.07871",
+      "repository": "arXiv",
+      "archiveID": "arXiv:1709.07871",
+      "creators": [
+        {
+          "firstName": "Ethan",
+          "lastName": "Perez",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Florian",
+          "lastName": "Strub",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Harm",
+          "lastName": "de Vries",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Vincent",
+          "lastName": "Dumoulin",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Aaron",
+          "lastName": "Courville",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computer Vision and Pattern Recognition",
+          "type": 1
+        },
+        {
+          "tag": "Statistics - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:42:45Z",
+      "dateModified": "2023-02-05T12:42:45Z",
+      "uri": "http://zotero.org/users/11037809/items/59T2Q4FN",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:53Z",
+          "dateModified": "2023-02-05T12:42:53Z",
+          "uri": "http://zotero.org/users/11037809/items/IJ9529TD",
+          "path": "/Zotero/storage/IJ9529TD/Perez et al. - 2017 - FiLM Visual Reasoning with a General Conditioning.pdf",
+          "select": "zotero://select/library/items/IJ9529TD"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:58Z",
+          "dateModified": "2023-02-05T12:42:58Z",
+          "uri": "http://zotero.org/users/11037809/items/6WET6SED",
+          "path": "/Zotero/storage/6WET6SED/1709.html",
+          "select": "zotero://select/library/items/6WET6SED"
+        }
+      ],
+      "notes": [
+        {
+          "key": "IBJ59LCJ",
+          "version": 193,
+          "itemType": "note",
+          "parentItem": "59T2Q4FN",
+          "note": "Comment: AAAI 2018. Code available at http://github.com/ethanjperez/film . Extends arXiv:1707.03017",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:45Z",
+          "dateModified": "2023-02-05T12:42:45Z",
+          "uri": "http://zotero.org/users/11037809/items/IBJ59LCJ"
+        }
+      ],
+      "citationKey": "perezFiLMVisualReasoning2017",
+      "itemID": 25,
+      "itemKey": "59T2Q4FN",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/59T2Q4FN"
+    },
+    {
+      "version": 3290,
+      "itemType": "preprint",
+      "title": "RT-1: Robotics Transformer for Real-World Control at Scale",
+      "abstractNote": "By transferring knowledge from large, diverse, task-agnostic datasets, modern machine learning models can solve specific downstream tasks either zero-shot or with small task-specific datasets to a high level of performance. While this capability has been demonstrated in other fields such as computer vision, natural language processing or speech recognition, it remains to be shown in robotics, where the generalization capabilities of the models are particularly critical due to the difficulty of collecting real-world robotic data. We argue that one of the keys to the success of such general robotic models lies with open-ended task-agnostic training, combined with high-capacity architectures that can absorb all of the diverse, robotic data. In this paper, we present a model class, dubbed Robotics Transformer, that exhibits promising scalable model properties. We verify our conclusions in a study of different model classes and their ability to generalize as a function of the data size, model size, and data diversity based on a large-scale data collection on real robots performing real-world tasks. The project's website and videos can be found at robotics-transformer.github.io",
+      "date": "2022-12-13",
+      "shortTitle": "RT-1",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2212.06817",
+      "accessDate": "2023-02-05T12:42:50Z",
+      "extra": "arXiv:2212.06817 [cs]",
+      "DOI": "10.48550/arXiv.2212.06817",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2212.06817",
+      "creators": [
+        {
+          "firstName": "Anthony",
+          "lastName": "Brohan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Noah",
+          "lastName": "Brown",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Justice",
+          "lastName": "Carbajal",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yevgen",
+          "lastName": "Chebotar",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Joseph",
+          "lastName": "Dabis",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chelsea",
+          "lastName": "Finn",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Keerthana",
+          "lastName": "Gopalakrishnan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Karol",
+          "lastName": "Hausman",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alex",
+          "lastName": "Herzog",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jasmine",
+          "lastName": "Hsu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Julian",
+          "lastName": "Ibarz",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Brian",
+          "lastName": "Ichter",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alex",
+          "lastName": "Irpan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tomas",
+          "lastName": "Jackson",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sally",
+          "lastName": "Jesmonth",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nikhil J.",
+          "lastName": "Joshi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ryan",
+          "lastName": "Julian",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dmitry",
+          "lastName": "Kalashnikov",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuheng",
+          "lastName": "Kuang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Isabel",
+          "lastName": "Leal",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kuang-Huei",
+          "lastName": "Lee",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sergey",
+          "lastName": "Levine",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yao",
+          "lastName": "Lu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Utsav",
+          "lastName": "Malla",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Deeksha",
+          "lastName": "Manjunath",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Igor",
+          "lastName": "Mordatch",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ofir",
+          "lastName": "Nachum",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Carolina",
+          "lastName": "Parada",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jodilyn",
+          "lastName": "Peralta",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Emily",
+          "lastName": "Perez",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Karl",
+          "lastName": "Pertsch",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jornell",
+          "lastName": "Quiambao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kanishka",
+          "lastName": "Rao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Michael",
+          "lastName": "Ryoo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Grecia",
+          "lastName": "Salazar",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Pannag",
+          "lastName": "Sanketi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kevin",
+          "lastName": "Sayed",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jaspiar",
+          "lastName": "Singh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sumedh",
+          "lastName": "Sontakke",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Austin",
+          "lastName": "Stone",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Clayton",
+          "lastName": "Tan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Huong",
+          "lastName": "Tran",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Vincent",
+          "lastName": "Vanhoucke",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Steve",
+          "lastName": "Vega",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Quan",
+          "lastName": "Vuong",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Fei",
+          "lastName": "Xia",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ted",
+          "lastName": "Xiao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Peng",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sichun",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tianhe",
+          "lastName": "Yu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Brianna",
+          "lastName": "Zitkovich",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computer Vision and Pattern Recognition",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Robotics",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:42:50Z",
+      "dateModified": "2023-02-05T12:42:50Z",
+      "uri": "http://zotero.org/users/11037809/items/7MR98BIW",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:07Z",
+          "dateModified": "2023-02-05T12:43:07Z",
+          "uri": "http://zotero.org/users/11037809/items/LZ8MM8IB",
+          "path": "/Zotero/storage/LZ8MM8IB/Brohan et al. - 2022 - RT-1 Robotics Transformer for Real-World Control .pdf",
+          "select": "zotero://select/library/items/LZ8MM8IB"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:12Z",
+          "dateModified": "2023-02-05T12:43:12Z",
+          "uri": "http://zotero.org/users/11037809/items/8C8HBIRJ",
+          "path": "/Zotero/storage/8C8HBIRJ/2212.html",
+          "select": "zotero://select/library/items/8C8HBIRJ"
+        }
+      ],
+      "notes": [
+        {
+          "key": "AGS6XHKQ",
+          "version": 193,
+          "itemType": "note",
+          "parentItem": "7MR98BIW",
+          "note": "Comment: See website at robotics-transformer.github.io",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:50Z",
+          "dateModified": "2023-02-05T12:42:50Z",
+          "uri": "http://zotero.org/users/11037809/items/AGS6XHKQ"
+        }
+      ],
+      "citationKey": "brohanRT1RoboticsTransformer2022",
+      "itemID": 24,
+      "itemKey": "7MR98BIW",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/7MR98BIW"
+    },
+    {
+      "version": 3289,
+      "itemType": "preprint",
+      "title": "Learning to Drive in a Day",
+      "abstractNote": "We demonstrate the first application of deep reinforcement learning to autonomous driving. From randomly initialised parameters, our model is able to learn a policy for lane following in a handful of training episodes using a single monocular image as input. We provide a general and easy to obtain reward: the distance travelled by the vehicle without the safety driver taking control. We use a continuous, model-free deep reinforcement learning algorithm, with all exploration and optimisation performed on-vehicle. This demonstrates a new framework for autonomous driving which moves away from reliance on defined logical rules, mapping, and direct supervision. We discuss the challenges and opportunities to scale this approach to a broader range of autonomous driving tasks.",
+      "date": "2018-09-11",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/1807.00412",
+      "accessDate": "2023-02-05T12:42:54Z",
+      "extra": "arXiv:1807.00412 [cs, stat]",
+      "DOI": "10.48550/arXiv.1807.00412",
+      "repository": "arXiv",
+      "archiveID": "arXiv:1807.00412",
+      "creators": [
+        {
+          "firstName": "Alex",
+          "lastName": "Kendall",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jeffrey",
+          "lastName": "Hawke",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "David",
+          "lastName": "Janz",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Przemyslaw",
+          "lastName": "Mazur",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Daniele",
+          "lastName": "Reda",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "John-Mark",
+          "lastName": "Allen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Vinh-Dieu",
+          "lastName": "Lam",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alex",
+          "lastName": "Bewley",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Amar",
+          "lastName": "Shah",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Robotics",
+          "type": 1
+        },
+        {
+          "tag": "Statistics - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:42:54Z",
+      "dateModified": "2023-02-05T12:42:54Z",
+      "uri": "http://zotero.org/users/11037809/items/I57VJX8V",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:58Z",
+          "dateModified": "2023-02-05T12:42:58Z",
+          "uri": "http://zotero.org/users/11037809/items/PT5FF3I7",
+          "path": "/Zotero/storage/PT5FF3I7/Kendall et al. - 2018 - Learning to Drive in a Day.pdf",
+          "select": "zotero://select/library/items/PT5FF3I7"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:03Z",
+          "dateModified": "2023-02-05T12:43:03Z",
+          "uri": "http://zotero.org/users/11037809/items/GX8D59VM",
+          "path": "/Zotero/storage/GX8D59VM/1807.html",
+          "select": "zotero://select/library/items/GX8D59VM"
+        }
+      ],
+      "notes": [
+        {
+          "key": "3WLIVWD2",
+          "version": 194,
+          "itemType": "note",
+          "parentItem": "I57VJX8V",
+          "note": "Comment: Further results and demo videos can be viewed at: https://wayve.ai/blog/l2diad",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:54Z",
+          "dateModified": "2023-02-05T12:42:54Z",
+          "uri": "http://zotero.org/users/11037809/items/3WLIVWD2"
+        }
+      ],
+      "citationKey": "kendallLearningDriveDay2018",
+      "itemID": 23,
+      "itemKey": "I57VJX8V",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/I57VJX8V"
+    },
+    {
+      "version": 3289,
+      "itemType": "preprint",
+      "title": "Meta Learning Backpropagation And Improving It",
+      "abstractNote": "Many concepts have been proposed for meta learning with neural networks (NNs), e.g., NNs that learn to reprogram fast weights, Hebbian plasticity, learned learning rules, and meta recurrent NNs. Our Variable Shared Meta Learning (VSML) unifies the above and demonstrates that simple weight-sharing and sparsity in an NN is sufficient to express powerful learning algorithms (LAs) in a reusable fashion. A simple implementation of VSML where the weights of a neural network are replaced by tiny LSTMs allows for implementing the backpropagation LA solely by running in forward-mode. It can even meta learn new LAs that differ from online backpropagation and generalize to datasets outside of the meta training distribution without explicit gradient calculation. Introspection reveals that our meta learned LAs learn through fast association in a way that is qualitatively different from gradient descent.",
+      "date": "2022-03-13",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2012.14905",
+      "accessDate": "2023-02-05T12:42:59Z",
+      "extra": "arXiv:2012.14905 [cs, stat]",
+      "DOI": "10.48550/arXiv.2012.14905",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2012.14905",
+      "creators": [
+        {
+          "firstName": "Louis",
+          "lastName": "Kirsch",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jürgen",
+          "lastName": "Schmidhuber",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Neural and Evolutionary Computing",
+          "type": 1
+        },
+        {
+          "tag": "Statistics - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:42:59Z",
+      "dateModified": "2023-02-05T12:42:59Z",
+      "uri": "http://zotero.org/users/11037809/items/MZ7MB6KY",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:09Z",
+          "dateModified": "2023-02-05T12:43:09Z",
+          "uri": "http://zotero.org/users/11037809/items/Y7RINHI9",
+          "path": "/Zotero/storage/Y7RINHI9/Kirsch and Schmidhuber - 2022 - Meta Learning Backpropagation And Improving It.pdf",
+          "select": "zotero://select/library/items/Y7RINHI9"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:14Z",
+          "dateModified": "2023-02-05T12:43:14Z",
+          "uri": "http://zotero.org/users/11037809/items/D9VFLNH9",
+          "path": "/Zotero/storage/D9VFLNH9/2012.html",
+          "select": "zotero://select/library/items/D9VFLNH9"
+        }
+      ],
+      "notes": [
+        {
+          "key": "ZJLJPW43",
+          "version": 194,
+          "itemType": "note",
+          "parentItem": "MZ7MB6KY",
+          "note": "Comment: Updated to the NeurIPS 2021 camera ready; fixed typo in eq 4",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:42:59Z",
+          "dateModified": "2023-02-05T12:42:59Z",
+          "uri": "http://zotero.org/users/11037809/items/ZJLJPW43"
+        }
+      ],
+      "citationKey": "kirschMetaLearningBackpropagation2022",
+      "itemID": 22,
+      "itemKey": "MZ7MB6KY",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/MZ7MB6KY"
+    },
+    {
+      "version": 3289,
+      "itemType": "preprint",
+      "title": "A Walk in the Park: Learning to Walk in 20 Minutes With Model-Free Reinforcement Learning",
+      "abstractNote": "Deep reinforcement learning is a promising approach to learning policies in uncontrolled environments that do not require domain knowledge. Unfortunately, due to sample inefficiency, deep RL applications have primarily focused on simulated environments. In this work, we demonstrate that the recent advancements in machine learning algorithms and libraries combined with a carefully tuned robot controller lead to learning quadruped locomotion in only 20 minutes in the real world. We evaluate our approach on several indoor and outdoor terrains which are known to be challenging for classical model-based controllers. We observe the robot to be able to learn walking gait consistently on all of these terrains. Finally, we evaluate our design decisions in a simulated environment.",
+      "date": "2022-08-16",
+      "shortTitle": "A Walk in the Park",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2208.07860",
+      "accessDate": "2023-02-05T12:43:04Z",
+      "extra": "arXiv:2208.07860 [cs]",
+      "DOI": "10.48550/arXiv.2208.07860",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2208.07860",
+      "creators": [
+        {
+          "firstName": "Laura",
+          "lastName": "Smith",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ilya",
+          "lastName": "Kostrikov",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sergey",
+          "lastName": "Levine",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Robotics",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:43:04Z",
+      "dateModified": "2023-02-05T12:43:04Z",
+      "uri": "http://zotero.org/users/11037809/items/39526ER4",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:11Z",
+          "dateModified": "2023-02-05T12:43:11Z",
+          "uri": "http://zotero.org/users/11037809/items/V92HTAYP",
+          "path": "/Zotero/storage/V92HTAYP/Smith et al. - 2022 - A Walk in the Park Learning to Walk in 20 Minutes.pdf",
+          "select": "zotero://select/library/items/V92HTAYP"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:17Z",
+          "dateModified": "2023-02-05T12:43:17Z",
+          "uri": "http://zotero.org/users/11037809/items/X2PYAJP9",
+          "path": "/Zotero/storage/X2PYAJP9/2208.html",
+          "select": "zotero://select/library/items/X2PYAJP9"
+        }
+      ],
+      "notes": [
+        {
+          "key": "VW287ADY",
+          "version": 195,
+          "itemType": "note",
+          "parentItem": "39526ER4",
+          "note": "Comment: First two authors contributed equally. Project website: https://sites.google.com/berkeley.edu/walk-in-the-park",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:04Z",
+          "dateModified": "2023-02-05T12:43:04Z",
+          "uri": "http://zotero.org/users/11037809/items/VW287ADY"
+        }
+      ],
+      "citationKey": "smithWalkParkLearning2022",
+      "itemID": 21,
+      "itemKey": "39526ER4",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/39526ER4"
+    },
+    {
+      "version": 3289,
+      "itemType": "preprint",
+      "title": "Mastering Diverse Domains through World Models",
+      "abstractNote": "General intelligence requires solving tasks across many domains. Current reinforcement learning algorithms carry this potential but are held back by the resources and knowledge required to tune them for new tasks. We present DreamerV3, a general and scalable algorithm based on world models that outperforms previous approaches across a wide range of domains with fixed hyperparameters. These domains include continuous and discrete actions, visual and low-dimensional inputs, 2D and 3D worlds, different data budgets, reward frequencies, and reward scales. We observe favorable scaling properties of DreamerV3, with larger models directly translating to higher data-efficiency and final performance. Applied out of the box, DreamerV3 is the first algorithm to collect diamonds in Minecraft from scratch without human data or curricula, a long-standing challenge in artificial intelligence. Our general algorithm makes reinforcement learning broadly applicable and allows scaling to hard decision-making problems.",
+      "date": "2023-01-10",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2301.04104",
+      "accessDate": "2023-02-05T12:43:08Z",
+      "extra": "arXiv:2301.04104 [cs, stat]",
+      "DOI": "10.48550/arXiv.2301.04104",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2301.04104",
+      "creators": [
+        {
+          "firstName": "Danijar",
+          "lastName": "Hafner",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jurgis",
+          "lastName": "Pasukonis",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jimmy",
+          "lastName": "Ba",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Timothy",
+          "lastName": "Lillicrap",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Statistics - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:43:08Z",
+      "dateModified": "2023-02-05T12:43:08Z",
+      "uri": "http://zotero.org/users/11037809/items/KNFKWL9H",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:15Z",
+          "dateModified": "2023-02-05T12:43:15Z",
+          "uri": "http://zotero.org/users/11037809/items/SYIALYNU",
+          "path": "/Zotero/storage/SYIALYNU/Hafner et al. - 2023 - Mastering Diverse Domains through World Models.pdf",
+          "select": "zotero://select/library/items/SYIALYNU"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:19Z",
+          "dateModified": "2023-02-05T12:43:19Z",
+          "uri": "http://zotero.org/users/11037809/items/JUEF6MGB",
+          "path": "/Zotero/storage/JUEF6MGB/2301.html",
+          "select": "zotero://select/library/items/JUEF6MGB"
+        }
+      ],
+      "notes": [
+        {
+          "key": "BFGWGB22",
+          "version": 208,
+          "itemType": "note",
+          "parentItem": "KNFKWL9H",
+          "note": "Comment: Website: https://danijar.com/dreamerv3",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:08Z",
+          "dateModified": "2023-02-05T12:43:08Z",
+          "uri": "http://zotero.org/users/11037809/items/BFGWGB22"
+        }
+      ],
+      "citationKey": "hafnerMasteringDiverseDomains2023",
+      "itemID": 20,
+      "itemKey": "KNFKWL9H",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/KNFKWL9H"
+    },
+    {
+      "version": 3289,
+      "itemType": "preprint",
+      "title": "ChatGPT is not all you need. A State of the Art Review of large Generative AI models",
+      "abstractNote": "During the last two years there has been a plethora of large generative models such as ChatGPT or Stable Diffusion that have been published. Concretely, these models are able to perform tasks such as being a general question and answering system or automatically creating artistic images that are revolutionizing several sectors. Consequently, the implications that these generative models have in the industry and society are enormous, as several job positions may be transformed. For example, Generative AI is capable of transforming effectively and creatively texts to images, like the DALLE-2 model; text to 3D images, like the Dreamfusion model; images to text, like the Flamingo model; texts to video, like the Phenaki model; texts to audio, like the AudioLM model; texts to other texts, like ChatGPT; texts to code, like the Codex model; texts to scientific texts, like the Galactica model or even create algorithms like AlphaTensor. This work consists on an attempt to describe in a concise way the main models are sectors that are affected by generative AI and to provide a taxonomy of the main generative models published recently.",
+      "date": "2023-01-11",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2301.04655",
+      "accessDate": "2023-02-05T12:43:13Z",
+      "extra": "arXiv:2301.04655 [cs]",
+      "DOI": "10.48550/arXiv.2301.04655",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2301.04655",
+      "creators": [
+        {
+          "firstName": "Roberto",
+          "lastName": "Gozalo-Brizuela",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Eduardo C.",
+          "lastName": "Garrido-Merchan",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:43:13Z",
+      "dateModified": "2023-02-05T12:43:13Z",
+      "uri": "http://zotero.org/users/11037809/items/39NDNZSK",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:18Z",
+          "dateModified": "2023-02-05T12:43:18Z",
+          "uri": "http://zotero.org/users/11037809/items/U8PKLIYD",
+          "path": "/Zotero/storage/U8PKLIYD/Gozalo-Brizuela and Garrido-Merchan - 2023 - ChatGPT is not all you need. A State of the Art Re.pdf",
+          "select": "zotero://select/library/items/U8PKLIYD"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:23Z",
+          "dateModified": "2023-02-05T12:43:23Z",
+          "uri": "http://zotero.org/users/11037809/items/84PCC8GN",
+          "path": "/Zotero/storage/84PCC8GN/2301.html",
+          "select": "zotero://select/library/items/84PCC8GN"
+        }
+      ],
+      "notes": [
+        {
+          "key": "FPKMK65N",
+          "version": 208,
+          "itemType": "note",
+          "parentItem": "39NDNZSK",
+          "note": "Comment: 22 pages",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:13Z",
+          "dateModified": "2023-02-05T12:43:13Z",
+          "uri": "http://zotero.org/users/11037809/items/FPKMK65N"
+        }
+      ],
+      "citationKey": "gozalo-brizuelaChatGPTNotAll2023",
+      "itemID": 19,
+      "itemKey": "39NDNZSK",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/39NDNZSK"
+    },
+    {
+      "version": 3289,
+      "itemType": "preprint",
+      "title": "Predictive Coding Approximates Backprop along Arbitrary Computation Graphs",
+      "abstractNote": "Backpropagation of error (backprop) is a powerful algorithm for training machine learning architectures through end-to-end differentiation. However, backprop is often criticised for lacking biological plausibility. Recently, it has been shown that backprop in multilayer-perceptrons (MLPs) can be approximated using predictive coding, a biologically-plausible process theory of cortical computation which relies only on local and Hebbian updates. The power of backprop, however, lies not in its instantiation in MLPs, but rather in the concept of automatic differentiation which allows for the optimisation of any differentiable program expressed as a computation graph. Here, we demonstrate that predictive coding converges asymptotically (and in practice rapidly) to exact backprop gradients on arbitrary computation graphs using only local learning rules. We apply this result to develop a straightforward strategy to translate core machine learning architectures into their predictive coding equivalents. We construct predictive coding CNNs, RNNs, and the more complex LSTMs, which include a non-layer-like branching internal graph structure and multiplicative interactions. Our models perform equivalently to backprop on challenging machine learning benchmarks, while utilising only local and (mostly) Hebbian plasticity. Our method raises the potential that standard machine learning algorithms could in principle be directly implemented in neural circuitry, and may also contribute to the development of completely distributed neuromorphic architectures.",
+      "date": "2020-10-05",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2006.04182",
+      "accessDate": "2023-02-05T12:43:18Z",
+      "extra": "arXiv:2006.04182 [cs]",
+      "DOI": "10.48550/arXiv.2006.04182",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2006.04182",
+      "creators": [
+        {
+          "firstName": "Beren",
+          "lastName": "Millidge",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alexander",
+          "lastName": "Tschantz",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christopher L.",
+          "lastName": "Buckley",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Neural and Evolutionary Computing",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:43:18Z",
+      "dateModified": "2023-02-05T12:43:18Z",
+      "uri": "http://zotero.org/users/11037809/items/MIHWXQ5T",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:24Z",
+          "dateModified": "2023-02-05T12:43:24Z",
+          "uri": "http://zotero.org/users/11037809/items/IR6ZAD7Z",
+          "path": "/Zotero/storage/IR6ZAD7Z/Millidge et al. - 2020 - Predictive Coding Approximates Backprop along Arbi.pdf",
+          "select": "zotero://select/library/items/IR6ZAD7Z"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:29Z",
+          "dateModified": "2023-02-05T12:43:29Z",
+          "uri": "http://zotero.org/users/11037809/items/AR8RM5M3",
+          "path": "/Zotero/storage/AR8RM5M3/2006.html",
+          "select": "zotero://select/library/items/AR8RM5M3"
+        }
+      ],
+      "notes": [
+        {
+          "key": "WJCMD95Q",
+          "version": 217,
+          "itemType": "note",
+          "parentItem": "MIHWXQ5T",
+          "note": "Comment: Submitted to NeurIPS 2020. Updated Acknowledgements. 11/06/20: fixed typos in maths -- 11/07/20: minor corrections; 05/10/20: major rewrite for ICLR",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:18Z",
+          "dateModified": "2023-02-05T12:43:18Z",
+          "uri": "http://zotero.org/users/11037809/items/WJCMD95Q"
+        }
+      ],
+      "citationKey": "millidgePredictiveCodingApproximates2020",
+      "itemID": 18,
+      "itemKey": "MIHWXQ5T",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/MIHWXQ5T"
+    },
+    {
+      "version": 3289,
+      "itemType": "preprint",
+      "title": "Training language models to follow instructions with human feedback",
+      "abstractNote": "Making language models bigger does not inherently make them better at following a user's intent. For example, large language models can generate outputs that are untruthful, toxic, or simply not helpful to the user. In other words, these models are not aligned with their users. In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback. Starting with a set of labeler-written prompts and prompts submitted through the OpenAI API, we collect a dataset of labeler demonstrations of the desired model behavior, which we use to fine-tune GPT-3 using supervised learning. We then collect a dataset of rankings of model outputs, which we use to further fine-tune this supervised model using reinforcement learning from human feedback. We call the resulting models InstructGPT. In human evaluations on our prompt distribution, outputs from the 1.3B parameter InstructGPT model are preferred to outputs from the 175B GPT-3, despite having 100x fewer parameters. Moreover, InstructGPT models show improvements in truthfulness and reductions in toxic output generation while having minimal performance regressions on public NLP datasets. Even though InstructGPT still makes simple mistakes, our results show that fine-tuning with human feedback is a promising direction for aligning language models with human intent.",
+      "date": "2022-03-04",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2203.02155",
+      "accessDate": "2023-02-05T12:43:23Z",
+      "extra": "arXiv:2203.02155 [cs]",
+      "DOI": "10.48550/arXiv.2203.02155",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2203.02155",
+      "creators": [
+        {
+          "firstName": "Long",
+          "lastName": "Ouyang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jeff",
+          "lastName": "Wu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xu",
+          "lastName": "Jiang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Diogo",
+          "lastName": "Almeida",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Carroll L.",
+          "lastName": "Wainwright",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Pamela",
+          "lastName": "Mishkin",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chong",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sandhini",
+          "lastName": "Agarwal",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Katarina",
+          "lastName": "Slama",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alex",
+          "lastName": "Ray",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "John",
+          "lastName": "Schulman",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jacob",
+          "lastName": "Hilton",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Fraser",
+          "lastName": "Kelton",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Luke",
+          "lastName": "Miller",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Maddie",
+          "lastName": "Simens",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Amanda",
+          "lastName": "Askell",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Peter",
+          "lastName": "Welinder",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Paul",
+          "lastName": "Christiano",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jan",
+          "lastName": "Leike",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ryan",
+          "lastName": "Lowe",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T12:43:23Z",
+      "dateModified": "2023-02-05T12:43:23Z",
+      "uri": "http://zotero.org/users/11037809/items/9U4YZZK5",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:28Z",
+          "dateModified": "2023-02-05T12:43:28Z",
+          "uri": "http://zotero.org/users/11037809/items/K9BSTIC5",
+          "path": "/Zotero/storage/K9BSTIC5/Ouyang et al. - 2022 - Training language models to follow instructions wi.pdf",
+          "select": "zotero://select/library/items/K9BSTIC5"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T12:43:32Z",
+          "dateModified": "2023-02-05T12:43:32Z",
+          "uri": "http://zotero.org/users/11037809/items/XYVBBDBT",
+          "path": "/Zotero/storage/XYVBBDBT/2203.html",
+          "select": "zotero://select/library/items/XYVBBDBT"
+        }
+      ],
+      "notes": [],
+      "citationKey": "ouyangTrainingLanguageModels2022",
+      "itemID": 17,
+      "itemKey": "9U4YZZK5",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/9U4YZZK5"
+    },
+    {
+      "version": 3289,
+      "itemType": "preprint",
+      "title": "Attention Is All You Need",
+      "abstractNote": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.",
+      "date": "2017-12-05",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/1706.03762",
+      "accessDate": "2023-02-05T15:18:20Z",
+      "extra": "arXiv:1706.03762 [cs]",
+      "DOI": "10.48550/arXiv.1706.03762",
+      "archiveID": "arXiv:1706.03762",
+      "creators": [
+        {
+          "firstName": "Ashish",
+          "lastName": "Vaswani",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Noam",
+          "lastName": "Shazeer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Niki",
+          "lastName": "Parmar",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jakob",
+          "lastName": "Uszkoreit",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Llion",
+          "lastName": "Jones",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Aidan N.",
+          "lastName": "Gomez",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Lukasz",
+          "lastName": "Kaiser",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Illia",
+          "lastName": "Polosukhin",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T15:18:20Z",
+      "dateModified": "2023-02-05T15:18:20Z",
+      "uri": "http://zotero.org/users/11037809/items/D5KHYV3M",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Vaswani et al. - 2017 - Attention Is All You Need.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T15:18:25Z",
+          "dateModified": "2023-02-05T15:18:25Z",
+          "uri": "http://zotero.org/users/11037809/items/H55LGQCG",
+          "path": "/Zotero/storage/H55LGQCG/Vaswani et al. - 2017 - Attention Is All You Need.pdf",
+          "select": "zotero://select/library/items/H55LGQCG"
+        }
+      ],
+      "notes": [],
+      "citationKey": "vaswaniAttentionAllYou2017",
+      "itemID": 16,
+      "itemKey": "D5KHYV3M",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/D5KHYV3M"
+    },
+    {
+      "version": 3289,
+      "itemType": "preprint",
+      "title": "Dream to Control: Learning Behaviors by Latent Imagination",
+      "abstractNote": "Learned world models summarize an agent's experience to facilitate learning complex behaviors. While learning world models from high-dimensional sensory inputs is becoming feasible through deep learning, there are many potential ways for deriving behaviors from them. We present Dreamer, a reinforcement learning agent that solves long-horizon tasks from images purely by latent imagination. We efficiently learn behaviors by propagating analytic gradients of learned state values back through trajectories imagined in the compact state space of a learned world model. On 20 challenging visual control tasks, Dreamer exceeds existing approaches in data-efficiency, computation time, and final performance.",
+      "date": "2020-03-17",
+      "shortTitle": "Dream to Control",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/1912.01603",
+      "accessDate": "2023-02-05T15:20:51Z",
+      "extra": "arXiv:1912.01603 [cs]",
+      "DOI": "10.48550/arXiv.1912.01603",
+      "archiveID": "arXiv:1912.01603",
+      "creators": [
+        {
+          "firstName": "Danijar",
+          "lastName": "Hafner",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Timothy",
+          "lastName": "Lillicrap",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jimmy",
+          "lastName": "Ba",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mohammad",
+          "lastName": "Norouzi",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Robotics",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T15:20:51Z",
+      "dateModified": "2023-02-05T15:20:51Z",
+      "uri": "http://zotero.org/users/11037809/items/GTV9BUXE",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Hafner et al. - 2020 - Dream to Control Learning Behaviors by Latent Imagination.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T15:20:55Z",
+          "dateModified": "2023-02-05T15:20:55Z",
+          "uri": "http://zotero.org/users/11037809/items/VFAU3V95",
+          "path": "/Zotero/storage/VFAU3V95/Hafner et al. - 2020 - Dream to Control Learning Behaviors by Latent Imagination.pdf",
+          "select": "zotero://select/library/items/VFAU3V95"
+        }
+      ],
+      "notes": [],
+      "citationKey": "hafnerDreamControlLearning2020",
+      "itemID": 15,
+      "itemKey": "GTV9BUXE",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/GTV9BUXE"
+    },
+    {
+      "version": 3289,
+      "itemType": "preprint",
+      "title": "The Forward-Forward Algorithm: Some Preliminary Investigations",
+      "abstractNote": "The aim of this paper is to introduce a new learning procedure for neural networks and to demonstrate that it works well enough on a few small problems to be worth further investigation. The Forward-Forward algorithm replaces the forward and backward passes of backpropagation by two forward passes, one with positive (i.e. real) data and the other with negative data which could be generated by the network itself. Each layer has its own objective function which is simply to have high goodness for positive data and low goodness for negative data. The sum of the squared activities in a layer can be used as the goodness but there are many other possibilities, including minus the sum of the squared activities. If the positive and negative passes could be separated in time, the negative passes could be done offline, which would make the learning much simpler in the positive pass and allow video to be pipelined through the network without ever storing activities or stopping to propagate derivatives.",
+      "date": "2022-12-26",
+      "shortTitle": "The Forward-Forward Algorithm",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2212.13345",
+      "accessDate": "2023-02-05T15:23:09Z",
+      "extra": "arXiv:2212.13345 [cs]",
+      "DOI": "10.48550/arXiv.2212.13345",
+      "archiveID": "arXiv:2212.13345",
+      "creators": [
+        {
+          "firstName": "Geoffrey",
+          "lastName": "Hinton",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-02-05T15:23:09Z",
+      "dateModified": "2023-02-05T15:23:09Z",
+      "uri": "http://zotero.org/users/11037809/items/DBU67SPC",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Hinton - 2022 - The Forward-Forward Algorithm Some Preliminary Investigations.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-02-05T15:23:12Z",
+          "dateModified": "2023-02-05T15:23:12Z",
+          "uri": "http://zotero.org/users/11037809/items/VP2PAHWZ",
+          "path": "/Zotero/storage/VP2PAHWZ/Hinton - 2022 - The Forward-Forward Algorithm Some Preliminary Investigations.pdf",
+          "select": "zotero://select/library/items/VP2PAHWZ"
+        }
+      ],
+      "notes": [],
+      "citationKey": "hintonForwardForwardAlgorithmPreliminary2022",
+      "itemID": 14,
+      "itemKey": "DBU67SPC",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/DBU67SPC"
+    },
+    {
+      "version": 3290,
+      "itemType": "journalArticle",
+      "title": "Characterizing the Impact of Diffuse Scattering in Urban Millimeter-Wave Deployments",
+      "abstractNote": "In this letter, we characterize the impact of diffuse scattering in dense urban deployments of millimeter-wave (mmWave) systems by using an advanced ray-launching (RL) simulation tool. Specifically, we first construct an RL-based methodology which is well-suited for the proposed analysis, and then investigate the received power distribution both with and without the contribution resultant from the diffuse scattering of rays for both line-of-sight (LOS) and non-LOS (NLOS) conditions. Simulation results are presented which show that, different from lower frequency bands, diffuse scattering makes a noticeable contribution to the total received power for NLOS links in the mmWave band. Therefore, when considering NLOS mmWave propagation in urban settings, it is critical to properly model and take into account specular attenuation due to surface roughness.",
+      "date": "2016-08",
+      "libraryCatalog": "IEEE Xplore",
+      "extra": "Conference Name: IEEE Wireless Communications Letters",
+      "volume": "5",
+      "pages": "432-435",
+      "publicationTitle": "IEEE Wireless Communications Letters",
+      "DOI": "10.1109/LWC.2016.2580669",
+      "issue": "4",
+      "ISSN": "2162-2345",
+      "creators": [
+        {
+          "firstName": "Dmitrii",
+          "lastName": "Solomitckii",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Qian Clara",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tommaso",
+          "lastName": "Balercia",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Claudio R. C. M.",
+          "lastName": "da Silva",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shilpa",
+          "lastName": "Talwar",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sergey",
+          "lastName": "Andreev",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yevgeni",
+          "lastName": "Koucheryavy",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Attenuation",
+          "type": 1
+        },
+        {
+          "tag": "Buildings",
+          "type": 1
+        },
+        {
+          "tag": "Millimeter-wave propagation",
+          "type": 1
+        },
+        {
+          "tag": "Optical surface waves",
+          "type": 1
+        },
+        {
+          "tag": "propagation in urban areas",
+          "type": 1
+        },
+        {
+          "tag": "ray launching",
+          "type": 1
+        },
+        {
+          "tag": "Receivers",
+          "type": 1
+        },
+        {
+          "tag": "Rough surfaces",
+          "type": 1
+        },
+        {
+          "tag": "Scattering",
+          "type": 1
+        },
+        {
+          "tag": "Surface roughness",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2023-04-19T13:56:48Z",
+      "dateModified": "2023-04-19T14:15:11Z",
+      "uri": "http://zotero.org/users/11037809/items/JTY6F4YI",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "IEEE Xplore Abstract Record",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-04-19T13:57:00Z",
+          "dateModified": "2023-04-19T13:57:00Z",
+          "uri": "http://zotero.org/users/11037809/items/BGHSYA4N",
+          "path": "/Zotero/storage/BGHSYA4N/7491262.html",
+          "select": "zotero://select/library/items/BGHSYA4N"
+        }
+      ],
+      "notes": [],
+      "citationKey": "solomitckiiCharacterizingImpactDiffuse2016",
+      "itemID": 1448,
+      "itemKey": "JTY6F4YI",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/JTY6F4YI"
+    },
+    {
+      "version": 3292,
+      "itemType": "preprint",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "abstractNote": "An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.",
+      "date": "2021-10-16",
+      "shortTitle": "LoRA",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2106.09685",
+      "accessDate": "2023-05-06T17:17:52Z",
+      "extra": "arXiv:2106.09685 [cs]",
+      "DOI": "10.48550/arXiv.2106.09685",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2106.09685",
+      "creators": [
+        {
+          "firstName": "Edward J.",
+          "lastName": "Hu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yelong",
+          "lastName": "Shen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Phillip",
+          "lastName": "Wallis",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zeyuan",
+          "lastName": "Allen-Zhu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuanzhi",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shean",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Lu",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Weizhu",
+          "lastName": "Chen",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {
+        "owl:sameAs": ["http://zotero.org/groups/4937575/items/4R34FQC2"]
+      },
+      "dateAdded": "2023-05-06T17:18:15Z",
+      "dateModified": "2023-05-06T17:18:15Z",
+      "uri": "http://zotero.org/users/11037809/items/2GU7ZXDS",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": ["http://zotero.org/groups/4937575/items/2DVARXZ2"]
+          },
+          "dateAdded": "2023-05-06T17:18:15Z",
+          "dateModified": "2023-05-06T17:18:15Z",
+          "uri": "http://zotero.org/users/11037809/items/ZKEHLAUS",
+          "path": "/Zotero/storage/ZKEHLAUS/Hu et al. - 2021 - LoRA Low-Rank Adaptation of Large Language Models.pdf",
+          "select": "zotero://select/library/items/ZKEHLAUS"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": ["http://zotero.org/groups/4937575/items/FMKM9IMY"]
+          },
+          "dateAdded": "2023-05-06T17:18:15Z",
+          "dateModified": "2023-05-06T17:18:15Z",
+          "uri": "http://zotero.org/users/11037809/items/8KCWH92E",
+          "path": "/Zotero/storage/8KCWH92E/2106.html",
+          "select": "zotero://select/library/items/8KCWH92E"
+        }
+      ],
+      "notes": [
+        {
+          "key": "EHXIP4TU",
+          "version": 1356,
+          "itemType": "note",
+          "parentItem": "2GU7ZXDS",
+          "note": "Comment: Draft V2 includes better baselines, experiments on GLUE, and more on adapter latency",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": ["http://zotero.org/groups/4937575/items/KU5EFSZP"]
+          },
+          "dateAdded": "2023-05-06T17:18:15Z",
+          "dateModified": "2023-05-06T17:18:15Z",
+          "uri": "http://zotero.org/users/11037809/items/EHXIP4TU"
+        }
+      ],
+      "citationKey": "huLoRALowRankAdaptation2021",
+      "itemID": 1542,
+      "itemKey": "2GU7ZXDS",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/2GU7ZXDS"
+    },
+    {
+      "version": 3292,
+      "itemType": "webpage",
+      "title": "Koala: A Dialogue Model for Academic Research",
+      "abstractNote": "The BAIR Blog",
+      "shortTitle": "Koala",
+      "url": "http://bair.berkeley.edu/blog/2023/04/03/koala/",
+      "accessDate": "2023-05-06T17:22:52Z",
+      "websiteTitle": "The Berkeley Artificial Intelligence Research Blog",
+      "creators": [
+        {
+          "firstName": "Daniel",
+          "lastName": "Seita",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xinyang Geng, Arnav Gudibande, Hao Liu, Eric Wallace, Pieter Abbeel, Sergey Levine, Dawn",
+          "lastName": "Song",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2023-05-06T17:22:52Z",
+      "dateModified": "2023-05-06T17:22:52Z",
+      "uri": "http://zotero.org/users/11037809/items/2TRLR355",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2023-05-06T17:22:59Z",
+          "dateModified": "2023-05-06T17:22:59Z",
+          "uri": "http://zotero.org/users/11037809/items/ASN8SLDU",
+          "path": "/Zotero/storage/ASN8SLDU/koala.html",
+          "select": "zotero://select/library/items/ASN8SLDU"
+        }
+      ],
+      "notes": [],
+      "citationKey": "seitaKoalaDialogueModel",
+      "itemID": 1546,
+      "itemKey": "2TRLR355",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/2TRLR355"
+    },
+    {
+      "version": 3290,
+      "itemType": "preprint",
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "abstractNote": "While the Transformer architecture has become the de-facto standard for natural language processing tasks, its applications to computer vision remain limited. In vision, attention is either applied in conjunction with convolutional networks, or used to replace certain components of convolutional networks while keeping their overall structure in place. We show that this reliance on CNNs is not necessary and a pure transformer applied directly to sequences of image patches can perform very well on image classification tasks. When pre-trained on large amounts of data and transferred to multiple mid-sized or small image recognition benchmarks (ImageNet, CIFAR-100, VTAB, etc.), Vision Transformer (ViT) attains excellent results compared to state-of-the-art convolutional networks while requiring substantially fewer computational resources to train.",
+      "date": "2021-06-03",
+      "shortTitle": "An Image is Worth 16x16 Words",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2010.11929",
+      "accessDate": "2024-05-27T14:40:35Z",
+      "extra": "arXiv:2010.11929 [cs]",
+      "DOI": "10.48550/arXiv.2010.11929",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2010.11929",
+      "creators": [
+        {
+          "firstName": "Alexey",
+          "lastName": "Dosovitskiy",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Lucas",
+          "lastName": "Beyer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alexander",
+          "lastName": "Kolesnikov",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dirk",
+          "lastName": "Weissenborn",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiaohua",
+          "lastName": "Zhai",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Thomas",
+          "lastName": "Unterthiner",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mostafa",
+          "lastName": "Dehghani",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Matthias",
+          "lastName": "Minderer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Georg",
+          "lastName": "Heigold",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sylvain",
+          "lastName": "Gelly",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jakob",
+          "lastName": "Uszkoreit",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Neil",
+          "lastName": "Houlsby",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computer Vision and Pattern Recognition",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-27T14:40:35Z",
+      "dateModified": "2024-05-27T14:40:39Z",
+      "uri": "http://zotero.org/users/11037809/items/5H4B8M5A",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "arXiv Fulltext PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-05-27T14:40:37Z",
+          "dateModified": "2024-05-27T14:40:37Z",
+          "uri": "http://zotero.org/users/11037809/items/J3NFVZUA",
+          "path": "/Zotero/storage/J3NFVZUA/Dosovitskiy et al. - 2021 - An Image is Worth 16x16 Words Transformers for Im.pdf",
+          "select": "zotero://select/library/items/J3NFVZUA"
+        },
+        {
+          "itemType": "attachment",
+          "title": "arXiv.org Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-05-27T14:40:45Z",
+          "dateModified": "2024-05-27T14:40:45Z",
+          "uri": "http://zotero.org/users/11037809/items/WRXF25DC",
+          "path": "/Zotero/storage/WRXF25DC/2010.html",
+          "select": "zotero://select/library/items/WRXF25DC"
+        }
+      ],
+      "notes": [
+        {
+          "key": "EC3M8GDW",
+          "version": 2943,
+          "itemType": "note",
+          "parentItem": "5H4B8M5A",
+          "note": "Comment: Fine-tuning code and pre-trained models are available at https://github.com/google-research/vision_transformer. ICLR camera-ready version with 2 small modifications: 1) Added a discussion of CLS vs GAP classifier in the appendix, 2) Fixed an error in exaFLOPs computation in Figure 5 and Table 6 (relative performance of models is basically not affected)",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-05-27T14:40:35Z",
+          "dateModified": "2024-05-27T14:40:35Z",
+          "uri": "http://zotero.org/users/11037809/items/EC3M8GDW"
+        }
+      ],
+      "citationKey": "dosovitskiyImageWorth16x162021",
+      "itemID": 2614,
+      "itemKey": "5H4B8M5A",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/5H4B8M5A"
+    },
+    {
+      "version": 3288,
+      "itemType": "preprint",
+      "title": "Large Models of What? Mistaking Engineering Achievements for Human Linguistic Agency",
+      "abstractNote": "In this paper we argue that key, often sensational and misleading, claims regarding linguistic capabilities of Large Language Models (LLMs) are based on at least two unfounded assumptions; the assumption of language completeness and the assumption of data completeness. Language completeness assumes that a distinct and complete thing such as `a natural language' exists, the essential characteristics of which can be effectively and comprehensively modelled by an LLM. The assumption of data completeness relies on the belief that a language can be quantified and wholly captured by data. Work within the enactive approach to cognitive science makes clear that, rather than a distinct and complete thing, language is a means or way of acting. Languaging is not the kind of thing that can admit of a complete or comprehensive modelling. From an enactive perspective we identify three key characteristics of enacted language; embodiment, participation, and precariousness, that are absent in LLMs, and likely incompatible in principle with current architectures. We argue that these absences imply that LLMs are not now and cannot in their present form be linguistic agents the way humans are. We illustrate the point in particular through the phenomenon of `algospeak', a recently described pattern of high stakes human language activity in heavily controlled online environments. On the basis of these points, we conclude that sensational and misleading claims about LLM agency and capabilities emerge from a deep misconception of both what human language is and what LLMs are.",
+      "date": "2024-07-11",
+      "shortTitle": "Large Models of What?",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2407.08790",
+      "accessDate": "2024-07-20T22:36:16Z",
+      "extra": "arXiv:2407.08790 [cs]",
+      "DOI": "10.48550/arXiv.2407.08790",
+      "archiveID": "arXiv:2407.08790",
+      "creators": [
+        {
+          "firstName": "Abeba",
+          "lastName": "Birhane",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Marek",
+          "lastName": "McGann",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computers and Society",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2024-07-20T22:36:16Z",
+      "dateModified": "2024-07-20T22:36:16Z",
+      "uri": "http://zotero.org/users/11037809/items/H8UG6INR",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Birhane and McGann - 2024 - Large Models of What Mistaking Engineering Achievements for Human Linguistic Agency.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-07-20T22:36:56Z",
+          "dateModified": "2024-07-20T22:36:56Z",
+          "uri": "http://zotero.org/users/11037809/items/QNSSYMYU",
+          "path": "/Zotero/storage/QNSSYMYU/Birhane and McGann - 2024 - Large Models of What Mistaking Engineering Achievements for Human Linguistic Agency.pdf",
+          "select": "zotero://select/library/items/QNSSYMYU"
+        }
+      ],
+      "notes": [],
+      "citationKey": "birhaneLargeModelsWhat2024",
+      "itemID": 2635,
+      "itemKey": "H8UG6INR",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/H8UG6INR"
+    },
+    {
+      "version": 3293,
+      "itemType": "preprint",
+      "title": "s1: Simple test-time scaling",
+      "abstractNote": "Test-time scaling is a promising new approach to language modeling that uses extra test-time compute to improve performance. Recently, OpenAI's o1 model showed this capability but did not publicly share its methodology, leading to many replication efforts. We seek the simplest approach to achieve test-time scaling and strong reasoning performance. First, we curate a small dataset s1K of 1,000 questions paired with reasoning traces relying on three criteria we validate through ablations: difficulty, diversity, and quality. Second, we develop budget forcing to control test-time compute by forcefully terminating the model's thinking process or lengthening it by appending \"Wait\" multiple times to the model's generation when it tries to end. This can lead the model to double-check its answer, often fixing incorrect reasoning steps. After supervised finetuning the Qwen2.5-32B-Instruct language model on s1K and equipping it with budget forcing, our model s1-32B exceeds o1-preview on competition math questions by up to 27% (MATH and AIME24). Further, scaling s1-32B with budget forcing allows extrapolating beyond its performance without test-time intervention: from 50% to 57% on AIME24. Our model, data, and code are open-source at https://github.com/simplescaling/s1",
+      "date": "2025-02-03",
+      "shortTitle": "s1",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2501.19393",
+      "accessDate": "2025-02-05T18:32:52Z",
+      "extra": "arXiv:2501.19393 [cs]",
+      "DOI": "10.48550/arXiv.2501.19393",
+      "archiveID": "arXiv:2501.19393",
+      "creators": [
+        {
+          "firstName": "Niklas",
+          "lastName": "Muennighoff",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zitong",
+          "lastName": "Yang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Weijia",
+          "lastName": "Shi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiang Lisa",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Li",
+          "lastName": "Fei-Fei",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hannaneh",
+          "lastName": "Hajishirzi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Luke",
+          "lastName": "Zettlemoyer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Percy",
+          "lastName": "Liang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Emmanuel",
+          "lastName": "Candès",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tatsunori",
+          "lastName": "Hashimoto",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-02-05T18:32:52Z",
+      "dateModified": "2025-02-05T18:32:52Z",
+      "uri": "http://zotero.org/users/11037809/items/UENXCAUM",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Muennighoff et al. - 2025 - s1 Simple test-time scaling.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-02-05T18:33:09Z",
+          "dateModified": "2025-02-05T18:33:09Z",
+          "uri": "http://zotero.org/users/11037809/items/38FXA8WT",
+          "path": "/Zotero/storage/38FXA8WT/Muennighoff et al. - 2025 - s1 Simple test-time scaling.pdf",
+          "select": "zotero://select/library/items/38FXA8WT"
+        }
+      ],
+      "notes": [],
+      "citationKey": "muennighoffS1SimpleTesttime2025",
+      "itemID": 2660,
+      "itemKey": "UENXCAUM",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/UENXCAUM"
+    },
+    {
+      "version": 3292,
+      "itemType": "preprint",
+      "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+      "abstractNote": "We introduce our first-generation reasoning models, DeepSeek-R1-Zero and DeepSeek-R1. DeepSeek-R1-Zero, a model trained via large-scale reinforcement learning (RL) without supervised fine-tuning (SFT) as a preliminary step, demonstrates remarkable reasoning capabilities. Through RL, DeepSeek-R1-Zero naturally emerges with numerous powerful and intriguing reasoning behaviors. However, it encounters challenges such as poor readability, and language mixing. To address these issues and further enhance reasoning performance, we introduce DeepSeek-R1, which incorporates multi-stage training and cold-start data before RL. DeepSeek-R1 achieves performance comparable to OpenAI-o1-1217 on reasoning tasks. To support the research community, we open-source DeepSeek-R1-Zero, DeepSeek-R1, and six dense models (1.5B, 7B, 8B, 14B, 32B, 70B) distilled from DeepSeek-R1 based on Qwen and Llama.",
+      "date": "2025-01-22",
+      "shortTitle": "DeepSeek-R1",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2501.12948",
+      "accessDate": "2025-02-05T19:14:42Z",
+      "extra": "arXiv:2501.12948 [cs]",
+      "DOI": "10.48550/arXiv.2501.12948",
+      "archiveID": "arXiv:2501.12948",
+      "creators": [
+        {
+          "firstName": "",
+          "lastName": "DeepSeek-AI",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Daya",
+          "lastName": "Guo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dejian",
+          "lastName": "Yang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Haowei",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Junxiao",
+          "lastName": "Song",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ruoyu",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Runxin",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Qihao",
+          "lastName": "Zhu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shirong",
+          "lastName": "Ma",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Peiyi",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiao",
+          "lastName": "Bi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiaokang",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xingkai",
+          "lastName": "Yu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yu",
+          "lastName": "Wu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Z. F.",
+          "lastName": "Wu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhibin",
+          "lastName": "Gou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhihong",
+          "lastName": "Shao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhuoshu",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ziyi",
+          "lastName": "Gao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Aixin",
+          "lastName": "Liu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bing",
+          "lastName": "Xue",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bingxuan",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bochao",
+          "lastName": "Wu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Bei",
+          "lastName": "Feng",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chengda",
+          "lastName": "Lu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chenggang",
+          "lastName": "Zhao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chengqi",
+          "lastName": "Deng",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chenyu",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Chong",
+          "lastName": "Ruan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Damai",
+          "lastName": "Dai",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Deli",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dongjie",
+          "lastName": "Ji",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Erhang",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Fangyun",
+          "lastName": "Lin",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Fucong",
+          "lastName": "Dai",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Fuli",
+          "lastName": "Luo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Guangbo",
+          "lastName": "Hao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Guanting",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Guowei",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "H.",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Han",
+          "lastName": "Bao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hanwei",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Haocheng",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Honghui",
+          "lastName": "Ding",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Huajian",
+          "lastName": "Xin",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Huazuo",
+          "lastName": "Gao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hui",
+          "lastName": "Qu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hui",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jianzhong",
+          "lastName": "Guo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jiashi",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jiawei",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jingchang",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jingyang",
+          "lastName": "Yuan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Junjie",
+          "lastName": "Qiu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Junlong",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "J. L.",
+          "lastName": "Cai",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jiaqi",
+          "lastName": "Ni",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jian",
+          "lastName": "Liang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jin",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kai",
+          "lastName": "Dong",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kai",
+          "lastName": "Hu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kaige",
+          "lastName": "Gao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kang",
+          "lastName": "Guan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kexin",
+          "lastName": "Huang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kuai",
+          "lastName": "Yu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Lean",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Lecong",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Liang",
+          "lastName": "Zhao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Litong",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Liyue",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Lei",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Leyi",
+          "lastName": "Xia",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mingchuan",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Minghua",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Minghui",
+          "lastName": "Tang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Meng",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Miaojun",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mingming",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ning",
+          "lastName": "Tian",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Panpan",
+          "lastName": "Huang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Peng",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Qiancheng",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Qinyu",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Qiushi",
+          "lastName": "Du",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ruiqi",
+          "lastName": "Ge",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ruisong",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ruizhe",
+          "lastName": "Pan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Runji",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "R. J.",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "R. L.",
+          "lastName": "Jin",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ruyi",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shanghao",
+          "lastName": "Lu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shangyan",
+          "lastName": "Zhou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shanhuang",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shengfeng",
+          "lastName": "Ye",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shiyu",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shuiping",
+          "lastName": "Yu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shunfeng",
+          "lastName": "Zhou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shuting",
+          "lastName": "Pan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "S. S.",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shuang",
+          "lastName": "Zhou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shaoqing",
+          "lastName": "Wu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shengfeng",
+          "lastName": "Ye",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tao",
+          "lastName": "Yun",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tian",
+          "lastName": "Pei",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tianyu",
+          "lastName": "Sun",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "T.",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wangding",
+          "lastName": "Zeng",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wanjia",
+          "lastName": "Zhao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wen",
+          "lastName": "Liu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wenfeng",
+          "lastName": "Liang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wenjun",
+          "lastName": "Gao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wenqin",
+          "lastName": "Yu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wentao",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "W. L.",
+          "lastName": "Xiao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Wei",
+          "lastName": "An",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiaodong",
+          "lastName": "Liu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiaohan",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiaokang",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiaotao",
+          "lastName": "Nie",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xin",
+          "lastName": "Cheng",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xin",
+          "lastName": "Liu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xin",
+          "lastName": "Xie",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xingchao",
+          "lastName": "Liu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xinyu",
+          "lastName": "Yang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xinyuan",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xuecheng",
+          "lastName": "Su",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xuheng",
+          "lastName": "Lin",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "X. Q.",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiangyue",
+          "lastName": "Jin",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiaojin",
+          "lastName": "Shen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiaosha",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiaowen",
+          "lastName": "Sun",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xiaoxiang",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xinnan",
+          "lastName": "Song",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xinyi",
+          "lastName": "Zhou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xianzu",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xinxia",
+          "lastName": "Shan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Y. K.",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Y. Q.",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Y. X.",
+          "lastName": "Wei",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yang",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yanhong",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yao",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yao",
+          "lastName": "Zhao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yaofeng",
+          "lastName": "Sun",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yaohui",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yi",
+          "lastName": "Yu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yichao",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yifan",
+          "lastName": "Shi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yiliang",
+          "lastName": "Xiong",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ying",
+          "lastName": "He",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yishi",
+          "lastName": "Piao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yisong",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yixuan",
+          "lastName": "Tan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yiyang",
+          "lastName": "Ma",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yiyuan",
+          "lastName": "Liu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yongqiang",
+          "lastName": "Guo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuan",
+          "lastName": "Ou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuduan",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yue",
+          "lastName": "Gong",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuheng",
+          "lastName": "Zou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yujia",
+          "lastName": "He",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yunfan",
+          "lastName": "Xiong",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuxiang",
+          "lastName": "Luo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuxiang",
+          "lastName": "You",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuxuan",
+          "lastName": "Liu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuyang",
+          "lastName": "Zhou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Y. X.",
+          "lastName": "Zhu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yanhong",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yanping",
+          "lastName": "Huang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yaohui",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yi",
+          "lastName": "Zheng",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuchen",
+          "lastName": "Zhu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yunxian",
+          "lastName": "Ma",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ying",
+          "lastName": "Tang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yukun",
+          "lastName": "Zha",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuting",
+          "lastName": "Yan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Z. Z.",
+          "lastName": "Ren",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zehui",
+          "lastName": "Ren",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhangli",
+          "lastName": "Sha",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhe",
+          "lastName": "Fu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhean",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhenda",
+          "lastName": "Xie",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhengyan",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhewen",
+          "lastName": "Hao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhicheng",
+          "lastName": "Ma",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhigang",
+          "lastName": "Yan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhiyu",
+          "lastName": "Wu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zihui",
+          "lastName": "Gu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zijia",
+          "lastName": "Zhu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zijun",
+          "lastName": "Liu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zilin",
+          "lastName": "Li",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ziwei",
+          "lastName": "Xie",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ziyang",
+          "lastName": "Song",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zizheng",
+          "lastName": "Pan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhen",
+          "lastName": "Huang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhipeng",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhongyu",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhen",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-02-05T19:14:42Z",
+      "dateModified": "2025-02-05T19:14:42Z",
+      "uri": "http://zotero.org/users/11037809/items/P8HRU38Y",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "DeepSeek-AI et al. - 2025 - DeepSeek-R1 Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-02-05T19:14:44Z",
+          "dateModified": "2025-02-05T19:14:44Z",
+          "uri": "http://zotero.org/users/11037809/items/UZN84IDC",
+          "path": "/Zotero/storage/UZN84IDC/DeepSeek-AI et al. - 2025 - DeepSeek-R1 Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.pdf",
+          "select": "zotero://select/library/items/UZN84IDC"
+        }
+      ],
+      "notes": [],
+      "citationKey": "deepseek-aiDeepSeekR1IncentivizingReasoning2025",
+      "itemID": 2659,
+      "itemKey": "P8HRU38Y",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/P8HRU38Y"
+    },
+    {
+      "version": 3292,
+      "itemType": "preprint",
+      "title": "LIMA: Less Is More for Alignment",
+      "abstractNote": "Large language models are trained in two stages: (1) unsupervised pretraining from raw text, to learn general-purpose representations, and (2) large scale instruction tuning and reinforcement learning, to better align to end tasks and user preferences. We measure the relative importance of these two stages by training LIMA, a 65B parameter LLaMa language model fine-tuned with the standard supervised loss on only 1,000 carefully curated prompts and responses, without any reinforcement learning or human preference modeling. LIMA demonstrates remarkably strong performance, learning to follow specific response formats from only a handful of examples in the training data, including complex queries that range from planning trip itineraries to speculating about alternate history. Moreover, the model tends to generalize well to unseen tasks that did not appear in the training data. In a controlled human study, responses from LIMA are either equivalent or strictly preferred to GPT-4 in 43% of cases; this statistic is as high as 58% when compared to Bard and 65% versus DaVinci003, which was trained with human feedback. Taken together, these results strongly suggest that almost all knowledge in large language models is learned during pretraining, and only limited instruction tuning data is necessary to teach models to produce high quality output.",
+      "date": "2023-05-18",
+      "shortTitle": "LIMA",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2305.11206",
+      "accessDate": "2025-02-05T19:16:19Z",
+      "extra": "arXiv:2305.11206 [cs]",
+      "DOI": "10.48550/arXiv.2305.11206",
+      "archiveID": "arXiv:2305.11206",
+      "creators": [
+        {
+          "firstName": "Chunting",
+          "lastName": "Zhou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Pengfei",
+          "lastName": "Liu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Puxin",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Srini",
+          "lastName": "Iyer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jiao",
+          "lastName": "Sun",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuning",
+          "lastName": "Mao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xuezhe",
+          "lastName": "Ma",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Avia",
+          "lastName": "Efrat",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ping",
+          "lastName": "Yu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Lili",
+          "lastName": "Yu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Susan",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gargi",
+          "lastName": "Ghosh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mike",
+          "lastName": "Lewis",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Luke",
+          "lastName": "Zettlemoyer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Omer",
+          "lastName": "Levy",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-02-05T19:16:19Z",
+      "dateModified": "2025-02-05T19:16:19Z",
+      "uri": "http://zotero.org/users/11037809/items/62A48DNY",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Zhou et al. - 2023 - LIMA Less Is More for Alignment.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-02-05T19:16:21Z",
+          "dateModified": "2025-02-05T19:16:21Z",
+          "uri": "http://zotero.org/users/11037809/items/DCKR4NAC",
+          "path": "/Zotero/storage/DCKR4NAC/Zhou et al. - 2023 - LIMA Less Is More for Alignment.pdf",
+          "select": "zotero://select/library/items/DCKR4NAC"
+        }
+      ],
+      "notes": [],
+      "citationKey": "zhouLIMALessMore2023",
+      "itemID": 2658,
+      "itemKey": "62A48DNY",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/62A48DNY"
+    },
+    {
+      "version": 3292,
+      "itemType": "preprint",
+      "title": "Natural Language Understanding with Distributed Representation",
+      "abstractNote": "This is a lecture note for the course DS-GA 3001 <Natural Language Understanding with Distributed Representation> at the Center for Data Science , New York University in Fall, 2015. As the name of the course suggests, this lecture note introduces readers to a neural network based approach to natural language understanding/processing. In order to make it as self-contained as possible, I spend much time on describing basics of machine learning and neural networks, only after which how they are used for natural languages is introduced. On the language front, I almost solely focus on language modelling and machine translation, two of which I personally find most fascinating and most fundamental to natural language understanding.",
+      "date": "2015-11-24",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/1511.07916",
+      "accessDate": "2025-02-20T12:47:38Z",
+      "extra": "arXiv:1511.07916 [cs]",
+      "DOI": "10.48550/arXiv.1511.07916",
+      "archiveID": "arXiv:1511.07916",
+      "creators": [
+        {
+          "firstName": "Kyunghyun",
+          "lastName": "Cho",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Statistics - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-02-20T12:47:38Z",
+      "dateModified": "2025-02-20T12:47:38Z",
+      "uri": "http://zotero.org/users/11037809/items/HSV9V7I8",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Cho - 2015 - Natural Language Understanding with Distributed Representation.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-02-20T12:47:42Z",
+          "dateModified": "2025-02-20T12:47:42Z",
+          "uri": "http://zotero.org/users/11037809/items/GTIZ59GJ",
+          "path": "/Zotero/storage/GTIZ59GJ/Cho - 2015 - Natural Language Understanding with Distributed Representation.pdf",
+          "select": "zotero://select/library/items/GTIZ59GJ"
+        }
+      ],
+      "notes": [],
+      "citationKey": "choNaturalLanguageUnderstanding2015",
+      "itemID": 2654,
+      "itemKey": "HSV9V7I8",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/HSV9V7I8"
+    },
+    {
+      "version": 3292,
+      "itemType": "preprint",
+      "title": "A Primer on Neural Network Models for Natural Language Processing",
+      "abstractNote": "Over the past few years, neural networks have re-emerged as powerful machine-learning models, yielding state-of-the-art results in fields such as image recognition and speech processing. More recently, neural network models started to be applied also to textual natural language signals, again with very promising results. This tutorial surveys neural network models from the perspective of natural language processing research, in an attempt to bring natural-language researchers up to speed with the neural techniques. The tutorial covers input encoding for natural language tasks, feed-forward networks, convolutional networks, recurrent networks and recursive networks, as well as the computation graph abstraction for automatic gradient computation.",
+      "date": "2015-10-02",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/1510.00726",
+      "accessDate": "2025-02-20T12:49:26Z",
+      "extra": "arXiv:1510.00726 [cs]",
+      "DOI": "10.48550/arXiv.1510.00726",
+      "archiveID": "arXiv:1510.00726",
+      "creators": [
+        {
+          "firstName": "Yoav",
+          "lastName": "Goldberg",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-02-20T12:49:26Z",
+      "dateModified": "2025-02-20T12:49:26Z",
+      "uri": "http://zotero.org/users/11037809/items/A9U7YDWM",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Goldberg - 2015 - A Primer on Neural Network Models for Natural Language Processing.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-02-20T12:49:42Z",
+          "dateModified": "2025-02-20T12:49:42Z",
+          "uri": "http://zotero.org/users/11037809/items/J8G96WJ7",
+          "path": "/Zotero/storage/J8G96WJ7/Goldberg - 2015 - A Primer on Neural Network Models for Natural Language Processing.pdf",
+          "select": "zotero://select/library/items/J8G96WJ7"
+        }
+      ],
+      "notes": [],
+      "citationKey": "goldbergPrimerNeuralNetwork2015",
+      "itemID": 2653,
+      "itemKey": "A9U7YDWM",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/A9U7YDWM"
+    },
+    {
+      "version": 3292,
+      "itemType": "preprint",
+      "title": "The FFT Strikes Back: An Efficient Alternative to Self-Attention",
+      "abstractNote": "Conventional self-attention mechanisms incur quadratic complexity, limiting their scalability on long sequences. We introduce FFTNet, an adaptive spectral filtering framework that leverages the Fast Fourier Transform (FFT) to achieve global token mixing in $\\mathcal{O}(n\\log n)$ time. By transforming inputs into the frequency domain, FFTNet exploits the orthogonality and energy preservation guaranteed by Parseval's theorem to capture long-range dependencies efficiently. A learnable spectral filter and modReLU activation dynamically emphasize salient frequency components, providing a rigorous and adaptive alternative to traditional self-attention. Experiments on the Long Range Arena and ImageNet benchmarks validate our theoretical insights and demonstrate superior performance over fixed Fourier and standard attention models.",
+      "date": "2025-02-25",
+      "shortTitle": "The FFT Strikes Back",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2502.18394",
+      "accessDate": "2025-02-26T12:52:42Z",
+      "extra": "arXiv:2502.18394 [cs]",
+      "DOI": "10.48550/arXiv.2502.18394",
+      "archiveID": "arXiv:2502.18394",
+      "creators": [
+        {
+          "firstName": "Jacob",
+          "lastName": "Fein-Ashley",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-02-26T12:52:42Z",
+      "dateModified": "2025-02-26T12:52:42Z",
+      "uri": "http://zotero.org/users/11037809/items/3UMAKL8J",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Fein-Ashley - 2025 - The FFT Strikes Back An Efficient Alternative to Self-Attention.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-02-26T12:52:44Z",
+          "dateModified": "2025-02-26T12:52:44Z",
+          "uri": "http://zotero.org/users/11037809/items/7R4BU7JD",
+          "path": "/Zotero/storage/7R4BU7JD/Fein-Ashley - 2025 - The FFT Strikes Back An Efficient Alternative to Self-Attention.pdf",
+          "select": "zotero://select/library/items/7R4BU7JD"
+        }
+      ],
+      "notes": [],
+      "citationKey": "fein-ashleyFFTStrikesBack2025",
+      "itemID": 2652,
+      "itemKey": "3UMAKL8J",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/3UMAKL8J"
+    },
+    {
+      "version": 3292,
+      "itemType": "preprint",
+      "title": "Cognitive Behaviors that Enable Self-Improving Reasoners, or, Four Habits of Highly Effective STaRs",
+      "abstractNote": "Test-time inference has emerged as a powerful paradigm for enabling language models to ``think'' longer and more carefully about complex challenges, much like skilled human experts. While reinforcement learning (RL) can drive self-improvement in language models on verifiable tasks, some models exhibit substantial gains while others quickly plateau. For instance, we find that Qwen-2.5-3B far exceeds Llama-3.2-3B under identical RL training for the game of Countdown. This discrepancy raises a critical question: what intrinsic properties enable effective self-improvement? We introduce a framework to investigate this question by analyzing four key cognitive behaviors -- verification, backtracking, subgoal setting, and backward chaining -- that both expert human problem solvers and successful language models employ. Our study reveals that Qwen naturally exhibits these reasoning behaviors, whereas Llama initially lacks them. In systematic experimentation with controlled behavioral datasets, we find that priming Llama with examples containing these reasoning behaviors enables substantial improvements during RL, matching or exceeding Qwen's performance. Importantly, the presence of reasoning behaviors, rather than correctness of answers, proves to be the critical factor -- models primed with incorrect solutions containing proper reasoning patterns achieve comparable performance to those trained on correct solutions. Finally, leveraging continued pretraining with OpenWebMath data, filtered to amplify reasoning behaviors, enables the Llama model to match Qwen's self-improvement trajectory. Our findings establish a fundamental relationship between initial reasoning behaviors and the capacity for improvement, explaining why some language models effectively utilize additional computation while others plateau.",
+      "date": "2025-03-03",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2503.01307",
+      "accessDate": "2025-03-06T15:50:27Z",
+      "extra": "arXiv:2503.01307 [cs]",
+      "DOI": "10.48550/arXiv.2503.01307",
+      "archiveID": "arXiv:2503.01307",
+      "creators": [
+        {
+          "firstName": "Kanishk",
+          "lastName": "Gandhi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ayush",
+          "lastName": "Chakravarthy",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Anikait",
+          "lastName": "Singh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nathan",
+          "lastName": "Lile",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Noah D.",
+          "lastName": "Goodman",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-03-06T15:50:27Z",
+      "dateModified": "2025-03-06T15:50:27Z",
+      "uri": "http://zotero.org/users/11037809/items/VNFRXM7G",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Gandhi et al. - 2025 - Cognitive Behaviors that Enable Self-Improving Reasoners, or, Four Habits of Highly Effective STaRs.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-03-06T15:50:29Z",
+          "dateModified": "2025-03-06T15:50:29Z",
+          "uri": "http://zotero.org/users/11037809/items/Z7RELRK2",
+          "path": "/Zotero/storage/Z7RELRK2/Gandhi et al. - 2025 - Cognitive Behaviors that Enable Self-Improving Reasoners, or, Four Habits of Highly Effective STaRs.pdf",
+          "select": "zotero://select/library/items/Z7RELRK2"
+        }
+      ],
+      "notes": [],
+      "citationKey": "gandhiCognitiveBehaviorsThat2025",
+      "itemID": 2651,
+      "itemKey": "VNFRXM7G",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/VNFRXM7G"
+    },
+    {
+      "version": 3292,
+      "itemType": "preprint",
+      "title": "Deep Learning is Not So Mysterious or Different",
+      "abstractNote": "Deep neural networks are often seen as different from other model classes by defying conventional notions of generalization. Popular examples of anomalous generalization behaviour include benign overfitting, double descent, and the success of overparametrization. We argue that these phenomena are not distinct to neural networks, or particularly mysterious. Moreover, this generalization behaviour can be intuitively understood, and rigorously characterized using long-standing generalization frameworks such as PAC-Bayes and countable hypothesis bounds. We present soft inductive biases as a key unifying principle in explaining these phenomena: rather than restricting the hypothesis space to avoid overfitting, embrace a flexible hypothesis space, with a soft preference for simpler solutions that are consistent with the data. This principle can be encoded in many model classes, and thus deep learning is not as mysterious or different from other model classes as it might seem. However, we also highlight how deep learning is relatively distinct in other ways, such as its ability for representation learning, phenomena such as mode connectivity, and its relative universality.",
+      "date": "2025-03-03",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2503.02113",
+      "accessDate": "2025-03-17T18:21:31Z",
+      "extra": "arXiv:2503.02113 [cs]",
+      "DOI": "10.48550/arXiv.2503.02113",
+      "archiveID": "arXiv:2503.02113",
+      "creators": [
+        {
+          "firstName": "Andrew Gordon",
+          "lastName": "Wilson",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Statistics - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-03-17T18:21:31Z",
+      "dateModified": "2025-03-17T18:21:31Z",
+      "uri": "http://zotero.org/users/11037809/items/WYAWG85Z",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Wilson - 2025 - Deep Learning is Not So Mysterious or Different.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-03-17T18:21:33Z",
+          "dateModified": "2025-03-17T18:21:33Z",
+          "uri": "http://zotero.org/users/11037809/items/ZRQLUCTK",
+          "path": "/Zotero/storage/ZRQLUCTK/Wilson - 2025 - Deep Learning is Not So Mysterious or Different.pdf",
+          "select": "zotero://select/library/items/ZRQLUCTK"
+        }
+      ],
+      "notes": [],
+      "citationKey": "wilsonDeepLearningNot2025",
+      "itemID": 2650,
+      "itemKey": "WYAWG85Z",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/WYAWG85Z"
+    },
+    {
+      "version": 3292,
+      "itemType": "preprint",
+      "title": "Transformers without Normalization",
+      "abstractNote": "Normalization layers are ubiquitous in modern neural networks and have long been considered essential. This work demonstrates that Transformers without normalization can achieve the same or better performance using a remarkably simple technique. We introduce Dynamic Tanh (DyT), an element-wise operation $DyT($x$) = \\tanh(\\alpha $x$)$, as a drop-in replacement for normalization layers in Transformers. DyT is inspired by the observation that layer normalization in Transformers often produces tanh-like, $S$-shaped input-output mappings. By incorporating DyT, Transformers without normalization can match or exceed the performance of their normalized counterparts, mostly without hyperparameter tuning. We validate the effectiveness of Transformers with DyT across diverse settings, ranging from recognition to generation, supervised to self-supervised learning, and computer vision to language models. These findings challenge the conventional understanding that normalization layers are indispensable in modern neural networks, and offer new insights into their role in deep networks.",
+      "date": "2025-03-13",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2503.10622",
+      "accessDate": "2025-03-17T20:25:26Z",
+      "extra": "arXiv:2503.10622 [cs]",
+      "DOI": "10.48550/arXiv.2503.10622",
+      "archiveID": "arXiv:2503.10622",
+      "creators": [
+        {
+          "firstName": "Jiachen",
+          "lastName": "Zhu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Xinlei",
+          "lastName": "Chen",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kaiming",
+          "lastName": "He",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yann",
+          "lastName": "LeCun",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zhuang",
+          "lastName": "Liu",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computer Vision and Pattern Recognition",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-03-17T20:25:26Z",
+      "dateModified": "2025-03-17T20:25:26Z",
+      "uri": "http://zotero.org/users/11037809/items/SJBTIC9N",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Zhu et al. - 2025 - Transformers without Normalization.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-03-17T20:25:50Z",
+          "dateModified": "2025-03-17T20:25:50Z",
+          "uri": "http://zotero.org/users/11037809/items/FHW5VSU2",
+          "path": "/Zotero/storage/FHW5VSU2/Zhu et al. - 2025 - Transformers without Normalization.pdf",
+          "select": "zotero://select/library/items/FHW5VSU2"
+        }
+      ],
+      "notes": [],
+      "citationKey": "zhuTransformersNormalization2025",
+      "itemID": 2649,
+      "itemKey": "SJBTIC9N",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/SJBTIC9N"
+    },
+    {
+      "version": 3288,
+      "itemType": "preprint",
+      "title": "The Leaderboard Illusion",
+      "abstractNote": "Measuring progress is fundamental to the advancement of any scientific field. As benchmarks play an increasingly central role, they also grow more susceptible to distortion. Chatbot Arena has emerged as the go-to leaderboard for ranking the most capable AI systems. Yet, in this work we identify systematic issues that have resulted in a distorted playing field. We find that undisclosed private testing practices benefit a handful of providers who are able to test multiple variants before public release and retract scores if desired. We establish that the ability of these providers to choose the best score leads to biased Arena scores due to selective disclosure of performance results. At an extreme, we identify 27 private LLM variants tested by Meta in the lead-up to the Llama-4 release. We also establish that proprietary closed models are sampled at higher rates (number of battles) and have fewer models removed from the arena than open-weight and open-source alternatives. Both these policies lead to large data access asymmetries over time. Providers like Google and OpenAI have received an estimated 19.2% and 20.4% of all data on the arena, respectively. In contrast, a combined 83 open-weight models have only received an estimated 29.7% of the total data. We show that access to Chatbot Arena data yields substantial benefits; even limited additional data can result in relative performance gains of up to 112% on the arena distribution, based on our conservative estimates. Together, these dynamics result in overfitting to Arena-specific dynamics rather than general model quality. The Arena builds on the substantial efforts of both the organizers and an open community that maintains this valuable evaluation platform. We offer actionable recommendations to reform the Chatbot Arena's evaluation framework and promote fairer, more transparent benchmarking for the field",
+      "date": "2025-04-29",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2504.20879",
+      "accessDate": "2025-04-30T19:41:36Z",
+      "extra": "arXiv:2504.20879 [cs]",
+      "DOI": "10.48550/arXiv.2504.20879",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2504.20879",
+      "creators": [
+        {
+          "firstName": "Shivalika",
+          "lastName": "Singh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yiyang",
+          "lastName": "Nan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Alex",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Daniel",
+          "lastName": "D'Souza",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sayash",
+          "lastName": "Kapoor",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ahmet",
+          "lastName": "Üstün",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sanmi",
+          "lastName": "Koyejo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yuntian",
+          "lastName": "Deng",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shayne",
+          "lastName": "Longpre",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Noah",
+          "lastName": "Smith",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Beyza",
+          "lastName": "Ermis",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Marzieh",
+          "lastName": "Fadaee",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sara",
+          "lastName": "Hooker",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Statistics - Methodology",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-04-30T19:41:36Z",
+      "dateModified": "2025-04-30T19:41:44Z",
+      "uri": "http://zotero.org/users/11037809/items/ICDHC898",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-04-30T19:41:37Z",
+          "dateModified": "2025-04-30T19:41:37Z",
+          "uri": "http://zotero.org/users/11037809/items/HS2TPWLJ",
+          "path": "/Zotero/storage/HS2TPWLJ/Singh et al. - 2025 - The Leaderboard Illusion.pdf",
+          "select": "zotero://select/library/items/HS2TPWLJ"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-04-30T19:41:43Z",
+          "dateModified": "2025-04-30T19:41:43Z",
+          "uri": "http://zotero.org/users/11037809/items/XQ2SKDM3",
+          "path": "/Zotero/storage/XQ2SKDM3/2504.html",
+          "select": "zotero://select/library/items/XQ2SKDM3"
+        }
+      ],
+      "notes": [
+        {
+          "key": "JDQD7BLH",
+          "version": 3199,
+          "itemType": "note",
+          "parentItem": "ICDHC898",
+          "note": "Comment: 68 pages, 18 figures, 9 tables",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-04-30T19:41:36Z",
+          "dateModified": "2025-04-30T19:41:36Z",
+          "uri": "http://zotero.org/users/11037809/items/JDQD7BLH"
+        }
+      ],
+      "citationKey": "singhLeaderboardIllusion2025",
+      "itemID": 2655,
+      "itemKey": "ICDHC898",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/ICDHC898"
+    },
+    {
+      "version": 3288,
+      "itemType": "preprint",
+      "title": "Continuous Thought Machines",
+      "abstractNote": "Biological brains demonstrate complex neural activity, where the timing and interplay between neurons is critical to how brains process information. Most deep learning architectures simplify neural activity by abstracting away temporal dynamics. In this paper we challenge that paradigm. By incorporating neuron-level processing and synchronization, we can effectively reintroduce neural timing as a foundational element. We present the Continuous Thought Machine (CTM), a model designed to leverage neural dynamics as its core representation. The CTM has two core innovations: (1) neuron-level temporal processing, where each neuron uses unique weight parameters to process a history of incoming signals; and (2) neural synchronization employed as a latent representation. The CTM aims to strike a balance between oversimplified neuron abstractions that improve computational efficiency, and biological realism. It operates at a level of abstraction that effectively captures essential temporal dynamics while remaining computationally tractable for deep learning. We demonstrate the CTM's strong performance and versatility across a range of challenging tasks, including ImageNet-1K classification, solving 2D mazes, sorting, parity computation, question-answering, and RL tasks. Beyond displaying rich internal representations and offering a natural avenue for interpretation owing to its internal process, the CTM is able to perform tasks that require complex sequential reasoning. The CTM can also leverage adaptive compute, where it can stop earlier for simpler tasks, or keep computing when faced with more challenging instances. The goal of this work is to share the CTM and its associated innovations, rather than pushing for new state-of-the-art results. To that end, we believe the CTM represents a significant step toward developing more biologically plausible and powerful artificial intelligence systems.",
+      "date": "2025-05-08",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2505.05522",
+      "accessDate": "2025-05-12T11:23:24Z",
+      "extra": "arXiv:2505.05522 [cs]",
+      "DOI": "10.48550/arXiv.2505.05522",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2505.05522",
+      "creators": [
+        {
+          "firstName": "Luke",
+          "lastName": "Darlow",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ciaran",
+          "lastName": "Regan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sebastian",
+          "lastName": "Risi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jeffrey",
+          "lastName": "Seely",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Llion",
+          "lastName": "Jones",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-05-12T11:23:24Z",
+      "dateModified": "2025-05-12T11:23:24Z",
+      "uri": "http://zotero.org/users/11037809/items/UFYJECIZ",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-05-12T11:23:41Z",
+          "dateModified": "2025-05-12T11:23:41Z",
+          "uri": "http://zotero.org/users/11037809/items/6MNCU9KW",
+          "path": "/Zotero/storage/6MNCU9KW/Darlow et al. - 2025 - Continuous Thought Machines.pdf",
+          "select": "zotero://select/library/items/6MNCU9KW"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-05-12T11:23:25Z",
+          "dateModified": "2025-05-12T11:23:25Z",
+          "uri": "http://zotero.org/users/11037809/items/Y59WITW4",
+          "path": "/Zotero/storage/Y59WITW4/2505.html",
+          "select": "zotero://select/library/items/Y59WITW4"
+        }
+      ],
+      "notes": [
+        {
+          "key": "ET23YSGX",
+          "version": 3211,
+          "itemType": "note",
+          "parentItem": "UFYJECIZ",
+          "note": "Comment: Technical report accompanied by online project page",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-05-12T11:23:24Z",
+          "dateModified": "2025-05-12T11:23:24Z",
+          "uri": "http://zotero.org/users/11037809/items/ET23YSGX"
+        }
+      ],
+      "citationKey": "darlowContinuousThoughtMachines2025",
+      "itemID": 2692,
+      "itemKey": "UFYJECIZ",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/UFYJECIZ"
+    },
+    {
+      "version": 3288,
+      "itemType": "preprint",
+      "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
+      "abstractNote": "Reinforcement learning with verifiable rewards (RLVR) has shown promise in enhancing the reasoning capabilities of large language models by learning directly from outcome-based rewards. Recent RLVR works that operate under the zero setting avoid supervision in labeling the reasoning process, but still depend on manually curated collections of questions and answers for training. The scarcity of high-quality, human-produced examples raises concerns about the long-term scalability of relying on human supervision, a challenge already evident in the domain of language model pretraining. Furthermore, in a hypothetical future where AI surpasses human intelligence, tasks provided by humans may offer limited learning potential for a superintelligent system. To address these concerns, we propose a new RLVR paradigm called Absolute Zero, in which a single model learns to propose tasks that maximize its own learning progress and improves reasoning by solving them, without relying on any external data. Under this paradigm, we introduce the Absolute Zero Reasoner (AZR), a system that self-evolves its training curriculum and reasoning ability by using a code executor to both validate proposed code reasoning tasks and verify answers, serving as an unified source of verifiable reward to guide open-ended yet grounded learning. Despite being trained entirely without external data, AZR achieves overall SOTA performance on coding and mathematical reasoning tasks, outperforming existing zero-setting models that rely on tens of thousands of in-domain human-curated examples. Furthermore, we demonstrate that AZR can be effectively applied across different model scales and is compatible with various model classes.",
+      "date": "2025-05-07",
+      "shortTitle": "Absolute Zero",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2505.03335",
+      "accessDate": "2025-05-12T11:23:36Z",
+      "extra": "arXiv:2505.03335 [cs]",
+      "DOI": "10.48550/arXiv.2505.03335",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2505.03335",
+      "creators": [
+        {
+          "firstName": "Andrew",
+          "lastName": "Zhao",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yiran",
+          "lastName": "Wu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yang",
+          "lastName": "Yue",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Tong",
+          "lastName": "Wu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Quentin",
+          "lastName": "Xu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yang",
+          "lastName": "Yue",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Matthieu",
+          "lastName": "Lin",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shenzhi",
+          "lastName": "Wang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Qingyun",
+          "lastName": "Wu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zilong",
+          "lastName": "Zheng",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Gao",
+          "lastName": "Huang",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-05-12T11:23:36Z",
+      "dateModified": "2025-05-12T11:23:36Z",
+      "uri": "http://zotero.org/users/11037809/items/RC7FE4RI",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-05-12T11:23:39Z",
+          "dateModified": "2025-05-12T11:23:39Z",
+          "uri": "http://zotero.org/users/11037809/items/YTVPXYS3",
+          "path": "/Zotero/storage/YTVPXYS3/Zhao et al. - 2025 - Absolute Zero Reinforced Self-play Reasoning with Zero Data.pdf",
+          "select": "zotero://select/library/items/YTVPXYS3"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-05-12T11:23:36Z",
+          "dateModified": "2025-05-12T11:23:36Z",
+          "uri": "http://zotero.org/users/11037809/items/SU68KXTB",
+          "path": "/Zotero/storage/SU68KXTB/2505.html",
+          "select": "zotero://select/library/items/SU68KXTB"
+        }
+      ],
+      "notes": [],
+      "citationKey": "zhaoAbsoluteZeroReinforced2025",
+      "itemID": 2691,
+      "itemKey": "RC7FE4RI",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/RC7FE4RI"
+    },
+    {
+      "version": 3288,
+      "itemType": "journalArticle",
+      "title": "INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning",
+      "abstractNote": "We introduce INTELLECT-2, the first globally distributed reinforcement learning (RL) training run of a 32 billion parameter model. Unlike traditional centralized training efforts, INTELLECT-2 trains a reasoning language model using fully asynchronous RL across a dynamic, heterogeneous swarm of permissionless compute contributors. To enable a training run with this unique infrastructure, we built various components from scratch: we introduce PRIME-RL, our training framework purpose-built for distributed asynchronous reinforcement learning, based on top of novel components such as TOPLOC, which verifies rollouts from untrusted inference workers, and SHARDCAST, which efficiently broadcasts policy weights from training nodes to inference workers.",
+      "language": "en",
+      "libraryCatalog": "Zotero",
+      "creators": [
+        {
+          "firstName": "Sami",
+          "lastName": "Jaghouar",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Justus",
+          "lastName": "Mattern",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jack Min",
+          "lastName": "Ong",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jannik",
+          "lastName": "Straube",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Manveer",
+          "lastName": "Basra",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Aaron",
+          "lastName": "Pazdera",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Matthew Di",
+          "lastName": "Ferrante",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kushal",
+          "lastName": "Thaman",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Felix",
+          "lastName": "Gabriel",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Fares",
+          "lastName": "Obeid",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kemal",
+          "lastName": "Erdem",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Michael",
+          "lastName": "Keiblinger",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Johannes",
+          "lastName": "Hagemann",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2025-05-12T11:29:13Z",
+      "dateModified": "2025-05-12T11:29:13Z",
+      "uri": "http://zotero.org/users/11037809/items/TU62LCT5",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-05-12T11:29:11Z",
+          "dateModified": "2025-05-12T11:29:14Z",
+          "uri": "http://zotero.org/users/11037809/items/PMDYW63E",
+          "path": "/Zotero/storage/PMDYW63E/Jaghouar et al. - INTELLECT-2 A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning.pdf",
+          "select": "zotero://select/library/items/PMDYW63E"
+        }
+      ],
+      "notes": [],
+      "citationKey": "jaghouarINTELLECT2ReasoningModel",
+      "itemID": 2690,
+      "itemKey": "TU62LCT5",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/TU62LCT5"
+    },
+    {
+      "version": 3288,
+      "itemType": "preprint",
+      "title": "LLMs Get Lost In Multi-Turn Conversation",
+      "abstractNote": "Large Language Models (LLMs) are conversational interfaces. As such, LLMs have the potential to assist their users not only when they can fully specify the task at hand, but also to help them define, explore, and refine what they need through multi-turn conversational exchange. Although analysis of LLM conversation logs has confirmed that underspecification occurs frequently in user instructions, LLM evaluation has predominantly focused on the single-turn, fully-specified instruction setting. In this work, we perform large-scale simulation experiments to compare LLM performance in single- and multi-turn settings. Our experiments confirm that all the top open- and closed-weight LLMs we test exhibit significantly lower performance in multi-turn conversations than single-turn, with an average drop of 39% across six generation tasks. Analysis of 200,000+ simulated conversations decomposes the performance degradation into two components: a minor loss in aptitude and a significant increase in unreliability. We find that LLMs often make assumptions in early turns and prematurely attempt to generate final solutions, on which they overly rely. In simpler terms, we discover that *when LLMs take a wrong turn in a conversation, they get lost and do not recover*.",
+      "date": "2025-05-09",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2505.06120",
+      "accessDate": "2025-05-15T08:58:51Z",
+      "extra": "arXiv:2505.06120 [cs]",
+      "DOI": "10.48550/arXiv.2505.06120",
+      "archiveID": "arXiv:2505.06120",
+      "creators": [
+        {
+          "firstName": "Philippe",
+          "lastName": "Laban",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Hiroaki",
+          "lastName": "Hayashi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yingbo",
+          "lastName": "Zhou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jennifer",
+          "lastName": "Neville",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Human-Computer Interaction",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-05-15T08:58:51Z",
+      "dateModified": "2025-05-15T08:58:51Z",
+      "uri": "http://zotero.org/users/11037809/items/ANZYGJPU",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Laban et al. - 2025 - LLMs Get Lost In Multi-Turn Conversation.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-05-15T08:58:53Z",
+          "dateModified": "2025-05-15T08:58:53Z",
+          "uri": "http://zotero.org/users/11037809/items/CFBA4ZP8",
+          "path": "/Zotero/storage/CFBA4ZP8/Laban et al. - 2025 - LLMs Get Lost In Multi-Turn Conversation.pdf",
+          "select": "zotero://select/library/items/CFBA4ZP8"
+        }
+      ],
+      "notes": [],
+      "citationKey": "labanLLMsGetLost2025",
+      "itemID": 2689,
+      "itemKey": "ANZYGJPU",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/ANZYGJPU"
+    },
+    {
+      "version": 3288,
+      "itemType": "preprint",
+      "title": "Harnessing the Universal Geometry of Embeddings",
+      "abstractNote": "We introduce the first method for translating text embeddings from one vector space to another without any paired data, encoders, or predefined sets of matches. Our unsupervised approach translates any embedding to and from a universal latent representation (i.e., a universal semantic structure conjectured by the Platonic Representation Hypothesis). Our translations achieve high cosine similarity across model pairs with different architectures, parameter counts, and training datasets. The ability to translate unknown embeddings into a different space while preserving their geometry has serious implications for the security of vector databases. An adversary with access only to embedding vectors can extract sensitive information about the underlying documents, sufficient for classification and attribute inference.",
+      "date": "2025-05-20",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2505.12540",
+      "accessDate": "2025-05-21T19:54:53Z",
+      "extra": "arXiv:2505.12540 [cs]",
+      "DOI": "10.48550/arXiv.2505.12540",
+      "archiveID": "arXiv:2505.12540",
+      "creators": [
+        {
+          "firstName": "Rishi",
+          "lastName": "Jha",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Collin",
+          "lastName": "Zhang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Vitaly",
+          "lastName": "Shmatikov",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "John X.",
+          "lastName": "Morris",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-05-21T19:54:53Z",
+      "dateModified": "2025-05-21T19:54:53Z",
+      "uri": "http://zotero.org/users/11037809/items/JCURP74J",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Jha et al. - 2025 - Harnessing the Universal Geometry of Embeddings.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-05-21T19:54:59Z",
+          "dateModified": "2025-05-21T19:54:59Z",
+          "uri": "http://zotero.org/users/11037809/items/JYUMT4LB",
+          "path": "/Zotero/storage/JYUMT4LB/Jha et al. - 2025 - Harnessing the Universal Geometry of Embeddings.pdf",
+          "select": "zotero://select/library/items/JYUMT4LB"
+        }
+      ],
+      "notes": [],
+      "citationKey": "jhaHarnessingUniversalGeometry2025",
+      "itemID": 2688,
+      "itemKey": "JCURP74J",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/JCURP74J"
+    }
+  ]
+}
