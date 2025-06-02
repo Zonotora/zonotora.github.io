@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
-  --color: antiquewhite;
-  --background-color: #0d1117;
+  --color: rgb(250, 235, 215);
+  --background-color: rgb(13, 17, 23);
   --background-hover-color: #0d1117;
   --border-color: #4d535c;
   --border-hover-color: antiquewhite;
@@ -10,6 +10,7 @@
   --border: 1px solid var(--border-color);
   /* --primary: #1183c3; */
   --primary: #e9966d;
+  --code-bg: rgba(250, 235, 215, 0.1);
 }
 
 html,
@@ -38,8 +39,6 @@ table {
 
 code {
   font-family: "Fira Code", monospace;
-  color: var(--background-color);
-  background-color: var(--color);
   border-radius: 4px;
   padding-left: 3px;
   padding-right: 3px;

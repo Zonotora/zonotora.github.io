@@ -8,6 +8,9 @@
     "border": {
       "color": "#0d1117",
       "hover": "#ababab"
+    },
+    "code": {
+      "background": "rgba(250, 235, 215, 0.5)"
     }
   },
   "dark": {
@@ -19,6 +22,9 @@
     "border": {
       "color": "#4d535c",
       "hover": "antiquewhite"
+    },
+    "code": {
+      "background": "rgba(250, 235, 215, 0.1)"
     }
   }
 }

@@ -41,6 +41,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       "--border-hover-color",
       borderHover
     );
+
+    document.documentElement.style.setProperty(
+      "--code-bg",
+      colors[mode].code.background
+    );
   };
 
   const setDarkmode = (mode: boolean) => {
