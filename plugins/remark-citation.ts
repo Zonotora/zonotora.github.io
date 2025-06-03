@@ -240,7 +240,6 @@ export default function remarkCitation(options?: Options) {
             parent.children.splice(index + i + 1, 0, newNode);
           }
         }
-        return [SKIP, index + used.length];
       }
     });
   };
