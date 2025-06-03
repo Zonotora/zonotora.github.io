@@ -143,9 +143,9 @@ export default function remarkCitation(options?: Options) {
     bibtex = Object.assign({}, ret, bibtex);
   }
 
-  const used: string[] = [];
-
   return (tree: any) => {
+    const used: string[] = [];
+
     visit(tree, "text", (node, index, parent) => {
       const regex = /@([a-zA-Z0-9_,\-]+)/g;
       let match;
