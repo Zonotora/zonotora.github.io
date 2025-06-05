@@ -1,0 +1,133 @@
+import Page from "../components/page";
+
+# GPU
+
+## CUDA
+
+The host is the CPU available in the system. The system memory associated with the CPU is called host memory. The GPU is called a device and GPU memory likewise called device memory.
+
+To execute any CUDA program, there are three main steps:
+
+- Copy the input data from host memory to device memory, also known as host-to-device transfer.
+- Load the GPU program and execute, caching data on-chip for performance.
+- Copy the results from device memory to host memory, also called device-to-host transfer.
+
+Every CUDA kernel starts with a **global** declaration specifier. Programmers provide a unique global ID to each thread by using built-in variables.
+
+A group of threads is called a CUDA block. CUDA blocks are grouped into a grid. A kernel is executed as a grid of blocks of threads (Figure 2).
+
+Each CUDA block is executed by one streaming multiprocessor (SM) and cannot be migrated to other SMs in GPU (except during preemption, debugging, or CUDA dynamic parallelism). One SM can run several concurrent CUDA blocks depending on the resources needed by CUDA blocks. Each kernel is executed on one device and CUDA supports running multiple kernels on a device at one time.
+
+The CUDA programming model provides three key language extensions to programmers:
+
+- CUDA blocks—A collection or group of threads.
+- Shared memory—Memory shared within a block among all threads.
+- Synchronization barriers— Enable multiple threads to wait until all threads have reached a particular point of execution before any thread continues.
+
+There are also many third-party tool-chains available:
+
+- [PyCUDA](https://developer.nvidia.com/pycuda) — Use CUDA API operations from a Python interface.
+- [OpenCL](https://developer.nvidia.com/opencl) —Use low-level API operations to program CUDA GPUs.
+
+### Install driver (archlinux)
+
+- https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units
+- https://en.wikipedia.org/wiki/OpenCL
+- https://wiki.archlinux.org/title/GPGPU
+
+Run
+
+```bash
+$ lspci -k -d ::03xx
+01:00.0 VGA compatible controller: NVIDIA Corporation GP104 [GeForce GTX 1070] (rev a1)
+	Subsystem: ASUSTeK Computer Inc. Device 8599
+	Kernel driver in use: nouveau
+	Kernel modules: nouveau, nvidia_drm, nvidia
+```
+
+Look for your name:
+
+https://nouveau.freedesktop.org/CodeNames.html
+
+Install correct package according to:
+https://wiki.archlinux.org/title/NVIDIA#Installation
+
+Restart machine
+
+```
+nvidia-smi
+```
+
+Install cuda
+
+Verify installation
+
+```
+nvcc --version
+
+```
+
+- nvidia
+- nvidia-utils: provides nvidia-libgl, opengl-driver, vulkan-driver
+- cuda
+- opencl-nvidia
+
+### Python and CUDA
+
+- PyCUDA
+- Numba
+
+### Numba
+
+> Numba is an open source, NumPy-aware optimizing compiler for Python sponsored by Anaconda, Inc. It uses the LLVM compiler project to generate machine code from Python syntax.
+> Numba can compile a large subset of numerically-focused Python, including many NumPy functions. Additionally, Numba has support for automatic parallelization of loops, generation of GPU-accelerated code, and creation of ufuncs and C callbacks.
+
+- Numba: https://numba.pydata.org/
+- Numba github: https://github.com/numba/numba
+- https://numba.readthedocs.io/en/stable/cuda/index.html
+
+## Define
+
+- SM
+- CUDA programming model
+
+## Resources
+
+- https://developer.nvidia.com/blog/tag/cuda-refresher/
+- https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
+- https://docs.nvidia.com/cuda/cuda-c-programming-guide/
+- https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf
+- https://www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/readings/lindholm08_tesla.pdf
+- cuda in python part1: https://www.vincent-lunot.com/post/an-introduction-to-cuda-in-python-part-1/
+- cuda compatibility: https://developer.nvidia.com/cuda-gpus
+- nvidia hpc: https://developer.nvidia.com/hpc
+- archlinux gpgpu: https://wiki.archlinux.org/title/GPGPU
+- cuda python: https://developer.nvidia.com/cuda-python
+- cuda python doc: https://nvidia.github.io/cuda-python/latest/
+- cuda python github: https://github.com/NVIDIA/cuda-python/tree/main
+- opencl: https://www.khronos.org/opencl/#ocl-overview
+- archlinux nvidia: https://wiki.archlinux.org/title/NVIDIA
+- nvidia codenames: https://nouveau.freedesktop.org/CodeNames.html
+
+old
+
+- Leetcpu: https://www.leetgpu.com/resources
+- Really nice glossary: https://modal.com/gpu-glossary
+- CUDA programming guide: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
+- CUDA books archive: https://developer.nvidia.com/cuda-books-archive
+- CUDA parallel programming: https://newfrontiers.illinois.edu/news-and-events/introduction-to-parallel-programming-with-cuda/
+- Triton: https://triton-lang.org/main/getting-started/tutorials/index.html
+- Pytorch doc: https://docs.pytorch.org/docs/stable/index.html
+- Pytorch tutorials: https://docs.pytorch.org/tutorials/
+- Pytorch zero to mastery: https://www.learnpytorch.io/
+- Tinygrad doc: https://docs.tinygrad.org/
+- Tinygrad notes: https://mesozoic-egg.github.io/tinygrad-notes/
+- Mojo: https://docs.modular.com/mojo/manual/
+
+export default function MDXPage({ children }) {
+  return (
+    <Page active="hpc">
+      <div className="content">{children}</div>
+    </Page>
+  );
+}
