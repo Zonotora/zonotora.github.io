@@ -10,7 +10,6 @@
   --border: 1px solid var(--border-color);
   /* --primary: #1183c3; */
   --primary: #e9966d;
-  --code-bg: rgba(250, 235, 215, 0.1);
 }
 
 html,
@@ -39,6 +38,7 @@ table {
 
 code {
   font-family: "Fira Code", monospace;
+  font-size: 10pt;
   border-radius: 4px;
   padding-left: 3px;
   padding-right: 3px;
@@ -66,6 +66,22 @@ main a:hover {
   opacity: 0.8;
 }
 
+main {
+  margin-top: 43px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  overflow-y: auto;
+  padding-bottom: 100px;
+}
+
+main p {
+  line-height: 1.5;
+}
+
 header {
   position: fixed;
   background-color: var(--background-color);
@@ -75,6 +91,7 @@ header {
   left: 50%;
   transform: translate(-50%, 0%);
   border: var(--border);
+  border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
   z-index: 100;
@@ -86,19 +103,6 @@ header {
   flex-wrap: wrap;
 }
 
-main {
-  margin-top: 43px;
-  line-height: 1.5;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  overflow-y: auto;
-  padding-bottom: 100px;
-}
-
 svg {
   fill: var(--color);
 }
@@ -106,16 +110,30 @@ svg {
 table {
   width: 100%;
   border: var(--border);
+  border-radius: 5px;
   text-align: left;
+  /* border-collapse: collapse; */
+  border-spacing: 0;
 }
 
 th {
-  color: antiquewhite;
-  background-color: var(--border-color);
+  /* color: antiquewhite;
+  background-color: var(--border-color); */
 }
 
-td {
-  border-top: var(--border);
+td,
+th {
+  border-bottom: var(--border);
+  border-right: var(--border);
+}
+
+td:last-child,
+th:last-child {
+  border-right: 0;
+}
+
+tr:last-child td {
+  border-bottom: 0;
 }
 
 tr:hover {
@@ -125,6 +143,10 @@ tr:hover {
 hr {
   border: none;
   border-bottom: 1px solid var(--border-color);
+}
+
+ol {
+  padding-left: 25px;
 }
 
 #refs {
@@ -139,6 +161,7 @@ hr {
   right: 10px;
   z-index: 100;
 }
+
 .helper-icons > a {
   cursor: pointer;
 }
@@ -167,6 +190,7 @@ hr {
   margin: 0 -10px;
   padding: 10px;
   border: var(--border);
+  border-radius: 5px;
   background-color: var(--background-color);
 }
 
@@ -297,6 +321,7 @@ hr {
   min-width: 100px;
   width: var(--page-width);
   border: var(--border);
+  border-radius: 5px;
   padding: 0 10px;
 }
 
