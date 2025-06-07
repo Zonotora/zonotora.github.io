@@ -57,7 +57,7 @@ const Header = ({ active }: HeaderProps) => {
           alternativeLink="guidos/book/index.html"
         />
         <HeaderLink active={active} link="ml" />
-        <HeaderLink active={active} link="hpc" />
+        <HeaderLink active={active} link="gpu" />
       </header>
       <div className="box helper-icons">
         <a href={`/feed.xml`}>

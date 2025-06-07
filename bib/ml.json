@@ -332,11 +332,11 @@
       ],
       "tags": [
         {
-          "tag": "Computer Science - Computation and Language",
+          "tag": "Computer Science - Machine Learning",
           "type": 1
         },
         {
-          "tag": "Computer Science - Machine Learning",
+          "tag": "Computer Science - Computation and Language",
           "type": 1
         }
       ],
@@ -557,15 +557,15 @@
       ],
       "tags": [
         {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
           "tag": "Computer Science - Computation and Language",
           "type": 1
         },
         {
           "tag": "Computer Science - Computer Vision and Pattern Recognition",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Machine Learning",
           "type": 1
         }
       ],
@@ -749,11 +749,11 @@
           "type": 1
         },
         {
-          "tag": "Computer Science - Computer Vision and Pattern Recognition",
+          "tag": "Statistics - Machine Learning",
           "type": 1
         },
         {
-          "tag": "Statistics - Machine Learning",
+          "tag": "Computer Science - Computer Vision and Pattern Recognition",
           "type": 1
         }
       ],
@@ -1078,7 +1078,15 @@
       ],
       "tags": [
         {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
           "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Robotics",
           "type": 1
         },
         {
@@ -1087,14 +1095,6 @@
         },
         {
           "tag": "Computer Science - Computer Vision and Pattern Recognition",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Machine Learning",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Robotics",
           "type": 1
         }
       ],
@@ -1208,11 +1208,11 @@
       ],
       "tags": [
         {
-          "tag": "Computer Science - Artificial Intelligence",
+          "tag": "Computer Science - Machine Learning",
           "type": 1
         },
         {
-          "tag": "Computer Science - Machine Learning",
+          "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
@@ -1299,11 +1299,11 @@
       ],
       "tags": [
         {
-          "tag": "Computer Science - Artificial Intelligence",
+          "tag": "Computer Science - Machine Learning",
           "type": 1
         },
         {
-          "tag": "Computer Science - Machine Learning",
+          "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
@@ -1489,11 +1489,11 @@
       ],
       "tags": [
         {
-          "tag": "Computer Science - Artificial Intelligence",
+          "tag": "Computer Science - Machine Learning",
           "type": 1
         },
         {
-          "tag": "Computer Science - Machine Learning",
+          "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
@@ -1576,11 +1576,11 @@
       ],
       "tags": [
         {
-          "tag": "Computer Science - Artificial Intelligence",
+          "tag": "Computer Science - Machine Learning",
           "type": 1
         },
         {
-          "tag": "Computer Science - Machine Learning",
+          "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         }
       ],
@@ -1837,15 +1837,15 @@
       ],
       "tags": [
         {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
           "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
           "tag": "Computer Science - Computation and Language",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Machine Learning",
           "type": 1
         }
       ],
@@ -1940,11 +1940,11 @@
       ],
       "tags": [
         {
-          "tag": "Computer Science - Computation and Language",
+          "tag": "Computer Science - Machine Learning",
           "type": 1
         },
         {
-          "tag": "Computer Science - Machine Learning",
+          "tag": "Computer Science - Computation and Language",
           "type": 1
         }
       ],
@@ -2009,11 +2009,11 @@
       ],
       "tags": [
         {
-          "tag": "Computer Science - Artificial Intelligence",
+          "tag": "Computer Science - Machine Learning",
           "type": 1
         },
         {
-          "tag": "Computer Science - Machine Learning",
+          "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
@@ -2148,6 +2148,10 @@
       ],
       "tags": [
         {
+          "tag": "Receivers",
+          "type": 1
+        },
+        {
           "tag": "Attenuation",
           "type": 1
         },
@@ -2169,10 +2173,6 @@
         },
         {
           "tag": "ray launching",
-          "type": 1
-        },
-        {
-          "tag": "Receivers",
           "type": 1
         },
         {
@@ -2270,15 +2270,15 @@
       ],
       "tags": [
         {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
           "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
           "tag": "Computer Science - Computation and Language",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Machine Learning",
           "type": 1
         }
       ],
@@ -2462,15 +2462,15 @@
       ],
       "tags": [
         {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
           "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
           "tag": "Computer Science - Computer Vision and Pattern Recognition",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Machine Learning",
           "type": 1
         }
       ],
@@ -2648,15 +2648,15 @@
       ],
       "tags": [
         {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
           "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
           "tag": "Computer Science - Computation and Language",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Machine Learning",
           "type": 1
         }
       ],
@@ -3701,15 +3701,15 @@
       ],
       "tags": [
         {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
           "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
           "tag": "Computer Science - Computation and Language",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Machine Learning",
           "type": 1
         }
       ],
@@ -3829,15 +3829,15 @@
       ],
       "tags": [
         {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
           "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
           "tag": "Computer Science - Computation and Language",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Machine Learning",
           "type": 1
         }
       ],
@@ -4058,11 +4058,11 @@
       ],
       "tags": [
         {
-          "tag": "Computer Science - Computation and Language",
+          "tag": "Computer Science - Machine Learning",
           "type": 1
         },
         {
-          "tag": "Computer Science - Machine Learning",
+          "tag": "Computer Science - Computation and Language",
           "type": 1
         }
       ],
@@ -4184,6 +4184,10 @@
       ],
       "tags": [
         {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
           "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
@@ -4193,10 +4197,6 @@
         },
         {
           "tag": "Computer Science - Computer Vision and Pattern Recognition",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Machine Learning",
           "type": 1
         }
       ],
@@ -4306,15 +4306,15 @@
       ],
       "tags": [
         {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
           "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
           "tag": "Computer Science - Computation and Language",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Machine Learning",
           "type": 1
         },
         {
@@ -4412,11 +4412,11 @@
       ],
       "tags": [
         {
-          "tag": "Computer Science - Artificial Intelligence",
+          "tag": "Computer Science - Machine Learning",
           "type": 1
         },
         {
-          "tag": "Computer Science - Machine Learning",
+          "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         }
       ],
@@ -4541,15 +4541,15 @@
       ],
       "tags": [
         {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
           "tag": "Computer Science - Artificial Intelligence",
           "type": 1
         },
         {
           "tag": "Computer Science - Computation and Language",
-          "type": 1
-        },
-        {
-          "tag": "Computer Science - Machine Learning",
           "type": 1
         }
       ],
@@ -4818,6 +4818,358 @@
       "itemKey": "JCURP74J",
       "libraryID": 1,
       "select": "zotero://select/library/items/JCURP74J"
+    },
+    {
+      "version": 3294,
+      "itemType": "preprint",
+      "title": "Scalable Extraction of Training Data from (Production) Language Models",
+      "abstractNote": "This paper studies extractable memorization: training data that an adversary can efficiently extract by querying a machine learning model without prior knowledge of the training dataset. We show an adversary can extract gigabytes of training data from open-source language models like Pythia or GPT-Neo, semi-open models like LLaMA or Falcon, and closed models like ChatGPT. Existing techniques from the literature suffice to attack unaligned models; in order to attack the aligned ChatGPT, we develop a new divergence attack that causes the model to diverge from its chatbot-style generations and emit training data at a rate 150x higher than when behaving properly. Our methods show practical attacks can recover far more data than previously thought, and reveal that current alignment techniques do not eliminate memorization.",
+      "date": "2023-11-28",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2311.17035",
+      "accessDate": "2025-06-03T16:41:56Z",
+      "extra": "arXiv:2311.17035 [cs]",
+      "DOI": "10.48550/arXiv.2311.17035",
+      "repository": "arXiv",
+      "archiveID": "arXiv:2311.17035",
+      "creators": [
+        {
+          "firstName": "Milad",
+          "lastName": "Nasr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nicholas",
+          "lastName": "Carlini",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jonathan",
+          "lastName": "Hayase",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Matthew",
+          "lastName": "Jagielski",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "A. Feder",
+          "lastName": "Cooper",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Daphne",
+          "lastName": "Ippolito",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christopher A.",
+          "lastName": "Choquette-Choo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Eric",
+          "lastName": "Wallace",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Florian",
+          "lastName": "Tramèr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Katherine",
+          "lastName": "Lee",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Cryptography and Security",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-06-03T16:41:56Z",
+      "dateModified": "2025-06-03T16:41:56Z",
+      "uri": "http://zotero.org/users/11037809/items/ZX5RSLSC",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-06-03T16:41:58Z",
+          "dateModified": "2025-06-03T16:41:58Z",
+          "uri": "http://zotero.org/users/11037809/items/6M8CIV7W",
+          "path": "/Zotero/storage/6M8CIV7W/Nasr et al. - 2023 - Scalable Extraction of Training Data from (Product.pdf",
+          "select": "zotero://select/library/items/6M8CIV7W"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-06-03T16:42:04Z",
+          "dateModified": "2025-06-03T16:42:04Z",
+          "uri": "http://zotero.org/users/11037809/items/NWLVZU89",
+          "path": "/Zotero/storage/NWLVZU89/2311.html",
+          "select": "zotero://select/library/items/NWLVZU89"
+        }
+      ],
+      "notes": [],
+      "citationKey": "nasrScalableExtractionTraining2023",
+      "itemID": 2723,
+      "itemKey": "ZX5RSLSC",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/ZX5RSLSC"
+    },
+    {
+      "version": 3299,
+      "itemType": "webpage",
+      "title": "\"Everyone wants to do the model work, not the data work\": Data Cascades in High-Stakes AI",
+      "shortTitle": "\"Everyone wants to do the model work, not the data work\"",
+      "url": "https://research.google/pubs/everyone-wants-to-do-the-model-work-not-the-data-work-data-cascades-in-high-stakes-ai/",
+      "accessDate": "2025-06-04T06:55:33Z",
+      "creators": [],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2025-06-04T06:55:33Z",
+      "dateModified": "2025-06-04T06:55:33Z",
+      "uri": "http://zotero.org/users/11037809/items/P2NVQBYZ",
+      "attachments": [],
+      "notes": [],
+      "citationKey": "EveryoneWantsModel",
+      "itemID": 2729,
+      "itemKey": "P2NVQBYZ",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/P2NVQBYZ"
+    },
+    {
+      "version": 3300,
+      "itemType": "preprint",
+      "title": "Not All Tokens Are Meant to Be Forgotten",
+      "abstractNote": "Large Language Models (LLMs), pre-trained on massive text corpora, exhibit remarkable human-level language understanding, reasoning, and decision-making abilities. However, they tend to memorize unwanted information, such as private or copyrighted content, raising significant privacy and legal concerns. Unlearning has emerged as a promising solution, but existing methods face a significant challenge of over-forgetting. This issue arises because they indiscriminately suppress the generation of all the tokens in forget samples, leading to a substantial loss of model utility. To overcome this challenge, we introduce the Targeted Information Forgetting (TIF) framework, which consists of (1) a flexible targeted information identifier designed to differentiate between unwanted words (UW) and general words (GW) in the forget samples, and (2) a novel Targeted Preference Optimization approach that leverages Logit Preference Loss to unlearn unwanted information associated with UW and Preservation Loss to retain general information in GW, effectively improving the unlearning process while mitigating utility degradation. Extensive experiments on the TOFU and MUSE benchmarks demonstrate that the proposed TIF framework enhances unlearning effectiveness while preserving model utility and achieving state-of-the-art results.",
+      "date": "2025-06-03",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2506.03142",
+      "accessDate": "2025-06-05T14:30:19Z",
+      "extra": "arXiv:2506.03142 [cs]",
+      "DOI": "10.48550/arXiv.2506.03142",
+      "archiveID": "arXiv:2506.03142",
+      "creators": [
+        {
+          "firstName": "Xiangyu",
+          "lastName": "Zhou",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yao",
+          "lastName": "Qiang",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Saleh Zare",
+          "lastName": "Zade",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Douglas",
+          "lastName": "Zytko",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Prashant",
+          "lastName": "Khanduri",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dongxiao",
+          "lastName": "Zhu",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Machine Learning",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-06-05T14:30:19Z",
+      "dateModified": "2025-06-05T14:30:19Z",
+      "uri": "http://zotero.org/users/11037809/items/4AEURX3X",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Zhou et al. - 2025 - Not All Tokens Are Meant to Be Forgotten.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-06-05T14:30:21Z",
+          "dateModified": "2025-06-05T14:30:21Z",
+          "uri": "http://zotero.org/users/11037809/items/QXAMG6PX",
+          "path": "/Zotero/storage/QXAMG6PX/Zhou et al. - 2025 - Not All Tokens Are Meant to Be Forgotten.pdf",
+          "select": "zotero://select/library/items/QXAMG6PX"
+        }
+      ],
+      "notes": [],
+      "citationKey": "zhouNotAllTokens2025",
+      "itemID": 2727,
+      "itemKey": "4AEURX3X",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/4AEURX3X"
+    },
+    {
+      "version": 3302,
+      "itemType": "preprint",
+      "title": "From Tokens to Thoughts: How LLMs and Humans Trade Compression for Meaning",
+      "abstractNote": "Humans organize knowledge into compact categories through semantic compression by mapping diverse instances to abstract representations while preserving meaning (e.g., robin and blue jay are both birds; most birds can fly). These concepts reflect a trade-off between expressive fidelity and representational simplicity. Large Language Models (LLMs) demonstrate remarkable linguistic abilities, yet whether their internal representations strike a human-like trade-off between compression and semantic fidelity is unclear. We introduce a novel information-theoretic framework, drawing from Rate-Distortion Theory and the Information Bottleneck principle, to quantitatively compare these strategies. Analyzing token embeddings from a diverse suite of LLMs against seminal human categorization benchmarks, we uncover key divergences. While LLMs form broad conceptual categories that align with human judgment, they struggle to capture the fine-grained semantic distinctions crucial for human understanding. More fundamentally, LLMs demonstrate a strong bias towards aggressive statistical compression, whereas human conceptual systems appear to prioritize adaptive nuance and contextual richness, even if this results in lower compressional efficiency by our measures. These findings illuminate critical differences between current AI and human cognitive architectures, guiding pathways toward LLMs with more human-aligned conceptual representations.",
+      "date": "2025-05-26",
+      "shortTitle": "From Tokens to Thoughts",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2505.17117",
+      "accessDate": "2025-06-05T18:30:17Z",
+      "extra": "arXiv:2505.17117 [cs]",
+      "DOI": "10.48550/arXiv.2505.17117",
+      "archiveID": "arXiv:2505.17117",
+      "creators": [
+        {
+          "firstName": "Chen",
+          "lastName": "Shani",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Dan",
+          "lastName": "Jurafsky",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Yann",
+          "lastName": "LeCun",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ravid",
+          "lastName": "Shwartz-Ziv",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computation and Language",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Information Theory",
+          "type": 1
+        },
+        {
+          "tag": "Mathematics - Information Theory",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "dateAdded": "2025-06-05T18:30:17Z",
+      "dateModified": "2025-06-05T18:30:17Z",
+      "uri": "http://zotero.org/users/11037809/items/8NS4R6CT",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Shani et al. - 2025 - From Tokens to Thoughts How LLMs and Humans Trade Compression for Meaning.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-06-05T18:30:18Z",
+          "dateModified": "2025-06-05T18:30:18Z",
+          "uri": "http://zotero.org/users/11037809/items/FGYKYTNJ",
+          "path": "/Zotero/storage/FGYKYTNJ/Shani et al. - 2025 - From Tokens to Thoughts How LLMs and Humans Trade Compression for Meaning.pdf",
+          "select": "zotero://select/library/items/FGYKYTNJ"
+        }
+      ],
+      "notes": [],
+      "citationKey": "shaniTokensThoughtsHow2025",
+      "itemID": 2726,
+      "itemKey": "8NS4R6CT",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/8NS4R6CT"
+    },
+    {
+      "version": 3309,
+      "itemType": "journalArticle",
+      "title": "The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity",
+      "abstractNote": "Recent generations of frontier language models have introduced Large Reasoning Models (LRMs) that generate detailed thinking processes before providing answers. While these models demonstrate improved performance on reasoning benchmarks, their fundamental capabilities, scaling properties, and limitations remain insufficiently understood. Current evaluations primarily focus on established mathematical and coding benchmarks, emphasizing final answer accuracy. However, this evaluation paradigm often suffers from data contamination and does not provide insights into the reasoning traces’ structure and quality. In this work, we systematically investigate these gaps with the help of controllable puzzle environments that allow precise manipulation of compositional complexity while maintaining consistent logical structures. This setup enables the analysis of not only final answers but also the internal reasoning traces, offering insights into how LRMs “think”. Through extensive experimentation across diverse puzzles, we show that frontier LRMs face a complete accuracy collapse beyond certain complexities. Moreover, they exhibit a counterintuitive scaling limit: their reasoning effort increases with problem complexity up to a point, then declines despite having an adequate token budget. By comparing LRMs with their standard LLM counterparts under equivalent inference compute, we identify three performance regimes: (1) lowcomplexity tasks where standard models surprisingly outperform LRMs, (2) medium-complexity tasks where additional thinking in LRMs demonstrates advantage, and (3) high-complexity tasks where both models experience complete collapse. We found that LRMs have limitations in exact computation: they fail to use explicit algorithms and reason inconsistently across puzzles. We also investigate the reasoning traces in more depth, studying the patterns of explored solutions and analyzing the models’ computational behavior, shedding light on their strengths, limitations, and ultimately raising crucial questions about their true reasoning capabilities.",
+      "date": "2025-06-05",
+      "language": "en",
+      "libraryCatalog": "Zotero",
+      "url": "https://ml-site.cdn-apple.com/papers/the-illusion-of-thinking.pdf",
+      "creators": [
+        {
+          "firstName": "Parshin",
+          "lastName": "Shojaee",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Iman",
+          "lastName": "Mirzadeh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Keivan",
+          "lastName": "Alizadeh",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Maxwell",
+          "lastName": "Horton",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Samy",
+          "lastName": "Bengio",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mehrdad",
+          "lastName": "Farajtabar",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "dateAdded": "2025-06-07T21:09:55Z",
+      "dateModified": "2025-06-07T21:27:19Z",
+      "uri": "http://zotero.org/users/11037809/items/KVXBT9QL",
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Shojaee et al. - The Illusion of Thinking Understanding the Streng.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-06-07T21:09:47Z",
+          "dateModified": "2025-06-07T21:09:56Z",
+          "uri": "http://zotero.org/users/11037809/items/3VMDYZEV",
+          "path": "/Zotero/storage/3VMDYZEV/Shojaee et al. - The Illusion of Thinking Understanding the Streng.pdf",
+          "select": "zotero://select/library/items/3VMDYZEV"
+        }
+      ],
+      "notes": [],
+      "citationKey": "shojaeeIllusionThinkingUnderstanding2025",
+      "itemID": 2732,
+      "itemKey": "KVXBT9QL",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/KVXBT9QL"
     }
   ]
 }

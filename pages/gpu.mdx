@@ -1,6 +1,25 @@
 import Page from "../components/page";
 
-# GPU
+# Tensor abstraction
+
+A _Tensor_ is a multi-dimensional matrix containing elements of a single data type.
+
+# GPGPU
+
+- archlinux wiki for GPGPU: https://wiki.archlinux.org/title/GPGPU
+- what is GPGPU: https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units
+
+## OpenCL
+
+- OpenCL: https://www.khronos.org/opencl/
+- Wikipedia: https://en.wikipedia.org/wiki/OpenCL
+
+OpenCL is a standard for cross-platform parallel programming of diverse accelerators. As such it is not CUDA specific, but targets CPUs, GPUs, DSPs and FPGAs. The OpenCL API specification enables each chip to have its own OpenCL drivers tuned to its specific architecture. To be conformant to OpenCL, hardware vendors must become OpenCL _Adapters_ and submit their conformance test results for review. Nvidia is OpenCL conformant, which allow us to use the C API provided by OpenCL to directly call the _Nvidia runtime_. This means that learning OpenCL will translate to other platforms as well, since they have to conform to the OpenCL specification if they are conformant.
+
+| Feature     | CUDA (Nvidia)                    | OpenCL (on Nvidia)                   |
+| ----------- | -------------------------------- | ------------------------------------ |
+| Support     | Nvidia GPUs only                 | Nvidia, AMD, Intel, CPUs, FPGAs, etc |
+| Performance | Generally higher, more optimized | Good, but usually lower than CUDA    |
 
 ## CUDA
 
@@ -31,10 +50,6 @@ There are also many third-party tool-chains available:
 
 ### Install driver (archlinux)
 
-- https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units
-- https://en.wikipedia.org/wiki/OpenCL
-- https://wiki.archlinux.org/title/GPGPU
-
 Run
 
 ```sh
@@ -58,7 +73,11 @@ Restart machine
 nvidia-smi
 ```
 
-Install cuda
+Install cuda (also see https://docs.nvidia.com/deploy/cuda-compatibility/)
+
+```sh
+pacman -S cuda
+```
 
 Verify installation
 
@@ -72,10 +91,16 @@ nvcc --version
 - cuda
 - opencl-nvidia
 
-### Python and CUDA
+### Interacting with CUDA
 
-- PyCUDA
-- Numba
+There exists several wrappers of the CUDA API.
+
+1. PyCUDA: https://github.com/inducer/pycuda \
+   Lets you access Nvidia's CUDA parallel computation API from Python.
+2. Official CUDA API bindings: https://github.com/NVIDIA/cuda-python \
+   Nvidia's own language bindings for the CUDA API written in Python/Cython. This is similar to (1) in abstraction level.
+3. Numba: https://github.com/numba/numba \
+   NumPy-aware optimizing compiler for Python, which means it uses the LLVM compiler project to generate machine code directly from Python syntax. Numba provides a high-level interface and uses cuda-python (2) under the hood to accelerate computations when compiling for CUDA.
 
 ### Numba
 
@@ -86,18 +111,44 @@ nvcc --version
 - Numba github: https://github.com/numba/numba
 - https://numba.readthedocs.io/en/stable/cuda/index.html
 
-## Define
+## ROCm
+
+_ROCm_ (Radeon Open Compute) is AMD's open-source parallel computing architecture and framework.
+
+### HIP
+
+_HIP_ (Heterogeneous Interface for Portability) is AMD's dedicated GPU programming environment.
+
+## Tinygrad
+
+Tinygrad takes advantage of the fact that every tensor operation is either elementwise, or reduction. The obvious advantage is to build up abstraction that makes optimization easier (think of this in the context of Complex Instruction Set Architecture vs RISC).
+
+## Pytorch
+
+lune
+
+## Jax
+
+https://github.com/jax-ml/jax
+
+JAX is a Python library for accelerator-oriented array computation and program transformation, designed for high-performance numerical computing and large-scale machine learning.
+
+JAX can automatically differentiate native Python and NumPy functions. It can differentiate through loops, branches, recursion, and closures, and it can take derivatives of derivatives of derivatives. It supports reverse-mode differentiation (a.k.a. backpropagation) via jax.grad as well as forward-mode differentiation, and the two can be composed arbitrarily to any order.
+
+JAX uses XLA to compile and scale your NumPy programs on TPUs, GPUs, and other hardware accelerators.
+
+# Define
 
 - SM
 - CUDA programming model
 
-## Resources
+# Resources
 
-- https://developer.nvidia.com/blog/tag/cuda-refresher/
-- https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
-- https://docs.nvidia.com/cuda/cuda-c-programming-guide/
-- https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf
-- https://www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/readings/lindholm08_tesla.pdf
+- cuda refresher: https://developer.nvidia.com/blog/tag/cuda-refresher/
+- cuda refresher programming model: https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
+- cuda c programming: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
+- cuda c programming pdf: https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf
+- nvidia tesla paper: https://www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/readings/lindholm08_tesla.pdf
 - cuda in python part1: https://www.vincent-lunot.com/post/an-introduction-to-cuda-in-python-part-1/
 - cuda compatibility: https://developer.nvidia.com/cuda-gpus
 - nvidia hpc: https://developer.nvidia.com/hpc
@@ -108,8 +159,11 @@ nvcc --version
 - opencl: https://www.khronos.org/opencl/#ocl-overview
 - archlinux nvidia: https://wiki.archlinux.org/title/NVIDIA
 - nvidia codenames: https://nouveau.freedesktop.org/CodeNames.html
+- numba nvidia guide: https://developer.nvidia.com/blog/numba-python-cuda-acceleration/
+- numba docs: https://numba.readthedocs.io/en/stable/
+- nvidia tech blog: https://developer.nvidia.com/blog/
 
-old
+general
 
 - Leetcpu: https://www.leetgpu.com/resources
 - Really nice glossary: https://modal.com/gpu-glossary
@@ -126,7 +180,7 @@ old
 
 export default function MDXPage({ children }) {
   return (
-    <Page active="hpc">
+    <Page active="gpu">
       <div className="content">{children}</div>
     </Page>
   );
