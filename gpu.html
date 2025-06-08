@@ -1,23 +1,27 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link data-next-font="" rel="preconnect" href="/" crossorigin="anonymous"/><link rel="preload" href="/_next/static/css/7246ba7ba336691a.css" as="style"/><link rel="stylesheet" href="/_next/static/css/7246ba7ba336691a.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js"></script><script src="/_next/static/chunks/webpack-73fa8922fc3e0a03.js" defer=""></script><script src="/_next/static/chunks/framework-305cb810cde7afac.js" defer=""></script><script src="/_next/static/chunks/main-1e819d43c82e61a4.js" defer=""></script><script src="/_next/static/chunks/pages/_app-882d2ca6ad63df8e.js" defer=""></script><script src="/_next/static/chunks/c16184b3-1754bfa260bbde28.js" defer=""></script><script src="/_next/static/chunks/603-9686efb8fc297326.js" defer=""></script><script src="/_next/static/chunks/pages/gpu-2e8849bb6b91b1ea.js" defer=""></script><script src="/_next/static/2cFToTVlVTlbKlyHbon-B/_buildManifest.js" defer=""></script><script src="/_next/static/2cFToTVlVTlbKlyHbon-B/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div><header><a href="/about">about</a><a href="/blog">blog</a><a href="/read">read</a><a href="/run">run</a><a href="/c">c</a><a href="/guidos/book/index.html" target="_blank" rel="noopener noreferrer">os</a><a href="/ml">ml</a><a style="text-decoration:underline" href="/gpu">gpu</a></header><div class="box helper-icons"><a href="/feed.xml"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rss" class="svg-inline--fa fa-rss " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg></a><a><svg style="position:relative;top:2px" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7l0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5H109c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8l0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4l0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5H226.4c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8l0 0 0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80V416H272v16c0 44.2-35.8 80-80 80z"></path></svg></a></div><main><div class="content"><nav class="toc"><ol class="toc-level toc-level-1"><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#tensor-abstraction">Tensor abstraction</a></li><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#gpgpu">GPGPU</a><ol class="toc-level toc-level-2"><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#opencl">OpenCL</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#cuda">CUDA</a><ol class="toc-level toc-level-3"><li class="toc-item toc-item-h3"><a class="toc-link toc-link-h3" href="#install-driver-archlinux">Install driver (archlinux)</a></li><li class="toc-item toc-item-h3"><a class="toc-link toc-link-h3" href="#interacting-with-cuda">Interacting with CUDA</a></li><li class="toc-item toc-item-h3"><a class="toc-link toc-link-h3" href="#numba">Numba</a></li></ol></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#rocm">ROCm</a><ol class="toc-level toc-level-3"><li class="toc-item toc-item-h3"><a class="toc-link toc-link-h3" href="#hip">HIP</a></li></ol></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#tinygrad">Tinygrad</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#pytorch">Pytorch</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#jax">Jax</a></li></ol></li><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#define">Define</a></li><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#resources">Resources</a></li></ol></nav>
-<h1 id="tensor-abstraction">Tensor abstraction</h1>
-<hr/>
-<p>A <em>Tensor</em> is a multi-dimensional matrix containing elements of a single data type.</p>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link data-next-font="" rel="preconnect" href="/" crossorigin="anonymous"/><link rel="preload" href="/_next/static/css/488a8579610bd81d.css" as="style"/><link rel="stylesheet" href="/_next/static/css/488a8579610bd81d.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js"></script><script src="/_next/static/chunks/webpack-d25720dcb38f26ad.js" defer=""></script><script src="/_next/static/chunks/framework-305cb810cde7afac.js" defer=""></script><script src="/_next/static/chunks/main-1e819d43c82e61a4.js" defer=""></script><script src="/_next/static/chunks/pages/_app-882d2ca6ad63df8e.js" defer=""></script><script src="/_next/static/chunks/c16184b3-1754bfa260bbde28.js" defer=""></script><script src="/_next/static/chunks/603-9686efb8fc297326.js" defer=""></script><script src="/_next/static/chunks/pages/gpu-f4f8a3d09069ea06.js" defer=""></script><script src="/_next/static/KQhcy9-O2WLeYM2Cu8Glw/_buildManifest.js" defer=""></script><script src="/_next/static/KQhcy9-O2WLeYM2Cu8Glw/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div><header><a href="/about">about</a><a href="/blog">blog</a><a href="/read">read</a><a href="/run">run</a><a href="/c">c</a><a href="/guidos/book/index.html" target="_blank" rel="noopener noreferrer">os</a><a href="/ml">ml</a><a style="text-decoration:underline" href="/gpu">gpu</a></header><div class="box helper-icons"><a href="/feed.xml"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rss" class="svg-inline--fa fa-rss " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg></a><a><svg style="position:relative;top:2px" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7l0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5H109c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8l0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4l0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5H226.4c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8l0 0 0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80V416H272v16c0 44.2-35.8 80-80 80z"></path></svg></a></div><main><div class="content"><nav class="toc"><ol class="toc-level toc-level-1"><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#gpgpu">GPGPU</a></li><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#opencl">OpenCL</a></li><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#cuda">CUDA</a><ol class="toc-level toc-level-2"><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#streaming-multiprocessor">Streaming multiprocessor</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#core">Core</a><ol class="toc-level toc-level-3"><li class="toc-item toc-item-h3"><a class="toc-link toc-link-h3" href="#cuda-core">CUDA core</a></li><li class="toc-item toc-item-h3"><a class="toc-link toc-link-h3" href="#tensor-core">Tensor core</a></li></ol></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#units">Units</a><ol class="toc-level toc-level-3"><li class="toc-item toc-item-h3"><a class="toc-link toc-link-h3" href="#special-function-unit">Special function unit</a></li><li class="toc-item toc-item-h3"><a class="toc-link toc-link-h3" href="#loadstore-unit">Load/store unit</a></li></ol></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#warp">Warp</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#memory">Memory</a><ol class="toc-level toc-level-3"><li class="toc-item toc-item-h3"><a class="toc-link toc-link-h3" href="#memory-coalescing">Memory coalescing</a></li></ol></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#drivers-archlinux">Drivers (archlinux)</a><ol class="toc-level toc-level-3"><li class="toc-item toc-item-h3"><a class="toc-link toc-link-h3" href="#interacting-with-cuda">Interacting with CUDA</a></li><li class="toc-item toc-item-h3"><a class="toc-link toc-link-h3" href="#numba">Numba</a></li></ol></li></ol></li><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#rocm">ROCm</a><ol class="toc-level toc-level-2"><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#hip">HIP</a></li></ol></li><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#software-stacks">Software stacks</a><ol class="toc-level toc-level-2"><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#tinygrad">Tinygrad</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#pytorch">Pytorch</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#jax">Jax</a></li></ol></li><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#tensor-abstraction">Tensor abstraction</a></li><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#define">Define</a></li><li class="toc-item toc-item-h1"><a class="toc-link toc-link-h1" href="#resources">Resources</a><ol class="toc-level toc-level-2"><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#top">Top</a></li><li class="toc-item toc-item-h2"><a class="toc-link toc-link-h2" href="#other">Other</a></li></ol></li></ol></nav>
 <h1 id="gpgpu">GPGPU</h1>
 <hr/>
 <ul>
 <li>archlinux wiki for GPGPU: <a href="https://wiki.archlinux.org/title/GPGPU">https://wiki.archlinux.org/title/GPGPU</a></li>
 <li>what is GPGPU: <a href="https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units">https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units</a></li>
 </ul>
-<h2 id="opencl">OpenCL</h2>
+<p>GPGPU</p>
+<ul>
+<li>OpenCL</li>
+<li>CUDA (Nvidia)</li>
+<li>ROCm (AMD)</li>
+</ul>
+<table><thead><tr><th>Feature</th><th>CUDA (Nvidia)</th><th>OpenCL (on Nvidia)</th></tr></thead><tbody><tr><td>Support</td><td>Nvidia GPUs only</td><td>Nvidia, AMD, Intel, CPUs, FPGAs, etc</td></tr><tr><td>Performance</td><td>Generally higher, more optimized</td><td>Good, but usually lower than CUDA</td></tr></tbody></table>
+<h1 id="opencl">OpenCL</h1>
 <hr/>
 <ul>
 <li>OpenCL: <a href="https://www.khronos.org/opencl/">https://www.khronos.org/opencl/</a></li>
 <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/OpenCL">https://en.wikipedia.org/wiki/OpenCL</a></li>
 </ul>
 <p>OpenCL is a standard for cross-platform parallel programming of diverse accelerators. As such it is not CUDA specific, but targets CPUs, GPUs, DSPs and FPGAs. The OpenCL API specification enables each chip to have its own OpenCL drivers tuned to its specific architecture. To be conformant to OpenCL, hardware vendors must become OpenCL <em>Adapters</em> and submit their conformance test results for review. Nvidia is OpenCL conformant, which allow us to use the C API provided by OpenCL to directly call the <em>Nvidia runtime</em>. This means that learning OpenCL will translate to other platforms as well, since they have to conform to the OpenCL specification if they are conformant.</p>
-<table><thead><tr><th>Feature</th><th>CUDA (Nvidia)</th><th>OpenCL (on Nvidia)</th></tr></thead><tbody><tr><td>Support</td><td>Nvidia GPUs only</td><td>Nvidia, AMD, Intel, CPUs, FPGAs, etc</td></tr><tr><td>Performance</td><td>Generally higher, more optimized</td><td>Good, but usually lower than CUDA</td></tr></tbody></table>
-<h2 id="cuda">CUDA</h2>
+<h1 id="cuda">CUDA</h1>
 <hr/>
+<p><em>Compute Unified Device Architecture (CUDA)</em>.</p>
 <p>The host is the CPU available in the system. The system memory associated with the CPU is called host memory. The GPU is called a device and GPU memory likewise called device memory.</p>
 <p>To execute any CUDA program, there are three main steps:</p>
 <ul>
@@ -39,7 +43,188 @@
 <li><a href="https://developer.nvidia.com/pycuda">PyCUDA</a> — Use CUDA API operations from a Python interface.</li>
 <li><a href="https://developer.nvidia.com/opencl">OpenCL</a> —Use low-level API operations to program CUDA GPUs.</li>
 </ul>
-<h3 id="install-driver-archlinux">Install driver (archlinux)</h3>
+<h2 id="streaming-multiprocessor">Streaming multiprocessor</h2>
+<hr/>
+<p><em>Streaming Multiprocessors (SMs)</em></p>
+<h2 id="core">Core</h2>
+<hr/>
+<div class="center"><div class="sm-container"><style>
+        .sm-container {
+          color: #b7c7b0;
+          font-family: &quot;Fira Code&quot;, monospace;
+          font-size: 6pt;
+          width: 100%;
+        }
+        .sm-title {
+          font-size: 1.6em;
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+        .l1-cache {
+          border: 1px solid #6fa29c;
+          background: none;
+          color: #8ecfc7;
+          padding: 8px 0;
+          text-align: center;
+          margin-bottom: 18px;
+          font-size: 1.1em;
+          letter-spacing: 1px;
+        }
+        .sm-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          gap: 18px;
+          margin-bottom: 18px;
+        }
+        .sm-core {
+          border: 1px solid #6fa29c;
+          padding: 12px 8px 8px 8px;
+          background: none;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .section {
+          border: 1px solid #6fa29c;
+          padding: 3px 8px;
+          margin-bottom: 2px;
+          font-size: 1em;
+          background: none;
+        }
+        .section.ws, .section.du {
+          background: #3d3c2b;
+          color: #d5d1a3;
+          border-color: #b8a96b;
+        }
+        .section.l0, .section.rf {
+          background: none;
+          color: #8ecfc7;
+        }
+        .compute-table {
+          display: flex;
+          flex-direction: row;
+          margin: 8px 0 6px 0;
+        }
+        .compute-table-left {
+          display: flex;
+          flex-direction: column;
+        }
+        .compute-row {
+          display: flex;
+          flex-direction: row;
+        }
+        .cell {
+          border: 1px solid #6fa29c;
+          padding: 2px 10px;
+          text-align: center;
+          font-size: 0.97em;
+        }
+        .cell.int32 {
+          background: none;
+          color: #b7c7b0;
+        }
+        .cell.fp32 {
+          background: none;
+          color: #b7c7b0;
+        }
+        .compute-table-mid {
+          display: flex;
+          flex-direction: column;
+        }
+        .cell.fp64 {
+          background: #2e4639;
+          color: #b7c7b0;
+          border: 1px solid #6fa29c;
+        }
+        .compute-table-right {
+          display: flex;
+          flex-direction: column;
+          margin-left: 8px;
+        }
+        .tensor-core {
+          border: 1px solid #6fa29c;
+          background: none;
+          color: #b7c7b0;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 1em;
+        }
+        .ldst-sfu-row {
+          display: flex;
+          flex-direction: row;
+          margin-top: 6px;
+        }
+        .ldst {
+          border: 1px solid #b27b7b;
+          background: none;
+          color: #b27b7b;
+          padding: 2px 8px;
+          font-size: 0.98em;
+          text-align: center;
+        }
+        .sfu {
+          border: 1px solid #b27b7b;
+          background: none;
+          color: #b27b7b;
+          padding: 2px 8px;
+          font-size: 0.98em;
+          text-align: center;
+          margin-left: 8px;
+        }
+        .tensor-mem-accel {
+          color: #b7c7b0;
+          text-align: center;
+          margin-bottom: 8px;
+          font-size: 1.08em;
+        }
+        .l1-shared {
+          border: 1px solid #6fa29c;
+          background: none;
+          color: #8ecfc7;
+          text-align: center;
+          margin-bottom: 12px;
+          font-size: 1.05em;
+          padding: 8px 0;
+        }
+        .tex-row {
+          display: flex;
+          gap: 16px;
+          margin-top: 8px;
+        }
+        .tex-block {
+          border: 1px solid #6fa29c;
+          background: none;
+          color: #b7c7b0;
+          text-align: center;
+          flex: 1;
+          padding: 8px 0;
+          font-size: 1.1em;
+        }
+        </style><div class="sm-title">SM</div><div class="l1-cache">L1 Instruction Cache</div><div class="sm-grid"><div class="sm-core"><div class="section l0">L0 Instruction Cache</div><div class="section ws">Warp Scheduler (32 thread/clk)</div><div class="section du">Dispatch Unit (32 thread/clk)</div><div class="section rf">Register File (16,384 × 32-bit)</div><div class="compute-table"><div class="compute-table-left"><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div></div><div class="compute-table-mid"><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div></div><div class="compute-table-right"><div class="tensor-core">TENSOR CORE<br/>4TH GENERATION</div></div></div><div class="ldst-sfu-row"><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="sfu">SFU</div></div></div><div class="sm-core"><div class="section l0">L0 Instruction Cache</div><div class="section ws">Warp Scheduler (32 thread/clk)</div><div class="section du">Dispatch Unit (32 thread/clk)</div><div class="section rf">Register File (16,384 × 32-bit)</div><div class="compute-table"><div class="compute-table-left"><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div></div><div class="compute-table-mid"><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div></div><div class="compute-table-right"><div class="tensor-core">TENSOR CORE<br/>4TH GENERATION</div></div></div><div class="ldst-sfu-row"><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="sfu">SFU</div></div></div><div class="sm-core"><div class="section l0">L0 Instruction Cache</div><div class="section ws">Warp Scheduler (32 thread/clk)</div><div class="section du">Dispatch Unit (32 thread/clk)</div><div class="section rf">Register File (16,384 × 32-bit)</div><div class="compute-table"><div class="compute-table-left"><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div></div><div class="compute-table-mid"><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div></div><div class="compute-table-right"><div class="tensor-core">TENSOR CORE<br/>4TH GENERATION</div></div></div><div class="ldst-sfu-row"><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="sfu">SFU</div></div></div><div class="sm-core"><div class="section l0">L0 Instruction Cache</div><div class="section ws">Warp Scheduler (32 thread/clk)</div><div class="section du">Dispatch Unit (32 thread/clk)</div><div class="section rf">Register File (16,384 × 32-bit)</div><div class="compute-table"><div class="compute-table-left"><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div><div class="compute-row"><div class="cell int32">INT32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div><div class="cell fp32">FP32</div></div></div><div class="compute-table-mid"><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div><div class="cell fp64">FP64</div></div><div class="compute-table-right"><div class="tensor-core">TENSOR CORE<br/>4TH GENERATION</div></div></div><div class="ldst-sfu-row"><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="ldst">LD / ST</div><div class="sfu">SFU</div></div></div></div><div class="tensor-mem-accel">Tensor Memory Accelerator</div><div class="l1-shared">256 KB L1 Data Cache / Shared Memory</div><div class="tex-row"><div class="tex-block">Tex</div><div class="tex-block">Tex</div><div class="tex-block">Tex</div><div class="tex-block">Tex</div></div></div></div>
+<h3 id="cuda-core">CUDA core</h3>
+<hr/>
+<h3 id="tensor-core">Tensor core</h3>
+<hr/>
+<h2 id="units">Units</h2>
+<hr/>
+<h3 id="special-function-unit">Special function unit</h3>
+<hr/>
+<h3 id="loadstore-unit">Load/store unit</h3>
+<hr/>
+<h2 id="warp">Warp</h2>
+<hr/>
+<h2 id="memory">Memory</h2>
+<hr/>
+<h3 id="memory-coalescing">Memory coalescing</h3>
+<hr/>
+<ul>
+<li>memory coalescing: <a href="https://homepages.math.uic.edu/~jan/mcs572f16/mcs572notes/lec35.html">https://homepages.math.uic.edu/~jan/mcs572f16/mcs572notes/lec35.html</a></li>
+</ul>
+<h2 id="drivers-archlinux">Drivers (archlinux)</h2>
 <hr/>
 <p>Run</p>
 <div class="remark-highlight"><pre class="language-sh"><code class="language-sh">$ lspci <span class="token parameter variable">-k</span> <span class="token parameter variable">-d</span> ::03xx
@@ -88,36 +273,73 @@ Numba can compile a large subset of numerically-focused Python, including many N
 <li>Numba github: <a href="https://github.com/numba/numba">https://github.com/numba/numba</a></li>
 <li><a href="https://numba.readthedocs.io/en/stable/cuda/index.html">https://numba.readthedocs.io/en/stable/cuda/index.html</a></li>
 </ul>
-<h2 id="rocm">ROCm</h2>
+<h1 id="rocm">ROCm</h1>
 <hr/>
 <p><em>ROCm</em> (Radeon Open Compute) is AMD&#x27;s open-source parallel computing architecture and framework.</p>
-<h3 id="hip">HIP</h3>
+<h2 id="hip">HIP</h2>
 <hr/>
 <p><em>HIP</em> (Heterogeneous Interface for Portability) is AMD&#x27;s dedicated GPU programming environment.</p>
+<h1 id="software-stacks">Software stacks</h1>
+<hr/>
+<ul>
+<li>Tinygrad</li>
+<li>Pytorch</li>
+<li>Jax</li>
+</ul>
 <h2 id="tinygrad">Tinygrad</h2>
 <hr/>
 <p>Tinygrad takes advantage of the fact that every tensor operation is either elementwise, or reduction. The obvious advantage is to build up abstraction that makes optimization easier (think of this in the context of Complex Instruction Set Architecture vs RISC).</p>
 <h2 id="pytorch">Pytorch</h2>
 <hr/>
-<p>lune</p>
 <h2 id="jax">Jax</h2>
 <hr/>
 <p><a href="https://github.com/jax-ml/jax">https://github.com/jax-ml/jax</a></p>
 <p>JAX is a Python library for accelerator-oriented array computation and program transformation, designed for high-performance numerical computing and large-scale machine learning.</p>
 <p>JAX can automatically differentiate native Python and NumPy functions. It can differentiate through loops, branches, recursion, and closures, and it can take derivatives of derivatives of derivatives. It supports reverse-mode differentiation (a.k.a. backpropagation) via jax.grad as well as forward-mode differentiation, and the two can be composed arbitrarily to any order.</p>
 <p>JAX uses XLA to compile and scale your NumPy programs on TPUs, GPUs, and other hardware accelerators.</p>
+<h1 id="tensor-abstraction">Tensor abstraction</h1>
+<hr/>
+<p>A <em>Tensor</em> is a multi-dimensional matrix containing elements of a single data type.</p>
 <h1 id="define">Define</h1>
 <hr/>
 <ul>
 <li>SM</li>
 <li>CUDA programming model</li>
+<li>GPUs are 1024 bit SIMD machines?</li>
 </ul>
 <h1 id="resources">Resources</h1>
 <hr/>
+<h2 id="top">Top</h2>
+<hr/>
 <ul>
+<li>cuda c programming: <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/">https://docs.nvidia.com/cuda/cuda-c-programming-guide/</a></li>
+<li>Really nice glossary: <a href="https://modal.com/gpu-glossary">https://modal.com/gpu-glossary</a></li>
+<li>cuda-training-series: <a href="https://www.olcf.ornl.gov/cuda-training-series/">https://www.olcf.ornl.gov/cuda-training-series/</a></li>
+<li>cuda best practices: <a href="https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#who-should-read-this-guide">https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html<!-- -->https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#who-should-read-this-guide</a></li>
+<li>going further than cuda intro (<em>exercises</em> and <em>where to from here</em>): <a href="https://developer.nvidia.com/blog/even-easier-introduction-cuda/#exercises">https://developer.nvidia.com/blog/even-easier-introduction-cuda/<!-- -->https://developer.nvidia.com/blog/even-easier-introduction-cuda/#exercises</a></li>
+<li>demystify gpu for dl part1 (blog): <a href="https://learnopencv.com/demystifying-gpu-architectures-for-deep-learning/">https://learnopencv.com/demystifying-gpu-architectures-for-deep-learning/</a></li>
+<li>demystify gpu for dl part2 (blog): <a href="https://learnopencv.com/demystifying-gpu-architectures-for-deep-learning-part-2/">https://learnopencv.com/demystifying-gpu-architectures-for-deep-learning-part-2/</a></li>
+<li>modern gpu architecture explained (blog): <a href="https://learnopencv.com/modern-gpu-architecture-explained/">https://learnopencv.com/modern-gpu-architecture-explained/</a></li>
+<li>leetgpu: <a href="https://leetgpu.com/">https://leetgpu.com/</a></li>
+<li>leetgpu resources: <a href="https://www.leetgpu.com/resources">https://www.leetgpu.com/resources</a></li>
+<li>supercomputing: <a href="https://homepages.math.uic.edu/~jan/mcs572f16/mcs572notes/index.html">https://homepages.math.uic.edu/~jan/mcs572f16/mcs572notes/index.html</a></li>
+<li>fabiensanglard (blog): <a href="https://fabiensanglard.net/cuda/">https://fabiensanglard.net/cuda/</a></li>
+</ul>
+<h2 id="other">Other</h2>
+<hr/>
+<ul>
+<li>CUDA programming guide: <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/">https://docs.nvidia.com/cuda/cuda-c-programming-guide/</a></li>
+<li>CUDA books archive: <a href="https://developer.nvidia.com/cuda-books-archive">https://developer.nvidia.com/cuda-books-archive</a></li>
+<li>CUDA parallel programming: <a href="https://newfrontiers.illinois.edu/news-and-events/introduction-to-parallel-programming-with-cuda/">https://newfrontiers.illinois.edu/news-and-events/introduction-to-parallel-programming-with-cuda/</a></li>
+<li>Triton: <a href="https://triton-lang.org/main/getting-started/tutorials/index.html">https://triton-lang.org/main/getting-started/tutorials/index.html</a></li>
+<li>Pytorch doc: <a href="https://docs.pytorch.org/docs/stable/index.html">https://docs.pytorch.org/docs/stable/index.html</a></li>
+<li>Pytorch tutorials: <a href="https://docs.pytorch.org/tutorials/">https://docs.pytorch.org/tutorials/</a></li>
+<li>Pytorch zero to mastery: <a href="https://www.learnpytorch.io/">https://www.learnpytorch.io/</a></li>
+<li>Tinygrad doc: <a href="https://docs.tinygrad.org/">https://docs.tinygrad.org/</a></li>
+<li>Tinygrad notes: <a href="https://mesozoic-egg.github.io/tinygrad-notes/">https://mesozoic-egg.github.io/tinygrad-notes/</a></li>
+<li>Mojo: <a href="https://docs.modular.com/mojo/manual/">https://docs.modular.com/mojo/manual/</a></li>
 <li>cuda refresher: <a href="https://developer.nvidia.com/blog/tag/cuda-refresher/">https://developer.nvidia.com/blog/tag/cuda-refresher/</a></li>
 <li>cuda refresher programming model: <a href="https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/">https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/</a></li>
-<li>cuda c programming: <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/">https://docs.nvidia.com/cuda/cuda-c-programming-guide/</a></li>
 <li>cuda c programming pdf: <a href="https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf">https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf</a></li>
 <li>nvidia tesla paper: <a href="https://www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/readings/lindholm08_tesla.pdf">https://www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/readings/lindholm08_tesla.pdf</a></li>
 <li>cuda in python part1: <a href="https://www.vincent-lunot.com/post/an-introduction-to-cuda-in-python-part-1/">https://www.vincent-lunot.com/post/an-introduction-to-cuda-in-python-part-1/</a></li>
@@ -133,19 +355,18 @@ Numba can compile a large subset of numerically-focused Python, including many N
 <li>numba nvidia guide: <a href="https://developer.nvidia.com/blog/numba-python-cuda-acceleration/">https://developer.nvidia.com/blog/numba-python-cuda-acceleration/</a></li>
 <li>numba docs: <a href="https://numba.readthedocs.io/en/stable/">https://numba.readthedocs.io/en/stable/</a></li>
 <li>nvidia tech blog: <a href="https://developer.nvidia.com/blog/">https://developer.nvidia.com/blog/</a></li>
-</ul>
-<p>general</p>
-<ul>
-<li>Leetcpu: <a href="https://www.leetgpu.com/resources">https://www.leetgpu.com/resources</a></li>
-<li>Really nice glossary: <a href="https://modal.com/gpu-glossary">https://modal.com/gpu-glossary</a></li>
-<li>CUDA programming guide: <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/">https://docs.nvidia.com/cuda/cuda-c-programming-guide/</a></li>
-<li>CUDA books archive: <a href="https://developer.nvidia.com/cuda-books-archive">https://developer.nvidia.com/cuda-books-archive</a></li>
-<li>CUDA parallel programming: <a href="https://newfrontiers.illinois.edu/news-and-events/introduction-to-parallel-programming-with-cuda/">https://newfrontiers.illinois.edu/news-and-events/introduction-to-parallel-programming-with-cuda/</a></li>
-<li>Triton: <a href="https://triton-lang.org/main/getting-started/tutorials/index.html">https://triton-lang.org/main/getting-started/tutorials/index.html</a></li>
-<li>Pytorch doc: <a href="https://docs.pytorch.org/docs/stable/index.html">https://docs.pytorch.org/docs/stable/index.html</a></li>
-<li>Pytorch tutorials: <a href="https://docs.pytorch.org/tutorials/">https://docs.pytorch.org/tutorials/</a></li>
-<li>Pytorch zero to mastery: <a href="https://www.learnpytorch.io/">https://www.learnpytorch.io/</a></li>
-<li>Tinygrad doc: <a href="https://docs.tinygrad.org/">https://docs.tinygrad.org/</a></li>
-<li>Tinygrad notes: <a href="https://mesozoic-egg.github.io/tinygrad-notes/">https://mesozoic-egg.github.io/tinygrad-notes/</a></li>
-<li>Mojo: <a href="https://docs.modular.com/mojo/manual/">https://docs.modular.com/mojo/manual/</a></li>
-</ul></div></main></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/gpu","query":{},"buildId":"2cFToTVlVTlbKlyHbon-B","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
+<li>tiny-gpu: <a href="https://github.com/adam-maj/tiny-gpu">https://github.com/adam-maj/tiny-gpu</a></li>
+<li>cuda-training-series github: <a href="https://github.com/olcf/cuda-training-series/tree/master/exercises">https://github.com/olcf/cuda-training-series/tree/master/exercises</a></li>
+<li>easy intro to cuda: <a href="https://developer.nvidia.com/blog/even-easier-introduction-cuda/">https://developer.nvidia.com/blog/even-easier-introduction-cuda/</a></li>
+<li>cub: <a href="https://nvidia.github.io/cccl/cub/">https://nvidia.github.io/cccl/cub/</a></li>
+<li>cutlass: cuda templates for linear algebra subroutines: <a href="https://github.com/NVIDIA/cutlass">https://github.com/NVIDIA/cutlass</a></li>
+<li>gpu-puzzles: <a href="https://github.com/srush/GPU-Puzzles">https://github.com/srush/GPU-Puzzles</a></li>
+<li>what is a gpu: <a href="https://kernel-operations.io/keops/autodiff_gpus/what_is_a_gpu.html">https://kernel-operations.io/keops/autodiff_gpus/what_is_a_gpu.html</a></li>
+<li>experiment with printf cuda: <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#formatted-output">https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html<!-- -->https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#formatted-output</a></li>
+<li>paul richmond lecture series: <a href="https://paulrichmond.shef.ac.uk//education/com4521">https://paulrichmond.shef.ac.uk//education/com4521</a></li>
+<li>applied GPU programming: <a href="https://www.youtube.com/playlist?list=PLPJwWVtf19Wgx_bupSDDSStSv-tOGGWRO">https://www.youtube.com/playlist?list=PLPJwWVtf19Wgx_bupSDDSStSv-tOGGWRO</a></li>
+<li>cuda ptx interop: <a href="https://docs.nvidia.com/cuda/pdf/PTX_Writers_Guide_To_Interoperability.pdf">https://docs.nvidia.com/cuda/pdf/PTX_Writers_Guide_To_Interoperability.pdf</a></li>
+<li>gpu mode: <a href="https://www.youtube.com/@GPUMODE">https://www.youtube.com/<!-- -->(<!-- -->)</a></li>
+<li>numba cuda: <a href="https://nvidia.github.io/numba-cuda/user/index.html">https://nvidia.github.io/numba-cuda/user/index.html</a></li>
+<li>opencl registry: <a href="https://registry.khronos.org/OpenCL/">https://registry.khronos.org/OpenCL/</a></li>
+</ul></div></main></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/gpu","query":{},"buildId":"KQhcy9-O2WLeYM2Cu8Glw","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
