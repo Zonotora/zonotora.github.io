@@ -1,27 +1,32 @@
 import Page from "../components/page";
-
-# Tensor abstraction
-
-A _Tensor_ is a multi-dimensional matrix containing elements of a single data type.
+import SmBlockDiagram from "../components/gpu/sm";
 
 # GPGPU
 
 - archlinux wiki for GPGPU: https://wiki.archlinux.org/title/GPGPU
 - what is GPGPU: https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units
 
-## OpenCL
+GPGPU
 
-- OpenCL: https://www.khronos.org/opencl/
-- Wikipedia: https://en.wikipedia.org/wiki/OpenCL
-
-OpenCL is a standard for cross-platform parallel programming of diverse accelerators. As such it is not CUDA specific, but targets CPUs, GPUs, DSPs and FPGAs. The OpenCL API specification enables each chip to have its own OpenCL drivers tuned to its specific architecture. To be conformant to OpenCL, hardware vendors must become OpenCL _Adapters_ and submit their conformance test results for review. Nvidia is OpenCL conformant, which allow us to use the C API provided by OpenCL to directly call the _Nvidia runtime_. This means that learning OpenCL will translate to other platforms as well, since they have to conform to the OpenCL specification if they are conformant.
+- OpenCL
+- CUDA (Nvidia)
+- ROCm (AMD)
 
 | Feature     | CUDA (Nvidia)                    | OpenCL (on Nvidia)                   |
 | ----------- | -------------------------------- | ------------------------------------ |
 | Support     | Nvidia GPUs only                 | Nvidia, AMD, Intel, CPUs, FPGAs, etc |
 | Performance | Generally higher, more optimized | Good, but usually lower than CUDA    |
 
-## CUDA
+# OpenCL
+
+- OpenCL: https://www.khronos.org/opencl/
+- Wikipedia: https://en.wikipedia.org/wiki/OpenCL
+
+OpenCL is a standard for cross-platform parallel programming of diverse accelerators. As such it is not CUDA specific, but targets CPUs, GPUs, DSPs and FPGAs. The OpenCL API specification enables each chip to have its own OpenCL drivers tuned to its specific architecture. To be conformant to OpenCL, hardware vendors must become OpenCL _Adapters_ and submit their conformance test results for review. Nvidia is OpenCL conformant, which allow us to use the C API provided by OpenCL to directly call the _Nvidia runtime_. This means that learning OpenCL will translate to other platforms as well, since they have to conform to the OpenCL specification if they are conformant.
+
+# CUDA
+
+_Compute Unified Device Architecture (CUDA)_.
 
 The host is the CPU available in the system. The system memory associated with the CPU is called host memory. The GPU is called a device and GPU memory likewise called device memory.
 
@@ -48,7 +53,35 @@ There are also many third-party tool-chains available:
 - [PyCUDA](https://developer.nvidia.com/pycuda) — Use CUDA API operations from a Python interface.
 - [OpenCL](https://developer.nvidia.com/opencl) —Use low-level API operations to program CUDA GPUs.
 
-### Install driver (archlinux)
+## Streaming multiprocessor
+
+_Streaming Multiprocessors (SMs)_
+
+## Core
+
+<div className="center">
+  <SmBlockDiagram></SmBlockDiagram>
+</div>
+
+### CUDA core
+
+### Tensor core
+
+## Units
+
+### Special function unit
+
+### Load/store unit
+
+## Warp
+
+## Memory
+
+### Memory coalescing
+
+- memory coalescing: https://homepages.math.uic.edu/~jan/mcs572f16/mcs572notes/lec35.html
+
+## Drivers (archlinux)
 
 Run
 
@@ -111,21 +144,25 @@ There exists several wrappers of the CUDA API.
 - Numba github: https://github.com/numba/numba
 - https://numba.readthedocs.io/en/stable/cuda/index.html
 
-## ROCm
+# ROCm
 
 _ROCm_ (Radeon Open Compute) is AMD's open-source parallel computing architecture and framework.
 
-### HIP
+## HIP
 
 _HIP_ (Heterogeneous Interface for Portability) is AMD's dedicated GPU programming environment.
+
+# Software stacks
+
+- Tinygrad
+- Pytorch
+- Jax
 
 ## Tinygrad
 
 Tinygrad takes advantage of the fact that every tensor operation is either elementwise, or reduction. The obvious advantage is to build up abstraction that makes optimization easier (think of this in the context of Complex Instruction Set Architecture vs RISC).
 
 ## Pytorch
-
-lune
 
 ## Jax
 
@@ -137,16 +174,47 @@ JAX can automatically differentiate native Python and NumPy functions. It can di
 
 JAX uses XLA to compile and scale your NumPy programs on TPUs, GPUs, and other hardware accelerators.
 
+# Tensor abstraction
+
+A _Tensor_ is a multi-dimensional matrix containing elements of a single data type.
+
 # Define
 
 - SM
 - CUDA programming model
+- GPUs are 1024 bit SIMD machines?
 
 # Resources
 
+## Top
+
+- cuda c programming: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
+- Really nice glossary: https://modal.com/gpu-glossary
+- cuda-training-series: https://www.olcf.ornl.gov/cuda-training-series/
+- cuda best practices: https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#who-should-read-this-guide
+- going further than cuda intro (_exercises_ and _where to from here_): https://developer.nvidia.com/blog/even-easier-introduction-cuda/#exercises
+- demystify gpu for dl part1 (blog): https://learnopencv.com/demystifying-gpu-architectures-for-deep-learning/
+- demystify gpu for dl part2 (blog): https://learnopencv.com/demystifying-gpu-architectures-for-deep-learning-part-2/
+- modern gpu architecture explained (blog): https://learnopencv.com/modern-gpu-architecture-explained/
+- leetgpu: https://leetgpu.com/
+- leetgpu resources: https://www.leetgpu.com/resources
+- supercomputing: https://homepages.math.uic.edu/~jan/mcs572f16/mcs572notes/index.html
+- fabiensanglard (blog): https://fabiensanglard.net/cuda/
+
+## Other
+
+- CUDA programming guide: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
+- CUDA books archive: https://developer.nvidia.com/cuda-books-archive
+- CUDA parallel programming: https://newfrontiers.illinois.edu/news-and-events/introduction-to-parallel-programming-with-cuda/
+- Triton: https://triton-lang.org/main/getting-started/tutorials/index.html
+- Pytorch doc: https://docs.pytorch.org/docs/stable/index.html
+- Pytorch tutorials: https://docs.pytorch.org/tutorials/
+- Pytorch zero to mastery: https://www.learnpytorch.io/
+- Tinygrad doc: https://docs.tinygrad.org/
+- Tinygrad notes: https://mesozoic-egg.github.io/tinygrad-notes/
+- Mojo: https://docs.modular.com/mojo/manual/
 - cuda refresher: https://developer.nvidia.com/blog/tag/cuda-refresher/
 - cuda refresher programming model: https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
-- cuda c programming: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
 - cuda c programming pdf: https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf
 - nvidia tesla paper: https://www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/readings/lindholm08_tesla.pdf
 - cuda in python part1: https://www.vincent-lunot.com/post/an-introduction-to-cuda-in-python-part-1/
@@ -162,21 +230,20 @@ JAX uses XLA to compile and scale your NumPy programs on TPUs, GPUs, and other h
 - numba nvidia guide: https://developer.nvidia.com/blog/numba-python-cuda-acceleration/
 - numba docs: https://numba.readthedocs.io/en/stable/
 - nvidia tech blog: https://developer.nvidia.com/blog/
-
-general
-
-- Leetcpu: https://www.leetgpu.com/resources
-- Really nice glossary: https://modal.com/gpu-glossary
-- CUDA programming guide: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
-- CUDA books archive: https://developer.nvidia.com/cuda-books-archive
-- CUDA parallel programming: https://newfrontiers.illinois.edu/news-and-events/introduction-to-parallel-programming-with-cuda/
-- Triton: https://triton-lang.org/main/getting-started/tutorials/index.html
-- Pytorch doc: https://docs.pytorch.org/docs/stable/index.html
-- Pytorch tutorials: https://docs.pytorch.org/tutorials/
-- Pytorch zero to mastery: https://www.learnpytorch.io/
-- Tinygrad doc: https://docs.tinygrad.org/
-- Tinygrad notes: https://mesozoic-egg.github.io/tinygrad-notes/
-- Mojo: https://docs.modular.com/mojo/manual/
+- tiny-gpu: https://github.com/adam-maj/tiny-gpu
+- cuda-training-series github: https://github.com/olcf/cuda-training-series/tree/master/exercises
+- easy intro to cuda: https://developer.nvidia.com/blog/even-easier-introduction-cuda/
+- cub: https://nvidia.github.io/cccl/cub/
+- cutlass: cuda templates for linear algebra subroutines: https://github.com/NVIDIA/cutlass
+- gpu-puzzles: https://github.com/srush/GPU-Puzzles
+- what is a gpu: https://kernel-operations.io/keops/autodiff_gpus/what_is_a_gpu.html
+- experiment with printf cuda: https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#formatted-output
+- paul richmond lecture series: https://paulrichmond.shef.ac.uk//education/com4521
+- applied GPU programming: https://www.youtube.com/playlist?list=PLPJwWVtf19Wgx_bupSDDSStSv-tOGGWRO
+- cuda ptx interop: https://docs.nvidia.com/cuda/pdf/PTX_Writers_Guide_To_Interoperability.pdf
+- gpu mode: https://www.youtube.com/@GPUMODE
+- numba cuda: https://nvidia.github.io/numba-cuda/user/index.html
+- opencl registry: https://registry.khronos.org/OpenCL/
 
 export default function MDXPage({ children }) {
   return (
