@@ -136,6 +136,45 @@ overwrite `malloc`:
 void* my_malloc(size_t size);
 ```
 
+# Macros
+
+A way to reduce the amount of repetitive code while making sure that names correspond to each other in different places we can make use of the following macro taken from the [llvm-project](https://github.com/llvm/llvm-project):
+
+```c
+// clang/lib/CodeGen/CodeGenFunction.h
+#define LIST_SANITIZER_CHECKS                                                  \
+  SANITIZER_CHECK(AddOverflow, add_overflow, 0)                                \
+  SANITIZER_CHECK(BuiltinUnreachable, builtin_unreachable, 0)                  \
+  SANITIZER_CHECK(CFICheckFail, cfi_check_fail, 0)                             \
+  SANITIZER_CHECK(DivremOverflow, divrem_overflow, 0)                          \
+  SANITIZER_CHECK(DynamicTypeCacheMiss, dynamic_type_cache_miss, 0)            \
+  SANITIZER_CHECK(FloatCastOverflow, float_cast_overflow, 0)                   \
+  SANITIZER_CHECK(FunctionTypeMismatch, function_type_mismatch, 0)             \
+  SANITIZER_CHECK(ImplicitConversion, implicit_conversion, 0)                  \
+  SANITIZER_CHECK(InvalidBuiltin, invalid_builtin, 0)                          \
+  SANITIZER_CHECK(InvalidObjCCast, invalid_objc_cast, 0)                       \
+  SANITIZER_CHECK(LoadInvalidValue, load_invalid_value, 0)                     \
+  SANITIZER_CHECK(MissingReturn, missing_return, 0)
+
+enum SanitizerHandler {
+#define SANITIZER_CHECK(Enum, Name, Version) Enum,
+  LIST_SANITIZER_CHECKS
+#undef SANITIZER_CHECK
+};
+```
+
+Here we define and un-define the macro again in another file:
+
+```c
+// clang/lib/CodeGen/CGExpr.cpp
+const SanitizerHandlerInfo SanitizerHandlers[] = {
+#define SANITIZER_CHECK(Enum, Name, Version) {#Name, Version},
+    LIST_SANITIZER_CHECKS
+#undef SANITIZER_CHECK
+};
+
+```
+
 export default function MDXPage({ children }) {
   return (
     <Page active="c">
