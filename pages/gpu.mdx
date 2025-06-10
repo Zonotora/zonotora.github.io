@@ -1,5 +1,4 @@
 import Page from "../components/page";
-import SmBlockDiagram from "../components/gpu/sm";
 
 # GPGPU
 
@@ -28,7 +27,8 @@ OpenCL is a standard for cross-platform parallel programming of diverse accelera
 
 _Compute Unified Device Architecture (CUDA)_.
 
-The host is the CPU available in the system. The system memory associated with the CPU is called host memory. The GPU is called a device and GPU memory likewise called device memory.
+- The host is the CPU available in the system. The system memory associated with the CPU is called host memory.
+- The GPU is called a device and GPU memory likewise called device memory.
 
 To execute any CUDA program, there are three main steps:
 
@@ -53,15 +53,87 @@ There are also many third-party tool-chains available:
 - [PyCUDA](https://developer.nvidia.com/pycuda) — Use CUDA API operations from a Python interface.
 - [OpenCL](https://developer.nvidia.com/opencl) —Use low-level API operations to program CUDA GPUs.
 
+Three step processing in heterogeneous architecture:
+
+1. CPU - Bridge - CPU memory
+2. PCIe or NVLink Bus
+3. GigaThread - Interconnect - L2 - DRAM
+
+Steps:
+
+1. We have to copy from the CPU to the GPU.
+2. Do the work, running CUDA kernels.
+3. Copy results back to CPU memory from GPU memory.
+
+```c
+__global__ void mykernel(void) {
+
+}
+```
+
+`__global__` indicates that a function:
+
+1. Runs on the device
+2. Is called from the host code (can also be called from other device code)
+
+`nvcc` separates source code into host and device components:
+
+1. Device functions (e.g., `mykernel()`) processed by NVIDIA compiler
+2. Host functions (e.g., `main()`) processed by standard host compiler.
+
+We need a way to call this on the GPU. _Kernel launch_ or _triple angle brackets_ will mark a call to device code:
+
+```c
+mykernel<<<1,1>>>();
+```
+
+The parameters inside the brackets are the CUDA kernel execution configuration.
+
+What about memory management? Host and device memory are separate entities. _Device_ pointers point to GPU memory.
+
+1. Typically passed to device code.
+2. Typically **not** dereferenced in host code.
+
+_Host_ pointers point to CPU memory:
+
+1. Typically **not** passed to device code.
+2. Typically **not** dereferenced in device code.
+
+(Special cases: Pinned pointers, ATS, managed memory)
+
+Simple CUDA API for handling device memory:
+
+```c
+cudaMalloc(), cudaFree(), cudaMemcpy() // similar to C equivalents
+```
+
+## CUDA programming model
+
+The CUDA programming model allows the programmer to define C++ functions, called _kernels_, which are executed N times in parallel by N different CUDA threads when they are invoked (depending on configuration). A kernel is defined using the `__global__` declaration specifier like so:
+
+```c
+// Kernel definition
+__global__ void VecAdd(float* A, float* B, float* C)
+{
+    int i = threadIdx.x;
+    C[i] = A[i] + B[i];
+}
+int main()
+{
+    ...
+    // Kernel invocation with N threads
+    VecAdd<<<1, N>>>(A, B, C);
+    ...
+}
+```
+
+Using the `<<<...>>>` syntax we can specify the _execution configuration_. In the above example we specify that the kernel `VecAdd` should be executed on N different CUDA threads.
+
 ## Streaming multiprocessor
 
 _Streaming Multiprocessors (SMs)_
 
 ## Core
-
-<div className="center">
-  <SmBlockDiagram></SmBlockDiagram>
-</div>
 
 ### CUDA core
 
@@ -200,6 +272,7 @@ A _Tensor_ is a multi-dimensional matrix containing elements of a single data ty
 - leetgpu resources: https://www.leetgpu.com/resources
 - supercomputing: https://homepages.math.uic.edu/~jan/mcs572f16/mcs572notes/index.html
 - fabiensanglard (blog): https://fabiensanglard.net/cuda/
+- paul richmond lecture series: https://paulrichmond.shef.ac.uk//education/com4521
 
 ## Other
 
@@ -238,7 +311,6 @@ A _Tensor_ is a multi-dimensional matrix containing elements of a single data ty
 - gpu-puzzles: https://github.com/srush/GPU-Puzzles
 - what is a gpu: https://kernel-operations.io/keops/autodiff_gpus/what_is_a_gpu.html
 - experiment with printf cuda: https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#formatted-output
-- paul richmond lecture series: https://paulrichmond.shef.ac.uk//education/com4521
 - applied GPU programming: https://www.youtube.com/playlist?list=PLPJwWVtf19Wgx_bupSDDSStSv-tOGGWRO
 - cuda ptx interop: https://docs.nvidia.com/cuda/pdf/PTX_Writers_Guide_To_Interoperability.pdf
 - gpu mode: https://www.youtube.com/@GPUMODE
