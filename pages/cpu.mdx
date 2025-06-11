@@ -1,0 +1,17 @@
+import Page from "../components/page";
+
+# HPC
+
+## Resources
+
+- hpc: https://en.algorithmica.org/hpc/
+- hpc lecture chalmers: https://hpc.raum-brothers.eu/
+- openmp: https://www.openmp.org/
+
+export default function MDXPage({ children }) {
+  return (
+    <Page active="cpu">
+      <div className="content">{children}</div>
+    </Page>
+  );
+}
