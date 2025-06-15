@@ -7,6 +7,8 @@ import {
   ReferenceLine,
 } from "recharts";
 import Page from "../components/page";
+import Figure from "../components/pages/figure";
+import Table from "../components/pages/table";
 import dynamic from "next/dynamic";
 export const LineChart = dynamic(
   () => import("recharts").then((r) => r.LineChart),
@@ -56,10 +58,9 @@ As stated above, this intensity level provides aerobic stimulus without the nega
 
 To avoid exceeding the sub-threshold level, we have to make use of some sort of intensity control. Measuring effort at a finer grained level allows for more repeatable quality work. It is often better (at least safer) to aim for a slightly lower control level than going too fast in each sub-threshold workout due reduce the risk of exceeding the intensity level. A weekly training load can be seen in #tab-norwegian-singles.
 
-<div className="table">
-  <label id="tab-norwegian-singles">
-    An example of a weekly workout plan for _Norwegian singles_.
-  </label>
+<Table id="tab-norwegian-singles" description="
+    An example of a weekly workout plan for Norwegian singles
+">
 
 | Day       | Beginner                        | Advanced                           |
 | --------- | ------------------------------- | ---------------------------------- |
@@ -71,7 +72,7 @@ To avoid exceeding the sub-threshold level, we have to make use of some sort of 
 | Saturday  | Sub (e.g., 4 x 1000m, 60s rest) | Sub (e.g., 8-10 x 1000m, 60s rest) |
 | Sunday    | Rest or Easy/Long run           | Long run                           |
 
-</div>
+</Table>
 
 ## Double threshold
 
@@ -99,10 +100,10 @@ export const data = [
   },
 ];
 
-<div className="figure">
-  <label id="fig-lactate">
-    Curve highlighting the lactate threshold levels LT1 and LT2.
-  </label>
+<Figure
+  id="fig-lactate"
+  description="Curve highlighting the lactate threshold levels LT1 and LT2."
+>
   <div className="center overflow-x">
     <LineChart width={400} height={200} data={data}>
       <XAxis
@@ -125,7 +126,7 @@ export const data = [
       <Line type="monotone" dataKey="y" stroke="#387908" />
     </LineChart>
   </div>
-</div>
+</Figure>
 
 - LT1 = aerobic threshold
 - LT2 = anaerobic threshold

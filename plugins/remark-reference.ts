@@ -8,10 +8,6 @@ type LabelType = {
   id: number;
 };
 
-function capitalize(value: string) {
-  return value.charAt(0).toUpperCase() + value.slice(1);
-}
-
 export default function remarkReference(options?: Options) {
   return (tree: any) => {
     let noOfFigures = 0;
@@ -19,29 +15,26 @@ export default function remarkReference(options?: Options) {
     const linkedItems: LabelType[] = [];
 
     visit(tree, "mdxJsxFlowElement", (node, index, parent) => {
+      // console.log(node);
       if (index == undefined) return;
 
-      if (node["name"] == "label") {
-        for (const a of node["attributes"]) {
-          if (a["name"] == "id") {
-            const type = parent["attributes"][0]["value"];
-            let id = 0;
-            if (type == "figure") {
-              noOfFigures += 1;
-              id = noOfFigures;
-            } else if (type == "table") {
-              noOfTables += 1;
-              id = noOfTables;
-            }
+      if (node.name == "Figure" || node.name == "Table") {
+        const idNode = node.attributes.find((e: any) => e.name == "id");
+        const descNode = node.attributes.find(
+          (e: any) => e.name == "description"
+        );
 
-            linkedItems.push({ type, value: a["value"], id });
-            const value = node["children"][0]["children"][0]["value"];
-
-            node["children"][0]["children"][0]["value"] = `${capitalize(
-              type
-            )} ${id}. ${value}`;
-          }
+        let id = 0;
+        if (node.name == "Figure") {
+          noOfFigures += 1;
+          id = noOfFigures;
+        } else if (node.name == "Table") {
+          noOfTables += 1;
+          id = noOfTables;
         }
+
+        linkedItems.push({ type: node.name, value: idNode.value, id });
+        descNode.value = `${node.name} ${id}. ${descNode.value}`;
       }
     });
 
@@ -72,7 +65,7 @@ export default function remarkReference(options?: Options) {
           children: [
             {
               type: "text",
-              value: `${capitalize(item.type)} ${item.id}`,
+              value: `${item.type} ${item.id}`,
             },
           ],
         });
