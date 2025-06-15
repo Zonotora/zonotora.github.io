@@ -117,13 +117,7 @@ table {
   border: var(--border);
   border-radius: 5px;
   text-align: left;
-  /* border-collapse: collapse; */
   border-spacing: 0;
-}
-
-th {
-  /* color: antiquewhite;
-  background-color: var(--border-color); */
 }
 
 td,
@@ -152,17 +146,17 @@ hr {
   border-bottom: 1px solid var(--border-color);
 }
 
-ol {
+.toc ol {
   padding-left: 15px;
   counter-reset: item;
 }
 
-li {
+.toc li {
   display: block;
 }
 
-li:before {
-  content: counters(item, ".") " ";
+.toc li:before {
+  content: counters(item, ".") ". ";
   counter-increment: item;
 }
 
