@@ -153,7 +153,17 @@ hr {
 }
 
 ol {
-  padding-left: 25px;
+  padding-left: 15px;
+  counter-reset: item;
+}
+
+li {
+  display: block;
+}
+
+li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
 }
 
 #refs {
@@ -223,10 +233,6 @@ ol {
   transform: translateX(calc(-100% - 20px));
   max-height: calc(100vh - 50px);
   overflow-y: auto;
-}
-
-.toc li {
-  list-style-type: none;
 }
 
 .toc a {

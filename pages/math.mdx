@@ -1,0 +1,14 @@
+import Page from "../components/page";
+
+# References
+
+- https://en.wikipedia.org/wiki/Lattice_(order)
+- https://en.wikipedia.org/wiki/Power_set
+
+export default function MDXPage({ children }) {
+  return (
+    <Page active="math">
+      <div className="content">{children}</div>
+    </Page>
+  );
+}
