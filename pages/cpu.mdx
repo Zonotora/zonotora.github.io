@@ -1,6 +1,21 @@
 import Page from "../components/page";
+import Figure from "../components/pages/figure";
 
 # HPC
+
+## OpenMP
+
+_OpenMP_ uses a fork/join model.
+
+1. Fork: Creates a number of parallel threads from a primary thread
+   - Primary thread is always thread 0
+   - No guarantee of order
+2. Join: Synchronises thread termination and returns program control to
+   primary
+
+<Figure id="fig-openmp" description="OpenMP">
+  ![alt text](images/openmp.svg "openmp")
+</Figure>
 
 ## Resources
 

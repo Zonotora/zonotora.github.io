@@ -84,7 +84,10 @@ main p {
 }
 
 main img {
-  width: 100%;
+  padding: 10px;
+  width: calc(100% - 20px);
+  border: var(--border);
+  border-radius: 5px;
 }
 
 header {

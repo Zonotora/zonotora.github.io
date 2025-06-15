@@ -1,0 +1,89 @@
+import Page from "../components/page";
+
+1. Reducing the number of branches
+2. State machines instead of booleans
+3. Faster copy (struct copy will be done using an optimized inline memcpy)
+4. Cheaper arithmetic
+   1. Avoid divisions by creating a table of 1/j and multiply by 1/j instead
+   2. Unsigned division is cheaper than signed division
+   3. Modulo often be transformed into if-statements
+5. Fewer operations
+6. Calculations in loops
+7. Avoid casting
+8. Remove if statements in loops if they are only run for one particular iteration
+9. Use a small number of function arguments to avoid using the stack
+10. Inline functions
+11. Parallelism
+12. Using the `restrict` keyword
+13. Double initialization
+14. Useless initialization
+
+# Algorithms and Data Structures
+
+- Algorithms optimized for speed may consume more memory due to precomputed data structures or caching
+- Conversely, algorithms optimized for memory may have to compute values "on the fly" to avoid having them stored in a lookup table.
+- Not trivial as the best theoretical algorithm may be slower in practice due to how the program interacts with the memory!
+- EXAMPLE: Sorting
+
+# Cache utilization
+
+- Code optimized for speed "mus" exploit the CPU cache more effectively to get faster execution times. However, this is not trivial and platform dependent.
+- Memory hierarchy
+- Cache access
+- Data cache vs Text cache
+- Cache models and levels
+- Spatial locality vs temporal locality
+  - Instructions and data are normally not accessed in a random order. The order is based on loops, subroutines, data structures, arrays etc.
+  - Stack vs Heap performance
+- Virtual memory
+- Cost effective?
+
+# Concurrency
+
+- Keep the critical section small
+- Spin-lock vs semaphore
+- Lock-free
+-
+
+# Distributed compute
+
+- Big data
+- MapReduce
+
+# SIMD
+
+# I/O
+
+# Misc
+
+- Loop unrolling
+- Pointer arithmetic
+- Compiler optimizations
+- Bitfields
+- Bitmaps
+- Register allocation
+- Floating point arithmetic
+- BigInt or 128 bits on 64 bit architecture
+- Inlining
+- Branchless programming (Pipelining)
+  - Control hazards
+  - Can lead to many stalls in the pipeline, normally the branch is predicted and stalled only if it turns out to be the wrong path. Much better if we can avoid the control statement altogether!
+- Alignment
+- RISC vs CISC
+  - CISC => Requires fewer instructions, but these instructions require a complex implementation which will make all instructions slow, even the simple instructions.
+  - Compilers are often good at making fast code with simple instructions.
+  - The longest delay in the circuit determines the clock speed.
+- Handcoding assembly for performance?
+  - Sometimes, but at the cost of efficiency and more lines of code increases the amounts of bugs
+
+# Tools
+
+- flamegraph
+
+export default function MDXPage({ children }) {
+  return (
+    <Page active="optim">
+      <div className="content">{children}</div>
+    </Page>
+  );
+}

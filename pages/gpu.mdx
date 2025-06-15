@@ -1,4 +1,20 @@
 import Page from "../components/page";
+import Figure from "../components/pages/figure";
+
+# Taxonomy
+
+- https://yosefk.com/blog/simd-simt-smt-parallelism-in-nvidia-gpus.html
+- https://www.stuffedcow.net/files/gpuarch-ispass2010.pdf
+
+SIMT
+
+<Figure
+  id="fig-cpu-vs-gpu"
+  description="CPU vs GPU"
+  source="https://modal.com/gpu-glossary/device-hardware/streaming-multiprocessor"
+>
+  ![alt text](images/cpu-vs-gpu.svg "cpu-vs-gpu")
+</Figure>
 
 # GPGPU
 
@@ -8,12 +24,12 @@ import Page from "../components/page";
 GPGPU
 
 - OpenCL
-- CUDA (Nvidia)
+- CUDA (NVIDIA)
 - ROCm (AMD)
 
-| Feature     | CUDA (Nvidia)                    | OpenCL (on Nvidia)                   |
+| Feature     | CUDA (NVIDIA)                    | OpenCL (on NVIDIA)                   |
 | ----------- | -------------------------------- | ------------------------------------ |
-| Support     | Nvidia GPUs only                 | Nvidia, AMD, Intel, CPUs, FPGAs, etc |
+| Support     | NVIDIA GPUs only                 | NVIDIA, AMD, Intel, CPUs, FPGAs, etc |
 | Performance | Generally higher, more optimized | Good, but usually lower than CUDA    |
 
 # OpenCL
@@ -21,11 +37,27 @@ GPGPU
 - OpenCL: https://www.khronos.org/opencl/
 - Wikipedia: https://en.wikipedia.org/wiki/OpenCL
 
-OpenCL is a standard for cross-platform parallel programming of diverse accelerators. As such it is not CUDA specific, but targets CPUs, GPUs, DSPs and FPGAs. The OpenCL API specification enables each chip to have its own OpenCL drivers tuned to its specific architecture. To be conformant to OpenCL, hardware vendors must become OpenCL _Adapters_ and submit their conformance test results for review. Nvidia is OpenCL conformant, which allow us to use the C API provided by OpenCL to directly call the _Nvidia runtime_. This means that learning OpenCL will translate to other platforms as well, since they have to conform to the OpenCL specification if they are conformant.
+OpenCL is a standard for cross-platform parallel programming of diverse accelerators. As such it is not CUDA specific, but targets CPUs, GPUs, DSPs and FPGAs. The OpenCL API specification enables each chip to have its own OpenCL drivers tuned to its specific architecture. To be conformant to OpenCL, hardware vendors must become OpenCL _Adapters_ and submit their conformance test results for review. NVIDIA is OpenCL conformant, which allow us to use the C API provided by OpenCL to directly call the _NVIDIA runtime_. This means that learning OpenCL will translate to other platforms as well, since they have to conform to the OpenCL specification if they are conformant.
 
-# CUDA
+# CUDA (NVIDIA)
 
 _Compute Unified Device Architecture (CUDA)_.
+
+SM -> Warp -> Block -> Grid -> Kernel
+
+## SM
+
+_Streaming Multiprocessors_ (SMs) is the fundamental processing unit within NVIDIA GPUs (See #fig-h100-sm for an overview of NVIDIA's H100 GPU SM). SMs are roughly analogous to CPU cores. Both execute computations and store state. However, compared to CPU cores, GPU SMs are simple and weaker processors. Execution in SMs is pipelined within an instruction (as in most CPUs since the 1990s), but there is no speculative execution or instruction pointer prediction (as in most CPUs these days).
+
+GPU SMs can execute more threads in parallel than CPUs. The H100 GPU can execute more than 16 000 threads (132 SMs x 32 threads x 4 warps > 16 000), while e.g., the [AMD EPYC 9965](https://www.techpowerup.com/cpu-specs/epyc-9965.c3904) uses a total of 384 threads. However, most consumer-grade CPUs are far from even that amount of threads.
+
+<Figure
+  id="fig-h100-sm"
+  description="A diagram of the internal architecture of an H100 GPU's Streaming Multiprocessors"
+  source="https://modal.com/gpu-glossary/device-hardware/streaming-multiprocessor"
+>
+  ![alt text](images/h100-sm.svg "cpu-vs-gpu")
+</Figure>
 
 - The host is the CPU available in the system. The system memory associated with the CPU is called host memory.
 - The GPU is called a device and GPU memory likewise called device memory.
@@ -201,9 +233,9 @@ nvcc --version
 There exists several wrappers of the CUDA API.
 
 1. PyCUDA: https://github.com/inducer/pycuda \
-   Lets you access Nvidia's CUDA parallel computation API from Python.
+   Lets you access NVIDIA's CUDA parallel computation API from Python.
 2. Official CUDA API bindings: https://github.com/NVIDIA/cuda-python \
-   Nvidia's own language bindings for the CUDA API written in Python/Cython. This is similar to (1) in abstraction level.
+   NVIDIA's own language bindings for the CUDA API written in Python/Cython. This is similar to (1) in abstraction level.
 3. Numba: https://github.com/numba/numba \
    NumPy-aware optimizing compiler for Python, which means it uses the LLVM compiler project to generate machine code directly from Python syntax. Numba provides a high-level interface and uses cuda-python (2) under the hood to accelerate computations when compiling for CUDA.
 
@@ -216,7 +248,7 @@ There exists several wrappers of the CUDA API.
 - Numba github: https://github.com/numba/numba
 - https://numba.readthedocs.io/en/stable/cuda/index.html
 
-# ROCm
+# ROCm (AMD)
 
 _ROCm_ (Radeon Open Compute) is AMD's open-source parallel computing architecture and framework.
 
@@ -316,6 +348,7 @@ A _Tensor_ is a multi-dimensional matrix containing elements of a single data ty
 - gpu mode: https://www.youtube.com/@GPUMODE
 - numba cuda: https://nvidia.github.io/numba-cuda/user/index.html
 - opencl registry: https://registry.khronos.org/OpenCL/
+- turing arch whitepaper: https://fabiensanglard.net/cuda/Turing-Architecture-Whitepaper.pdf
 
 export default function MDXPage({ children }) {
   return (
