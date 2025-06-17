@@ -45,11 +45,26 @@ _Compute Unified Device Architecture (CUDA)_.
 
 SM -> Warp -> Block -> Grid -> Kernel
 
-## SM
+## Terminology
+
+|                                | Description                                                       |
+| ------------------------------ | ----------------------------------------------------------------- |
+| Streaming Multiprocessors (SM) |                                                                   |
+| Warp                           | A group of 32 threads.                                            |
+| Warp scheduler                 | A dedicated scheduler for optimizing the execution flow of warps. |
+| Thread group                   |                                                                   |
+| CUDA core                      |                                                                   |
+| Tensor core                    |                                                                   |
+| Special function unit          |                                                                   |
+| Load/store unit                |                                                                   |
+
+## Streaming Multiprocessor (SM)
 
 _Streaming Multiprocessors_ (SMs) is the fundamental processing unit within NVIDIA GPUs (See #fig-h100-sm for an overview of NVIDIA's H100 GPU SM). SMs are roughly analogous to CPU cores. Both execute computations and store state. However, compared to CPU cores, GPU SMs are simple and weaker processors. Execution in SMs is pipelined within an instruction (as in most CPUs since the 1990s), but there is no speculative execution or instruction pointer prediction (as in most CPUs these days).
 
 GPU SMs can execute more threads in parallel than CPUs. The H100 GPU can execute more than 16 000 threads (132 SMs x 32 threads x 4 warps > 16 000), while e.g., the [AMD EPYC 9965](https://www.techpowerup.com/cpu-specs/epyc-9965.c3904) uses a total of 384 threads. However, most consumer-grade CPUs are far from even that amount of threads.
+
+GPU SMs support a large number of _concurrent_ threads, i.e., threads that can be interleaved. A single SM on the H100 can concurrently execute up to 2048 threads split across 64 thread groups of 32 threads each. That means that the whole H100 with its 132 SMs can execute a total of 250k concurrent threads.
 
 <Figure
   id="fig-h100-sm"
@@ -58,6 +73,8 @@ GPU SMs can execute more threads in parallel than CPUs. The H100 GPU can execute
 >
   ![alt text](images/h100-sm.svg "cpu-vs-gpu")
 </Figure>
+
+## Brief
 
 - The host is the CPU available in the system. The system memory associated with the CPU is called host memory.
 - The GPU is called a device and GPU memory likewise called device memory.
@@ -160,10 +177,6 @@ int main()
 ```
 
 Using the `<<<...>>>` syntax we can specify the _execution configuration_. In the above example we specify that the kernel `VecAdd` should be executed on N different CUDA threads.
-
-## Streaming multiprocessor
-
-_Streaming Multiprocessors (SMs)_
 
 ## Core
 
