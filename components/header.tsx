@@ -51,6 +51,7 @@ const Header = ({ active }: HeaderProps) => {
         <HeaderLink active={active} link="read" />
         <HeaderLink active={active} link="run" />
         <HeaderLink active={active} link="c" />
+        <HeaderLink active={active} link="zig" />
         <HeaderLink active={active} link="cpu" />
         <HeaderLink active={active} link="gpu" />
         <HeaderLink active={active} link="ml" />
