@@ -49,7 +49,6 @@ const Header = ({ active }: HeaderProps) => {
         <HeaderLink active={active} link="about" />
         <HeaderLink active={active} link="blog" />
         <HeaderLink active={active} link="read" />
-        <HeaderLink active={active} link="run" />
         <HeaderLink active={active} link="misc" />
       </header>
       <div className="box helper-icons">
