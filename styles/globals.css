@@ -71,7 +71,7 @@ main {
 }
 
 main a {
-  text-decoration: underline;
+  text-decoration: underline dotted;
   color: var(--primary);
 }
 
