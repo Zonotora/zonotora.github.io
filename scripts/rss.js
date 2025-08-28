@@ -1,27 +1,18 @@
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkHtml from "remark-html";
-import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
 
 async function process(data) {
-  const text = matter(data);
-  const content = text.content;
-  const meta = text.data;
-
-  const file = await unified()
-    .use(remarkParse)
-    .use(remarkHtml)
-    .process(content);
-
+  // TODO: Use metadata file
   return {
-    title: meta.title,
-    description: meta.description,
-    published: meta.date,
-    updated: meta.date,
+    title: "<title>",
+    description: "<description>",
+    published: "<date>",
+    updated: "<date>",
     category: [],
-    content: file,
+    content: "",
   };
 }
 
