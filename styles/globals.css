@@ -270,7 +270,6 @@ hr {
   gap: 5px;
 }
 
-.post-preview,
 .project-preview {
   min-width: 100px;
   width: var(--page-width);
@@ -294,7 +293,6 @@ hr {
   align-items: center;
 }
 
-.post-preview-info,
 .project-preview-info {
   color: var(--color);
   margin-bottom: 15px;
@@ -327,26 +325,29 @@ hr {
   justify-content: center;
 }
 
-.book-preview {
+.preview {
   min-width: 100px;
   width: var(--page-width);
   border: var(--border);
   border-radius: 5px;
   padding: 0 10px;
 }
+a.preview {
+  color: var(--color);
+}
 
-.book-preview-dummy {
+.preview-dummy {
   min-width: 180px;
   width: 20%;
   padding: 0 11px;
 }
 
-.book-preview-type {
+.preview-type {
   padding-left: 5px;
   padding-right: 5px;
 }
 
-.book-preview.summary {
+.preview.summary {
   cursor: pointer;
 }
 
@@ -396,9 +397,8 @@ hr {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .post-preview,
   .project-preview,
-  .book-preview,
+  .preview,
   .post,
   .statistics,
   .content {
@@ -426,13 +426,12 @@ hr {
 }
 
 @media (hover: hover) {
-  .post-preview:hover,
   .project-preview:hover {
     border-color: var(--border-hover-color);
     background-color: var(--background-hover-color);
   }
 
-  .book-preview.summary:hover {
+  .preview.summary:hover {
     border-color: var(--border-hover-color);
     background-color: var(--background-hover-color);
   }

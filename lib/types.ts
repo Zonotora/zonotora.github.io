@@ -11,7 +11,7 @@ export type BookType = {
   description: string;
   content: string;
 };
-export type BookPreviewType = {
+export type PreviewType = {
   author: string;
   country: string;
   date: string;

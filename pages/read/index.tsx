@@ -1,10 +1,9 @@
-import BookPreview from "../../components/book-preview";
 import Page from "../../components/page";
 import BookHeader from "../../components/book-header";
 import books from "../../data/books.json";
 import {
   BookType,
-  BookPreviewType,
+  PreviewType,
   Filter,
   Lexicographical,
   ValidPredicates,
@@ -14,14 +13,49 @@ import {
 } from "../../lib/types";
 import { getStaticFiles } from "../../lib/api";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const convertTitle = (title: string) => {
   return title.toLowerCase().replaceAll(":", " ").replaceAll(/\s+/g, "-");
 };
 
+type Props = {
+  book: PreviewType;
+  summary?: boolean;
+  slug: string;
+};
+
+const Preview = ({ book, summary, slug }: Props) => {
+  const content = (
+    <>
+      <div>{book.title}</div>
+      <div>{book.author}</div>
+      <div style={{ fontSize: "10pt" }}>{book.date}</div>
+      {book.type === "" ? (
+        <></>
+      ) : (
+        <span className="preview-type tag" style={{ fontSize: "10pt" }}>
+          {book.type}
+        </span>
+      )}
+    </>
+  );
+  const withLink = (
+    <Link href={`/${slug}`} className={`preview${summary ? " summary" : ""}`}>
+      {content}
+    </Link>
+  );
+
+  const withoutLink = (
+    <div className={`preview${summary ? " summary" : ""}`}>{content}</div>
+  );
+
+  return summary ? withLink : withoutLink;
+};
+
 export const Reading = ({ files }: { files: StaticFileType[] }) => {
   const [slugs, setSlugs] = useState<{ [id: string]: string }>({});
-  const [activeBooks, setActiveBooks] = useState<BookPreviewType[]>(books);
+  const [activeBooks, setActiveBooks] = useState<PreviewType[]>(books);
   const [filter, setFilter] = useState<Filter>({
     sort: {
       title: Lexicographical.None,
@@ -61,7 +95,7 @@ export const Reading = ({ files }: { files: StaticFileType[] }) => {
       predicates: {},
     };
 
-    const addStatistics = (key: string, book: BookPreviewType) => {
+    const addStatistics = (key: string, book: PreviewType) => {
       if (!(key in tStatistics.predicates)) {
         tStatistics.predicates[key] = structuredClone(stats);
       }
@@ -88,7 +122,7 @@ export const Reading = ({ files }: { files: StaticFileType[] }) => {
   }, []);
 
   useEffect(() => {
-    const predicate = (book: BookPreviewType) => {
+    const predicate = (book: PreviewType) => {
       let ret = true;
       if (filter.predicate.year) {
         ret &&= book.date.slice(0, 4) === filter.predicate.year;
@@ -99,7 +133,7 @@ export const Reading = ({ files }: { files: StaticFileType[] }) => {
       return ret;
     };
 
-    const compareFn = (a: BookPreviewType, b: BookPreviewType) => {
+    const compareFn = (a: PreviewType, b: PreviewType) => {
       let ret = 0;
       if (filter.sort.year !== Lexicographical.None) {
         ret ||=
@@ -159,7 +193,7 @@ export const Reading = ({ files }: { files: StaticFileType[] }) => {
   const booksNode = (
     <>
       {activeBooks.map((book) => (
-        <BookPreview
+        <Preview
           key={book.title}
           book={book}
           summary={convertTitle(book.title) in slugs}

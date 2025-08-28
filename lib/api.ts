@@ -1,10 +1,19 @@
 import fs from "fs";
 import path from "path";
 import { join } from "path";
-import matter from "gray-matter";
 import { StaticFileType } from "./types";
+import metadata from "../data/metadata.json";
 
 const PAGES_PATH = join(process.cwd(), "pages");
+
+type MetadataType = {
+  [link: string]: {
+    title: string;
+    date: string;
+  };
+};
+
+const typedMetadata: MetadataType = metadata;
 
 export function getStaticFiles(directory: string): StaticFileType[] {
   const files = fs.readdirSync(join(PAGES_PATH, directory));
@@ -13,14 +22,20 @@ export function getStaticFiles(directory: string): StaticFileType[] {
   for (const file of files) {
     const filePath = join(PAGES_PATH, directory, file);
     const fileWebPath = path.join(directory, file);
-    const fileContents = fs.readFileSync(filePath, "utf8");
     const extname = path.extname(filePath);
     if (extname !== ".mdx") {
       continue;
     }
-    const { data } = matter(fileContents);
-    const { title, date } = data;
+
     const link = fileWebPath.replace(/\.mdx$/, "");
+    let title = "<title>";
+    let date = "<date>";
+    if (link in typedMetadata) {
+      const info = typedMetadata[link];
+      title = info.title;
+      date = info.date;
+    }
+
     const content = {
       title,
       date,
