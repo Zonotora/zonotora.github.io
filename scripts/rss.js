@@ -1,18 +1,23 @@
-import { unified } from "unified";
-import remarkParse from "remark-parse";
-import remarkHtml from "remark-html";
 import fs from "fs";
 import path from "path";
 
-async function process(data) {
-  // TODO: Use metadata file
+async function process(key, data) {
+  const text = fs.readFileSync("data/metadata.json");
+  const metadata = JSON.parse(text);
+  let title = "title";
+  let date = "";
+  let desc = "description";
+  if (key in metadata) {
+    title = metadata[key].title;
+    date = metadata[key].date;
+  }
   return {
-    title: "<title>",
-    description: "<description>",
-    published: "<date>",
-    updated: "<date>",
+    title: title,
+    description: desc,
+    published: date,
+    updated: date,
     category: [],
-    content: "",
+    content: data,
   };
 }
 
@@ -85,7 +90,8 @@ async function main() {
     const data = fs.readFileSync(`pages/blog/${file.name}`, "utf8");
     const extname = path.extname(file.name);
     if (extname !== ".md" && extname !== ".mdx") continue;
-    const fileData = await process(data);
+    const key = `blog/${file.name.replace(/\.mdx$/, "")}`;
+    const fileData = await process(key, data);
     const xml = await xmlItem(fileData, options);
     if (updated === "") updated = fileData.updated;
     else {
