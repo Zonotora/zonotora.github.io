@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link
+    href="https://zonotora.github.io/curated-feed.xml"
+    rel="self"
+    type="application/atom+xml"
+  />
+  <link href="https://zonotora.github.io" rel="alternate" type="text/html" />
+  <updated>2020-03-15T00:00:00+00:00</updated>
+  <id>https://zonotora.github.io/curated-feed.xml</id>
+  <title type="html">Axel Lundberg - Curated Posts</title>
+  <author>
+    <name>Axel Lundberg</name>
+    <email></email>
+  </author>
+  <subtitle>A curated collection of interesting blog posts and articles</subtitle>
+  
+  <entry>
+    <title type="html">
+      The Math Behind GANs
+    </title>
+    <link
+      href="https://jaketae.github.io/study/gan-math/"
+      rel="alternate"
+      type="text/html"
+      title="The Math Behind GANs"
+    />
+    <published>2020-03-15T00:00:00+00:00</published>
+    <updated>2020-03-15T00:00:00+00:00</updated>
+    <id>https://jaketae.github.io/study/gan-math/</id>
+    <content type="html" xml:base="https://jaketae.github.io/study/gan-math/">
+      In this post, we’ll take a deep dive into the math behind GANs. My primary source of reference is Generative Adversarial Nets by Ian Goodfellow, et al. It is in this paper that Goodfellow first outlined the concept of a GAN, which is why it only makes sense that we commence from the analysis of this paper. Let’s begin!
+    </content>
+    <author>
+      <name>Jake Tae</name>
+    </author>
+    <category>Deep learning</category><category>Statistics</category>
+    <summary type="html">In this post, we’ll take a deep dive into the math behind GANs. My primary source of reference is Generative Adversarial Nets by Ian Goodfellow, et al. It is in this paper that Goodfellow first outlined the concept of a GAN, which is why it only makes sense that we commence from the analysis of this paper. Let’s begin!</summary>
+  </entry>
+  
+</feed>
