@@ -178,6 +178,10 @@ hr {
 
 .helper-icons > a {
   cursor: pointer;
+  margin-right: 5px;
+}
+.helper-icons > a:last-child {
+  margin-right: 0px;
 }
 
 .heatmap td {
@@ -491,7 +495,7 @@ a.preview {
     width: calc(100% - 20px);
   }
   header {
-    width: calc(100% - 82px);
+    width: calc(100% - 112px);
     left: 10px;
     right: 72px;
     transform: translateX(0);

@@ -1,0 +1,11 @@
+[
+  {
+    "title": "The Math Behind GANs",
+    "description": "In this post, we’ll take a deep dive into the math behind GANs. My primary source of reference is Generative Adversarial Nets by Ian Goodfellow, et al. It is in this paper that Goodfellow first outlined the concept of a GAN, which is why it only makes sense that we commence from the analysis of this paper. Let’s begin!",
+    "link": "https://jaketae.github.io/study/gan-math/",
+    "author": "Jake Tae",
+    "category": ["Deep learning", "Statistics"],
+    "published": "2020-03-15",
+    "updated": "2020-03-15"
+  }
+]
