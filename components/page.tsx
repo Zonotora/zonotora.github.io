@@ -1,5 +1,6 @@
 import { ReactNode, useEffect, useRef } from "react";
 import Header from "./header";
+import FootnotePositioner from "./footnote-positioner";
 
 type Props = {
   active: string;
@@ -62,6 +63,7 @@ const Page = ({ active, children }: Props) => {
     <div>
       <Header active={active} />
       <main>{children}</main>
+      <FootnotePositioner />
     </div>
   );
 };
