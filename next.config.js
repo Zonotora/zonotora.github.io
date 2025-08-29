@@ -9,6 +9,7 @@ import mdx from "@next/mdx";
 import remarkCitation from "./plugins/remark-citation.ts";
 import remarkHeadingHr from "./plugins/remark-heading-hr.ts";
 import remarkReference from "./plugins/remark-reference.ts";
+import remarkCodeAccordion from "./plugins/remark-code-accordion.ts";
 
 const nextConfig = {
   reactStrictMode: true,
@@ -33,6 +34,7 @@ const withMDX = mdx({
     remarkPlugins: [
       remarkGfm,
       remarkMath,
+      remarkCodeAccordion,
       remarkPrism,
       remarkCitation,
       remarkReference,

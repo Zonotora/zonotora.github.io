@@ -436,3 +436,43 @@ a.preview {
     background-color: var(--background-hover-color);
   }
 }
+
+/* Code Accordion Styles */
+.code-accordion {
+  margin: 16px 0;
+  border: var(--border);
+  border-radius: 5px;
+  /* background-color: var(--background-color); */
+}
+
+.code-accordion-summary {
+  padding: 12px 16px;
+  /* background-color: var(--border-color); */
+  cursor: pointer;
+  user-select: none;
+  font-family: "Fira Code", monospace;
+  color: var(--color);
+  border-radius: 5px 5px 0 0;
+  transition: background-color 0.2s ease;
+}
+
+.code-accordion-summary:hover {
+  background-color: var(--border-hover-color);
+}
+
+.code-accordion[open] .code-accordion-summary::before {
+  transform: rotate(90deg);
+}
+
+.code-accordion-content {
+  padding: 0;
+}
+
+.code-accordion-content pre {
+  margin: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+.code-accordion-content code {
+  border-radius: 0 0 5px 5px;
+}
