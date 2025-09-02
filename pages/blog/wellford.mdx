@@ -1,0 +1,282 @@
+import Page from "../../components/page";
+
+# Wellford's online algorithm
+
+It can be quite useful to be able to calculate the mean and variance in a [single pass](https://en.wikipedia.org/wiki/One-pass_algorithm) whenever you have a program that updates a population at discrete time steps. This is where [Wellford's online algorithm](https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm) comes in! The name [online](https://en.wikipedia.org/wiki/Online_algorithm) is based on the fact that the algorithm processes the input piece-by-piece without knowledge of the complete input stream from the start. Let's derive the formulas. To make an online algorithm viable, a [recurrence relation](https://en.wikipedia.org/wiki/Recurrence_relation) is required between the quantities one is interested in. In this case we need to find a recurrence relation for the mean and variance. E.g., we want to find a relation for the mean and variance such that the next value ($n$) for each of these quantities is based on the previous value ($n-1$)
+
+$$
+\begin{aligned}
+\overline {x}_{n} &= f(\overline {x}_{n-1}) \\
+\sigma _{n}^{2} &= g(\sigma _{n-1}^{2})
+\end{aligned}
+$$
+
+where $f$ and $g$ are the relations we want to find. So we start by some denotations.
+Given a population with $n$ samples $(x_1, \dots, x_n)$ we denote the following
+
+$$
+\begin{aligned}
+\text{sample mean} &: {\textstyle {\overline {x}}_{n} ={\frac {1}{n}}\sum _{i=1}^{n}x_{i}} \\
+\text{biased sample variance} &: {\textstyle \sigma _{n}^{2} ={\frac {1}{n}}\sum _{i=1}^{n}\left(x_{i}-{\overline {x}}_{n}\right)^{2}} \\
+\text{unbiased sample variance} &: {\textstyle s_{n}^{2}={\frac {1}{n-1}}\sum _{i=1}^{n}\left(x_{i}-{\overline {x}}_{n}\right)^{2}}
+\end{aligned}
+$$
+
+# Naive approach
+
+Let's start by deriving a recurrence formula for $\overline {x}_{n+1}$ before getting into the naivety of the approach. It all comes down to a little bit of algebraic manipulation
+
+$$
+\begin{align}
+{\overline {x}}_{n} &= {\frac {1}{n}}\sum _{i=1}^{n}x_{i} \nonumber \\
+&= {\frac {1}{n}}\sum _{i=1}^{n-1}x_{i} + {\frac {1}{n}} x_n\nonumber \\
+&= {\frac {1}{n}} \, (n - 1)\, \overline {x}_{n-1} + {\frac {1}{n}} x_n\nonumber \\
+&= \overline {x}_{n-1} +  \frac {x_n - \overline {x}_{n-1}}{n} \\
+\end{align}
+$$
+
+So (1) would look something like this in Python
+
+```python
+class RunningMean:
+    def __init__(self):
+        self.n = 0
+        self._mean = 0
+
+    def update(self, new_sample):
+        self.n += 1
+        self._mean += (new_sample - self._mean) / self.n
+
+    def mean(self): return self._mean
+```
+
+The naivety of the approach comes from the fact that it suffers from numerical instability or [catastrophic cancellation](https://en.wikipedia.org/wiki/Catastrophic_cancellation) as can be seen when we derive a recurrence formula for $\sigma_n^2$
+
+$$
+\begin{align}
+\sigma _{n}^{2} &= {\frac {1}{n}}\sum _{i=1}^{n}\left(x_{i}-{\overline {x}}_{n}\right)^{2} \nonumber \\
+&= {\frac {1}{n}}\sum _{i=1}^{n-1}\left(x_{i}-{\overline {x}}_{n}\right)^{2} + {\frac {1}{n}} \left( x_n - \overline{x}_n \right)^2
+\end{align}
+$$
+
+We want to relate $\left( x_i - \overline{x}_n \right)$ with $\left( x_i - \overline{x}_{n-1} \right)$ as we have a recurrence relation and want to capture the transition of the mean shift. Note that
+
+$$
+\begin{align}
+\left( x_i - \overline{x}_n \right) = \left( x_i - \overline{x}_{n-1} \right)  + \left(\overline x_{n-1} - \overline{x}_n \right)
+\end{align}
+$$
+
+Squaring (3) yields
+
+$$
+\begin{align}
+\left( x_i - \overline{x}_n \right)^2 = \left( x_i - \overline{x}_{n-1} \right)^2 - 2\left( x_i - \overline{x}_{n-1} \right)\left(\overline x_{n-1} - \overline{x}_n \right) + \left(\overline x_{n-1} - \overline{x}_n \right)^2
+\end{align}
+$$
+
+Putting (4) into the summation of (2) from $i$ to $n-1$, utilizing the fact that $\sum_{i=1}^{n-1} \left( x_i - \overline x_{n-1} \right) = 0$ as well as $\overline x_{n-1} - \overline x_n = - \frac {x_n - \overline x_{n-1}}{n}$ which follows from (1) we get the following
+
+$$
+\begin{align}
+\sum _{i=1}^{n-1}\left(x_{i}-{\overline {x}}_{n}\right)^{2} &= \sum_{i=1}^{n-1} \left ( x_i - \overline x_{n - 1} \right)^2 + (n - 1) \left( \overline x_{n-1} - \overline x_n \right)^2 \nonumber \\
+&= (n-1) \,\sigma_{n-1}^{2} + \frac{n - 1}{n^2} \left( x_n - \overline x_{n-1} \right)^2
+\end{align}
+$$
+
+Putting (5) into (2) we have the following
+
+$$
+\begin{align}
+\sigma_{n}^{2} &= {\frac {1}{n}}\sum _{i=1}^{n-1}\left(x_{i}-{\overline {x}}_{n}\right)^{2} + {\frac {1}{n}} \left( x_n - \overline{x}_n \right)^2 \nonumber \\
+&= {\frac {1}{n}} (n-1) \,\sigma_{n-1}^{2} + \frac{n - 1}{n^3} \left( x_n - \overline x_{n-1} \right)^2 + {\frac {1}{n}} \left( x_n - \overline{x}_n \right)^2
+\end{align}
+$$
+
+Let $a := x_n - \overline x_{n-1}$ and $b := x_n - \overline x_n$. From (1) we have the following relation
+
+$$
+\begin{align}
+b &= x_n - \overline x_n \nonumber \\
+&= x_n - \left ( \overline x_{n-1} + \frac{a}{n} \right ) \nonumber \\
+&= x_n - \overline x_{n-1} -  \frac{a}{n} \nonumber \\
+&= a - \frac{a}{n} \nonumber \\
+&= \frac{n - 1}{n} \, a \\
+\end{align}
+$$
+
+Use the substitute of $a$ and $b$ and plug (7) into (6)
+
+$$
+\begin{align}
+\sigma_{n}^{2}
+&= {\frac {1}{n}} (n-1) \,\sigma_{n-1}^{2} + \frac{n - 1}{n^3} \left( x_n - \overline x_{n-1} \right)^2 + {\frac {1}{n}} \left( x_n - \overline{x}_n \right)^2 \nonumber \\
+&= {\frac {1}{n}} (n-1) \,\sigma_{n-1}^{2} + \frac{n - 1}{n^3} a^2 + {\frac {1}{n}} b^2 \nonumber \\
+&= {\frac {1}{n}} (n-1) \,\sigma_{n-1}^{2} + \frac{n - 1}{n^3} a^2 + {\frac {(n-1)^2}{n^3}} a^2 \nonumber \\
+&= {\frac {1}{n}} (n-1) \,\sigma_{n-1}^{2} + \frac{n - 1}{n^2} a^2 \nonumber \\
+&= {\frac {1}{n}} (n-1) \,\sigma_{n-1}^{2} + \frac{1}{n} ab \nonumber \\
+&= {\frac {(n-1) \,\sigma_{n-1}^{2} + (x_n - \overline x_{n-1}) (x_n - \overline x_n)}{n}} \\
+&= \sigma_{n-1}^{2} + {\frac {(x_n - \overline x_{n-1}) (x_n - \overline x_n) - \sigma_{n-1}^{2}}{n}}
+\end{align}
+$$
+
+So (9) would look something like this in Python
+
+```python
+import math
+class RunningVar:
+    def __init__(self):
+        self.n = 0
+        self._mean = 0
+        self._var = 0
+
+    def update(self, new_sample):
+        self.n += 1
+        delta1 = new_sample - self._mean
+        self._mean += delta1 / self.n
+        delta2 = new_sample - self._mean
+        self._var += (delta1 * delta2 - self._var) / self.n
+
+    def mean(self): return self._mean
+    def var(self): return self._var
+    def std(self): return math.sqrt(self.var())
+```
+
+Here is the unbiased sample variance for completeness
+
+$$
+{\displaystyle s_{n}^{2}={\frac {n-2}{n-1}}\,s_{n-1}^{2}+{\frac {(x_{n}-{\bar {x}}_{n-1})^{2}}{n}}=s_{n-1}^{2}+{\frac {(x_{n}-{\bar {x}}_{n-1})^{2}}{n}}-{\frac {s_{n-1}^{2}}{n-1}},\quad n>1}
+$$
+
+# Avoiding numerical instability
+
+Formula (9) suffers from numerical instability as it repeatedly subtracts a small value $\sigma_{n-1}^2$ from a big value $(x_n - \overline x_{n-1}) (x_n - \overline x_n)$ that scales with $n$. This means that subtracting good approximations to two nearby numbers may yield a very bad approximation to the difference of the original numbers. What Wellford came up with instead is quite clever. If we multiply both sides of (8) with $n$ we get the following
+
+$$
+\begin{align}
+n \sigma_{n}^{2}
+&= (n-1) \,\sigma_{n-1}^{2} + (x_n - \overline x_{n-1}) (x_n - \overline x_n)
+\end{align}
+$$
+
+Now we define $M_{2,n} := n \sigma_{n}^{2}$. Note that
+
+$$
+M_{2,n-1} = (n-1) \,\sigma_{n-1}^{2}
+$$
+
+So from (10) we get the following recurrence relation
+
+$$
+\begin{align}
+M_{2,n} = M_{2,n-1}+(x_{n}-{\bar {x}}_{n-1})(x_{n}-{\bar {x}}_{n})
+\end{align}
+$$
+
+To get the biased sample variance, we simply divide $M_{2,n}$ with the population size
+
+$$
+\sigma_{n-1}^{2} = {\frac {M_{2,n}}{n}}
+$$
+
+To get the unbiased sample variance
+
+$$
+s_{n}^{2}= {\frac {M_{2,n}}{n - 1}}
+$$
+
+So (11) would look something like this in Python
+
+```python
+import math
+class Wellford:
+    def __init__(self):
+        self.n = 0
+        self._mean = 0
+        self.m2 = 0
+
+    def update(self, new_sample):
+        self.n += 1
+        delta1 = new_sample - self._mean
+        self._mean += delta1 / self.n
+        delta2 = new_sample - self._mean
+        self.m2 = delta1 * delta2
+
+    def mean(self): return self._mean
+    def var(self): return self.m2 / self.n # population var
+    def std(self): return math.sqrt(self.var())
+```
+
+# Running the algorithms
+
+Running the algorithms we can see that (9) performs very poorly in practice, while Wellford's algorithm is a good estimate of the real variance.
+
+```python
+rm = RunningMean()
+rv = RunningVar()
+w = Wellford()
+
+n = 10
+mean_sum = 0
+for i in range(n):
+  rm.update(i)
+  rv.update(i)
+  w.update(i)
+
+  mean_sum += i
+
+mean = mean_sum / n
+
+var_sum = 0
+for i in range(n):
+  var_sum = (i - mean)**2
+
+var = var_sum / n
+
+print("Real")
+print("mean", mean)
+print("var", var)
+print("std", math.sqrt(var))
+print()
+print("RunningMean")
+print("mean", rm.mean())
+print()
+print("RunningVar")
+print("mean", rv.mean())
+print("var", rv.var())
+print("std", rv.std())
+print()
+print("Wellford")
+print("mean", w.mean())
+print("var", w.var())
+print("std", w.std())
+```
+
+```
+Real
+mean 4.5
+var 2.025
+std 1.4230249470757708
+
+RunningMean
+mean 4.5
+
+RunningVar
+mean 4.5
+var 8.25
+std 2.8722813232690143
+
+Wellford
+mean 4.5
+var 2.25
+std 1.5
+```
+
+export default function MDXPage({ children }) {
+return (
+<Page active="">
+<div className="content">{children}</div>
+</Page>
+);
+
+}
