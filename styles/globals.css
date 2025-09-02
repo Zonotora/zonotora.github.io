@@ -41,8 +41,6 @@ code {
   font-family: "Fira Code", monospace;
   font-size: 10pt;
   border-radius: 4px;
-  padding-left: 3px;
-  padding-right: 3px;
 }
 
 code span {
@@ -147,6 +145,10 @@ tr:hover {
 hr {
   border: none;
   border-bottom: 1px solid var(--border-color);
+}
+
+.mord.text {
+  font-size: 12pt;
 }
 
 .toc ol {
@@ -258,12 +260,16 @@ hr {
 
 .tag {
   background-color: var(--border-color);
-  color: white;
+  color: var(--color);
   margin-top: 5px;
   padding-left: 5px;
   padding-right: 5px;
   min-width: 25px;
   text-align: center;
+}
+
+main .tag {
+  background-color: transparent;
 }
 
 .posts {
@@ -479,6 +485,58 @@ a.preview {
   color: var(--primary);
   font-weight: bold;
   margin-right: 4px;
+}
+
+/* Shared copy button styles */
+.copy-btn {
+  position: absolute;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  color: var(--color);
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.copy-btn:hover {
+  background: var(--background-hover-color) !important;
+  border-color: var(--border-hover-color) !important;
+  opacity: 1 !important;
+}
+
+.copy-btn svg {
+  transition: fill 0.2s ease;
+}
+
+.copy-btn:hover svg {
+  fill: var(--primary) !important;
+}
+
+/* Display math copy button (block equations) */
+.copy-btn-display {
+  top: 8px;
+  right: 8px;
+  padding: 4px 6px;
+}
+
+/* Inline math copy button */
+.copy-btn-inline {
+  top: -2px;
+  right: -2px;
+  padding: 2px 3px;
+  border-radius: 2px;
+  font-size: 10px;
+}
+
+/* Code block copy button */
+.copy-btn-code {
+  top: 8px;
+  right: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
 }
 
 /* Dynamic queries */

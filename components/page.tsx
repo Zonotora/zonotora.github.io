@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useRef } from "react";
 import Header from "./header";
 import FootnotePositioner from "./footnote-positioner";
+import CopyButtons from "./copy-buttons";
 
 type Props = {
   active: string;
@@ -64,6 +65,7 @@ const Page = ({ active, children }: Props) => {
       <Header active={active} />
       <main>{children}</main>
       <FootnotePositioner />
+      <CopyButtons />
     </div>
   );
 };
