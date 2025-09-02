@@ -18,7 +18,7 @@ const CopyButtons = () => {
 
     // Find all KaTeX display math elements (block equations)
     const displayMathElements = document.querySelectorAll(".katex-display");
-    
+
     displayMathElements.forEach((mathElement) => {
       // Skip if already processed
       if (mathElement.querySelector(".math-copy-btn")) {
@@ -30,7 +30,7 @@ const CopyButtons = () => {
       wrapper.style.position = "relative";
       wrapper.style.display = "inline-block";
       wrapper.style.width = "100%";
-      
+
       // Insert wrapper before math element and move math element inside
       mathElement.parentNode?.insertBefore(wrapper, mathElement);
       wrapper.appendChild(mathElement);
@@ -38,10 +38,10 @@ const CopyButtons = () => {
       // Create copy button
       const copyBtn = document.createElement("button");
       copyBtn.className = "copy-btn copy-btn-display";
-      
+
       // Add copy icon to button
       copyBtn.appendChild(createCopyIcon());
-      
+
       // Add button to wrapper
       wrapper.appendChild(copyBtn);
 
@@ -49,7 +49,7 @@ const CopyButtons = () => {
       wrapper.addEventListener("mouseenter", () => {
         copyBtn.style.opacity = "0.7";
       });
-      
+
       wrapper.addEventListener("mouseleave", () => {
         copyBtn.style.opacity = "0";
       });
@@ -58,33 +58,37 @@ const CopyButtons = () => {
       copyBtn.addEventListener("click", async () => {
         try {
           // Find the script tag with LaTeX source
-          const scriptTag = mathElement.querySelector('script[type="math/tex; mode=display"]') ||
-                          mathElement.querySelector('script[type="math/tex"]');
-          
+          const scriptTag =
+            mathElement.querySelector(
+              'script[type="math/tex; mode=display"]'
+            ) || mathElement.querySelector('script[type="math/tex"]');
+
           let latexSource = "";
-          
+
           if (scriptTag) {
             // Get LaTeX from script tag
-            latexSource = scriptTag.textContent || scriptTag.innerText || "";
+            latexSource = scriptTag.textContent || "";
           } else {
             // Fallback: try to extract from annotation
-            const annotation = mathElement.querySelector('annotation[encoding="application/x-tex"]');
+            const annotation = mathElement.querySelector(
+              'annotation[encoding="application/x-tex"]'
+            );
             if (annotation) {
-              latexSource = annotation.textContent || annotation.innerText || "";
+              latexSource = annotation.textContent || "";
             }
           }
 
           // Clean up the LaTeX source
           latexSource = latexSource.trim();
-          
+
           // For display math, wrap in $$ if not already wrapped
-          if (latexSource && !latexSource.startsWith('$$')) {
+          if (latexSource && !latexSource.startsWith("$$")) {
             latexSource = `$$\n${latexSource}\n$$`;
           }
 
           if (latexSource) {
             await navigator.clipboard.writeText(latexSource);
-            
+
             // Visual feedback
             const originalIcon = copyBtn.innerHTML;
             copyBtn.innerHTML = `
@@ -92,7 +96,7 @@ const CopyButtons = () => {
                 <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
               </svg>
             `;
-            
+
             setTimeout(() => {
               copyBtn.innerHTML = originalIcon;
             }, 1500);
@@ -104,11 +108,16 @@ const CopyButtons = () => {
     });
 
     // Also handle inline math elements
-    const inlineMathElements = document.querySelectorAll(".katex:not(.katex-display)");
-    
+    const inlineMathElements = document.querySelectorAll(
+      ".katex:not(.katex-display)"
+    );
+
     inlineMathElements.forEach((mathElement) => {
       // Skip if already processed or if it's inside a display math
-      if (mathElement.querySelector(".copy-btn") || mathElement.closest(".katex-display")) {
+      if (
+        mathElement.querySelector(".copy-btn") ||
+        mathElement.closest(".katex-display")
+      ) {
         return;
       }
 
@@ -116,7 +125,7 @@ const CopyButtons = () => {
       const wrapper = document.createElement("span");
       wrapper.style.position = "relative";
       wrapper.style.display = "inline-block";
-      
+
       // Insert wrapper before math element and move math element inside
       mathElement.parentNode?.insertBefore(wrapper, mathElement);
       wrapper.appendChild(mathElement);
@@ -124,13 +133,13 @@ const CopyButtons = () => {
       // Create copy button for inline math
       const copyBtn = document.createElement("button");
       copyBtn.className = "copy-btn copy-btn-inline";
-      
+
       // Add smaller copy icon to button
       const smallIcon = createCopyIcon();
       smallIcon.setAttribute("width", "12");
       smallIcon.setAttribute("height", "12");
       copyBtn.appendChild(smallIcon);
-      
+
       // Add button to wrapper
       wrapper.appendChild(copyBtn);
 
@@ -138,7 +147,7 @@ const CopyButtons = () => {
       wrapper.addEventListener("mouseenter", () => {
         copyBtn.style.opacity = "0.7";
       });
-      
+
       wrapper.addEventListener("mouseleave", () => {
         copyBtn.style.opacity = "0";
       });
@@ -147,32 +156,36 @@ const CopyButtons = () => {
       copyBtn.addEventListener("click", async () => {
         try {
           // Find the script tag with LaTeX source
-          const scriptTag = mathElement.querySelector('script[type="math/tex"]');
-          
+          const scriptTag = mathElement.querySelector(
+            'script[type="math/tex"]'
+          );
+
           let latexSource = "";
-          
+
           if (scriptTag) {
             // Get LaTeX from script tag
-            latexSource = scriptTag.textContent || scriptTag.innerText || "";
+            latexSource = scriptTag.textContent || "";
           } else {
             // Fallback: try to extract from annotation
-            const annotation = mathElement.querySelector('annotation[encoding="application/x-tex"]');
+            const annotation = mathElement.querySelector(
+              'annotation[encoding="application/x-tex"]'
+            );
             if (annotation) {
-              latexSource = annotation.textContent || annotation.innerText || "";
+              latexSource = annotation.textContent || "";
             }
           }
 
           // Clean up the LaTeX source
           latexSource = latexSource.trim();
-          
+
           // For inline math, wrap in $ if not already wrapped
-          if (latexSource && !latexSource.startsWith('$')) {
+          if (latexSource && !latexSource.startsWith("$")) {
             latexSource = `$${latexSource}$`;
           }
 
           if (latexSource) {
             await navigator.clipboard.writeText(latexSource);
-            
+
             // Visual feedback
             const originalIcon = copyBtn.innerHTML;
             copyBtn.innerHTML = `
@@ -180,7 +193,7 @@ const CopyButtons = () => {
                 <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
               </svg>
             `;
-            
+
             setTimeout(() => {
               copyBtn.innerHTML = originalIcon;
             }, 1500);
@@ -193,7 +206,7 @@ const CopyButtons = () => {
 
     // Handle code blocks
     const codeBlocks = document.querySelectorAll("pre[class*='language-']");
-    
+
     codeBlocks.forEach((codeBlock) => {
       // Skip if already processed
       if (codeBlock.querySelector(".copy-btn")) {
@@ -204,7 +217,7 @@ const CopyButtons = () => {
       const wrapper = document.createElement("div");
       wrapper.style.position = "relative";
       wrapper.style.display = "block";
-      
+
       // Insert wrapper before code block and move code block inside
       codeBlock.parentNode?.insertBefore(wrapper, codeBlock);
       wrapper.appendChild(codeBlock);
@@ -212,10 +225,10 @@ const CopyButtons = () => {
       // Create copy button for code blocks
       const copyBtn = document.createElement("button");
       copyBtn.className = "copy-btn copy-btn-code";
-      
+
       // Add copy icon to button
       copyBtn.appendChild(createCopyIcon("14"));
-      
+
       // Add button to wrapper
       wrapper.appendChild(copyBtn);
 
@@ -223,7 +236,7 @@ const CopyButtons = () => {
       wrapper.addEventListener("mouseenter", () => {
         copyBtn.style.opacity = "0.7";
       });
-      
+
       wrapper.addEventListener("mouseleave", () => {
         copyBtn.style.opacity = "0";
       });
@@ -234,13 +247,14 @@ const CopyButtons = () => {
           // Get the code element inside the pre
           const codeElement = codeBlock.querySelector("code");
           let codeContent = "";
-          
+
           if (codeElement) {
             // Get text content, preserving line breaks
-            codeContent = codeElement.textContent || codeElement.innerText || "";
+            codeContent =
+              codeElement.textContent || codeElement.innerText || "";
           } else {
             // Fallback to pre content
-            codeContent = codeBlock.textContent || codeBlock.innerText || "";
+            codeContent = codeBlock.textContent || "";
           }
 
           // Clean up the code content
@@ -248,7 +262,7 @@ const CopyButtons = () => {
 
           if (codeContent) {
             await navigator.clipboard.writeText(codeContent);
-            
+
             // Visual feedback
             const originalIcon = copyBtn.innerHTML;
             copyBtn.innerHTML = `
@@ -256,7 +270,7 @@ const CopyButtons = () => {
                 <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
               </svg>
             `;
-            
+
             setTimeout(() => {
               copyBtn.innerHTML = originalIcon;
             }, 1500);
@@ -266,7 +280,6 @@ const CopyButtons = () => {
         }
       });
     });
-
   }, []);
 
   return null; // This component doesn't render anything visible
