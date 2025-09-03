@@ -41,6 +41,35 @@ function MyApp({ Component, pageProps }: AppProps) {
       "--border-hover-color",
       borderHover
     );
+
+    // Set code block colors based on theme
+    if (value) {
+      // Dark mode - keep existing dark colors
+      document.documentElement.style.setProperty("--code-bg", "#141920");
+      document.documentElement.style.setProperty("--code-text", "#ccc");
+      document.documentElement.style.setProperty("--code-comment", "#999");
+      document.documentElement.style.setProperty("--code-punctuation", "#ccc");
+      document.documentElement.style.setProperty("--code-tag", "#e2777a");
+      document.documentElement.style.setProperty("--code-function", "#6196cc");
+      document.documentElement.style.setProperty("--code-number", "#f08d49");
+      document.documentElement.style.setProperty("--code-property", "#f8c555");
+      document.documentElement.style.setProperty("--code-keyword", "#cc99cd");
+      document.documentElement.style.setProperty("--code-string", "#7ec699");
+      document.documentElement.style.setProperty("--code-operator", "#67cdcc");
+    } else {
+      // Light mode - use light theme colors
+      document.documentElement.style.setProperty("--code-bg", "#f8f8f8");
+      document.documentElement.style.setProperty("--code-text", "#333");
+      document.documentElement.style.setProperty("--code-comment", "#888");
+      document.documentElement.style.setProperty("--code-punctuation", "#333");
+      document.documentElement.style.setProperty("--code-tag", "#d73a49");
+      document.documentElement.style.setProperty("--code-function", "#005cc5");
+      document.documentElement.style.setProperty("--code-number", "#e36209");
+      document.documentElement.style.setProperty("--code-property", "#b58900");
+      document.documentElement.style.setProperty("--code-keyword", "#6f42c1");
+      document.documentElement.style.setProperty("--code-string", "#22863a");
+      document.documentElement.style.setProperty("--code-operator", "#0086b3");
+    }
   };
 
   const setDarkmode = (mode: boolean) => {

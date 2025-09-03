@@ -10,6 +10,19 @@
   --border: 1px solid var(--border-color);
   /* --primary: #1183c3; */
   --primary: #e9966d;
+
+  /* Code block colors - dark mode defaults */
+  --code-bg: #141920;
+  --code-text: #ccc;
+  --code-comment: #999;
+  --code-punctuation: #ccc;
+  --code-tag: #e2777a;
+  --code-function: #6196cc;
+  --code-number: #f08d49;
+  --code-property: #f8c555;
+  --code-keyword: #cc99cd;
+  --code-string: #7ec699;
+  --code-operator: #67cdcc;
 }
 
 html,
@@ -407,23 +420,22 @@ a.preview {
   margin: 16px 0;
   border: var(--border);
   border-radius: 5px;
-  background-color: #141920;
-  /* background-color: var(--background-color); */
+  background-color: var(--code-bg);
 }
 
 .code-accordion-summary {
-  padding: 12px 16px 12px 40px;
+  padding: 8px;
   cursor: pointer;
   user-select: none;
   font-family: "Fira Code", monospace;
   color: var(--color);
+  font-size: 11pt;
   border-radius: 5px 5px 0 0;
-  transition: background-color 0.2s ease;
   position: relative;
 }
 
 .code-accordion-summary:hover {
-  background-color: var(--border-hover-color);
+  opacity: 0.5;
 }
 
 .code-accordion[open] .code-accordion-summary::before {
@@ -442,7 +454,6 @@ a.preview {
 .code-accordion-content code {
   border-radius: 0 0 5px 5px;
 }
-
 
 /* Footnote Styles */
 .footnote-container {
