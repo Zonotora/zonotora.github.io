@@ -552,6 +552,13 @@ a.preview {
   font-size: 12px;
 }
 
+.katex-display {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
 /* Dynamic queries */
 @media only screen and (max-width: 1200px) {
   main {
