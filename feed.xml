@@ -6,7 +6,7 @@
     type="application/atom+xml"
   />
   <link href="https://zonotora.github.io/blog" rel="alternate" type="text/html" />
-  <updated>2025-08-28T00:00:00+00:00</updated>
+  <updated>2025-09-02T00:00:00+00:00</updated>
   <id>https://zonotora.github.io/feed.xml</id>
   <title type="html">Axel Lundberg</title>
   <author>
@@ -24,8 +24,8 @@
       type="text/html"
       title="Wellford's online algorithm"
     />
-    <published>2025-08-28T00:00:00+00:00</published>
-    <updated>2025-08-28T00:00:00+00:00</updated>
+    <published>2025-09-02T00:00:00+00:00</published>
+    <updated>2025-09-02T00:00:00+00:00</updated>
     <id>https://zonotora.github.io/blog/wellford's-online-algorithm</id>
     <content type="html" xml:base="https://zonotora.github.io/blog/wellford's-online-algorithm">
       import Page from "../../components/page";
