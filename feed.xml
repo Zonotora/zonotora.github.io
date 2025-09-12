@@ -249,17 +249,17 @@ w = Wellford()
 n = 10
 mean_sum = 0
 for i in range(n):
-  rm.update(i)
-  rv.update(i)
-  w.update(i)
+    rm.update(i)
+    rv.update(i)
+    w.update(i)
 
-  mean_sum += i
+    mean_sum += i
 
 mean = mean_sum / n
 
 var_sum = 0
 for i in range(n):
-  var_sum = (i - mean)**2
+    var_sum = (i - mean)**2
 
 var = var_sum / n
 
