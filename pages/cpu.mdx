@@ -5,12 +5,12 @@ import Figure from "../components/pages/figure";
 
 ## OpenMP
 
-_OpenMP_ uses a fork/join model.
+_OpenMP_[^openmp] uses a fork/join model.
 
-1. Fork: Creates a number of parallel threads from a primary thread
+1. Fork[^fork]: Creates[^create] a number of parallel threads from a primary thread
    - Primary thread is always thread 0
    - No guarantee of order
-2. Join: Synchronises thread termination and returns program control to
+2. Join[^join]: Synchronises thread termination and returns program control to
    primary
 
 <Figure id="fig-openmp" description="OpenMP">
@@ -21,7 +21,13 @@ _OpenMP_ uses a fork/join model.
 
 - hpc: https://en.algorithmica.org/hpc/
 - hpc lecture chalmers: https://hpc.raum-brothers.eu/
-- openmp: https://www.openmp.org/
+- openmp: https://www.openmp.org/ [^cool]
+
+[^openmp]: OpenMP (Open Multi-Processing) is an API for multi-platform shared-memory parallel programming
+[^fork]: Is a concept for diverging execution flows.
+[^create]: This is a long text for something
+[^join]: The join operations is also part of the parallel computing.
+[^cool]: Does this work now?
 
 export default function MDXPage({ children }) {
   return (
