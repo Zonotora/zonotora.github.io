@@ -50,9 +50,6 @@ const Header = ({ active }: HeaderProps) => {
         <HeaderLink active={active} link="misc" />
       </header>
       <div className="box helper-icons">
-        <a href={`/curated-feed.xml`} title="Curated RSS Feed">
-          <FontAwesomeIcon icon={faRss} style={{ opacity: "0.5" }} />
-        </a>
         <a href={`/feed.xml`} title="Blog RSS Feed">
           <FontAwesomeIcon icon={faRss} />
         </a>
