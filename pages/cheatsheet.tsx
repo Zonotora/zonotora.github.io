@@ -3,7 +3,7 @@ import Page from "../components/page";
 import CheatSheetAccordion from "../components/cheatsheet-accordion";
 import CheatSheetFilter from "../components/cheatsheet-filter";
 import { cheatsheetData } from "../data/cheatsheet-data";
-import { CheatSheetSection } from "../lib/types";
+import { CheatSheetSection, CheatSheetSubsection } from "../lib/types";
 
 const CheatSheet = () => {
   const [filterText, setFilterText] = useState("");
@@ -93,7 +93,10 @@ const CheatSheet = () => {
               }
               return null;
             })
-            .filter((subsection) => subsection !== null);
+            .filter(
+              (subsection): subsection is CheatSheetSubsection =>
+                subsection !== null
+            );
 
           if (matchingSubsections.length > 0) {
             return {
@@ -120,7 +123,7 @@ const CheatSheet = () => {
         }
         return null;
       })
-      .filter((section): section is CheatSheetSection => section !== null);
+      .filter((section) => section !== null) as CheatSheetSection[];
   }, [filterText]);
 
   return (
@@ -133,14 +136,17 @@ const CheatSheet = () => {
           onToggleAll={toggleAll}
         />
         <div className="cheatsheet-sections">
-          {filteredSections.map((section) => (
-            <CheatSheetAccordion
-              key={section.id}
-              section={section}
-              isOpen={openSections[section.id] ?? true}
-              onToggle={() => toggleSection(section.id)}
-            />
-          ))}
+          {filteredSections.map(
+            (section) =>
+              section && (
+                <CheatSheetAccordion
+                  key={section.id}
+                  section={section}
+                  isOpen={openSections[section.id] ?? true}
+                  onToggle={() => toggleSection(section.id)}
+                />
+              )
+          )}
         </div>
         {filteredSections.length === 0 && (
           <div className="cheatsheet-no-results">
