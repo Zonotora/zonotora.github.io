@@ -57,6 +57,17 @@ export const cheatsheetData: CheatSheetData = [
             example: "docker run -d -p 8080:80 nginx",
           },
           {
+            command:
+              "docker run -it --rm -v /path/on/host:/path/in/container <image> sh",
+            description:
+              "Run container in interactive mode with volume mount. Remove container once the container is stopped",
+          },
+          {
+            command: "docker exec -it <container> /bin/sh",
+            description:
+              "Executes an interactive shell inside an already running container",
+          },
+          {
             command: "docker stop <container>",
             description: "Stop a running container",
           },
@@ -88,6 +99,10 @@ export const cheatsheetData: CheatSheetData = [
           {
             command: "docker container stats",
             description: "View resource usage stats",
+          },
+          {
+            command: "docker port <container>",
+            description: "Show port binding to host",
           },
         ],
       },
@@ -271,6 +286,16 @@ export const cheatsheetData: CheatSheetData = [
       {
         command: "grep -E 'pattern1|pattern2' file",
         description: "Extended regex (OR)",
+      },
+    ],
+  },
+  {
+    id: "ss",
+    title: "ss",
+    commands: [
+      {
+        command: "ss -tlnp",
+        description: "List all open TCP connections",
       },
     ],
   },
