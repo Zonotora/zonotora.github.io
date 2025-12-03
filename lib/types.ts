@@ -66,3 +66,24 @@ export const toggle = (current: Lexicographical) => {
   else if (current === Lexicographical.ZA) return Lexicographical.None;
   else return Lexicographical.None;
 };
+
+export type CheatSheetCommand = {
+  command: string;
+  description: string;
+  example?: string;
+};
+
+export type CheatSheetSubsection = {
+  title: string;
+  commands: CheatSheetCommand[];
+};
+
+export type CheatSheetSection = {
+  id: string;
+  title: string;
+  description?: string;
+  commands?: CheatSheetCommand[];
+  subsections?: CheatSheetSubsection[];
+};
+
+export type CheatSheetData = CheatSheetSection[];

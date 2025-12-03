@@ -602,6 +602,226 @@ a.preview {
   }
 }
 
+/* Cheat Sheet Styles */
+.cheatsheet-container {
+  width: calc(var(--page-width) + 20px);
+  padding: 10px;
+}
+
+.cheatsheet-filter-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.cheatsheet-filter-container {
+  position: relative;
+  flex: 1;
+}
+
+.cheatsheet-filter-input {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Fira Code", monospace;
+  font-size: 12pt;
+  background-color: var(--background-color);
+  color: var(--color);
+  border: var(--border);
+  border-radius: 5px;
+  outline: none;
+}
+
+.cheatsheet-filter-input:focus {
+  border-color: var(--border-hover-color);
+}
+
+.cheatsheet-filter-input::placeholder {
+  color: var(--border-color);
+}
+
+.cheatsheet-filter-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--border-color);
+  cursor: pointer;
+  font-size: 16pt;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cheatsheet-filter-clear:hover {
+  color: var(--primary);
+}
+
+.cheatsheet-toggle-all {
+  padding: 10px 15px;
+  font-family: "Fira Code", monospace;
+  font-size: 12pt;
+  background-color: var(--background-color);
+  color: var(--primary);
+  border: var(--border);
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  min-width: 45px;
+}
+
+.cheatsheet-toggle-all:hover {
+  border-color: var(--border-hover-color);
+  background-color: var(--background-hover-color);
+}
+
+.cheatsheet-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cheatsheet-commands-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+}
+
+.cheatsheet-section {
+  border: var(--border);
+  border-radius: 5px;
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+.cheatsheet-section-header {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  user-select: none;
+}
+
+.cheatsheet-section-header:hover {
+  background-color: var(--background-hover-color);
+}
+
+.cheatsheet-section-arrow {
+  font-family: "Fira Code", monospace;
+  font-size: 10pt;
+  color: var(--primary);
+  display: inline-block;
+  width: 15px;
+  margin-top: 3px;
+}
+
+.cheatsheet-section-header-content {
+  flex: 1;
+}
+
+.cheatsheet-section-title {
+  margin: 0;
+  font-size: 14pt;
+  color: var(--color);
+  font-family: "PT Serif", serif;
+}
+
+.cheatsheet-section-description {
+  margin: 4px 0 0 0;
+  font-size: 11pt;
+  color: var(--border-color);
+  font-family: "PT Serif", serif;
+  line-height: 1.4;
+}
+
+.cheatsheet-section-content {
+  padding: 0 10px 10px 10px;
+}
+
+.cheatsheet-subsection {
+  margin-bottom: 20px;
+}
+
+.cheatsheet-subsection:last-child {
+  margin-bottom: 0;
+}
+
+.cheatsheet-subsection-title {
+  margin: 0 0 10px 0;
+  font-size: 12pt;
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+}
+
+.cheatsheet-command {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cheatsheet-command:last-child {
+  border-bottom: none;
+}
+
+.cheatsheet-command-text {
+  margin-bottom: 4px;
+}
+
+.cheatsheet-command-code {
+  font-family: "Fira Code", monospace;
+  font-size: 11pt;
+  color: var(--primary);
+  background-color: transparent;
+  padding: 0;
+}
+
+.cheatsheet-command-description {
+  font-family: "PT Serif", serif;
+  font-size: 11pt;
+  color: var(--color);
+  line-height: 1.4;
+}
+
+.cheatsheet-command-example {
+  margin-top: 4px;
+  font-family: "PT Serif", serif;
+  font-size: 10pt;
+  color: var(--border-color);
+}
+
+.cheatsheet-command-example code {
+  font-family: "Fira Code", monospace;
+  font-size: 10pt;
+  color: var(--code-string);
+  background-color: transparent;
+}
+
+.cheatsheet-no-results {
+  text-align: center;
+  padding: 40px;
+  font-family: "PT Serif", serif;
+  font-size: 12pt;
+  color: var(--border-color);
+}
+
+@media only screen and (max-width: 1200px) {
+  .cheatsheet-container {
+    width: calc(100% - 20px);
+  }
+
+  .cheatsheet-commands-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (hover: hover) {
   .project-preview:hover {
     border-color: var(--border-hover-color);

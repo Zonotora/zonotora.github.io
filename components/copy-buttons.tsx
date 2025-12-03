@@ -204,6 +204,71 @@ const CopyButtons = () => {
       });
     });
 
+    // Handle cheatsheet commands
+    const cheatsheetCommands = document.querySelectorAll(".cheatsheet-command");
+
+    cheatsheetCommands.forEach((commandElement) => {
+      // Skip if already processed
+      if (commandElement.querySelector(".copy-btn")) {
+        return;
+      }
+
+      // Get the code element
+      const codeElement = commandElement.querySelector(
+        ".cheatsheet-command-code"
+      );
+      if (!codeElement) {
+        return;
+      }
+
+      // Make command element relative for positioning
+      (commandElement as HTMLElement).style.position = "relative";
+
+      // Create copy button for cheatsheet commands
+      const copyBtn = document.createElement("button");
+      copyBtn.className = "copy-btn copy-btn-code";
+
+      // Add copy icon to button
+      copyBtn.appendChild(createCopyIcon("14"));
+
+      // Add button to command element
+      commandElement.appendChild(copyBtn);
+
+      // Show/hide button on hover
+      commandElement.addEventListener("mouseenter", () => {
+        copyBtn.style.opacity = "0.7";
+      });
+
+      commandElement.addEventListener("mouseleave", () => {
+        copyBtn.style.opacity = "0";
+      });
+
+      // Copy functionality for cheatsheet commands
+      copyBtn.addEventListener("click", async () => {
+        try {
+          const commandText = codeElement.textContent?.trim() || "";
+
+          if (commandText) {
+            await navigator.clipboard.writeText(commandText);
+
+            // Visual feedback
+            const originalIcon = copyBtn.innerHTML;
+            copyBtn.innerHTML = `
+              <svg viewBox="0 0 512 512" width="14" height="14" style="fill: var(--primary);">
+                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
+              </svg>
+            `;
+
+            setTimeout(() => {
+              copyBtn.innerHTML = originalIcon;
+            }, 1500);
+          }
+        } catch (err) {
+          console.error("Failed to copy command:", err);
+        }
+      });
+    });
+
     // Handle code blocks
     const codeBlocks = document.querySelectorAll("pre[class*='language-']");
 
