@@ -18,6 +18,46 @@ export default function remarkFootnotes() {
     const footnotes: FootnoteData[] = [];
     let footnoteCounter = 0;
 
+    // Helper function to convert AST nodes to JSX children
+    const convertNodesToJSX = (nodes: any[]): any[] => {
+      const result: any[] = [];
+
+      for (const child of nodes) {
+        if (child.type === "text") {
+          result.push({
+            type: "text",
+            value: child.value,
+          });
+        } else if (child.type === "link") {
+          result.push({
+            type: "mdxJsxTextElement",
+            name: "a",
+            attributes: [
+              {
+                type: "mdxJsxAttribute",
+                name: "href",
+                value: child.url,
+              },
+              ...(child.title
+                ? [
+                    {
+                      type: "mdxJsxAttribute",
+                      name: "title",
+                      value: child.title,
+                    },
+                  ]
+                : []),
+            ],
+            children: convertNodesToJSX(child.children),
+          });
+        } else if (child.children) {
+          result.push(...convertNodesToJSX(child.children));
+        }
+      }
+
+      return result;
+    };
+
     // First pass: collect footnote definitions that remarkGfm creates
     visit(tree, "footnoteDefinition", (node, index, parent) => {
       if (index === undefined) return;
@@ -36,6 +76,9 @@ export default function remarkFootnotes() {
         label,
         content: content.trim(),
       });
+
+      // Store the AST children for rendering with links
+      (footnotes[footnotes.length - 1] as any).children = node.children;
 
       // Remove the footnote definition from the tree
       parent.children.splice(index, 1);
@@ -56,6 +99,11 @@ export default function remarkFootnotes() {
         const footnote = footnotes.find((fn) => fn.label === label);
 
         if (footnote) {
+          // Convert the footnote's AST children to JSX
+          const footnoteChildren = (footnote as any).children
+            ? convertNodesToJSX((footnote as any).children)
+            : [{ type: "text", value: footnote.content }];
+
           sideFootnotes.push({
             type: "mdxJsxFlowElement",
             name: "div",
@@ -91,8 +139,9 @@ export default function remarkFootnotes() {
               },
               {
                 type: "text",
-                value: ` ${footnote.content}`,
+                value: " ",
               },
+              ...footnoteChildren,
             ],
           });
           const newRefNode = {
