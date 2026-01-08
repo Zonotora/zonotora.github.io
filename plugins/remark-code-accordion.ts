@@ -4,7 +4,7 @@ type Options = {
   // Option to control which languages should be wrapped in accordions
   languages?: string[];
   // Option to control accordion title format
-  titleFormat?: (lang: string, meta?: string) => string;
+  titleFormat?: (lang: string, meta?: string) => string | undefined;
   // Minimum number of lines before wrapping in accordion
   minLines?: number;
   // Whether to default to open state
@@ -13,14 +13,15 @@ type Options = {
 
 export default function remarkCodeAccordion(options?: Options) {
   const languages = options?.languages; // If undefined, all code blocks will be wrapped
-  const titleFormat =
-    options?.titleFormat ||
-    ((lang: string) =>
-      lang ? lang.charAt(0).toUpperCase() + lang.slice(1) : "Code");
   const minLines = options?.minLines ?? 0; // Default to 0 to wrap all code blocks
   const defaultOpen = options?.defaultOpen ?? true; // Default to open
 
   return (tree: any) => {
+    let titleFormat =
+      options?.titleFormat ||
+      ((lang: string) =>
+        lang ? lang.charAt(0).toUpperCase() + lang.slice(1) : "Code");
+
     visit(tree, "code", (node, index, parent) => {
       if (index === undefined || !parent) return;
 
@@ -50,6 +51,10 @@ export default function remarkCodeAccordion(options?: Options) {
           shouldBeOpen = false;
         } else if (meta.includes("toggle:open")) {
           shouldBeOpen = true;
+        }
+        if (meta.includes("title:")) {
+          titleFormat = (lang: string, meta?: string) =>
+            meta?.substring(meta?.indexOf("title:") + "title:".length);
         }
       }
 
