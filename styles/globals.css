@@ -408,6 +408,8 @@ a.preview {
 .figure,
 .table {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .reference-item {

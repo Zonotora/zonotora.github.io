@@ -4,10 +4,11 @@ type Props = {
   id: string;
   description: string;
   source?: string;
+  width?: string;
   children?: ReactNode;
 };
 
-const Figure = ({ id, description, children, source }: Props) => {
+const Figure = ({ id, description, children, source, width }: Props) => {
   const sourceNode = source ? (
     <>
       (See{" "}
@@ -21,11 +22,13 @@ const Figure = ({ id, description, children, source }: Props) => {
   );
   return (
     <div className="figure">
-      <label id={id}></label>
-      {children}
-      <label>
-        {description} {sourceNode}
-      </label>
+      <div style={{ width: width ? width : "100%" }}>
+        <label id={id}></label>
+        {children}
+        <label>
+          {description} {sourceNode}
+        </label>
+      </div>
     </div>
   );
 };
