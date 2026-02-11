@@ -47,15 +47,14 @@ const Header = ({ active }: HeaderProps) => {
     <>
       <header>
         <HeaderLink active={active} link="blog" />
-        <HeaderLink active={active} link="cheatsheet" />
         <HeaderLink active={active} link="misc" />
       </header>
-      <div className="box helper-icons">
+      {/* <div className="box helper-icons">
         <a href={`/feed.xml`} title="Blog RSS Feed">
           <FontAwesomeIcon icon={faRss} />
         </a>
         <a onClick={toggleDarkmode}>{darkmode ? dark : light}</a>
-      </div>
+      </div> */}
     </>
   );
 };
