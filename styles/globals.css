@@ -2,17 +2,17 @@
 
 :root {
   --color: rgb(250, 235, 215);
-  --background-color: rgb(13, 17, 23);
+  --background-color: #181a1b;
   --background-hover-color: #0d1117;
   --border-color: #4d535c;
   --border-hover-color: antiquewhite;
-  --page-width: 600px;
+  --page-width: 700px;
   --border: 1px solid var(--border-color);
   /* --primary: #1183c3; */
   --primary: #e9966d;
 
   /* Code block colors - dark mode defaults */
-  --code-bg: #141920;
+  --code-bg: #1c1f20;
   --code-text: #ccc;
   --code-comment: #999;
   --code-punctuation: #ccc;

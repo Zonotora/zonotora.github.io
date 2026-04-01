@@ -1,8 +1,8 @@
 import { CSSProperties, useContext } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRss } from "@fortawesome/free-solid-svg-icons";
-import { UserContext } from "../pages/_app";
-import { dark, light } from "./icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faRss } from "@fortawesome/free-solid-svg-icons";
+// import { UserContext } from "../pages/_app";
+// import { dark, light } from "./icons";
 
 type HeaderProps = {
   active: string;
@@ -37,11 +37,11 @@ function HeaderLink({ active, link, alternativeLink }: HeaderLinkProps) {
 }
 
 const Header = ({ active }: HeaderProps) => {
-  const { darkmode, setDarkmode } = useContext(UserContext);
+  // const { darkmode, setDarkmode } = useContext(UserContext);
 
-  const toggleDarkmode = () => {
-    setDarkmode(!darkmode);
-  };
+  // const toggleDarkmode = () => {
+  //   setDarkmode(!darkmode);
+  // };
 
   return (
     <>
