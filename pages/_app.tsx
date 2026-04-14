@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import "../styles/prism.css";
 import "katex/dist/katex.min.css";
 import type { AppProps } from "next/app";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import colors from "../data/colors.json";
 import Cookies from "universal-cookie";
 
@@ -93,6 +93,21 @@ function MyApp({ Component, pageProps }: AppProps) {
   //     setDarkmode(mode);
   //   }
   // }, []);
+
+  useEffect(() => {
+    const onClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (!target) return;
+
+      const image = target.closest("main img") as HTMLImageElement | null;
+      if (!image) return;
+
+      image.classList.toggle("img-zoomed");
+    };
+
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
 
   return (
     // <UserContext.Provider

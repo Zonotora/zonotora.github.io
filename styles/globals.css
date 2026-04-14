@@ -98,6 +98,22 @@ main img {
   width: calc(100% - 20px);
   border: var(--border);
   border-radius: 5px;
+  cursor: zoom-in;
+  transition: transform 0.15s ease, width 0.15s ease, max-width 0.15s ease;
+}
+
+main img.img-zoomed {
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  cursor: zoom-out;
 }
 
 header {
